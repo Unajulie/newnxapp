@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'nxapp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for nxapp
+
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+        'RCTImage', # <-- Add RCTImage
+    ]
+  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
+
+
+
+  pod 'CodePush', :path => '../node_modules/react-native-code-push'
+
+  pod 'react-native-geolocation', :path => '../node_modules/@react-native-community/geolocation'
+
+end
