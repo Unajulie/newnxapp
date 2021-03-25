@@ -17,6 +17,12 @@ import MoreProActivity from './MoreProActivity';
 import CheckActivity from './CheckActivity';
 import ScienceteamActivity from './ScienceteamActivity';
 import ProfMosheActivity from './ProfMosheActivity';
+import ProfMosheExperiencesActivity from './ProfMosheExperiencesActivity';
+import ProfMosheVideosActivity from './ProfMosheVideosActivity';
+import ProfMosheCareerActivity from './ProfMosheCareerActivity';
+import ProfMosheHonorsActivity from './ProfMosheHonorsActivity';
+import ProfMosheSponsoredActivity from './ProfMosheSponsoredActivity';
+import ProfMoshePublishedActivity from './ProfMoshePublishedActivity';
 import DavidActivity from './DavidActivity';
 import HuiliActivity from './HuiliActivity';
 import ChifatActivity from './ChifatActivity';
@@ -50,7 +56,10 @@ import LaunchActivity from './LaunchActivity';
 export const RootStack = createStackNavigator(
     {
         Launch: { //此处的Lauch名字任意,在跳转页面的时候会用到这个名字
-            screen: LaunchActivity //此处的screen赋值页面,要记得在顶部先import引入，否则找不到页面而报错，第一个代表默认加载的页面
+            screen: LaunchActivity,//此处的screen赋值页面,要记得在顶部先import引入，否则找不到页面而报错，第一个代表默认加载的页面
+            navigationOptions: {
+                header: null,
+            },
         },
         Main: {  
             screen: MainActivity 
@@ -72,6 +81,24 @@ export const RootStack = createStackNavigator(
         },
         Moshe: {
             screen: ProfMosheActivity
+        },
+        ProfMosheExperiences: {
+            screen: ProfMosheExperiencesActivity
+        },
+        ProfMosheVideos: {
+            screen: ProfMosheVideosActivity
+        },
+        ProfMosheCareer: {
+            screen: ProfMosheCareerActivity
+        },
+        ProfMosheHonors: {
+            screen: ProfMosheHonorsActivity
+        },
+        ProfMosheSponsored: {
+            screen: ProfMosheSponsoredActivity
+        },
+        ProfMoshePublished: {
+            screen: ProfMoshePublishedActivity
         },
         David: {
             screen: DavidActivity
@@ -191,10 +218,13 @@ export const RootStack = createStackNavigator(
     },
     {
         initialRouteName: 'Launch',
-        defaultNavigationOptions: ({ navigation, screenProps }) => {
-            return ({
+        defaultNavigationOptions: ({ navigation}) => {
+            return (
+            
+                {
                 headerStyle: {
                     backgroundColor: '#0071BC',
+                    
                 },
                 headerTintColor: '#fff',
                 headerTitleStyle: {
@@ -206,7 +236,8 @@ export const RootStack = createStackNavigator(
                 //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
                 //所以需要在此处添加 navigation={navigation}，那么LoginIcon中的pros就能有navigation这个对象了
                 headerRight: <LoginIcon navigation={navigation} />
-            })
+                }
+            )
         }
     }
 );

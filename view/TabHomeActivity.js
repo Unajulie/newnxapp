@@ -81,18 +81,159 @@ export default class TabHomeActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <View style={{ width: "100%", height: 345 }}>
+               
+                <View style={{ backgroundColor: '#ffffff',marginTop: 40 }}>
+                    <View style={{ width: '90%', height: 300, marginTop: 56, alignSelf: 'center' }}>
+                        {/* 我的报告 */}
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChart")}>
+                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 80, flexDirection: 'row', marginBottom: 40 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/home1.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text onPress={() => {
+                                        this.state.user == null ?
+                                            this.navigate.push("Login")
+                                            :
+                                            this.state.user.privatekey ?
+                                                this.navigate.push("DnaReport")
+                                                :
+                                                this.navigate.push("RasEncryptionActivity")
+
+                                    }}
+                                        style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>
+                                        {I18n.t('TabHomeActivity.myreport')}{"\n"}
+                                        <Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Scan your Kit and get your chronological Age data.</Text>  
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        {/* 问卷调查 */}
+                        <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
+                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 80, flexDirection: 'row', marginBottom: 40 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/home2.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text
+                                        onPress={() => {
+                                            this.state.user == null ?
+                                                this.navigate.push("Login")
+                                                :
+                                                this.state.user.privatekey ?
+                                                    this.navigate.push("LifeStyleChart")
+                                                    :
+                                                    this.navigate.push("RasEncryptionActivity")
+                                        }}
+                                        style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.questionnaires')}{"\n"}
+                                        <Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Fill a questionnaires about your lifestyle</Text>
+                                        </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        {/* 测试流程 */}
+                        <TouchableOpacity onPress={() => this.navigate.push("Testprocess")}>
+                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 80, flexDirection: 'row', marginBottom: 40 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/home3.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.testprocess')}{"\n"}
+                                    <Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Step by step instrucations for a main workflow</Text>
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+
+                    </View>
+                </View>
+       
+
+                {/* <View style={{ width: '90%', marginTop: 34, marginBottom: 34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
+                    <ImageBackground style={{ width: '100%', heigh: '100%', alignSelf: 'center' }} source={require('../image/enpic/home-bg.png')} resizeMode='contain'  >
+
+                        <View style={{ width: '90%', alignSelf: 'center', height: 314, zIndex: 999 }}>
+                            <View style={{ heigh: 145, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
+                                <View style={{ height: 145, width: '32%', }}>
+                                    <Text onPress={() => this.navigate.push("About")} style={{height:145, textAlign:'center', color: '#ffffff',paddingTop:77, fontSize: 16,}}>{I18n.t('TabHomeActivity.aboutus')}</Text>
+                                </View>
+                                <View style={{ height: 156, width: '36%', alignSelf: 'center' ,}}>
+                                    <Text onPress={() => {
+                                        this.state.user == null ?
+                                            this.navigate.push("Login")
+                                            :
+                                            this.state.user.privatekey ?
+                                                this.navigate.push("LifeStyleChart")
+                                                :
+                                                this.navigate.push("RasEncryptionActivity")
+
+                                    }} style={{height: 61,marginTop:95, textAlign:'right',paddingTop:41, color:'#ffffff',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
+                                </View>
+                                <View style={{ height: 145, width: '32%', }}>
+                                    <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 16,}}>{I18n.t('TabHomeActivity.test')}</Text>
+                                </View>
+                            </View>
+    
+                            <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
+                                
+                                <View style={{ height: 112, width: '32%',}}>
+                                    <Text onPress={() => this.navigate.push("Mall")}  style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16, }}>{I18n.t('TabHomeActivity.mark')}</Text>
+                                </View>
+                                <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
+                                    <Text onPress={() => {
+                                        this.state.user == null ?
+                                            this.navigate.push("Login")
+                                            :
+                                            this.state.user.privatekey ?
+                                                this.navigate.push("DnaReport")
+                                                :
+                                                this.navigate.push("RasEncryptionActivity")
+                                    }}
+                                        style={{ height: 67,color:'#1e1e1e',lineHeight:17, }}>{I18n.t('TabHomeActivity.report')}</Text>
+                                </View>
+                                <View style={{ height: 112, width: '32%',}}>
+                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
+                                </View>
+                            </View>
+                        </View>
+                    </ImageBackground>
+                </View> */}
+               
+                <View style={{ width: '100%',  marginTop: 40, }}>  
+                        <View style={{ width: '90%',  alignSelf: 'center', marginBottom: 20,padding:30,backgroundColor:'#EBECED',borderRadius:15}}>
+                            <Text style={{ fontSize: 24, color: '#333333', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 34, marginBottom: 19 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
+                            <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23, marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
+                            <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
+                        </View>
+                </View>
+            
+                {/* 产品轮播点击跳转 */}
+                 <View style={{ width: "100%", height: 440 }}>
 
                     <Swiper
-                        height={340}//组件高度
+                        height={440}//组件高度
                         horizontal={true}//水平轮播
-                        paginationStyle={{ bottom: 10 }}
+                        // paginationStyle={{ bottom: 10 }}
+                        showsPagination={false}//底部圆点
                         showsButtons={true}
+                        //
+                        buttonWrapperStyle={{position: 'absolute', top: -200,paddingHorizontal: 30, paddingVertical: 30, left: 25, display:'flex',justifyContent:'flex-end'}}
+                        prevButton={<Text style={{fontSize:50, color:'gainsboro', paddingTop:0,backgroundColor:'white'}}>‹-</Text>}
+                        nextButton={<Text style={{fontSize:50, color:'gainsboro', paddingTop:0,backgroundColor:'white'}}>-›</Text>} 
                         loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
-                        autoplay={true}>
+                        autoplay={false}>
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <View style={{ width: '100%', }}>
-                                <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index1.jpg')} resizeMode='cover'  >
+            
+                                {/* <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index1.jpg')} resizeMode='cover'  >
                                     <View style={{ height: 23 }}></View>
                                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
                                         <Text style={{ fontSize: 34, color: '#006DB5', fontWeight:"bold"}}>
@@ -125,12 +266,38 @@ export default class TabHomeActivity extends Component<Props> {
                                         {I18n.t('TabHomeActivity.count')}
                                     </Text>
                                     </View>
-                                </ImageBackground>
+                                </ImageBackground> */}
+                                
+                                <View style={{ width: '100%',marginLeft: 20}}>
+                                    <Text style={{ fontSize: 26, color: '#333333', textAlign: 'left', fontFamily: 'FontAwesome', lineHeight: 34 }}>Products</Text>
+                                </View>
+                                <View style={{ backgroundColor: '#ffffff',width:'90%'}}>
+                                    <View style={{ width: '90%',  alignSelf: 'center', marginBottom:23,borderStyle:'solid',borderTopWidth: 1,borderRightWidth: 1,borderBottomWidth: 1,borderLeftWidth: 1}}>
+                                        <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index7.jpg')} resizeMode="contain" />
+                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 30, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
+                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight:23 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
+                                        {/* <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
+                                            <View style={{ width: '85%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
+                                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')}</Text> 
+                                            </View>
 
-                            </View>
+                                            <View style={{ width: '15%', height: 45, justifyContent: 'center' }}>
+                                                <TouchableOpacity onPress={() =>{this.setState({ url: "https://epi-age.com/product/epiage/" }); this.setState({ display: true })}}>
+                                                    <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
+                                                </TouchableOpacity>
+                                            </View>
+
+                                       </View> */}
+                                        <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
+                                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'left',lineHeight:30 }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
+                                        </TouchableOpacity>
+                                    </View>
+                                </View>
+                                    
+                           
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => this.navigate.push("Same")}>
-                            <View style={{ width: '100%', height: 345 }}>
+                            {/* <View style={{ width: '100%', height: 345 }}>
                                 <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' >
                                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                                         <View style={{ width: '100%' }}>
@@ -140,9 +307,36 @@ export default class TabHomeActivity extends Component<Props> {
                                         </View>
                                     </View>
                                 </ImageBackground>
-                            </View>
+                            </View> */}
+                            <View style={{ width: '100%',marginLeft: 20 }}>
+                                    <Text style={{ fontSize: 26, color: '#333333', textAlign: 'left', fontFamily: 'FontAwesome', lineHeight: 34 }}>Products</Text>
+                            </View>  
+                            <View style={{ backgroundColor: '#ffffff',width:'90%'}}>                          
+                                <View style={{width: '90%', alignSelf: 'center', marginBottom:23,borderStyle:'solid',borderTopWidth: 1,borderRightWidth: 1,borderBottomWidth: 1,borderLeftWidth: 1 }}>
+                                    {/* <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 24, textAlign: 'center', color: '#282828',lineHeight:38 }}>{I18n.t('TabHomeActivity.whatsame')}</Text> */}
+                                    <Image style={{ width: '100%', height: 245, justifyContent: 'center' }} source={require('../image/enpic/index9.jpg')} resizeMode='contain' />
+                                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 30, color: '#333333' }}>{I18n.t('TabHomeActivity.sam')}</Text>
+                                    <Text style={{ fontSize: 18, fontFamily: 'FontAwesome', color: '#4d4d4d',textAlign:'left' ,lineHeight: 23}}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
+                                    {/* <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text> */}
+                                    {/* <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
+                                        <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
+                                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}</Text>
+                                        </View>
+                                        
+                                        <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
+                                            <TouchableOpacity onPress={() =>  {this.setState({ url: "https://epi-age.com/product/episame/" }); this.setState({ display: true })}}>
+                                                <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
+                                            </TouchableOpacity>
+                                        </View>
+
+                                    </View> */}
+                                    <TouchableOpacity style={{marginTop:23}} onPress={() => this.navigate.push("Same")}>
+                                        <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'left',lineHeight:30, }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
+                                    </TouchableOpacity>
+                                </View>
+                          </View>
                         </TouchableOpacity>
-                        <View style={{ width: '100%', }}>
+                        {/* <View style={{ width: '100%', }}>
                             <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" >
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
                                 <View style={{ height: 20 }}></View>
@@ -159,11 +353,11 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{fontSize: 12, color: '#6A6B6A', }}>{I18n.t('TabHomeActivity.indispensable')}</Text>
                                 </View>
                             </ImageBackground>
-                        </View>
-                        <View style={{ width: '100%', height: 345 }}>
+                        </View> */}
+                        {/* <View style={{ width: '100%', height: 345 }}>
                             <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index4.jpg')} resizeMode="cover" />
-                        </View>
-                        <View style={{ width: '100%', height: 345 }}>
+                        </View> */}
+                        {/* <View style={{ width: '100%', height: 345 }}>
                             <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" >
                                 <View style={{  width: '90%', alignSelf: 'center', flexDirection:"column",}}>
                                 <View style={{ height: '38%',}}></View>
@@ -186,59 +380,12 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                                 </View>
                             </ImageBackground>
-                        </View>
+                        </View> */}
                     </Swiper >
                 </View>
-                <View style={{ width: '90%', marginTop: 34, marginBottom: 34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
-                    <ImageBackground style={{ width: '100%', heigh: '100%', alignSelf: 'center' }} source={require('../image/enpic/home-bg.png')} resizeMode='contain'  >
 
-                        <View style={{ width: '90%', alignSelf: 'center', height: 314, zIndex: 999 }}>
-                            <View style={{ heigh: 145, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <View style={{ height: 145, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("About")} style={{height:145, textAlign:'center', color: '#ffffff',paddingTop:77, fontSize: 16,}}>{I18n.t('TabHomeActivity.aboutus')}</Text>
-                                </View>
-                                <View style={{ height: 156, width: '36%', alignSelf: 'center' ,}}>
-                                    <Text onPress={() => {
-                                        this.state.user == null ?
-                                            this.navigate.push("Login")
-                                            :
-                                            this.state.user.privatekey ?
-                                                this.navigate.push("LifeStyleChart")
-                                                :
-                                                this.navigate.push("RasEncryptionActivity")
-
-                                    }} style={{height: 61,marginTop:95, textAlign:'right',paddingTop:41, color:'#ffffff',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
-                                </View>
-                                <View style={{ height: 145, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 16,}}>{I18n.t('TabHomeActivity.test')}</Text>
-                                </View>
-                            </View>
-                            {/* <View style={{height:67,width:'100%'}}></View> */}
-                            <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                
-                                <View style={{ height: 112, width: '32%',}}>
-                                    <Text onPress={() => this.navigate.push("Mall")}  style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16, }}>{I18n.t('TabHomeActivity.mark')}</Text>
-                                </View>
-                                <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
-                                    <Text onPress={() => {
-                                        this.state.user == null ?
-                                            this.navigate.push("Login")
-                                            :
-                                            this.state.user.privatekey ?
-                                                this.navigate.push("DnaReport")
-                                                :
-                                                this.navigate.push("RasEncryptionActivity")
-                                    }}
-                                        style={{ height: 67,color:'#1e1e1e',lineHeight:17, }}>{I18n.t('TabHomeActivity.report')}</Text>
-                                </View>
-                                <View style={{ height: 112, width: '32%',}}>
-                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
-                                </View>
-                            </View>
-                        </View>
-                    </ImageBackground>
-                </View>
-                <View style={{ flex: 1, justifyContent: 'center', backgroundColor: '#f0f0f0', paddingBottom: 30 }}>
+                {/* 相关视频 */}
+                 <View style={{ flex: 1, justifyContent: 'center', backgroundColor: '#f0f0f0', paddingBottom: 30 }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#333333', fontSize: 26, marginLeft: 20, marginBottom: 15 }}>{I18n.t('TabHomeActivity.video')}</Text>
                     <VideoPlayer
                         style={{ width: "100%", height: 250 }}
@@ -249,29 +396,23 @@ export default class TabHomeActivity extends Component<Props> {
                         navigator={this.props.navigator}
                     />
                 </View>
-                <View style={{ width: '100%',  marginTop: 20, }}>  
-                    <View style={{ width: '90%',  alignSelf: 'center', marginBottom: 20 }}>
-                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 34, marginBottom: 19 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23, marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
-                    </View>
-                </View>
-                <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
+                <View style={{ heigh: 40, width: '100%' }}></View>
+                {/* 图片 */}
+                {/* <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
                     <View style={{ width: '90%', height: 389, alignSelf: 'center' }}>
                         <Image style={{ width: '100%', height: 278, marginTop: 12 }} source={require('../image/enpic/index6.jpg')} resizeMode="contain" />
                         <Text style={{ fontSize: 23, textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 34, marginTop: 0, color: '#333333' }}>{I18n.t('TabHomeActivity.kit')}</Text>
                         <View style={{ borderBottomWidth: 1, borderColor: '#000000', width: '7%', alignSelf: 'center' }}></View>
                         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                                {/* <Text style={{ marginRight: 5, fontSize: 24, textAlign: 'right', fontFamily: 'NotoSansHans-Light', color: '#b2b2b2', textDecorationLine: 'line-through' }}>$249</Text> */}
                             </View>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                                {/* <Text style={{ marginLeft: 5, fontSize: 24,fontWeight: '800', textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#f43d2a' }}>$145</Text> */}
                             </View>
                         </View>
                     </View>
-                </View>
-                <View style={{ backgroundColor: '#ffffff' }}>
+                </View> */}
+                {/* epiage 购买 */}
+                {/* <View style={{ backgroundColor: '#ffffff' }}>
                     <View style={{ width: '90%',  alignSelf: 'center', marginTop: 23 ,marginBottom:23}}>
                         <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index7.jpg')} resizeMode="contain" />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
@@ -292,8 +433,9 @@ export default class TabHomeActivity extends Component<Props> {
                             <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34,marginTop:23 }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
                         </TouchableOpacity>
                     </View>
-                </View>
-                <View style={{ backgroundColor: '#0071bc' }}>
+                </View> */}
+
+                {/* <View style={{ backgroundColor: '#0071bc' }}>
                     <View style={{ width: '90%',  alignSelf: 'center', marginTop: 34 }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, color: '#ffffff', textAlign: 'center', lineHeight: 45, fontWeight: '600' }}>{I18n.t('TabHomeActivity.appsystem')}</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>-{I18n.t('TabHomeActivity.personalrep')}-</Text>
@@ -327,8 +469,8 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </View>
                     </View>
-                </View>
-                <View style={{ backgroundColor: '#f0f0f0' }}>
+                </View> */}
+                {/* <View style={{ backgroundColor: '#f0f0f0' }}>
                     <View style={{width: '90%', alignSelf: 'center', marginTop: 34,marginBottom:34 }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 24, textAlign: 'center', color: '#282828',lineHeight:38 }}>{I18n.t('TabHomeActivity.whatsame')}</Text>
                         <Text style={{ fontSize: 18, fontFamily: 'FontAwesome', color: '#4d4d4d',textAlign:'center' ,lineHeight: 23,marginBottom:12}}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
@@ -351,11 +493,11 @@ export default class TabHomeActivity extends Component<Props> {
                             <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34, }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
                         </TouchableOpacity>
                     </View>
-                </View>
+                </View> */}
 
-                <View style={{ backgroundColor: '#ffffff', }}>
-                    <View style={{ width: '90%', height: 489, marginTop: 56, alignSelf: 'center' }}>
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChart")}>
+                {/* <View style={{ backgroundColor: '#ffffff', }}>
+                    <View style={{ width: '90%', height: 489, marginTop: 56, alignSelf: 'center' }}> */}
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChart")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc4.png')} resizeMode='contain' />
@@ -379,8 +521,8 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
+                        </TouchableOpacity> */}
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc3.png')} resizeMode='contain' />
@@ -402,8 +544,8 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Testprocess")}>
+                        </TouchableOpacity> */}
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("Testprocess")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc10.png')} resizeMode='contain' />
@@ -415,7 +557,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                         {/* <TouchableOpacity onPress={() => this.navigate.push("Check")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
@@ -429,7 +571,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity> */}
-                        <TouchableOpacity onPress={() => this.navigate.push("QA")}>
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("QA")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc1.png')} resizeMode='contain' />
@@ -441,8 +583,8 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("DataSecurity")}>
+                        </TouchableOpacity> */}
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("DataSecurity")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc9.png')} resizeMode='contain' />
@@ -454,8 +596,8 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
+                        </TouchableOpacity> */}
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc2.png')} resizeMode='contain' />
@@ -467,12 +609,12 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
-                    </View>
+                        </TouchableOpacity> */}
+                    {/* </View>
                     <Text style={{ textAlign: 'center', fontFamily: 'FontAwesome',  fontSize: 16, textDecorationLine: 'underline',lineHeight:45 }}>{I18n.t('TabHomeActivity.disclaimer')}</Text>
                     <Text style={{width:'90%', fontFamily: 'FontAwesome',alignSelf:'center', textAlign: 'center', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
                     <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12,marginTop:34 }}>{I18n.t('TabHomeActivity.allright')}</Text>
-                </View>
+                </View> */}
                 <DropdownAlert ref={ref => this.dropDownAlertRef = ref}  onTap={()=>{
                      this.state.user == null ?
                      this.navigate.push("Login")

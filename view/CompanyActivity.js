@@ -25,22 +25,30 @@ export default class CompanyActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <ImageBackground style={{ width: '100%', height: 245 }} source={require('../image/enpic/company.jpg')} resizeMode='cover'  >
-                    <Text style={{width:'90%',alignSelf: 'center', fontFamily: 'FontAwesome', marginTop: 34, fontSize: 34,lineHeight:45, color: '#ffffff' }}>{I18n.t('CompanyActivity.team')}</Text>
-                </ImageBackground>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Text style={{  width: '70%', fontSize: 14, paddingTop: 12,lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.nextgeneration')}</Text>
-                    <Image style={{ height: 99, width: '30%' }} resizeMode='contain' source={require("../image/enpic/company1.jpg")}></Image>
-                </View>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Text style={{  width: '70%', fontSize: 14, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.ecosystem')}</Text>
-                    <Image style={{ height: 99, width: '30%' }} resizeMode='contain' source={require("../image/enpic/company2.jpg")}></Image>
-                </View>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Text style={{width: '70%', fontSize: 14, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.ittechnology')}</Text>
-                    <Image style={{ height: 99, width: '30%' }} resizeMode='contain' source={require("../image/enpic/company3.jpg")}></Image>
-                </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center',marginTop:34 }}>{I18n.t('TabHomeActivity.allright')}</Text>
+         
+                        <ImageBackground style={{ width: '100%', height: 265}} imageStyle={{width:'100%',height:265,borderBottomRightRadius:15,borderBottomLeftRadius:15 }} source={require('../image/enpic/company.jpg')} resizeMode='cover'  >
+                            <Text style={{width:'90%',alignSelf: 'center', fontFamily: 'FontAwesome', marginTop: 34, fontSize: 34,lineHeight:45, color: '#ffffff' }}>{I18n.t('CompanyActivity.team')}</Text>
+                        </ImageBackground>
+                        <View style={{ width: '100%', height: 500 }}>
+                            <View>
+                                <Text style={{  width: '100%', fontSize: 20, lineHeight: 40, fontFamily: 'FontAwesome',marginLeft:15,color:'black',height:40 }}>Company introduction</Text>
+                            </View>
+                            <View style={{ width: '90%', alignSelf: 'center', marginTop: 20,marginBottom:20, flexDirection: 'row', borderBottomColor: '#f0f0f0'}}>
+                                <Image style={{ height: 29, width: '10%' }} resizeMode='contain' source={require("../image/enpic/comp1.png")}></Image>
+                                <Text style={{  width: '90%', fontSize: 14, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.nextgeneration')}</Text>
+                            </View>
+                            <View style={{ width: '90%', alignSelf: 'center', marginTop: 20,marginBottom:20, flexDirection: 'row', borderBottomColor: '#f0f0f0' }}>
+                                <Image style={{ height: 29, width: '10%' }} resizeMode='contain' source={require("../image/enpic/comp1.png")}></Image>
+                                <Text style={{  width: '90%', fontSize: 14, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.ecosystem')}</Text>
+                            </View>
+                            <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom:20,flexDirection: 'row', borderBottomColor: '#f0f0f0' }}>
+                                <Image style={{ height: 29, width: '10%' }} resizeMode='contain' source={require("../image/enpic/comp1.png")}></Image>
+                                <Text style={{width: '90%', fontSize: 14,  lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.ittechnology')}</Text>
+                            </View>
+                        
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center',marginTop:34 }}>{I18n.t('TabHomeActivity.allright')}</Text>
+                        </View>
+                   
             </ScrollView>
         );
     }
