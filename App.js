@@ -15,26 +15,6 @@ const styles = StyleSheet.create({
   }
 });
 
-const slides = [
-  {
-    image: require('./image/enpic/nav1.jpg'),
-    imageStyle: styles.image,
-    backgroundColor: 'transparent',
-  },
-  {
-    image: require('./image/enpic/nav2.jpg'),
-    imageStyle: styles.image,
-  },
-  {
-    image: require('./image/enpic/nav3.jpg'),
-    imageStyle: styles.image,
-  },
-  {
-    image: require('./image/enpic/nav4.jpg'),
-    imageStyle: styles.image,
-  }
-];
-
 export default class App extends Component<Props> {
   constructor(props) {
     super(props)
@@ -108,18 +88,10 @@ export default class App extends Component<Props> {
         </View>
       </View>
       :
-      this.state.showapp
-        ?
         <MenuProvider>
           <RootStack />
         </MenuProvider>
-        :
-        <AppIntro
-          slides={slides}
-          onDone={() => { this.setState({ showapp: true }) }}
-          onSkip={() => { this.setState({ showapp: true }) }}
-          showSkipButton={true}
-        />
+        
   }
 }
 

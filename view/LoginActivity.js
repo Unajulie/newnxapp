@@ -12,7 +12,6 @@ import data from '../appdata'
 
 
 
-type Props = {};
 export default class LoginActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({

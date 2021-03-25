@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-
-import { Text, View, StatusBar, TouchableOpacity, } from 'react-native';
+import { Text, View, StatusBar, TouchableOpacity, Image } from 'react-native';
 import { Button } from "native-base";
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session'
+import Swiper from 'react-native-swiper'
+import { px2dp } from '../src/px2dp'
 import { ImageBackground } from 'react-native';
 
-
-
-export default class LaunchActivity extends Component<Props> {
+export default class LaunchActivity extends Component {
 
 
     constructor(props) {
@@ -32,28 +31,47 @@ export default class LaunchActivity extends Component<Props> {
         return (
 
             <View style={{ flex: 1, flexDirection: "column" }}>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                />
-                <View>
+                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
+                <View style={{ width: "100%", height: 440, zIndex: 0 }}>
+                    <View style={{ width: "100%", height: 440 }}>
+                        <Swiper
+                            height={px2dp(400)}//组件高度
+                            horizontal={true}//水平轮播
+                            showsPagination={true}//底部圆点
+                            showsButtons={false}
+                            dot={<View style={{ width: px2dp(13), margin: px2dp(3), height: px2dp(3), borderRadius: px2dp(30), backgroundColor: '#cdcdcd', marginBottom: px2dp(20) }}></View>}
+                            activeDot={<View style={{ width: px2dp(20), margin: px2dp(3), height: px2dp(3), borderRadius: px2dp(30), backgroundColor: '#ffffff', marginBottom: px2dp(20) }}></View>}
+                            loop={true}
+                            autoplay={false}>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <ImageBackground style={{ width: '100%', height: '100%', position: 'relative' }} source={require('../image/enpic/swiper1.jpg')} resizeMode='cover'>
+                                    <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
+                                        <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
+                                    </View>
+                                    <Text style={{ flex: 0.7, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontSize: px2dp(40), fontWeight: '600' }}>Stop Counting your Age!</Text>
+                                    <View style={{ flex: 1.3, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
+                                        <Text style={{ color: '#ffffff', fontSize: px2dp(15),fontWeight:'300', margin: px2dp(20), lineHeight: px2dp(19) }}>By birthdays or candles on the cake, wrinkles, crow's feet or the frown lines on your face — those are only numbers.</Text>
+                                    </View>
+                                </ImageBackground>
 
-                    <ImageBackground style={{
-                        height: 400,
-                        width: "100%",
-                        alignItems: 'center',
-                        resizeMode: "contain",
-                        justifyContent: "center"
-                        
-                    }} source={require("../image/launch.jpg")} />
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#9DD6EB' }}>
+                                <Text style={{}}>Hello Swiper</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#9DD6EB' }}>
+                                <Text style={{}}>Hello Swiper</Text>
+                            </View>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#9DD6EB' }}>
+                                <Text style={{}}>Hello Swiper</Text>
+                            </View>
+                        </Swiper>
+                    </View>
                 </View>
-                <View style={{ width: '90%', alignSelf: 'center', borderTopLeftRadius: 30, borderTopRightRadius: 30 }}>
-                    <View style={{ width: "100%", height: 40, flexDirection: "row", justifyContent: "space-between", marginBottom: 30 }} >
-                        <View style={{ width: "45%", height: 40, }}>
+                <View style={{ width: '100%', alignSelf: 'center', marginTop: px2dp(-30), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: '#ffffff', zIndex: 999 }}>
+                    <View style={{ width: "100%", height: px2dp(40), marginTop: px2dp(30), justifyContent: "space-between", marginBottom: 30 }} >
+                        <View style={{ width: "90%", height: px2dp(40),alignSelf:"center", marginBottom:px2dp(20),}}>
                             <TouchableOpacity >
-                                <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#e64d85" }}
+                                <Button style={{ width: "100%", height: px2dp(40), borderRadius: px2dp(30), backgroundColor: "#007ad7" }}
                                     ref={ref => this.reportPage = ref}
                                     onPress={() => this.state.user == null ?
                                         this.navigate.push("Register")
@@ -67,33 +85,29 @@ export default class LaunchActivity extends Component<Props> {
                                 </Button>
                             </TouchableOpacity>
                         </View>
-                        <View style={{ width: "45%", height: 40, }}>
+                        <View style={{ width: "90%", height: px2dp(40),alignSelf:"center",  marginBottom:px2dp(20),  }}>
                             <TouchableOpacity >
-                                <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#4381f1" }}
+                                <Button style={{ width: "100%", height: px2dp(40),backgroundColor: "#f0ffff",borderWidth:px2dp(1),borderColor:'#007ad7', borderRadius: px2dp(30), }}
                                     onPress={() => this.navigate.push("Mall")}>
-                                    <Text style={{ width: "100%", height: 40, color: "#ffffff", lineHeight: 40, textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.buykit")}</Text>
+                                    <Text style={{ width: "100%", height: 40, color: "#007ad7", lineHeight: 40, textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.buykit")}</Text>
                                 </Button>
                             </TouchableOpacity>
                         </View>
-                    </View>
 
-                    {this.state.dispaly == true ?
-                        <View style={{ width: "100%", height: 40 }}>
-                            <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#116dbc" }}
-                                onPress={() => this.navigate.push('Login')}>
-                                <Text style={{ width: "100%", height: 40, color: "#ffffff", lineHeight: 40, textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.signin")}</Text>
-                            </Button>
-                        </View>
-                        : null}
-                    <View style={{ width: "100%", height: 60, marginTop: 20 }}>
-                        <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#e35a24" }}
-                            onPress={() => this.navigate.push('Main')}>
-                            <Text style={{ width: "100%", height: 40, lineHeight: 40, color: "#ffffff", fontStyle: "italic", fontWeight: "700", textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
-                        </Button>
+
+                        {this.state.dispaly == true ?
+                            <View style={{ width: "90%", height: px2dp(40),alignSelf:'center',marginBottom:px2dp(20) }}>
+                                <Button style={{ width: "100%", height: px2dp(40), borderRadius: px2dp(30), backgroundColor: "#ffdead",borderWidth:px2dp(1), borderColor:'#d08037' }}
+                                    onPress={() => this.navigate.push('Login')}>
+                                    <Text style={{ width: "100%", height: px2dp(40), color: "#e35a24", lineHeight: 40, textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.signin")}</Text>
+                                </Button>
+                            </View>
+                            : null}
+                            <View style={{ width: "100%", height: 40,marginTop: 20}} onPress={() => this.navigate.push('Main')}>
+                                <Text style={{ width: "100%", height: 40, lineHeight: 40, color: "#007ad7",fontWeight: "700", textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
+                            </View>
                     </View>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </View>
-
             </View>
         );
     }

@@ -53,6 +53,11 @@ import ShafaatActivity from './ShafaatActivity';
 import AgeAccelerateActivity from './AgeAccelerateActivity';
 import Manual4Activity from './Manual4Activity';
 import LaunchActivity from './LaunchActivity';
+import { View } from 'native-base';
+import { I18n } from '../locales/i18n';
+import { ImageBackground } from 'react-native';
+import { px2dp } from '../src/px2dp';
+const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 56;
 export const RootStack = createStackNavigator(
     {
         Launch: { //此处的Lauch名字任意,在跳转页面的时候会用到这个名字
@@ -61,8 +66,34 @@ export const RootStack = createStackNavigator(
                 header: null,
             },
         },
-        Main: {  
-            screen: MainActivity 
+        Register: {
+            screen: RegisterActivity,
+            navigationOptions: {
+                // header: ImageBackground,
+                headerTintColor: 'black',
+                headerTitleStyle: {
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    flex: 1,
+                    fontWeight: 'bold',
+                    fontSize: px2dp(14)
+                },
+                headerTitleContainerStyle:{
+                    left: TITLE_OFFSET,
+                    right: TITLE_OFFSET,
+                },
+                
+                headerStyle: {
+                    color: 'white',
+                    backgroundColor: 'transparent',
+                    marginLeft: px2dp(10),
+                    marginTop: px2dp(20)
+                }
+            },
+
+        },
+        Main: {
+            screen: MainActivity
         },
         Testprocess: {
             screen: TestprocessActivity
@@ -142,9 +173,7 @@ export const RootStack = createStackNavigator(
         Login: {
             screen: LoginActivity
         },
-        Register: {
-            screen: RegisterActivity
-        },
+
         LifeStyleChart: {
             screen: LifeStyleChartActivity
         },
@@ -205,37 +234,37 @@ export const RootStack = createStackNavigator(
         Scanner: {
             screen: ScannerAcitivity
         },
-        LangActivity:{
-            screen:LangActivity
+        LangActivity: {
+            screen: LangActivity
         },
-        ShafaatActivity:{
-            screen:ShafaatActivity
+        ShafaatActivity: {
+            screen: ShafaatActivity
         },
         AgeAccelerate: {
             screen: AgeAccelerateActivity
         }
-       
+
     },
     {
         initialRouteName: 'Launch',
-        defaultNavigationOptions: ({ navigation}) => {
+        defaultNavigationOptions: ({ navigation }) => {
             return (
-            
+
                 {
-                headerStyle: {
-                    backgroundColor: '#0071BC',
-                    
-                },
-                headerTintColor: '#fff',
-                headerTitleStyle: {
-                    fontWeight: 'bold',
-                    fontFamily: 'NotoSansHans-Light',
-                },
-                //每一个screen组件中都自动具有了navigation属性
-                //要强调的是navigation属性并不是所有的组件里都有，只有screen组件才自动接收该属性（被screen属性声明过的组件）
-                //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
-                //所以需要在此处添加 navigation={navigation}，那么LoginIcon中的pros就能有navigation这个对象了
-                headerRight: <LoginIcon navigation={navigation} />
+                    headerStyle: {
+                        backgroundColor: '#0071BC',
+
+                    },
+                    headerTintColor: '#fff',
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                        fontFamily: 'NotoSansHans-Light',
+                    },
+                    //每一个screen组件中都自动具有了navigation属性
+                    //要强调的是navigation属性并不是所有的组件里都有，只有screen组件才自动接收该属性（被screen属性声明过的组件）
+                    //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
+                    //所以需要在此处添加 navigation={navigation}，那么LoginIcon中的pros就能有navigation这个对象了
+                    headerRight: <LoginIcon navigation={navigation} />
                 }
             )
         }
