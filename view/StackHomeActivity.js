@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { createStackNavigator, createAppContainer } from 'react-navigation'
+import { View, Image, ImageBackground, StyleSheet } from 'react-native';
+import { I18n } from '../locales/i18n';
+import { px2dp } from '../src/px2dp';
+import { createStackNavigator, createAppContainer, Header } from 'react-navigation'
 import TabAboutActivity from './TabAboutActivity';
 import CompanyActivity from './CompanyActivity';
 import MainActivity from './MainActivity';
@@ -53,10 +56,7 @@ import ShafaatActivity from './ShafaatActivity';
 import AgeAccelerateActivity from './AgeAccelerateActivity';
 import Manual4Activity from './Manual4Activity';
 import LaunchActivity from './LaunchActivity';
-import { View } from 'native-base';
-import { I18n } from '../locales/i18n';
-import { ImageBackground } from 'react-native';
-import { px2dp } from '../src/px2dp';
+
 const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 56;
 export const RootStack = createStackNavigator(
     {
@@ -69,28 +69,99 @@ export const RootStack = createStackNavigator(
         Register: {
             screen: RegisterActivity,
             navigationOptions: {
-                // header: ImageBackground,
+
                 headerTintColor: 'black',
+                headerRight: null,
                 headerTitleStyle: {
                     alignSelf: 'center',
                     textAlign: 'center',
                     flex: 1,
                     fontWeight: 'bold',
-                    fontSize: px2dp(14)
+                    fontSize: px2dp(18),
                 },
-                headerTitleContainerStyle:{
+                headerTitleContainerStyle: {
                     left: TITLE_OFFSET,
                     right: TITLE_OFFSET,
                 },
-                
                 headerStyle: {
-                    color: 'white',
-                    backgroundColor: 'transparent',
-                    marginLeft: px2dp(10),
-                    marginTop: px2dp(20)
+                    height: px2dp(80),
+                    backgroundColor: '#FBF0EC',
+
                 }
             },
 
+        },
+        Login: {
+            screen: LoginActivity,
+            navigationOptions: {
+
+                headerTintColor: 'black',
+                headerRight: null,
+                headerTitleStyle: {
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    flex: 1,
+                    fontWeight: 'bold',
+                    fontSize: px2dp(18),
+                },
+                headerTitleContainerStyle: {
+                    left: TITLE_OFFSET,
+                    right: TITLE_OFFSET,
+                },
+                headerStyle: {
+                    height: px2dp(80),
+                    backgroundColor: '#FBF0EC',
+
+                }
+            },
+        },
+        Forget: {
+            screen: ForgetActivity,
+            navigationOptions: {
+
+                headerTintColor: 'black',
+                headerRight: null,
+                headerTitleStyle: {
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    flex: 1,
+                    fontWeight: 'bold',
+                    fontSize: px2dp(18),
+                },
+                headerTitleContainerStyle: {
+                    left: TITLE_OFFSET,
+                    right: TITLE_OFFSET,
+                },
+                headerStyle: {
+                    height: px2dp(80),
+                    backgroundColor: '#FBF0EC',
+
+                }
+            },
+        },
+        Consent: {
+            screen: ConsentActivity,
+            navigationOptions: {
+
+                headerTintColor: 'black',
+                headerRight: null,
+                headerTitleStyle: {
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    flex: 1,
+                    fontWeight: 'bold',
+                    fontSize: px2dp(18),
+                },
+                headerTitleContainerStyle: {
+                    left: TITLE_OFFSET,
+                    right: TITLE_OFFSET,
+                },
+                headerStyle: {
+                    height: px2dp(80),
+                    backgroundColor: '#FBF0EC',
+
+                }
+            },
         },
         Main: {
             screen: MainActivity
@@ -149,9 +220,7 @@ export const RootStack = createStackNavigator(
         Questionnaire: {
             screen: QuestionnaireActivity
         },
-        Consent: {
-            screen: ConsentActivity
-        },
+       
         Biological: {
             screen: BiologicalActivity
         },
@@ -170,16 +239,11 @@ export const RootStack = createStackNavigator(
         Confirm: {
             screen: ConfirmActivity
         },
-        Login: {
-            screen: LoginActivity
-        },
 
         LifeStyleChart: {
             screen: LifeStyleChartActivity
         },
-        Forget: {
-            screen: ForgetActivity
-        },
+       
         DnaReport: {
             screen: DnaReportActivity
         },

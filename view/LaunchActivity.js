@@ -48,21 +48,48 @@ export default class LaunchActivity extends Component {
                                     <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                         <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                     </View>
-                                    <Text style={{ flex: 0.7, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontSize: px2dp(40), fontWeight: '600' }}>Stop Counting your Age!</Text>
-                                    <View style={{ flex: 1.3, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
+                                    <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontSize: px2dp(40), fontWeight: '600' }}>Stop Counting your Age!</Text>
+                                    <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
                                         <Text style={{ color: '#ffffff', fontSize: px2dp(15),fontWeight:'300', margin: px2dp(20), lineHeight: px2dp(19) }}>By birthdays or candles on the cake, wrinkles, crow's feet or the frown lines on your face — those are only numbers.</Text>
                                     </View>
                                 </ImageBackground>
 
                             </View>
-                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#9DD6EB' }}>
-                                <Text style={{}}>Hello Swiper</Text>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <ImageBackground style={{ width: '100%', height: '100%', position: 'relative' }} source={require('../image/enpic/swiper2.jpg')} resizeMode='cover'>
+                                    <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
+                                        <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
+                                    </View>
+                                    <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontSize: px2dp(40), fontWeight: '600' }}>How Old Are You, Really?</Text>
+                                    <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
+                                        <Text style={{ color: '#ffffff', fontSize: px2dp(15),fontWeight:'300', margin: px2dp(20), lineHeight: px2dp(19) }}>The only age that counts is your biological DNA age.</Text>
+                                    </View>
+                                </ImageBackground>
+
                             </View>
-                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#9DD6EB' }}>
-                                <Text style={{}}>Hello Swiper</Text>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <ImageBackground style={{ width: '100%', height: '100%', position: 'relative' }} source={require('../image/enpic/swiper3.jpg')} resizeMode='cover'>
+                                    <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
+                                        <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
+                                    </View>
+                                    <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontSize: px2dp(40), fontWeight: '600' }}>Discover Your Biological Age</Text>
+                                    <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
+                                        <Text style={{ color: '#ffffff', fontSize: px2dp(15),fontWeight:'300', margin: px2dp(20), lineHeight: px2dp(19) }}>Biological age can be measured with Only 2ml saliva sample</Text>
+                                    </View>
+                                </ImageBackground>
+
                             </View>
-                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#9DD6EB' }}>
-                                <Text style={{}}>Hello Swiper</Text>
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <ImageBackground style={{ width: '100%', height: '100%', position: 'relative' }} source={require('../image/enpic/swiper4.jpg')} resizeMode='cover'>
+                                    <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
+                                        <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
+                                    </View>
+                                    <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontSize: px2dp(40), fontWeight: '600' }}>Reverse Your Age</Text>
+                                    <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
+                                        <Text style={{ color: '#ffffff', fontSize: px2dp(15),fontWeight:'300', margin: px2dp(20), lineHeight: px2dp(19) }}>Importantly "epigenetics" in different from  "genetics" is potentially reversible by dietary interventions and life style changes.</Text>
+                                    </View>
+                                </ImageBackground>
+
                             </View>
                         </Swiper>
                     </View>
@@ -104,7 +131,7 @@ export default class LaunchActivity extends Component {
                             </View>
                             : null}
                             <View style={{ width: "100%", height: 40,marginTop: 20}} onPress={() => this.navigate.push('Main')}>
-                                <Text style={{ width: "100%", height: 40, lineHeight: 40, color: "#007ad7",fontWeight: "700", textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
+                                <Text style={{ width: "100%", height: 40, lineHeight: 40, color: "#007ad7",fontWeight: "700",textDecorationLine:'underline', textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
                             </View>
                     </View>
                 </View>
