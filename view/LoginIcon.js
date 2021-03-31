@@ -49,7 +49,7 @@ export default class LoginIcon extends Component<Props> {
                                 {this.state.user != null ?
                                     <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
                                         <Image style={{ height: 30, width: 30 }} resizeMode="contain" source={require("../image/ic_login.png")} />
-                                        <Text style={{ color: 'white' }}>{this.state.user.nickname}</Text>
+                                        <Text style={{ color: '#000000' }}>{this.state.user.nickname}</Text>
                                     </View>
                                     :
                                     <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>

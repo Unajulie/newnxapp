@@ -166,6 +166,29 @@ export const RootStack = createStackNavigator(
         Main: {
             screen: MainActivity
         },
+        DnaReport: {
+            screen: DnaReportActivity,
+            navigationOptions: {
+
+                headerTintColor: 'black',
+                headerTitleStyle: {
+                    alignSelf: 'center',
+                    textAlign: 'center',
+                    flex: 1,
+                    fontWeight: 'bold',
+                    fontSize: px2dp(18),
+                },
+                headerTitleContainerStyle: {
+                    left: TITLE_OFFSET,
+                    right: TITLE_OFFSET,
+                },
+                headerStyle: {
+                    height: px2dp(80),
+                    backgroundColor: '#FBF0EC',
+
+                }
+            },
+        },
         Testprocess: {
             screen: TestprocessActivity
         },
@@ -244,9 +267,7 @@ export const RootStack = createStackNavigator(
             screen: LifeStyleChartActivity
         },
        
-        DnaReport: {
-            screen: DnaReportActivity
-        },
+       
         Payment: {
             screen: PaymentActivity
         },
@@ -310,7 +331,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'Launch',
+        initialRouteName: 'DnaReport',
         defaultNavigationOptions: ({ navigation }) => {
             return (
 
