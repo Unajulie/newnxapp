@@ -372,7 +372,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'DnaReport',
+        initialRouteName: 'About',
         defaultNavigationOptions: ({ navigation }) => {
             return (
 
