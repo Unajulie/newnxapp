@@ -66,23 +66,7 @@ export default class ProfMosheExperiencesActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                {/* 相关影片 */}
-   
-                {/* 三个页面切换TabView */}
-                {/* <TabView
-                    navigationState={this.state}
-                    renderScene={SceneMap({
-                        first: FirstRoute,
-                        second: SecondRoute,
-                        Third: ThirddRoute,
-                    })}
-                    onIndexChange={index => this.setState({ index })}
-
-                    initialLayout={{ width: Dimensions.get('window').width }}
-                    style={{ height: 667, }}
-                /> */}
-
-                {/* 荣誉 */}
+               
         
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>

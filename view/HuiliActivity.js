@@ -1,125 +1,126 @@
 import React, { Component } from 'react';
-import {StyleSheet,StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
+import { StyleSheet, StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
 import { WebView } from 'react-native-webview'
-import {TabBar, TabView, SceneMap } from 'react-native-tab-view'
+import { TabBar, TabView, SceneMap } from 'react-native-tab-view'
 import { I18n } from '../locales/i18n'
 
-const FirstRoute = () => (
-    <View style={{ width: '90%', alignSelf: 'center' }}>
-        <View style={{ flexDirection: 'row' }}>
-            <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
-        </View>
-        <View style={{ width: '100%', flexDirection: 'row' }} >
-            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2015
-                        </Text>
-            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.medicine')}</Text>
-        </View>
-        <View style={{ flexDirection: 'row', }}>
-            <Text style={{ width: '28%', height: 79, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-            </Text>
-            <View style={{ width: '70%', height: 79, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.award')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> {I18n.t('HuiliActivity.grand')}</Text>
-            </View>
-        </View>
-        <View style={{ width: '100%', flexDirection: 'row' }} >
-            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013
-                        </Text>
-            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.the')}</Text>
-        </View>
-        <View style={{ flexDirection: 'row', }}>
-            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-            </Text>
-            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> {I18n.t('HuiliActivity.studentship')}</Text>
-            </View>
-        </View>
-        <View style={{ width: '100%', flexDirection: 'row' }} >
-            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2012
-                        </Text>
-            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
-        </View>
-        <View style={{ flexDirection: 'row', }}>
-            <Text style={{ width: '28%', height: 145, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
+// const FirstRoute = () => (
+//     <View style={{ width: '90%', alignSelf: 'center' }}>
+//         <View style={{ flexDirection: 'row' }}>
+//             <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
+//         </View>
+//         <View style={{ width: '100%', flexDirection: 'row' }} >
+//             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2015
+//                         </Text>
+//             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+//             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.medicine')}</Text>
+//         </View>
+//         <View style={{ flexDirection: 'row', }}>
+//             <Text style={{ width: '28%', height: 79, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+//             </Text>
+//             <View style={{ width: '70%', height: 79, paddingLeft: 19 }} >
+//                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.award')}</Text>
+//                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> {I18n.t('HuiliActivity.grand')}</Text>
+//             </View>
+//         </View>
+//         <View style={{ width: '100%', flexDirection: 'row' }} >
+//             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013
+//                         </Text>
+//             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+//             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.the')}</Text>
+//         </View>
+//         <View style={{ flexDirection: 'row', }}>
+//             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+//             </Text>
+//             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+//                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')}</Text>
+//                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> {I18n.t('HuiliActivity.studentship')}</Text>
+//             </View>
+//         </View>
+//         <View style={{ width: '100%', flexDirection: 'row' }} >
+//             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2012
+//                         </Text>
+//             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+//             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
+//         </View>
+//         <View style={{ flexDirection: 'row', }}>
+//             <Text style={{ width: '28%', height: 145, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
 
-            <View style={{ width: '70%', height: 145, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.excel2')}</Text>
-                <View style={{height:12}}></View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 17, }}>{I18n.t('HuiliActivity.poster1')}</Text>
-            </View>
-        </View>
-        <View style={{ width: '100%', flexDirection: 'row' }} >
-            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2011
-                        </Text>
-            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
-        </View>
-        <View style={{ flexDirection: 'row', }}>
-            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-            </Text>
-            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')} </Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('HuiliActivity.travel2')}</Text>
-            </View>
-        </View>
-        <View style={{ width: '100%', flexDirection: 'row' }} >
-            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010
-                        </Text>
-            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
-        </View>
-        <View style={{ flexDirection: 'row', }}>
-            <Text style={{ width: '28%', height: 189, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-            </Text>
-            <View style={{ width: '70%', height: 189, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')} </Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('HuiliActivity.studentship')}</Text>
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.jp')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight:28 , }}>{I18n.t('HuiliActivity.fellowship')}</Text>
-            </View>
-        </View>
-    </View>
-);
+//             <View style={{ width: '70%', height: 145, paddingLeft: 19 }} >
+//                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.excel2')}</Text>
+//                 <View style={{height:12}}></View>
+//                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 17, }}>{I18n.t('HuiliActivity.poster1')}</Text>
+//             </View>
+//         </View>
+//         <View style={{ width: '100%', flexDirection: 'row' }} >
+//             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2011
+//                         </Text>
+//             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+//             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
+//         </View>
+//         <View style={{ flexDirection: 'row', }}>
+//             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+//             </Text>
+//             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+//                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')} </Text>
+//                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('HuiliActivity.travel2')}</Text>
+//             </View>
+//         </View>
+//         <View style={{ width: '100%', flexDirection: 'row' }} >
+//             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010
+//                         </Text>
+//             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+//             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
+//         </View>
+//         <View style={{ flexDirection: 'row', }}>
+//             <Text style={{ width: '28%', height: 189, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+//             </Text>
+//             <View style={{ width: '70%', height: 189, paddingLeft: 19 }} >
+//                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')} </Text>
+//                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('HuiliActivity.studentship')}</Text>
+//                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.jp')}</Text>
+//                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight:28 , }}>{I18n.t('HuiliActivity.fellowship')}</Text>
+//             </View>
+//         </View>
+//     </View>
+// );
 
-const SecondRoute = () => (
-    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-        <View style={{ height: 20 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', marginBottom:23, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
-            {I18n.t('HuiliActivity.bing')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', marginBottom:23,lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
-            {I18n.t('HuiliActivity.larose')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', marginBottom:23, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
-            {I18n.t('HuiliActivity.louise')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.diabetes')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome',marginBottom:23, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
-            {I18n.t('HuiliActivity.laroseakt')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.canada')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome',marginBottom:23, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
-            {I18n.t('HuiliActivity.nck')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('HuiliActivity.biology')}</Text>
-        </Text>
-    </View>
-);
-const styles = StyleSheet.create({
-    scene: {
-        flex: 1,
-    },
-});
+// const SecondRoute = () => (
+//     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+//         <View style={{ height: 20 }}></View>
+//         <Text style={{ fontFamily: 'FontAwesome', marginBottom:23, lineHeight: 21 }}>
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+//             {I18n.t('HuiliActivity.bing')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome', marginBottom:23,lineHeight: 21 }}>
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+//             {I18n.t('HuiliActivity.larose')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome', marginBottom:23, lineHeight: 21 }}>
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+//             {I18n.t('HuiliActivity.louise')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.diabetes')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome',marginBottom:23, lineHeight: 21 }}>
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+//             {I18n.t('HuiliActivity.laroseakt')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.canada')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome',marginBottom:23, lineHeight: 21 }}>
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+//             {I18n.t('HuiliActivity.nck')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('HuiliActivity.biology')}</Text>
+//         </Text>
+//     </View>
+// );
+// const styles = StyleSheet.create({
+//     scene: {
+//         flex: 1,
+//     },
+// });
+type Props = {};
 export default class HuiliActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -128,23 +129,26 @@ export default class HuiliActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        this.state = {
-            display: false,
-            index: 0,
-            routes: [
-                { key: 'first', title: I18n.t('HuiliActivity.honors') },
-                { key: 'second', title: I18n.t('HuiliActivity.comferences') },
-            ],
-        }
     }
-    _handleIndexChange = index => this.setState({ index });
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         display: false,
+    //         index: 0,
+    //         routes: [
+    //             { key: 'first', title: I18n.t('HuiliActivity.honors') },
+    //             { key: 'second', title: I18n.t('HuiliActivity.comferences') },
+    //         ],
+    //     }
+    // }
+    // _handleIndexChange = index => this.setState({ index });
 
-    _renderHeader = props => <TabBar {...props} />;
+    // _renderHeader = props => <TabBar {...props} />;
 
-    _renderScene = SceneMap({
-        first: FirstRoute,
-        second: SecondRoute,
-    });
+    // _renderScene = SceneMap({
+    //     first: FirstRoute,
+    //     second: SecondRoute,
+    // });
     render() {
         this.navigate = this.props.navigation;
         return (
@@ -156,7 +160,7 @@ export default class HuiliActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                {this.state.display == true ?
+                {/* {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} startInLoadingState={true} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
@@ -165,13 +169,17 @@ export default class HuiliActivity extends Component<Props> {
                             </TouchableOpacity>
                         </View>
                     </Modal> : null
-                }
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20, marginBottom: 20 }}>
+                } */}
+                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', paddingTop: 20, marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/huili.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('HuiliActivity.title')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('HuiliActivity.lab')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('HuiliActivity.ltb')}</Text>
                 </View>
+
+
+
+                {/* 
                 <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('HuiliActivity.exper')}</Text>
                 </View>
@@ -232,10 +240,10 @@ export default class HuiliActivity extends Component<Props> {
                         <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.montreal')}</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('HuiliActivity.vice')}</Text>
                     </View>
-                </View>
+                </View> */}
 
-                <View style={{ height: 34 }}></View>
-                <TabView
+              
+                {/* <TabView
                     navigationState={this.state}
                     renderScene={SceneMap({
                         first: FirstRoute,
@@ -245,9 +253,9 @@ export default class HuiliActivity extends Component<Props> {
 
                     initialLayout={{ width: Dimensions.get('window').width }}
                     style={{ height: 734, }}
-                />
+                /> */}
 
-                <View style={{ backgroundColor: '#f0f0f0' }}>
+                {/* <View style={{ backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('HuiliActivity.papers')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#1f96f4', paddingTop: 20, paddingBottom: 20 }}>
@@ -279,6 +287,73 @@ export default class HuiliActivity extends Component<Props> {
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://link.springer.com/article/10.1007%2Fs00284-008-9241-6" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Effects of cations and PH on antimicrobial activity of Thanatin and s-Thanatin
 							against Escherichia coli ATCC25922 and B. subtilis ATCC 21332. Current Microbiology. 2008;</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View> */}
+
+                <View style={{ backgroundColor: '#ffffff', marginTop: 40 }}>
+                    <View style={{ width: '90%', height: 740, alignSelf: 'center' }}>
+                        {/* experiences 经历*/}
+                        <TouchableOpacity onPress={() => this.navigate.push("HuiliExperiences")}>
+                            <View style={{ borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0A0A0A', fontWeight: '700' }}>Professional Experiences
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+
+                        {/* Conferences */}
+                        <TouchableOpacity onPress={() => this.navigate.push("DavidConferences")}>
+                            <View style={{ borderColor: '#D6D7D8', borderRadius: 15, borderWidth: 1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro3.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0A0A0A', fontWeight: '700' }}>Conferences
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        {/* Honors 荣誉*/}
+                        <TouchableOpacity onPress={() => this.navigate.push("DavidHonor")}>
+                            <View style={{ borderColor: '#D6D7D8', borderRadius: 15, borderWidth: 1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro4.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0A0A0A', fontWeight: '700' }}>Honors
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+
+                        {/* published 发表*/}
+                        <TouchableOpacity onPress={() => this.navigate.push("DavidPublished")}>
+                            <View style={{ borderColor: '#D6D7D8', borderRadius: 15, borderWidth: 1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0A0A0A', fontWeight: '700' }}>Published Papers
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
+                                </View>
+                            </View>
                         </TouchableOpacity>
                     </View>
                 </View>

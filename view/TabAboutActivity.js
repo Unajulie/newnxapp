@@ -26,7 +26,7 @@ export default class TabAboutActivity extends Component<Props> {
                 </StatusBar>
                 {/* 公司简介  改版*/}
                 <View style={{ backgroundColor: '#ffffff',marginTop: 40 }}>
-                    <View style={{ width: '90%', height: 600, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 640, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => this.navigate.push("Company")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 100, flexDirection: 'row', marginBottom: 40 }}>
                                     <View style={{ width: '20%', justifyContent: 'center' }}>

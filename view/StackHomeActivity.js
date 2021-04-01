@@ -27,9 +27,19 @@ import ProfMosheHonorsActivity from './ProfMosheHonorsActivity';
 import ProfMosheSponsoredActivity from './ProfMosheSponsoredActivity';
 import ProfMoshePublishedActivity from './ProfMoshePublishedActivity';
 import DavidActivity from './DavidActivity';
+import DavidExperiencesActivity from './DavidExperiencesActivity';
+import DavidPublishedActivity from './DavidPublishedActivity';
+import DavidHonorActivity from './DavidHonorActivity';
+import DavidConferencesActivity from './DavidConferencesActivity';
 import HuiliActivity from './HuiliActivity';
 import ChifatActivity from './ChifatActivity';
+import ChifatExperiencesActivity from './ChifatExperiencesActivity';
+import ChifatPublishedActivity from './ChifatPublishedActivity';
 import ZhiyuanActivity from './ZhiyuanActivity';
+import ZhiyuanExperiencesActivity from './ZhiyuanExperiencesActivity';
+import ZhiyuanPublishedActivity from './ZhiyuanPublishedActivity';
+import ZhiyuanHonorsActivity from './ZhiyuanHonorsActivity';
+import ZhiyuanConferencesActivity from './ZhiyuanConferencesActivity';
 import MethylationActivity from './MethylationActivity';
 import QuestionnaireActivity from './QuestionnaireActivity';
 import ConsentActivity from './ConsentActivity';
@@ -225,8 +235,21 @@ export const RootStack = createStackNavigator(
         ProfMoshePublished: {
             screen: ProfMoshePublishedActivity
         },
+        
         David: {
             screen: DavidActivity
+        },
+        DavidExperiences: {
+            screen: DavidExperiencesActivity
+        },
+        DavidPublished: {
+            screen: DavidPublishedActivity
+        },
+        DavidHonor: {
+            screen: DavidHonorActivity
+        },
+        DavidConferences: {
+            screen: DavidConferencesActivity
         },
         Huili: {
             screen: HuiliActivity
@@ -234,8 +257,26 @@ export const RootStack = createStackNavigator(
         Chifat: {
             screen: ChifatActivity
         },
+        ChifatExperiences: {
+            screen: ChifatExperiencesActivity
+        },
+        ChifatPublished: {
+            screen: ChifatPublishedActivity
+        },
         Zhiyuan: {
             screen: ZhiyuanActivity
+        },
+        ZhiyuanExperiences: {
+            screen: ZhiyuanExperiencesActivity
+        },
+        ZhiyuanPublished: {
+            screen: ZhiyuanPublishedActivity
+        },
+        ZhiyuanHonors: {
+            screen: ZhiyuanHonorsActivity
+        },
+        ZhiyuanConferences: {
+            screen: ZhiyuanConferencesActivity
         },
         Methylation: {
             screen: MethylationActivity

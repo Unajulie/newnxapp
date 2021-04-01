@@ -5,62 +5,63 @@ import { WebView } from 'react-native-webview';
 import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
 import { I18n } from '../locales/i18n';
 
-const FirstRoute = () => (
-    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-        <View style={{ height: 20 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.trainee')}</Text>
-            {I18n.t('ZhiyuanActivity.american')}
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.scholarship')}</Text>
-            {I18n.t('ZhiyuanActivity.council')}
-        </Text>
-        <View style={{ paddingTop: 20, paddingBottom: 20 }}>
-            <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.journals')}</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, ontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.biochemistry')}</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.annuals')} </Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.cellular')}</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.journal')} </Text>
+// const FirstRoute = () => (
+//     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+//         <View style={{ height: 20 }}></View>
+//         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.trainee')}</Text>
+//             {I18n.t('ZhiyuanActivity.american')}
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.scholarship')}</Text>
+//             {I18n.t('ZhiyuanActivity.council')}
+//         </Text>
+//         <View style={{ paddingTop: 20, paddingBottom: 20 }}>
+//             <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.journals')}</Text>
+//             <Text style={{ fontFamily: 'FontAwesome', height: 23, ontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.biochemistry')}</Text>
+//             <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.annuals')} </Text>
+//             <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.cellular')}</Text>
+//             <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.journal')} </Text>
 
-        </View>
-        <View style={{ paddingTop: 20, paddingBottom: 20 }}>
-            <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.board')}</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.journal')}</Text>
-        </View>
-    </View>
-);
+//         </View>
+//         <View style={{ paddingTop: 20, paddingBottom: 20 }}>
+//             <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.board')}</Text>
+//             <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.journal')}</Text>
+//         </View>
+//     </View>
+// );
 
-const SecondRoute = () => (
-    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-        <View style={{ height: 20 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-        {I18n.t('ZhiyuanActivity.society')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.newusa')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>
-        {I18n.t('ZhiyuanActivity.third')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-        {I18n.t('ZhiyuanActivity.seminar')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-        {I18n.t('ZhiyuanActivity.georgina')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-        {I18n.t('ZhiyuanActivity.symposium')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.china')}</Text>
-        </Text>
-    </View>
-);
-const styles = StyleSheet.create({
-    scene: {
-        flex: 1,
-    },
-});
+// const SecondRoute = () => (
+//     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+//         <View style={{ height: 20 }}></View>
+//         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
+//         {I18n.t('ZhiyuanActivity.society')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.newusa')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>
+//         {I18n.t('ZhiyuanActivity.third')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
+//         {I18n.t('ZhiyuanActivity.seminar')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
+//         {I18n.t('ZhiyuanActivity.georgina')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
+//         </Text>
+//         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
+//         {I18n.t('ZhiyuanActivity.symposium')}
+//             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.china')}</Text>
+//         </Text>
+//     </View>
+// );
+// const styles = StyleSheet.create({
+//     scene: {
+//         flex: 1,
+//     },
+// });
+type Props = {};
 export default class ZhiyuanActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -69,28 +70,31 @@ export default class ZhiyuanActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        this.state = {
-            display: false,
-            index: 0,
-            routes: [
-                { key: 'first', title: I18n.t('ZhiyuanActivity.honors') },
-                { key: 'second', title: I18n.t('ZhiyuanActivity.conferences') },
-            ],
-        }
     }
-    _handleIndexChange = index => this.setState({ index });
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         display: false,
+    //         index: 0,
+    //         routes: [
+    //             { key: 'first', title: I18n.t('ZhiyuanActivity.honors') },
+    //             { key: 'second', title: I18n.t('ZhiyuanActivity.conferences') },
+    //         ],
+    //     }
+    // }
+    // _handleIndexChange = index => this.setState({ index });
 
-    _renderHeader = props => <TabBar {...props} />;
+    // _renderHeader = props => <TabBar {...props} />;
 
-    _renderScene = SceneMap({
-        first: FirstRoute,
-        second: SecondRoute,
-    });
+    // _renderScene = SceneMap({
+    //     first: FirstRoute,
+    //     second: SecondRoute,
+    // });
     render() {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                {this.state.display == true ?
+                {/* {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
@@ -99,14 +103,15 @@ export default class ZhiyuanActivity extends Component<Props> {
                             </TouchableOpacity>
                         </View>
                     </Modal> : null
-                }
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20, marginBottom: 20 }}>
+                } */}
+                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20, paddingBottom: 20,borderStyle:"dashed" ,borderBottomWidth:0.5 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/jason.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Zhiyuan Lv Ph.D.</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ZhiyuanActivity.manager')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ZhiyuanActivity.beijing')}</Text>
                 </View>
-                <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
+                {/* 个人经历 */}
+                {/* <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ZhiyuanActivity.professional')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
@@ -166,10 +171,11 @@ export default class ZhiyuanActivity extends Component<Props> {
                         <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ZhiyuanActivity.nanjing')}</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ZhiyuanActivity.candidate')}</Text>
                     </View>
-                </View>
+                </View> */}
 
                 <View style={{ height: 20 }}></View>
-                <TabView
+                {/* 滑块 */}
+                {/* <TabView
                     navigationState={this.state}
                     renderScene={SceneMap({
                         first: FirstRoute,
@@ -179,9 +185,10 @@ export default class ZhiyuanActivity extends Component<Props> {
 
                     initialLayout={{ width: Dimensions.get('window').width }}
                     style={{ height: 589, }}
-                />
-
-                <View style={{ backgroundColor: '#f0f0f0' }}>
+                /> */}
+                
+                {/* 论文 */}
+                {/* <View style={{ backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('ZhiyuanActivity.papers')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#1f96f4', paddingTop: 20, paddingBottom: 20 }}>
@@ -257,7 +264,74 @@ export default class ZhiyuanActivity extends Component<Props> {
                             mitochondrial respiration and alleviates steatosis in L02 and hepG2 cells by decreasing ATP and H2O2 levels: A novel mechanism for NAFLD. Journal of Hepatology. 2008 Oct.</Text>
                         </TouchableOpacity>
                     </View>
-                </View>
+                </View> */}
+
+                <View style={{ backgroundColor: '#ffffff',marginTop: 40 }}>
+                    <View style={{ width: '90%', height: 540,  alignSelf: 'center' }}>
+                        {/* experiences 经历*/}
+                        <TouchableOpacity onPress={() => this.navigate.push("ZhiyuanExperiences")}>
+                            <View style={{ borderRadius: 15,borderWidth:1,borderColor:'#D6D7D8', height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Professional Experiences
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center',fontWeight:'700' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                      
+                        {/* Conferences */}
+                        <TouchableOpacity onPress={() => this.navigate.push("ZhiyuanConferences")}>
+                            <View style={{  borderColor:'#D6D7D8',borderRadius: 15,borderWidth:1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro3.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Conferences
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center',fontWeight:'700' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        {/* Honors 荣誉*/}
+                        <TouchableOpacity onPress={() => this.navigate.push("ZhiyuanHonors")}>
+                            <View style={{  borderColor:'#D6D7D8',borderRadius: 15,borderWidth:1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro4.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Honors
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center',fontWeight:'700'}}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                       
+                        {/* published 发表*/}
+                        <TouchableOpacity onPress={() => this.navigate.push("ZhiyuanPublished")}>
+                            <View style={{ borderColor:'#D6D7D8', borderRadius: 15,borderWidth:1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
+                                <View style={{ width: '20%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Published Papers
+                                    </Text>
+                                </View>
+                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center',fontWeight:'700' }}> &gt; </Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                    </View>    
+                </View> 
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('ZhiyuanActivity.reserved')}</Text>
             </ScrollView >
 

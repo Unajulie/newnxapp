@@ -91,7 +91,7 @@ export default class DavidActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 } */}
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20,marginTop:23 , paddingBottom: 20,borderStyle:"dotted" ,borderBottomWidth:0.5}}>
+                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20,marginTop:23 , paddingBottom: 20,borderStyle:"dashed" ,borderBottomWidth:0.5}}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/david.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t("DavidActivity.title")}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t("DavidActivity.senior")}</Text>
@@ -232,9 +232,9 @@ export default class DavidActivity extends Component<Props> {
                     </View>
                 </View> */}
                 <View style={{ backgroundColor: '#ffffff',marginTop: 40 }}>
-                    <View style={{ width: '90%', height: 740,  alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 540,  alignSelf: 'center' }}>
                         {/* experiences 经历*/}
-                        <TouchableOpacity onPress={() => this.navigate.push("ProfMosheExperiences")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("DavidExperiences")}>
                             <View style={{ borderRadius: 15,borderWidth:1,borderColor:'#D6D7D8', height: 80, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
@@ -249,14 +249,14 @@ export default class DavidActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                       
-                        {/* Career */}
-                        <TouchableOpacity onPress={() => this.navigate.push("ProfMosheCareer")}>
+                        {/* Conferences */}
+                        <TouchableOpacity onPress={() => this.navigate.push("DavidConferences")}>
                             <View style={{  borderColor:'#D6D7D8',borderRadius: 15,borderWidth:1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro3.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Career
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Conferences
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -265,7 +265,7 @@ export default class DavidActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                         {/* Honors 荣誉*/}
-                        <TouchableOpacity onPress={() => this.navigate.push("ProfMosheHonors")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("DavidHonor")}>
                             <View style={{  borderColor:'#D6D7D8',borderRadius: 15,borderWidth:1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro4.png')} resizeMode='contain' />
@@ -281,7 +281,7 @@ export default class DavidActivity extends Component<Props> {
                         </TouchableOpacity>
                        
                         {/* published 发表*/}
-                        <TouchableOpacity onPress={() => this.navigate.push("ProfMoshePublished")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("DavidPublished")}>
                             <View style={{ borderColor:'#D6D7D8', borderRadius: 15,borderWidth:1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro6.png')} resizeMode='contain' />

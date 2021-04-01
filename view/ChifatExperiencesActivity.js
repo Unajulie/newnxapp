@@ -11,10 +11,10 @@ import { I18n } from '../locales/i18n';
 //     },
 // });
 type Props = {};
-export default class ChifatActivity extends Component<Props> {
+export default class ChifatExperiencesActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title:  I18n.t("ChifatActivity.title"),
+            title: I18n.t("ChifatActivity.experiences"),
         })
     }
     constructor(props) {
@@ -28,7 +28,7 @@ export default class ChifatActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                 <StatusBar
+                <StatusBar
                     animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
                     hidden={true}  //是否隐藏状态栏。  
                     translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
@@ -45,46 +45,33 @@ export default class ChifatActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 } */}
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20, paddingBottom: 20,borderStyle:"dotted" ,borderBottomWidth:0.5 }}>
+                {/* <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', paddingTop: 20, marginBottom: 20, borderStyle: "dotted", borderBottomWidth: 0.5 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/chifat.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('ChifatActivity.title')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ChifatActivity.senior')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ChifatActivity.ltb')}</Text>
-                </View>
-                {/* 个人履历 */}
-                {/* <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ChifatActivity.experiences')}</Text>
-                </View>
-                <View style={{ flexDirection: 'row' }}>
-                    <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
-                </View>
-                <View style={{ width: '100%', flexDirection: 'row' }} >
-                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2017-now
-                        </Text>
-                    <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ChifatActivity.hongkong')}</Text>
-                </View>
-                <View style={{ flexDirection: 'row', }}>
-                    <Text style={{ width: '28%', height: 56, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                    </Text>
-                    <View style={{ width: '70%', height: 56, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ChifatActivity.src')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ChifatActivity.scientist')} </Text>
-                    </View>
-                </View>
-                <View style={{ width: '100%', flexDirection: 'row' }} >
-                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light',fontSize:12, textAlign: 'center' }}>2010,2016-2017
-                        </Text>
-                    <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ChifatActivity.university')}</Text>
-                </View>
-                <View style={{ flexDirection: 'row', }}>
-                    <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                    </Text>
-                    <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ChifatActivity.assistaant')}</Text>
-                    </View>
                 </View> */}
+                <View>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 28, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ChifatActivity.experiences')}</Text>
+                </View>
+                <View style={{ marginTop: 20, marginBottom: 20 }}>
+                    {/* 2017-now */}
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
+                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14 }}>2017-now</Text>
+                        <Text style={{ height: 30, lineHeight: 30, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ChifatActivity.hongkong')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>{I18n.t('ChifatActivity.src')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>{I18n.t('ChifatActivity.scientist')}</Text>
+                    </View>
+                    <View style={{ height: 20 }}></View>
+                     {/* 2010,2016-2017 */}
+                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
+                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14 }}>2010,2016-2017</Text>
+                        <Text style={{ height: 30, lineHeight: 30, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ChifatActivity.university')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>{I18n.t('ChifatActivity.assistaant')}</Text>
+                    </View>
+                    <View style={{ height: 20 }}></View>
+
+                </View>
 
                 {/* 论文 */}
                 {/* <View style={{ height: 20 }}></View>
@@ -129,41 +116,7 @@ export default class ChifatActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View> */}
-                  <View style={{ backgroundColor: '#ffffff',marginTop: 40 }}>
-                    <View style={{ width: '90%', height: 400,  alignSelf: 'center' }}>
-                        {/* experiences 经历*/}
-                        <TouchableOpacity onPress={() => this.navigate.push("ChifatExperiences")}>
-                            <View style={{ borderRadius: 15,borderWidth:1,borderColor:'#D6D7D8', height: 80, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Professional Experiences
-                                    </Text>
-                                </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center',fontWeight:'700' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity>
 
-                        {/* published 发表*/}
-                        <TouchableOpacity onPress={() => this.navigate.push("ChifatPublished")}>
-                            <View style={{ borderColor:'#D6D7D8', borderRadius: 15,borderWidth:1, height: 80, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color:'#0A0A0A',fontWeight:'700' }}>Published Papers
-                                    </Text>
-                                </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 20, fontFamily: 'NotoSansHans-Light', color: '#898989', textAlign: 'center',fontWeight:'700' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity>
-                    </View>    
-                </View> 
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('ChifatActivity.rights')}</Text>
             </ScrollView >
 

@@ -53,7 +53,7 @@ export default class ScienceteamActivity extends Component<Props> {
                         <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123,fontWeight:"700" }}>&gt;</Text>
                     </View>
                 </TouchableOpacity>
-                <View style={{ height: 10, marginTop: 10 }}></View>
+                {/* <View style={{ height: 10, marginTop: 10 }}></View>
                 <TouchableOpacity onPress={() => this.navigate.push("Huili")}>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row',borderRadius:15,borderWidth:1 }}>
                         <Image style={{ height: 123, width: '30%' }} resizeMode="contain" source={require("../image/icons/huili1.png")}></Image>
@@ -64,7 +64,7 @@ export default class ScienceteamActivity extends Component<Props> {
                         </View>
                         <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123,fontWeight:"700" }}>&gt;</Text>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <View style={{ height: 10, marginTop: 10}}></View>
                 <TouchableOpacity onPress={() => this.navigate.push("Chifat")}>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row',borderRadius:15,borderWidth:1 }}>
@@ -90,9 +90,8 @@ export default class ScienceteamActivity extends Component<Props> {
                         <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123,fontWeight:"700" }}>&gt;</Text>
                     </View>
                 </TouchableOpacity>
-                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ height: 45, marginTop: 10, backgroundColor: '#0071BC' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: 'white',fontWeight:'bold' }}>&nbsp;&nbsp;Scientific Advisory Board</Text>
+                <View style={{ height: 45, marginTop: 10,width:'90%',alignSelf:'center'}}>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, fontWeight:'bold' }}>&nbsp;&nbsp;Scientific Advisory Board</Text>
                 </View>
                 <View style={{ height: 10, marginTop: 10, }}></View>
                 <TouchableOpacity onPress={() => this.navigate.push("ShafaatActivity")}>

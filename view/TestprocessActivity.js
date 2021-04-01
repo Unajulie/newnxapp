@@ -11,7 +11,7 @@ export default class TestprocessActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        this.state={user: null}
+        this.state = { user: null }
     }
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
@@ -29,83 +29,65 @@ export default class TestprocessActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <ImageBackground style={{ width: '100%', height: 223 }} source={require('../image/icons/tp1.png')} resizeMode='cover'  >
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', marginLeft: 19, marginTop: 99, fontSize: 34, color: '#ffffff' }}>{I18n.t('TestprocessActivity.testprocess')}</Text>
+                <ImageBackground style={{ width: '100%', height: 223 }}
+                    source={require('../image/icons/tp1.png')} resizeMode='cover'>
+                    <Text style={{ marginLeft: 19, marginTop: 99, fontSize: 34, color: '#ffffff' }}>{I18n.t('TestprocessActivity.testprocess')}</Text>
                 </ImageBackground>
-                <View style={{ flexDirection: 'row', marginTop: 20 }}>
-                    <View style={{ width: '20%', height: 145, }}></View>
-                    <View style={{ width: '50%', height: 145, justifyContent: 'flex-end' }}>
-                        <Image style={{ height: 59, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp2.png")}></Image>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.downloadapp')}</Text>
-                    </View>
-                    <View style={{ width: '30%', height: 145 }}>
-                        <Image style={{ height: 105, width: '100%', }} resizeMode='contain' source={require("../image/icons/tpa.png")}></Image>
-                    </View>
-                </View>
-                <View style={{ height: 23, width: '77%', alignSelf: 'flex-end', borderTopLeftRadius: 10, borderBottomLeftRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-
-                <View style={{ flexDirection: 'row' }} >
-                    <View style={{ width: '70%', flexDirection: 'column', marginTop: 20 }}>
-                        <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Mall") }}>
-                            <View style={{ width: '88%', height: 123, justifyContent: 'flex-end' }}>
-                                <Image style={{ height: 59, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp3.png")}></Image>
-                                <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.purchasekit')}</Text>
-                            </View>
-                        </TouchableOpacity>
-                        <View style={{ height: 23, width: '77%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                        <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Quesnote") }}>
-                            <View style={{ width: '100%', height: 167, justifyContent: 'flex-end', paddingLeft: 56 }}>
-                                <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp4.png")}></Image>
-                                <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.fillques')}</Text>
-                                <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.fillques2')}</Text>
-                            </View>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={{ width: '30%', height: 123, marginTop: 99 }}>
-                        <Image style={{ height: 123, width: '100%', }} resizeMode='contain' source={require("../image/icons/tpb.png")}></Image>
-                    </View>
-                </View>
-                <View style={{ height: 23, width: '67%', alignSelf: 'flex-end', borderTopLeftRadius: 10, borderBottomLeftRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                <View style={{ flexDirection: 'row' }} >
-                    <View style={{ width: '70%', flexDirection: 'column', marginTop: 20 }}>
-                        <View style={{ width: '88%', height: 167, justifyContent: 'flex-end', paddingLeft: 67 }}>
-                            <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp5.png")}></Image>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.collect')}</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.collect2')}</Text>
-                        </View>
-                        <View style={{ height: 23, width: '77%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                        <View style={{ width: '77%', height: 189, justifyContent: 'flex-end', }}>
-                            <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp6.png")}></Image>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.sample')}</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.back')}</Text>
-                        </View>
-                    </View>
-                    <View style={{ width: '33%', height: 167, marginTop: 67, paddingRight: 28 }}>
-                        <Image style={{ height: 145, width: '100%', }} resizeMode='contain' source={require("../image/icons/tpc.png")}></Image>
-                    </View>
-                </View>
-                <View style={{ height: 23, width: '77%', alignSelf: 'flex-end', borderTopLeftRadius: 10, borderBottomLeftRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                <View style={{ flexDirection: 'row', marginTop: 20 }}>
-                    <View style={{ width: '30%', height: 167 }}>
-                        <Image style={{ height: 219, width: '100%', }} resizeMode='contain' source={require("../image/icons/tpd.png")}></Image>
-                    </View>
-                    <View style={{ width: '50%', height: 167, justifyContent: 'flex-end' }}>
-                        <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp7.png")}></Image>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.extraction')}  </Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.extraction2')}  </Text>
-                    </View>
-                    <View style={{ width: '20%', height: 167, }}></View>
-                </View>
-                <View style={{ height: 23, width: '66%', alignSelf: 'flex-end', borderTopLeftRadius: 10, borderBottomLeftRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                <TouchableOpacity style={{ width: "100%", }} onPress={() => { this.state.user == null ? this.navigate.push("Login"):navigate.push("DnaReport") }}>
-                    <View style={{ width: '88%', height: 167, justifyContent: 'flex-end' }}>
-                        <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp8.png")}></Image>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.report')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.report2')}</Text>
-                    </View>
+                <View style={{height:30}}></View>
+                {/* 下载程序 */}
+                <TouchableOpacity>
+                    <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps1.png')} resizeMode='cover'>
+                        <Text style={{ fontSize: 16, height: 72, lineHeight: 72, marginLeft:'30%' }}>{I18n.t('TestprocessActivity.downloadapp')}</Text>
+                    </ImageBackground>
                 </TouchableOpacity>
-                <View style={{ height: 23, width: '66%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-
+                <View style={{ height: 30 }}></View>
+                {/* 购买产品 */}
+                <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
+                    <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps2.png')} resizeMode='cover'>
+                        <Text style={{ fontSize: 16, height: 72, lineHeight: 72, marginLeft:'30%'}}>{I18n.t('TestprocessActivity.purchasekit')}</Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <View style={{ height: 30 }}></View>
+                {/* 问卷调查 */}
+                <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
+                    <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps3.png')} resizeMode='cover'>
+                        <Text style={{ fontSize: 16, height: 72, lineHeight: 30, marginLeft:'30%' }}>{I18n.t('TestprocessActivity.fillques')}{"\n"}
+                        <Text style={{fontSize: 16, textAlign: 'left',}}>{I18n.t('TestprocessActivity.fillques2')}</Text></Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <View style={{ height: 30 }}></View>
+                {/* 收集您的唾液样本 */}
+                <TouchableOpacity>
+                    <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps4.png')} resizeMode='cover'>
+                        <Text style={{ fontSize: 16, height: 72, lineHeight: 30, marginLeft:'30%' }}>{I18n.t('TestprocessActivity.collect')}{"\n"}
+                        <Text style={{fontSize: 16, textAlign: 'left',}}>{I18n.t('TestprocessActivity.collect2')}</Text></Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <View style={{ height: 30 }}></View>
+                {/* 寄回樣本 */}
+                <TouchableOpacity>
+                    <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps5.png')} resizeMode='cover'>
+                        <Text style={{ fontSize: 16, height: 72, lineHeight: 30, marginLeft:'30%' }}>{I18n.t('TestprocessActivity.sample')}{"\n"}
+                        <Text style={{fontSize: 16, textAlign: 'left',}}>{I18n.t('TestprocessActivity.back')}</Text></Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <View style={{ height: 30 }}></View>
+                {/* DNA 提取和分析 */}
+                <TouchableOpacity>
+                    <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps6.png')} resizeMode='cover'>
+                        <Text style={{ fontSize: 16, height: 72, lineHeight: 30, marginLeft:'30%' }}>{I18n.t('TestprocessActivity.extraction')}{"\n"}
+                        <Text style={{fontSize: 16, textAlign: 'left',}}>{I18n.t('TestprocessActivity.extraction2')}</Text></Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <View style={{ height: 30 }}></View>
+                {/* DNA 發出報告 */}
+                <TouchableOpacity onPress={() => { this.state.user == null ? this.navigate.push("Login") : navigate.push("DnaReport") }}>
+                    <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps7.png')} resizeMode='cover'>
+                        <Text style={{ fontSize: 16, height: 72, lineHeight: 30, marginLeft:'30%' }}>{I18n.t('TestprocessActivity.report')}{"\n"}
+                        <Text style={{fontSize: 16, textAlign: 'left',}}>{I18n.t('TestprocessActivity.report2')}</Text></Text>
+                    </ImageBackground>
+                </TouchableOpacity>
+                <View style={{ height: 30 }}></View>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('TabHomeActivity.allright')}</Text>
             </ScrollView>
         );

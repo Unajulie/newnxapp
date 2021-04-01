@@ -69,51 +69,6 @@ export default class ProfMosheSponsoredActivity extends Component<Props> {
                 </View>
 
 
-
-
-
-
-             
-             
-               
-{/*                    
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1992
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.inst')}</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('ProfMosheActivity.school')}</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$74,592/year</Text>
-                        </View>
-
-                    </View> */}
-           
-
-
-
-
-
-                {/* 三个页面切换TabView */}
-                {/* <TabView
-                    navigationState={this.state}
-                    renderScene={SceneMap({
-                        first: FirstRoute,
-                        second: SecondRoute,
-                        Third: ThirddRoute,
-                    })}
-                    onIndexChange={index => this.setState({ index })}
-
-                    initialLayout={{ width: Dimensions.get('window').width }}
-                    style={{ height: 667, }}
-                /> */}
-
-                {/* 荣誉 */}
-
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>
 

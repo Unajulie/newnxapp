@@ -19,13 +19,14 @@ export default class ShafaatActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20, marginBottom: 20 }}>
+                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20,  paddingBottom: 20,borderStyle:"dashed" ,borderBottomWidth:0.5 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/Shafaat-2.jpg")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('ScienceteamActivity.Shafaat')}</Text>
                 </View>
-                <View style={{ marginBottom: 20,width:'100%',justifyContent:"center",paddingLeft: 17, justifyContent: 'center', backgroundColor: '#f0f0f0'}}>
-                    <View style={{ backgroundColor: '#f0f0f0',width:"95%"}}>
-                        <Text style={{fontFamily: 'NotoSansHans-Light'}}>{I18n.t('ScienceteamActivity.Shafaatmsg')}</Text>
+                <View style={{height:40}}></View>
+                <View style={{ width:'100%'}}>
+                    <View style={{ width:"90%",alignSelf: 'center',height:300}}>
+                        <Text style={{fontFamily: 'NotoSansHans-Light',lineHeight:40,alignSelf:'center'}}>{I18n.t('ScienceteamActivity.Shafaatmsg')}</Text>
                     </View>
                 </View>
                
