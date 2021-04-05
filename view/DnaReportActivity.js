@@ -10,7 +10,12 @@ import data from '../appdata'
 import Input from "react-native-input-validation"
 import DropDownItem from "react-native-drop-down-item";
 import ProgressBarAnimated from 'react-native-progress-bar-animated';
-
+const customText = {
+    style: {
+        // fontFamily: 'serif',
+      fontFamily: Platform.OS === 'ios' ? 'HelveticaNeue' : 'Roboto',
+    }
+  };
 export default class DnaReportActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -20,9 +25,6 @@ export default class DnaReportActivity extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
-            progress: 20,
-            progressWithOnComplete: 0,
-            progressCustomized: 0,
             expanded: false,
             tabshow: true,
             rage: 0,
@@ -37,96 +39,82 @@ export default class DnaReportActivity extends Component<Props> {
             barcode: '',
             btnBuildPdfdisabled: true,
             display: false,
-            contents: [
-                {
-                    title: "Title 1",
-                    body: "Hi. I love this component. What do you think?"
-                },
-                {
-                    title: "See this one too",
-                    body: "Yes. You can have more items."
-                },
-                {
-                    title: "Thrid thing",
-                    body:
-                        "What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text? What about very long text?"
-                }
-            ],
-            option: {
-                legend: {
-                    data: ['Chronological Age<Epigenetic Age', 'Chronological Age>Epigenetic Age']
-                },
-                xAxis: [{
-                    name: 'Chronological Age',
-                    type: 'value',
-                    nameLocation: 'middle',
-                    nameGap: 20,
-                    scale: true,
-                    nameTextStyle: { color: "#0071BC" },
-                    axisLabel: {
-                        formatter: '{value}'
-                    }
-                }],
-                yAxis: [{
-                    name: 'Epigenetic Age',
-                    nameLocation: 'middle',
-                    nameGap: 22,
-                    nameRotate: 90,
-                    type: 'value',
-                    scale: true,
-                    nameTextStyle: { color: "#0071BC" },
-                    axisLabel: {
-                        formatter: '{value}'
-                    }
-                }],
-                series: [
-                    {
-                        name: 'Chronological Age<Epigenetic Age',
-                        type: 'scatter',
-                        //圆点的颜色为红色
-                        itemStyle: {
-                            normal: {
-                                color: 'red'
-                            }
-                        },
-                        //自然年龄<生物学年龄
-                        data: null,
-                        markPoint: {
-                            data: [
-                                {
-                                    name: 'Epigenetic Age',
-                                    value: null,
-                                    xAxis: null,
-                                    yAxis: null
-                                }
-                            ]
-                        },
-                    },
-                    {
-                        name: 'Chronological Age>Epigenetic Age',
-                        type: 'scatter',
-                        //圆点的颜色为绿色
-                        itemStyle: {
-                            normal: {
-                                color: 'green'
-                            }
-                        },
-                        //自然年龄>生物学年龄
-                        data: null,
-                        markPoint: {
-                            data: [
-                                {
-                                    name: 'Epigenetic Age',
-                                    value: null,
-                                    xAxis: null,
-                                    yAxis: null
-                                }
-                            ]
-                        },
+
+            // option: {
+            //     legend: {
+            //         data: ['Chronological Age<Epigenetic Age', 'Chronological Age>Epigenetic Age']
+            //     },
+            //     xAxis: [{
+            //         name: 'Chronological Age',
+            //         type: 'value',
+            //         nameLocation: 'middle',
+            //         nameGap: 20,
+            //         scale: true,
+            //         nameTextStyle: { color: "#0071BC" },
+            //         axisLabel: {
+            //             formatter: '{value}'
+            //         }
+            //     }],
+            //     yAxis: [{
+            //         name: 'Epigenetic Age',
+            //         nameLocation: 'middle',
+            //         nameGap: 22,
+            //         nameRotate: 90,
+            //         type: 'value',
+            //         scale: true,
+            //         nameTextStyle: { color: "#0071BC" },
+            //         axisLabel: {
+            //             formatter: '{value}'
+            //         }
+            //     }],
+            //     series: [
+            //         {
+            //             name: 'Chronological Age<Epigenetic Age',
+            //             type: 'scatter',
+            //             //圆点的颜色为红色
+            //             itemStyle: {
+            //                 normal: {
+            //                     color: 'red'
+            //                 }
+            //             },
+            //             //自然年龄<生物学年龄
+            //             data: null,
+            //             markPoint: {
+            //                 data: [
+            //                     {
+            //                         name: 'Epigenetic Age',
+            //                         value: null,
+            //                         xAxis: null,
+            //                         yAxis: null
+            //                     }
+            //                 ]
+            //             },
+            //         },
+            //         {
+            //             name: 'Chronological Age>Epigenetic Age',
+            //             type: 'scatter',
+            //             //圆点的颜色为绿色
+            //             itemStyle: {
+            //                 normal: {
+            //                     color: 'green'
+            //                 }
+            //             },
+            //             //自然年龄>生物学年龄
+            //             data: null,
+            //             markPoint: {
+            //                 data: [
+            //                     {
+            //                         name: 'Epigenetic Age',
+            //                         value: null,
+            //                         xAxis: null,
+            //                         yAxis: null
+            //                     }
+            //                 ]
+            //             },
 
 
-                    }]
-            }
+            //         }]
+            // }
         }
     }
 
@@ -134,19 +122,19 @@ export default class DnaReportActivity extends Component<Props> {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
 
-            fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
-                let v = []
-                for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).toFixed(2)
-                    let biological = window.parseFloat(data[i].biological).toFixed(2)
-                    v.push([naturally, biological])
-                }
-                let option = Object.assign({}, this.state.option);
-                option.series[0].data = v;
-                this.setState({ option });
-                this.echarts.webview.reload();
+            // fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
+            //     let v = []
+            //     for (var i in data) {
+            //         let naturally = window.parseFloat(data[i].naturally).toFixed(2)
+            //         let biological = window.parseFloat(data[i].biological).toFixed(2)
+            //         v.push([naturally, biological])
+            //     }
+            //     let option = Object.assign({}, this.state.option);
+            //     option.series[0].data = v;
+            //     this.setState({ option });
+            //     this.echarts.webview.reload();
 
-            })
+            // })
             fetch(data.url + "/user/report/findNtrGtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
@@ -211,52 +199,52 @@ export default class DnaReportActivity extends Component<Props> {
         });
     }
     //查看报告
-    viewReport() {
-        //赋值
-        this.setState({ rage: this.state.ageBox[j] })
-        let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-        fetch(data.url + "/user/report/" + uuid + "/" + barcode.val + "/findEmail.jhtml").then(data => data.json()).then((udata) => {
-            if (barcode.stat == "ready") {
-                this.setState({ animating: true })
-                this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
-                this.setState({ ageBox: this.state.ageBox })
-                console.info(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j])
-                //更改实际年龄
-                fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
-                    this.setState({ btnBuildPdfdisabled: false })
-                    let option = Object.assign({}, this.state.option);
-                    let biological = window.parseFloat(barcode.biological).toFixed(2);
-                    //let naturally = window.parseFloat(barcode.naturally).toFixed(2)
-                    let naturally = this.state.ageBox[j]
-                    this.setState({ biological })
-                    this.setState({ naturally })
-                    let i = biological > naturally ? 0 : 1;
-                    option.series[i].markPoint.data[0].value = biological
-                    //自然年龄
-                    this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
-                    this.setState({ ageBox: this.state.ageBox })
-                    //自然年龄
-                    option.series[i].markPoint.data[0].xAxis = this.state.ageBox[j]
-                    option.series[i].markPoint.data[0].yAxis = biological
-                    this.setState({ option })
-                    this.setState({ visual: true })
-                    {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
-                    {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
-                    {/* 从而重新刷新webview数据 */ }
-                    this.echarts.webview.reload()
-                    this.setState({ animating: false })
-                })
-            } else if (barcode.stat == "processing") {
-                this.setState({ visual: false })
-                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
-            } else if (barcode.stat == "pending") {
-                this.setState({ visual: false })
-                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pendingwait"));
-            }
-            this.setState({ barcode: barcode.val })
-        })
+    // viewReport() {
+    //     //赋值
+    //     this.setState({ rage: this.state.ageBox[j] })
+    //     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+    //     fetch(data.url + "/user/report/" + uuid + "/" + barcode.val + "/findEmail.jhtml").then(data => data.json()).then((udata) => {
+    //         if (barcode.stat == "ready") {
+    //             this.setState({ animating: true })
+    //             this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
+    //             this.setState({ ageBox: this.state.ageBox })
+    //             console.info(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j])
+    //             //更改实际年龄
+    //             fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
+    //                 this.setState({ btnBuildPdfdisabled: false })
+    //                 let option = Object.assign({}, this.state.option);
+    //                 let biological = window.parseFloat(barcode.biological).toFixed(2);
+    //                 let naturally = window.parseFloat(barcode.naturally).toFixed(2)
+    //                 // let naturally = this.state.ageBox[j]
+    //                 this.setState({ biological })
+    //                 this.setState({ naturally })
+    //                 let i = biological > naturally ? 0 : 1;
+    //                 option.series[i].markPoint.data[0].value = biological
+    //                 //自然年龄
+    //                 this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
+    //                 this.setState({ ageBox: this.state.ageBox })
+    //                 //自然年龄
+    //                 option.series[i].markPoint.data[0].xAxis = this.state.ageBox[j]
+    //                 option.series[i].markPoint.data[0].yAxis = biological
+    //                 this.setState({ option })
+    //                 this.setState({ visual: true })
+    //                 {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
+    //                 {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
+    //                 {/* 从而重新刷新webview数据 */ }
+    //                 this.echarts.webview.reload()
+    //                 this.setState({ animating: false })
+    //             })
+    //         } else if (barcode.stat == "processing") {
+    //             this.setState({ visual: false })
+    //             Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
+    //         } else if (barcode.stat == "pending") {
+    //             this.setState({ visual: false })
+    //             Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pendingwait"));
+    //         }
+    //         this.setState({ barcode: barcode.val })
+    //     })
 
-    }
+    // }
     render() {
         this.navigate = this.props.navigation;
         return (
@@ -268,8 +256,8 @@ export default class DnaReportActivity extends Component<Props> {
                             onPress={value => {
                                 this.setState({ tabshow: value == 'newkit' ? true : false })
                             }}
-                            textStyle={{ fontWeight: 'bold' }}
-                            selectedTextStyle={{ fontWeight: 'bold' }}
+                            textStyle={{ fontWeight: 'bold',fontFamily:'fantasy' }}
+                            selectedTextStyle={{ fontWeight: 'bold',fontFamily:'fantasy' }}
                             textColor={'#404cb2'}
                             selectedColor={'#ffffff'}
                             buttonColor={'#404cb2'}
@@ -288,16 +276,16 @@ export default class DnaReportActivity extends Component<Props> {
                             <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(30) }}>
                                 <View style={{ width: '100%', height: px2dp(250), backgroundColor: '#ebeced', borderRadius: px2dp(30) }}>
                                     <View style={{ marginLeft: px2dp(15), marginTop: px2dp(20) }}>
-                                        <Text style={{ fontWeight: 'bold', fontSize: px2dp(16), }}>EpiAge</Text>
+                                        <Text  style={{ fontWeight: 'bold', fontSize: px2dp(16), fontFamily: 'fantasy',}}>EpiAge</Text>
                                     </View>
-                                    <Text style={{ margin: px2dp(15), fontWeight: '200', fontSize: px2dp(14) }}>The epigenetic age is a better parameter of our health well being and life span than our chronological age.</Text>
+                                    <Text style={{ margin: px2dp(15), fontWeight: '200', fontSize: px2dp(14), fontFamily: 'serif', }}>The epigenetic age is a better parameter of our health well being and life span than our chronological age.</Text>
                                     <Image style={{ height: px2dp(140), width: '100%', borderRadius: px2dp(30) }} source={require('../image/enpic/index9.jpg')} resizeMode='cover' />
                                 </View>
                                 <View style={{ width: "100%", alignSelf: "center", height: px2dp(300), marginTop: px2dp(45) }}>
                                     <View style={{ flexDirection: 'row', height: px2dp(50), width: '100%', justifyContent: 'center', alignItems: 'center', borderColor: '#404cb2', borderWidth: 1, borderRadius: px2dp(5), }}>
                                         <Image style={{ height: px2dp(30), width: px2dp(50), marginLeft: px2dp(5) }} source={require('../image/barcode.png')} resizeMode='contain' />
                                         <TextInput
-                                            style={{ flex: 1, height: px2dp(50), color: '#000000', fontWeight: 'bold', paddingVertical: 0, }}
+                                            style={{ flex: 1, height: px2dp(50), color: '#000000', fontWeight: 'bold', paddingVertical: 0,fontFamily: 'fantasy', }}
                                             onChangeText={(barcode) => this.setState({ barcode })}
                                             placeholder={I18n.t("DnaReportActivity.yourbarcode")}
                                             placeholderTextColor='#cdcdcd'
@@ -306,7 +294,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         >
                                         </TextInput>
                                     </View>
-                                    <Text style={{ width: "100%", height: px2dp(40), lineHeight: px2dp(40), color: "#000000", textAlign: "center", textAlignVertical: "center", fontSize: px2dp(16), fontWeight: 'bold' }}>OR</Text>
+                                    <Text style={{ width: "100%", height: px2dp(40), lineHeight: px2dp(40), color: "#000000", textAlign: "center", textAlignVertical: "center", fontSize: px2dp(16), fontFamily: 'fantasy', fontWeight: 'bold' }}>OR</Text>
                                     <TouchableOpacity onPress={() => {
                                         this.navigate.push("Scanner", {
                                             barcode: this.state.barcode,
@@ -317,7 +305,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     }}>
                                         <View style={{ width: "100%", height: px2dp(50), justifyContent: 'center', flexDirection: 'row', alignSelf: "center", borderWidth: 1, borderColor: '#404cb2', borderRadius: px2dp(5), }} >
                                             <Image style={{ height: px2dp(30), width: px2dp(50), marginTop: px2dp(10) }} resizeMode='contain' source={require("../image/barcode.png")}></Image>
-                                            <Text style={{ color: '#404cb2', lineHeight: px2dp(50), fontWeight: 'bold', fontSize: px2dp(14) }}>Scan Kit Barcode</Text>
+                                            <Text style={{ color: '#404cb2', lineHeight: px2dp(50), fontWeight: 'bold', fontSize: px2dp(14), fontFamily: 'fantasy', }}>Scan Kit Barcode</Text>
                                         </View>
                                     </TouchableOpacity>
                                     <View style={{ width: "100%", height: px2dp(50), backgroundColor: "#404cb2", borderRadius: px2dp(5), marginTop: px2dp(30), alignSelf: "center" }} >
@@ -380,7 +368,7 @@ export default class DnaReportActivity extends Component<Props> {
                                             })
 
                                         }}>
-                                            <Text style={{ width: "100%", height: px2dp(50), textAlign: "center", lineHeight: px2dp(50), color: "white", fontSize: px2dp(16), }}>{I18n.t('DnaReportActivity.Registerkit')}</Text>
+                                            <Text style={{ width: "100%", height: px2dp(50), textAlign: "center", lineHeight: px2dp(50), color: "white", fontSize: px2dp(16), fontFamily: 'serif', }}>{I18n.t('DnaReportActivity.Registerkit')}</Text>
                                         </TouchableOpacity>
                                     </View>
                                 </View>
@@ -406,23 +394,23 @@ export default class DnaReportActivity extends Component<Props> {
 
                                                     <DropDownItem
                                                         key={i}
-                                                        contentVisible={false}
+                                                        contentVisible={true}
                                                         invisibleImage={require('../image/drop-down.png')}
                                                         visibleImage={require('../image/drop-up.png')}
                                                         style={{ padding: px2dp(10) }}
                                                         header={
                                                             <View style={{ height: px2dp(75) }}>
                                                                 {this.state.display ?
-                                                                <View style={{
-                                                                    width: px2dp(9),
-                                                                    height: px2dp(9),
-                                                                    backgroundColor: '#404cb2',
-                                                                    borderColor: '#404cb2',
-                                                                    borderStyle: 'solid',
-                                                                    borderRadius: px2dp(15),
-                                                                    marginTop: px2dp(5)
-                                                                }}/>
-                                                                : null}
+                                                                    <View style={{
+                                                                        width: px2dp(9),
+                                                                        height: px2dp(9),
+                                                                        backgroundColor: '#404cb2',
+                                                                        borderColor: '#404cb2',
+                                                                        borderStyle: 'solid',
+                                                                        borderRadius: px2dp(15),
+                                                                        marginTop: px2dp(5)
+                                                                    }} />
+                                                                    : null}
                                                                 <View style={{
                                                                     width: '100%',
                                                                     height: px2dp(50),
@@ -435,8 +423,9 @@ export default class DnaReportActivity extends Component<Props> {
                                                                         lineHeight: px2dp(50),
                                                                         fontSize: px2dp(17),
                                                                         color: '#7f8081',
-                                                                        fontWeight: 'bold'
-                                                                    }}>{I18n.t('DnaReportActivity.barcode')} | <Text style={{ color: '#000000' }}>{barcode.val}</Text></Text>
+                                                                        fontWeight: 'bold',
+                                                                        fontFamily: 'fantasy',
+                                                                    }}>{I18n.t('DnaReportActivity.barcode')} | <Text style={{ color: '#000000',fontFamily: 'fantasy', }}>{barcode.val}</Text></Text>
 
                                                                 </View>
                                                             </View>
@@ -444,22 +433,22 @@ export default class DnaReportActivity extends Component<Props> {
 
                                                         <View key={barcode.val} style={{ width: px2dp(290), height: px2dp(560), borderTopWidth: px2dp(1), borderTopColor: 'grey', overflow: 'hidden' }}>
                                                             <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081' }}>{I18n.t('DnaReportActivity.regtime')}</Text>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', textAlign: 'justify' }}>{barcode.createTime}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.regtime')}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', textAlign: 'justify',fontFamily: 'fantasy', }}>{barcode.createTime}</Text>
                                                             </View>
                                                             <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081' }}>{I18n.t('DnaReportActivity.detectTime')}</Text>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000' }}>{barcode.detectTime}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.detectTime')}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.detectTime}</Text>
                                                             </View>
                                                             {barcode.stat == "ready" ?
                                                                 <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081' }}>{I18n.t('DnaReportActivity.status')}</Text>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000' }}>{barcode.endtime}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.status')}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.endtime}</Text>
                                                                 </View>
                                                                 :
                                                                 <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081' }}>{I18n.t('DnaReportActivity.endtime')}</Text>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000' }}>{barcode.endtime}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.endtime')}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.endtime}</Text>
                                                                 </View>
                                                             }
                                                             {/* progress bar start */}
@@ -470,8 +459,9 @@ export default class DnaReportActivity extends Component<Props> {
                                                                         lineHeight: px2dp(50),
                                                                         color: '#7f8081',
                                                                         fontSize: px2dp(14),
+                                                                        fontFamily: 'fantasy',
                                                                     }}>Accomplish percentage</Text>
-                                                                    <Text style={{ lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000' }}>{barcode.processing}%</Text>
+                                                                    <Text style={{ lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.processing}%</Text>
                                                                 </View>
                                                                 <View style={{ width: '100%', height: px2dp(40), alignSelf: 'center', borderBottomWidth: 1, borderBottomColor: '#cdcdcd' }}>
                                                                     <ProgressBarAnimated
@@ -492,12 +482,18 @@ export default class DnaReportActivity extends Component<Props> {
                                                                 <View style={{ flexDirection: 'row', height: px2dp(50), marginTop: px2dp(10), width: '100%', justifyContent: 'center', alignItems: 'center', borderColor: '#d0d1d2', borderWidth: px2dp(2), borderRadius: px2dp(5), }}>
                                                                     <Image style={{ height: px2dp(20), width: px2dp(30), marginLeft: px2dp(5) }} source={require('../image/person.png')} resizeMode='contain' />
                                                                     <TextInput
-                                                                        style={{ flex: 1, height: px2dp(50), width: '100%', color: '#000000', fontWeight: 'bold', paddingVertical: 0, }}
+                                                                        style={{ flex: 1, height: px2dp(50), width: '100%',fontFamily: 'fantasy', color: '#000000', fontWeight: 'bold', paddingVertical: 0, }}
                                                                         onChangeText={(barcode) => this.setState({ barcode })}
                                                                         placeholder={'Enter Your Age'}
+                                                                        keyboardType="numeric"
                                                                         placeholderTextColor='#cdcdcd'
-                                                                        value={this.state.barcode}
-                                                                    >
+                                                                        defaultValue={"0"}
+                                                                        value={this.state.ageBox[i] ? String(this.state.ageBox[i]) : ""}
+                                                                        onChangeText={(val) => {
+                                                                            let data = val.replace(/[^\d.]/g, '')
+                                                                            this.state.ageBox[i] = data
+                                                                            this.setState({ ageBox: this.state.ageBox })
+                                                                        }}>
                                                                     </TextInput>
                                                                 </View>
                                                             </View>
@@ -510,9 +506,9 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     <View style={{ flexDirection: 'row', height: px2dp(50), width: '100%', alignItems: 'center', borderColor: '#d0d1d2', borderWidth: px2dp(2), borderRadius: px2dp(5), }}>
                                                                         <Image style={{ height: px2dp(20), width: px2dp(30), marginLeft: px2dp(5) }} source={require('../image/notify.png')} resizeMode='contain' />
                                                                         <TextInput style={{
-                                                                            flex: 1, height: px2dp(50), width: '100%', color: '#000000', fontWeight: 'bold', paddingVertical: 0,
+                                                                            flex: 1, height: px2dp(50), width: '100%', color: '#000000', fontWeight: 'bold', paddingVertical: 0,fontFamily: 'fantasy',
                                                                         }}
-                                                                            errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5 }}
+                                                                            errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5,fontFamily: 'fantasy', }}
                                                                             errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
                                                                             placeholder={'Notification email'}
                                                                             placeholderTextColor='#cdcdcd'
@@ -559,14 +555,13 @@ export default class DnaReportActivity extends Component<Props> {
                                                                                 })
                                                                             }}
                                                                         />
-                                                                        <Text style={{ fontSize: px2dp(12), marginLeft: px2dp(10) }}>{I18n.t("DnaReportActivity.allow")}</Text>
+                                                                        <Text style={{ fontSize: px2dp(12), marginLeft: px2dp(10),fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.allow")}</Text>
                                                                     </View>
                                                                 </View>
                                                             }
 
                                                             <View style={{ width: "100%", height: px2dp(50), backgroundColor: "#404cb2", borderRadius: px2dp(5), marginTop: px2dp(30), alignSelf: "center" }} >
                                                                 <TouchableOpacity onPress={() => {
-                                                                    this.navigate.push("Report")
                                                                     //赋值
                                                                     this.setState({ rage: this.state.ageBox[j] })
                                                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
@@ -578,28 +573,13 @@ export default class DnaReportActivity extends Component<Props> {
                                                                             console.info(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j])
                                                                             //更改实际年龄
                                                                             fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
-                                                                                this.setState({ btnBuildPdfdisabled: false })
-                                                                                let option = Object.assign({}, this.state.option);
                                                                                 let biological = window.parseFloat(barcode.biological).toFixed(2);
-                                                                                //let naturally = window.parseFloat(barcode.naturally).toFixed(2)
                                                                                 let naturally = this.state.ageBox[j]
-                                                                                this.setState({ biological })
-                                                                                this.setState({ naturally })
-                                                                                let i = biological > naturally ? 0 : 1;
-                                                                                option.series[i].markPoint.data[0].value = biological
-                                                                                //自然年龄
-                                                                                this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
-                                                                                this.setState({ ageBox: this.state.ageBox })
-                                                                                //自然年龄
-                                                                                option.series[i].markPoint.data[0].xAxis = this.state.ageBox[j]
-                                                                                option.series[i].markPoint.data[0].yAxis = biological
-                                                                                this.setState({ option })
-                                                                                this.setState({ visual: true })
-                                                                                {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
-                                                                                {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
-                                                                                {/* 从而重新刷新webview数据 */ }
-                                                                                this.echarts.webview.reload()
-                                                                                this.setState({ animating: false })
+                                                                                let repdata = {}
+                                                                                repdata.biological = biological
+                                                                                repdata.naturally = this.state.ageBox[i]
+                                                                                repdata.barcode=barcode.val
+                                                                                this.navigate.push("Report", repdata)
                                                                             })
                                                                         } else if (barcode.stat == "processing") {
                                                                             this.setState({ visual: false })
@@ -612,7 +592,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     })
 
                                                                 }}>
-                                                                    <Text style={{ width: "100%", height: px2dp(50), textAlign: "center", lineHeight: px2dp(50), color: "white", fontSize: px2dp(16), }}>View Report</Text>
+                                                                    <Text style={{ width: "100%", height: px2dp(50), textAlign: "center", lineHeight: px2dp(50), color: "white", fontSize: px2dp(16),fontFamily: 'fantasy', }}>View Report</Text>
                                                                 </TouchableOpacity>
                                                             </View>
                                                             {/* notify me by email end */}
@@ -634,7 +614,7 @@ export default class DnaReportActivity extends Component<Props> {
                 </ScrollView >
                 {this.state.tabshow == true ?
                     <TouchableOpacity onPress={() => this.navigate.push("Mall")} style={{ width: '100%', height: px2dp(60), flex: 1, position: 'absolute', bottom: 0, left: 0, zIndex: 9999, backgroundColor: '#cdcdcd' }}>
-                        <Text style={{ height: px2dp(60), fontSize: px2dp(14), lineHeight: px2dp(60), fontWeight: 'bold', color: '#000000', textAlign: 'center', }}>No product yet? Buy Epiage Kit →</Text>
+                        <Text style={{ height: px2dp(60), fontSize: px2dp(14), lineHeight: px2dp(60), fontWeight: 'bold', color: '#000000', textAlign: 'center', fontFamily: 'fantasy',}}>No product yet? Buy Epiage Kit →</Text>
                     </TouchableOpacity>
                     :
                     null

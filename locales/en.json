@@ -291,7 +291,7 @@
         "how":"HOW OLD ARE YOU?",
         "why":"Why is your",
         "epigenetic":"'Epigenetic age' important?",
-        "calculate":"Expected Epigenetic Age Calculator",
+        "calculate":"Expected  EpiAge Calculator",
         "acceleration":"Age Acceleration Calculator",
         "buildPDF": "Build PDF",
         "viewPdf": "View PDF",
@@ -309,7 +309,7 @@
         "yourage": "Enter Your Age(optional)",
         "ageFormat": "Incorrect age format",
         "emailFormat":"Incorrect email format",
-        "allow":"Allow notification when results are ready",
+        "allow":"Allow email notification",
         "regtime":"Register Date",
         "baseinfo":"Basic information",
         "endtime":"Completion Date",
@@ -319,6 +319,9 @@
         "intransit":"in-transit",
         "remaining_days":"Remaining days",
         "Pendding":"Pendding"
+    },
+    "ReportActivity": {
+        "title": "EpiAge Report"
     },
     "user_profile": {
         "title": "Your Profile"
