@@ -49,45 +49,45 @@ export default class DavidHonorActivity extends Component<Props> {
 
                 {/* 荣誉 */}
                 <View>
-                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 28, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('DavidActivity.honor')}</Text>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'fantasy', fontSize: 28, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('DavidActivity.honor')}</Text>
                 </View>
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
 
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14,}}>{I18n.t('DavidActivity.us')}</Text>
-                        <Text style={{ height: 80, lineHeight: 40, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.cancer')}</Text>
+                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14,}}>{I18n.t('DavidActivity.us')}</Text>
+                        <Text style={{ height: 80, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.cancer')}</Text>
                     </View>
 
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14, }}>{I18n.t('DavidActivity.uspa')}</Text>
-                        <Text style={{ height: 80, lineHeight: 40, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.dna')}</Text>
+                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14, }}>{I18n.t('DavidActivity.uspa')}</Text>
+                        <Text style={{ height: 80, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.dna')}</Text>
                     </View>
 
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14,  }}>2011</Text>
+                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14,  }}>2011</Text>
                         <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.fellow')}</Text>
-                        <Text style={{ height: 20, lineHeight: 20, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.israel')}</Text>
+                        <Text style={{ height: 20, lineHeight: 20, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.israel')}</Text>
                     </View>
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14,}}>2010</Text>
-                        <Text style={{ height: 20, lineHeight: 20, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.alumni')}</Text>
+                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14,}}>2010</Text>
+                        <Text style={{ height: 20, lineHeight: 20, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.alumni')}</Text>
                         <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.award')}</Text>
                     </View>
 
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14, }}>2009</Text>
-                        <Text style={{ height: 20, lineHeight: 20, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.medical')}</Text>
+                        <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14, }}>2009</Text>
+                        <Text style={{ height: 20, lineHeight: 20, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.medical')}</Text>
                         <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.award')}</Text>
                     </View>
 
                 </View>
 
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('DavidActivity.all')}</Text>
+                <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>{I18n.t('DavidActivity.all')}</Text>
             </ScrollView >
 
         );

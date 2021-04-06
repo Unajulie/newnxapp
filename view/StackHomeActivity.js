@@ -372,7 +372,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'About',
+        initialRouteName: 'Launch',
         defaultNavigationOptions: ({ navigation }) => {
             return (
 

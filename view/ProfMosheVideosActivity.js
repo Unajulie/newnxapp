@@ -33,8 +33,8 @@ export default class ProfMosheVideosActivity extends Component<Props> {
                 <View style={{ height: 20 }}></View>
                 <View style={{ paddingTop: 20, paddingBottom: 20, backgroundColor: '#f0f0f0' }}>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <Text style={{ width: '90%', height: 67, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.video')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.o2o')}</Text>
+                        <Text style={{ width: '90%', height: 67, fontFamily: 'fantasy', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.video')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.o2o')}</Text>
                      
                         <VideoPlayer
                             style={{ width: "100%", height: 250, }}
@@ -46,7 +46,7 @@ export default class ProfMosheVideosActivity extends Component<Props> {
                         />
                      
                         <View style={{ height: 15 }}></View>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.hope')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.hope')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -56,7 +56,7 @@ export default class ProfMosheVideosActivity extends Component<Props> {
                             navigator={this.props.navigator}
                         />
                         <View style={{ height: 15 }}></View>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.epigenetic')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.epigenetic')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -66,7 +66,7 @@ export default class ProfMosheVideosActivity extends Component<Props> {
                             navigator={this.props.navigator}
                         />
                         <View style={{ height: 15 }}></View>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.behavioral')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.behavioral')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -79,7 +79,7 @@ export default class ProfMosheVideosActivity extends Component<Props> {
                 </View>
 
         
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>
 
         );

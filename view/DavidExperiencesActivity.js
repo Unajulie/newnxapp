@@ -29,52 +29,52 @@ export default class DavidExperiencesActivity extends Component<Props> {
                 </StatusBar>
             
                 <View>
-                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 28, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('DavidActivity.professional')}</Text>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'fantasy', fontSize: 28, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('DavidActivity.professional')}</Text>
                 </View>
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
                      {/* 2017-now */}
                      <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:14 }}>2017-now</Text>  
-                        <Text style={{  height: 20, lineHeight: 20, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.hong')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.senior')}</Text>
+                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2017-now</Text>  
+                        <Text style={{  height: 20, lineHeight: 20, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.hong')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.senior')}</Text>
                     </View>
                     <View style={{ height: 20 }}></View>
                     {/* 2016-now */}
                     <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:14 }}>2016-now</Text>  
-                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.montreal')}</Text>
-                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.canada')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.founder')}</Text>
+                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2016-now</Text>  
+                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.montreal')}</Text>
+                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'fantasy', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.canada')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.founder')}</Text>
                     </View>
                     <View style={{ height: 20 }}></View>
                     {/* 2016-2017 */}
                     <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:14 }}>2016-2017</Text>  
-                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.department')}</Text>
-                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.mcgill')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.research')}</Text>
+                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2016-2017</Text>  
+                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.department')}</Text>
+                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'fantasy', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.mcgill')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.research')}</Text>
                     </View>
                     <View style={{ height: 20 }}></View>
                      {/* 2011-2016 */}
                      <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:14 }}>2011-2016</Text>  
-                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.department')}</Text>
-                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.university')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.fellowed')}</Text>
+                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2011-2016</Text>  
+                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.department')}</Text>
+                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'fantasy', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.university')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.fellowed')}</Text>
                     </View>
                     <View style={{ height: 20 }}></View>
                     {/* 2011-2016 */}
                     <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:14 }}>2004-2011</Text>  
-                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.hebrew')}</Text>
-                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'NotoSansHans-Light', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.school')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.assistant')}</Text>
+                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2004-2011</Text>  
+                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('DavidActivity.hebrew')}</Text>
+                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'fantasy', textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.school')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('DavidActivity.assistant')}</Text>
                     </View>
                     <View style={{ height: 20 }}></View>
                 </View>
 
                 
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('DavidActivity.all')}</Text>
+                <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>{I18n.t('DavidActivity.all')}</Text>
             </ScrollView >
 
         );

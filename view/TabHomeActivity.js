@@ -209,9 +209,9 @@ export default class TabHomeActivity extends Component<Props> {
                 <View style={{ height: 15 }}></View>
                 <View style={{ width: '100%', marginTop: 40, }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginBottom: 20, padding: 30, backgroundColor: '#EBECED', borderRadius: 15 }}>
-                        <Text style={{ fontSize: 24, color: '#333333', textAlign: 'left', fontFamily: 'FontAwesome', lineHeight: 34, marginBottom: 19 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'left', fontFamily: 'FontAwesome', lineHeight: 23, marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'left', fontFamily: 'FontAwesome', lineHeight: 23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
+                        <Text style={{ fontSize: 20, color: '#333333', textAlign: 'left', fontFamily: 'fantasy', lineHeight: 34, marginBottom: 19 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
+                        <Text style={{ fontSize: 16, color: '#808080', textAlign: 'left', fontFamily: 'fantasy', lineHeight: 23, marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
+                        <Text style={{ fontSize: 16, color: '#808080', textAlign: 'left', fontFamily: 'fantasy', lineHeight: 23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                     </View>
                 </View>
                 <View style={{ height: 20 }}></View>
@@ -268,7 +268,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </ImageBackground> */}
 
                             <View style={{ width: '100%', marginLeft: 20 }}>
-                                <Text style={{ fontSize: 26, color: '#333333', textAlign: 'left', fontFamily: 'FontAwesome', lineHeight: 34 }}>Products</Text>
+                                <Text style={{ fontSize: 26, color: '#333333', textAlign: 'left', fontFamily: 'fantasy', lineHeight: 34 }}>Products</Text>
                             </View>
                             <View style={{ height: 30 }}></View>
                             <View style={{ backgroundColor: '#ffffff', width: '90%' }}>
@@ -318,7 +318,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </ImageBackground>
                             </View> */}
                             <View style={{ width: '100%', marginLeft: 20 }}>
-                                <Text style={{ fontSize: 26, color: '#333333', textAlign: 'left', fontFamily: 'FontAwesome', lineHeight: 34 }}>Products</Text>
+                                <Text style={{ fontSize: 26, color: '#333333', textAlign: 'left', fontFamily: 'fantasy', lineHeight: 34 }}>Products</Text>
                             </View>
                             <View style={{ height: 30 }}></View>
                             <View style={{ backgroundColor: '#ffffff', width: '90%' }}>
@@ -328,7 +328,7 @@ export default class TabHomeActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: 245, justifyContent: 'center', borderRadius: 20 }} source={require('../image/enpic/index9.jpg')} resizeMode='contain' />
                                         <Text style={{ fontSize: 18, lineHeight: 24, color: '#131415', fontWeight: '700' }}>{I18n.t('TabHomeActivity.sam')}</Text>
                                         <Text style={{ fontSize: 14, color: '#333333', lineHeight: 24 }}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
-                                        {/* <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text> */}
+                                        {/* <Text style={{ fontFamily: 'fantasy', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text> */}
                                         {/* <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                                         <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}</Text>
@@ -432,7 +432,7 @@ export default class TabHomeActivity extends Component<Props> {
                     <View style={{ width: '90%',  alignSelf: 'center', marginTop: 23 ,marginBottom:23}}>
                         <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index7.jpg')} resizeMode="contain" />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
-                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: 18, color: '#4d4d4d', lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
                         <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '85%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')}</Text> 
@@ -465,21 +465,21 @@ export default class TabHomeActivity extends Component<Props> {
                                 <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap1.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.international')}</Text>
+                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.international')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap2.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.dynrep')}</Text>
+                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.dynrep')}</Text>
                                     </View>
                                 </View>
                                 <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap3.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.question2')}</Text>
+                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.question2')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap4.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16,  textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.machinelearn')}</Text>
+                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16,  textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.machinelearn')}</Text>
                                     </View>
                                 </View>
                             </View>
@@ -489,10 +489,10 @@ export default class TabHomeActivity extends Component<Props> {
                 {/* <View style={{ backgroundColor: '#f0f0f0' }}>
                     <View style={{width: '90%', alignSelf: 'center', marginTop: 34,marginBottom:34 }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 24, textAlign: 'center', color: '#282828',lineHeight:38 }}>{I18n.t('TabHomeActivity.whatsame')}</Text>
-                        <Text style={{ fontSize: 18, fontFamily: 'FontAwesome', color: '#4d4d4d',textAlign:'center' ,lineHeight: 23,marginBottom:12}}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
+                        <Text style={{ fontSize: 18, fontFamily: 'fantasy', color: '#4d4d4d',textAlign:'center' ,lineHeight: 23,marginBottom:12}}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
                         <Image style={{ width: '100%', height: 245, justifyContent: 'center' }} source={require('../image/enpic/index9.jpg')} resizeMode='contain' />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.sam')}</Text>
-                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
                         <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}</Text>
@@ -627,8 +627,8 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity> */}
                 {/* </View>
-                    <Text style={{ textAlign: 'center', fontFamily: 'FontAwesome',  fontSize: 16, textDecorationLine: 'underline',lineHeight:45 }}>{I18n.t('TabHomeActivity.disclaimer')}</Text>
-                    <Text style={{width:'90%', fontFamily: 'FontAwesome',alignSelf:'center', textAlign: 'center', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'fantasy',  fontSize: 16, textDecorationLine: 'underline',lineHeight:45 }}>{I18n.t('TabHomeActivity.disclaimer')}</Text>
+                    <Text style={{width:'90%', fontFamily: 'fantasy',alignSelf:'center', textAlign: 'center', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
                     <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12,marginTop:34 }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </View> */}
                 <DropdownAlert ref={ref => this.dropDownAlertRef = ref} onTap={() => {

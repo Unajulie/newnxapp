@@ -30,46 +30,46 @@ export default class ProfMosheSponsoredActivity extends Component<Props> {
                 </StatusBar>
                 <View style={{ height: 40 }}></View>
                 <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', }}>
-                    <Text style={{ height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', fontSize: 20, fontWeight: '700' }}>Sponsored</Text>
+                    <Text style={{ height: 17, lineHeight: 19, fontFamily: 'fantasy', fontSize: 20, fontWeight: '700' }}>Sponsored</Text>
                 </View>
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
 
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14 }}>2010-2013</Text>
-                        <Text style={{ height: 30, lineHeight: 30, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.halth')}</Text>
-                        <Text style={{ height: 30, lineHeight: 20, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16 }}>{I18n.t('ProfMosheActivity.team')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$166,666</Text>
+                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14 }}>2010-2013</Text>
+                        <Text style={{ height: 30, lineHeight: 30, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.halth')}</Text>
+                        <Text style={{ height: 30, lineHeight: 20, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('ProfMosheActivity.team')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$166,666</Text>
                     </View>
                     <View style={{height:20}}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14 }}>2007-2012</Text>
-                        <Text style={{ height: 36, lineHeight: 30, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.cancer')}{I18n.t('ProfMosheActivity.analysis')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$141,000</Text>
+                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14 }}>2007-2012</Text>
+                        <Text style={{ height: 36, lineHeight: 30, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.cancer')}{I18n.t('ProfMosheActivity.analysis')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$141,000</Text>
                     </View>
                     <View style={{height:20}}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14 }}>2005-2010</Text>
-                        <Text style={{ height: 60, lineHeight: 30, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.health')}{I18n.t('ProfMosheActivity.prospect')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$168,158</Text>
+                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14 }}>2005-2010</Text>
+                        <Text style={{ height: 60, lineHeight: 30, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.health')}{I18n.t('ProfMosheActivity.prospect')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$168,158</Text>
                     </View>
                     <View style={{height:20}}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14 }}>1997-2000</Text>
-                        <Text style={{ height: 36, lineHeight: 30, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.natural')}{I18n.t('ProfMosheActivity.science')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$145,500</Text>
+                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14 }}>1997-2000</Text>
+                        <Text style={{ height: 36, lineHeight: 30, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.natural')}{I18n.t('ProfMosheActivity.science')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$145,500</Text>
                     </View>
                     <View style={{height:20}}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
-                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 14 }}>1989-1992</Text>
-                        <Text style={{ height: 36, lineHeight: 30, fontFamily: 'NotoSansHans-Light', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.inst')}{I18n.t('ProfMosheActivity.school')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$74,592/year</Text>
+                        <Text style={{ height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14 }}>1989-1992</Text>
+                        <Text style={{ height: 36, lineHeight: 30, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center', fontWeight: '700', fontSize: 16 }}>{I18n.t('ProfMosheActivity.inst')}{I18n.t('ProfMosheActivity.school')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45, textAlign: 'center', fontSize: 16 }}>C$74,592/year</Text>
                     </View>
                     <View style={{height:20}}></View>
 
                 </View>
 
 
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>
 
         );
