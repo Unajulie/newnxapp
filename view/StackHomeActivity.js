@@ -66,7 +66,7 @@ import ShafaatActivity from './ShafaatActivity';
 import AgeAccelerateActivity from './AgeAccelerateActivity';
 import Manual4Activity from './Manual4Activity';
 import LaunchActivity from './LaunchActivity';
-
+import ReportActivity from './ReportActivity';
 const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 56;
 export const RootStack = createStackNavigator(
     {
@@ -199,6 +199,9 @@ export const RootStack = createStackNavigator(
                 }
             },
         },
+        Report: {
+            screen: ReportActivity
+        },
         Testprocess: {
             screen: TestprocessActivity
         },
@@ -235,7 +238,7 @@ export const RootStack = createStackNavigator(
         ProfMoshePublished: {
             screen: ProfMoshePublishedActivity
         },
-        
+
         David: {
             screen: DavidActivity
         },
@@ -284,7 +287,7 @@ export const RootStack = createStackNavigator(
         Questionnaire: {
             screen: QuestionnaireActivity
         },
-       
+
         Biological: {
             screen: BiologicalActivity
         },
@@ -307,8 +310,8 @@ export const RootStack = createStackNavigator(
         LifeStyleChart: {
             screen: LifeStyleChartActivity
         },
-       
-       
+
+
         Payment: {
             screen: PaymentActivity
         },
@@ -377,20 +380,38 @@ export const RootStack = createStackNavigator(
             return (
 
                 {
-                    headerStyle: {
-                        backgroundColor: '#0071BC',
+                    // headerStyle: {
+                    //     backgroundColor: '#0071BC',
 
-                    },
-                    headerTintColor: '#fff',
+                    // },
+                    // headerTintColor: '#fff',
+                    // headerTitleStyle: {
+                    //     fontWeight: 'bold',
+                    //     fontFamily: 'NotoSansHans-Light',
+                    // },
+                    // //每一个screen组件中都自动具有了navigation属性
+                    // //要强调的是navigation属性并不是所有的组件里都有，只有screen组件才自动接收该属性（被screen属性声明过的组件）
+                    // //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
+                    // //所以需要在此处添加 navigation={navigation}，那么LoginIcon中的pros就能有navigation这个对象了
+                    // headerRight: <LoginIcon navigation={navigation} />
+                    headerTintColor: 'black',
                     headerTitleStyle: {
+                        alignSelf: 'center',
+                        textAlign: 'center',
+                        flex: 1,
                         fontWeight: 'bold',
-                        fontFamily: 'NotoSansHans-Light',
+                        fontSize: px2dp(18),
+                        fontFamily: 'fantasy',
                     },
-                    //每一个screen组件中都自动具有了navigation属性
-                    //要强调的是navigation属性并不是所有的组件里都有，只有screen组件才自动接收该属性（被screen属性声明过的组件）
-                    //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
-                    //所以需要在此处添加 navigation={navigation}，那么LoginIcon中的pros就能有navigation这个对象了
-                    headerRight: <LoginIcon navigation={navigation} />
+                    headerTitleContainerStyle: {
+                        left: TITLE_OFFSET,
+                        right: TITLE_OFFSET,
+                    },
+                    headerStyle: {
+                        height: px2dp(80),
+                        backgroundColor: '#FBF0EC',
+
+                    }
                 }
             )
         }
