@@ -9,7 +9,7 @@ import {
 } from 'react-native-popup-menu';
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n'
-
+import { px2dp } from '../src/px2dp';
 
 type Props = {};
 export default class LoginIcon extends Component<Props> {
@@ -42,19 +42,19 @@ export default class LoginIcon extends Component<Props> {
         
         return (
             <View>
-                <View style={{ width: 100, height: 50, justifyContent: "center", alignItems: "center" }}>
+                <View style={{ width: px2dp(100), height: px2dp(80), justifyContent: "center", alignItems: "center" }}>
                     <Menu>
                         <MenuTrigger>
-                            <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
+                            <View style={{ width: '100%',height:px2dp(100), justifyContent: "center", alignItems: "center" }}>
                                 {this.state.user != null ?
-                                    <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
-                                        <Image style={{ height: 30, width: 30 }} resizeMode="contain" source={require("../image/ic_login.png")} />
-                                        <Text style={{ color: '#000000' }}>{this.state.user.nickname}</Text>
+                                    <View style={{ width: px2dp(120),height:px2dp(70),justifyContent: "center", alignItems: "center" }}>
+                                        <Image style={{ height: px2dp(30), width: px2dp(30),marginBottom:px2dp(5) }} resizeMode="contain" source={require("../image/ic_login.png")} />
+                                        <Text style={{ color: '#000000',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>Hello, {this.state.user.nickname}</Text>
                                     </View>
                                     :
-                                    <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
-                                        <Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/icons/user-logo.png")} />
-                                        <Text style={{ color: 'white' }}>{I18n.t('LoginIcon.message')}</Text>
+                                    <View style={{ width: px2dp(120), justifyContent: "center", alignItems: "center" }}>
+                                        <Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/icons/user-logo.png")} />
+                                        <Text style={{  color: '#000000',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>{I18n.t('LoginIcon.message')}</Text>
                                     </View>
                                 }
                             </View>
@@ -70,14 +70,14 @@ export default class LoginIcon extends Component<Props> {
                                     navigate.dispatch(resetAction);
                                 }} >
                                     <View style={{ flexDirection: "row" }}>
-                                        <View><Image style={{ height: 20, width: 20 }} resizeMode="contain" source={require("../image/logout.png")} /></View>
-                                        <View><Text style={{ color: "#333333" }}>Logout</Text></View>
+                                        <View><Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/logout.png")} /></View>
+                                        <View><Text style={{ color: "#333333",fontFamily:'fantasy' }}>Logout</Text></View>
                                     </View>
                                 </MenuOption>
                                 <MenuOption onSelect={() => {navigate.push("LangActivity")}}>
                                     <View style={{ flexDirection: "row" }}>
-                                        <View><Image style={{ height: 20, width: 20 }} resizeMode="contain" source={require("../image/lang.png")} /></View>
-                                        <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.language')}</Text></View>
+                                        <View><Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/lang.png")} /></View>
+                                        <View><Text style={{ color: "#333333",fontFamily:'fantasy' }}>{I18n.t('LoginActivity.language')}</Text></View>
                                     </View>
                                 </MenuOption>
                             </MenuOptions>
@@ -85,20 +85,20 @@ export default class LoginIcon extends Component<Props> {
                             <MenuOptions customStyles={optionsStyles}>
                                 <MenuOption onSelect={() => {navigate.push("Login")}}>
                                     <View style={{ flexDirection: "row" }}>
-                                        <View><Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/login.png")} /></View>
-                                        <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.login')}</Text></View>
+                                        <View><Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/login.png")} /></View>
+                                        <View><Text style={{ color: "#333333",fontFamily:'fantasy' }}>{I18n.t('LoginActivity.login')}</Text></View>
                                     </View>
                                 </MenuOption>
                                 <MenuOption onSelect={() => {navigate.push("Register")}}>
                                     <View style={{ flexDirection: "row" }}>
-                                        <View><Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/reg.png")} /></View>
-                                        <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.register')}</Text></View>
+                                        <View><Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/reg.png")} /></View>
+                                        <View><Text style={{ color: "#333333",fontFamily:'fantasy' }}>{I18n.t('LoginActivity.register')}</Text></View>
                                     </View>
                                 </MenuOption>
                                 <MenuOption onSelect={() => {navigate.push("LangActivity")}}>
                                     <View style={{ flexDirection: "row" }}>
-                                        <View><Image style={{ height: 20, width: 20 }} resizeMode="contain" source={require("../image/lang.png")} /></View>
-                                        <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.language')}</Text></View>
+                                        <View><Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/lang.png")} /></View>
+                                        <View><Text style={{ color: "#333333",fontFamily:'fantasy' }}>{I18n.t('LoginActivity.language')}</Text></View>
                                     </View>
                                 </MenuOption>
                             </MenuOptions>

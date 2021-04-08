@@ -578,7 +578,8 @@ export default class DnaReportActivity extends Component<Props> {
                                                                                 let repdata = {}
                                                                                 repdata.biological = biological
                                                                                 repdata.naturally = this.state.ageBox[i]
-                                                                                repdata.barcode=barcode.val
+                                                                                repdata.barcode = barcode.val
+                                                                                // repdata.btnBuildPdfdisabled= this.setState({ btnBuildPdfdisabled: false })
                                                                                 this.navigate.push("Report", repdata)
                                                                             })
                                                                         } else if (barcode.stat == "processing") {

@@ -32,7 +32,7 @@ export default class ReportActivity extends Component<Props> {
             statusbar: false,
             animating: false,
             barcode: '',
-            btnBuildPdfdisabled: true,
+            btnBuildPdfdisabled: false,
             display: false,
             pdfbox: [],
             option: {
@@ -244,7 +244,9 @@ export default class ReportActivity extends Component<Props> {
                             <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} startInLoadingState={true} />
                             <View style={{ width: "100%", height: 35, backgroundColor: "#404cb2" }}>
                                 <TouchableOpacity style={{ width: "100%", height: "100%" }}>
-                                    <Button style={{ width: "100%", height: "100%", backgroundColor: "#404cb2" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
+                                    <Button style={{ width: "100%", height: "100%", backgroundColor: "#404cb2" }} title
+                                        color="#404cb2"
+                                        onPress={() => { { this.setState({ display: false }) } }} />
                                 </TouchableOpacity>
                             </View>
                         </Modal> : null
@@ -315,7 +317,7 @@ export default class ReportActivity extends Component<Props> {
                             <View style={{ borderTopWidth: px2dp(1), borderTopColor: '#cdcdcd', borderStyle: 'dashed', }}></View>
                             <View style={{ height: px2dp(90), }}>
                                 <Text style={{ textAlign: 'center', fontSize: px2dp(14), color: '#000000', margin: px2dp(15), fontFamily: 'serif', }}>
-                                    The "nomal" chronological age of people with similar EpiAge results (calculated using a mathematical equation from our tests)
+                                    The "normal" chronological age of people with similar EpiAge results (calculated using a mathematical equation from our tests)
                                 </Text>
                             </View>
                         </View>
@@ -383,171 +385,171 @@ export default class ReportActivity extends Component<Props> {
                             </TouchableOpacity>
                         </View>
 
-                            <View style={{ width: "100%", alignItems: "center", marginTop: px2dp(30) }}>
+                        <View style={{ width: "100%", alignItems: "center", marginTop: px2dp(30) }}>
 
-                                <Image style={{ height: px2dp(225), width: '100%', borderTopRightRadius: px2dp(30), borderTopLeftRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep12.jpg")}></Image>
-                                <View style={{ width: '90%', alignSelf: 'center', }}>
-                                    <View style={{ width: '100%', alignSelf: 'flex-end', marginTop: px2dp(-23), marginBottom: px2dp(34) }}>
-                                        <Text style={{ alignSelf: 'flex-end', fontSize: px2dp(14), color: '#404cb2', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.how')}</Text>
-                                        <Text style={{ alignSelf: 'flex-end', fontSize: px2dp(14), color: '#888888', fontFamily: 'fantasy', lineHeight: px2dp(20), marginTop: px2dp(10) }}>{I18n.t('DnaReportActivity.why')}</Text>
-                                        <Text style={{ alignSelf: 'flex-end', fontSize: px2dp(20), color: '#404cb2', fontFamily: 'fantasy', lineHeight: px2dp(30) }}>{I18n.t('DnaReportActivity.epigenetic')}</Text>
-
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(8), fontFamily: 'fantasy', lineHeight: px2dp(22) }}>{I18n.t('DnaReportActivity.look')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.parameter')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.hardware')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.shift')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.clock')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.different')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.studies')}</Text>
-                                    </View>
-                                </View>
-                                <View style={{ width: '100%', backgroundColor: '#f0f0f0', height: 10 }}></View>
-                                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '70%', fontSize: 16, fontFamily: 'fantasy', paddingTop: 23, lineHeight: 26, }}>{I18n.t('DnaReportActivity.what')}<Text style={{ color: '#404cb2', fontSize: 21 }}>{I18n.t('DnaReportActivity.epiage')}</Text><Text style={{ color: '#404cb2' }}>{I18n.t('DnaReportActivity.mean')}</Text></Text>
-                                        <Image style={{ height: 99, width: '30%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/rep2.png")}></Image>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.cg')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.dna')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.redflag')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.changes')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.act')}</Text>
-                                    </View>
-                                    <Image style={{ height: px2dp(100), width: '50%', alignSelf: 'flex-end', marginBottom: px2dp(10) }} resizeMode='contain' source={require("../image/enpic/rep3.png")}></Image>
+                            <Image style={{ height: px2dp(225), width: '100%', borderTopRightRadius: px2dp(30), borderTopLeftRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep12.jpg")}></Image>
+                            <View style={{ width: '90%', alignSelf: 'center', }}>
+                                <View style={{ width: '100%', alignSelf: 'flex-end', marginTop: px2dp(-23), marginBottom: px2dp(34) }}>
+                                    <Text style={{ alignSelf: 'flex-end', fontSize: px2dp(14), color: '#404cb2', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.how')}</Text>
+                                    <Text style={{ alignSelf: 'flex-end', fontSize: px2dp(14), color: '#888888', fontFamily: 'fantasy', lineHeight: px2dp(20), marginTop: px2dp(10) }}>{I18n.t('DnaReportActivity.why')}</Text>
+                                    <Text style={{ alignSelf: 'flex-end', fontSize: px2dp(20), color: '#404cb2', fontFamily: 'fantasy', lineHeight: px2dp(30) }}>{I18n.t('DnaReportActivity.epigenetic')}</Text>
 
                                 </View>
-                                <View style={{ height: px2dp(10), width: '100%', backgroundColor: '#f0f0f0' }}></View>
-                                <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(20), }}>
-                                    <View style={{ flexDirection: 'row', marginBottom: px2dp(20) }}>
-                                        <View style={{ flexDirection: 'column', width: '40%' }}>
-                                            <Text style={{ fontSize: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(28), }}>{I18n.t('DnaReportActivity.do')} </Text>
-                                            <Image style={{ height: px2dp(100), width: '100%' }} resizeMode='contain' source={require("../image/enpic/rep4.png")}></Image>
-                                        </View>
-                                        <Text style={{ width: '60%', fontSize: px2dp(16), fontFamily: 'fantasy', lineHeight: px2dp(35), }}><Text style={{ color: '#404cb2', fontSize: px2dp(22) }}>{I18n.t('DnaReportActivity.older')}</Text></Text>
-                                    </View>
-
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.genetics')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.open')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.exercise')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <View style={{ width: '60%', flexDirection: 'row' }}>
-                                            <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                            <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.way')}</Text>
-                                        </View>
-                                        <Image style={{ width: '40%', height: 123, }} resizeMode='contain' source={require("../image/enpic/rep5.png")}></Image>
-                                    </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(8), fontFamily: 'fantasy', lineHeight: px2dp(22) }}>{I18n.t('DnaReportActivity.look')}</Text>
                                 </View>
-                                <Image style={{ width: '100%', height: px2dp(300), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep6.png")}></Image>
-                                <View style={{ width: '70%', alignSelf: 'flex-end', marginTop: px2dp(-60), marginBottom: px2dp(23) }}>
-                                    <Text style={{ fontSize: px2dp(22), color: '#404cb2', fontFamily: 'fantasy', lineHeight: px2dp(30) }}>{I18n.t('DnaReportActivity.position')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), fontFamily: 'fantasy', lineHeight: px2dp(30) }}>{I18n.t('DnaReportActivity.health')}</Text>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.parameter')}</Text>
                                 </View>
-                                <View style={{ width: '90%', alignSelf: 'center', }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.links')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.updated')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.first')}</Text>
-                                    </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.hardware')}</Text>
                                 </View>
-                                <Image style={{ width: '100%', height: px2dp(300), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep7.png")}></Image>
-                                <View style={{ width: '80%', alignSelf: 'flex-end', marginTop: px2dp(-60), marginBottom: px2dp(23) }}>
-                                    <Text style={{ fontSize: px2dp(16), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.dynamic')}</Text>
-                                    <Text style={{ fontSize: px2dp(22), lineHeight: px2dp(30), color: '#404cb2', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.achive')}</Text>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.shift')}</Text>
                                 </View>
-                                <View style={{ width: '90%', alignSelf: 'center', }}>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.suggest')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.update')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.second')}</Text>
-                                    </View>
-
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.anonymized')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.model')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.analyze')}</Text>
-                                    </View>
-                                    <View style={{ flexDirection: 'row' }}>
-
-                                        <View style={{ width: '60%' }}>
-
-                                            <View style={{ flexDirection: 'row' }}>
-                                                <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                                <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.routes')}</Text>
-                                            </View>
-                                            <View style={{ flexDirection: 'row' }}>
-                                                <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
-                                                <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.coevolve')}</Text>
-                                            </View>
-                                        </View>
-                                        <Image style={{ width: '40%', height: 123 }} resizeMode='contain' source={require("../image/enpic/rep13.png")}></Image>
-                                    </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.clock')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.different')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.studies')}</Text>
                                 </View>
                             </View>
+                            <View style={{ width: '100%', backgroundColor: '#f0f0f0', height: 10 }}></View>
+                            <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '70%', fontSize: 16, fontFamily: 'fantasy', paddingTop: 23, lineHeight: 26, }}>{I18n.t('DnaReportActivity.what')}<Text style={{ color: '#404cb2', fontSize: 21 }}>{I18n.t('DnaReportActivity.epiage')}</Text><Text style={{ color: '#404cb2' }}>{I18n.t('DnaReportActivity.mean')}</Text></Text>
+                                    <Image style={{ height: 99, width: '30%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/rep2.png")}></Image>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.cg')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.dna')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.redflag')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.changes')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.act')}</Text>
+                                </View>
+                                <Image style={{ height: px2dp(100), width: '50%', alignSelf: 'flex-end', marginBottom: px2dp(10) }} resizeMode='contain' source={require("../image/enpic/rep3.png")}></Image>
+
+                            </View>
+                            <View style={{ height: px2dp(10), width: '100%', backgroundColor: '#f0f0f0' }}></View>
+                            <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(20), }}>
+                                <View style={{ flexDirection: 'row', marginBottom: px2dp(20) }}>
+                                    <View style={{ flexDirection: 'column', width: '40%' }}>
+                                        <Text style={{ fontSize: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(28), }}>{I18n.t('DnaReportActivity.do')} </Text>
+                                        <Image style={{ height: px2dp(100), width: '100%' }} resizeMode='contain' source={require("../image/enpic/rep4.png")}></Image>
+                                    </View>
+                                    <Text style={{ width: '60%', fontSize: px2dp(16), fontFamily: 'fantasy', lineHeight: px2dp(35), }}><Text style={{ color: '#404cb2', fontSize: px2dp(22) }}>{I18n.t('DnaReportActivity.older')}</Text></Text>
+                                </View>
+
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.genetics')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.open')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.exercise')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <View style={{ width: '60%', flexDirection: 'row' }}>
+                                        <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                        <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.way')}</Text>
+                                    </View>
+                                    <Image style={{ width: '40%', height: 123, }} resizeMode='contain' source={require("../image/enpic/rep5.png")}></Image>
+                                </View>
+                            </View>
+                            <Image style={{ width: '100%', height: px2dp(300), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep6.png")}></Image>
+                            <View style={{ width: '70%', alignSelf: 'flex-end', marginTop: px2dp(-60), marginBottom: px2dp(23) }}>
+                                <Text style={{ fontSize: px2dp(22), color: '#404cb2', fontFamily: 'fantasy', lineHeight: px2dp(30) }}>{I18n.t('DnaReportActivity.position')}</Text>
+                                <Text style={{ fontSize: px2dp(14), fontFamily: 'fantasy', lineHeight: px2dp(30) }}>{I18n.t('DnaReportActivity.health')}</Text>
+                            </View>
+                            <View style={{ width: '90%', alignSelf: 'center', }}>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.links')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.updated')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.first')}</Text>
+                                </View>
+                            </View>
+                            <Image style={{ width: '100%', height: px2dp(300), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep7.png")}></Image>
+                            <View style={{ width: '80%', alignSelf: 'flex-end', marginTop: px2dp(-60), marginBottom: px2dp(23) }}>
+                                <Text style={{ fontSize: px2dp(16), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.dynamic')}</Text>
+                                <Text style={{ fontSize: px2dp(22), lineHeight: px2dp(30), color: '#404cb2', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.achive')}</Text>
+                            </View>
+                            <View style={{ width: '90%', alignSelf: 'center', }}>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.suggest')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.update')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.second')}</Text>
+                                </View>
+
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.anonymized')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.model')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                    <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.analyze')}</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+
+                                    <View style={{ width: '60%' }}>
+
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                            <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.routes')}</Text>
+                                        </View>
+                                        <View style={{ flexDirection: 'row' }}>
+                                            <Text style={{ width: '7%', fontSize: px2dp(12), color: '#939598' }}>●</Text>
+                                            <Text style={{ width: '95%', fontSize: px2dp(12), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20) }}>{I18n.t('DnaReportActivity.coevolve')}</Text>
+                                        </View>
+                                    </View>
+                                    <Image style={{ width: '40%', height: 123 }} resizeMode='contain' source={require("../image/enpic/rep13.png")}></Image>
+                                </View>
+                            </View>
+                        </View>
                         <View style={{ height: 34, width: "100%" }}></View>
 
                     </View>
@@ -564,58 +566,62 @@ export default class ReportActivity extends Component<Props> {
                             <View style={{ flexDirection: 'column' }}>
                                 <View style={{ width: "89%", alignSelf: 'center', borderRadius: 50 }}>
                                     <TouchableOpacity>
-                                        <Button disabled={this.state.btnBuildPdfdisabled} onPress={() => {
-                                            this.setState({ animating: true })
-                                            this.setState({ btnBuildPdfdisabled: true })
-                                            let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                            Session.load("pdfsavepath").then((savepathbox) => {
-                                                let url = data.url + "user/report/" + uuid + "/" + this.state.barcode + "/" + I18n.locale + "/" + this.state.rage + "/buildPDF.jhtml"
-                                                console.info(url)
-                                                //下载pdf
-                                                fetch(url).then(res => res.text()).then((issuccess) => {
-                                                    if (issuccess == "success") {
-                                                        if (savepathbox.indexOf(this.state.barcode + ":" + uuid + ":" + I18n.locale) == -1) {
-                                                            savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
-                                                            this.setState({ animating: false })
-                                                            Session.save("pdfsavepath", savepathbox)
-                                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
-                                                        } else {
-                                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
-                                                            this.setState({ animating: false })
-                                                        }
-                                                    } else {
-                                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
-                                                        this.setState({ btnBuildPdfdisabled: true })
-                                                        this.setState({ animating: false })
-                                                    }
-                                                })
-                                            }).catch(e => {
-                                                Session.save("pdfsavepath", [])
+                                        <Button disabled={this.state.btnBuildPdfdisabled}
+                                            color="#404cb2"
+                                            onPress={() => {
+                                                this.setState({ animating: true })
+                                                this.setState({ btnBuildPdfdisabled: true })
+                                                let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                                 Session.load("pdfsavepath").then((savepathbox) => {
+                                                    let url = data.url + "user/report/" + uuid + "/" + this.state.barcode + "/" + I18n.locale + "/" + this.state.rage + "/buildPDF.jhtml"
+                                                    console.info(url)
+                                                    //下载pdf
                                                     fetch(url).then(res => res.text()).then((issuccess) => {
                                                         if (issuccess == "success") {
-                                                            savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
-                                                            this.setState({ animating: false })
-                                                            Session.save("pdfsavepath", savepathbox)
-                                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                            if (savepathbox.indexOf(this.state.barcode + ":" + uuid + ":" + I18n.locale) == -1) {
+                                                                savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
+                                                                this.setState({ animating: false })
+                                                                Session.save("pdfsavepath", savepathbox)
+                                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                            } else {
+                                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                                this.setState({ animating: false })
+                                                            }
                                                         } else {
                                                             Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
                                                             this.setState({ btnBuildPdfdisabled: true })
                                                             this.setState({ animating: false })
                                                         }
                                                     })
+                                                }).catch(e => {
+                                                    Session.save("pdfsavepath", [])
+                                                    Session.load("pdfsavepath").then((savepathbox) => {
+                                                        fetch(url).then(res => res.text()).then((issuccess) => {
+                                                            if (issuccess == "success") {
+                                                                savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
+                                                                this.setState({ animating: false })
+                                                                Session.save("pdfsavepath", savepathbox)
+                                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                            } else {
+                                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
+                                                                this.setState({ btnBuildPdfdisabled: true })
+                                                                this.setState({ animating: false })
+                                                            }
+                                                        })
+                                                    })
                                                 })
-                                            })
 
-                                        }} title={I18n.t("DnaReportActivity.buildPDF")} />
+                                            }} title={I18n.t("DnaReportActivity.buildPDF")} />
                                     </TouchableOpacity>
                                 </View>
                                 <View style={{ width: '100%', height: 23 }} />
                                 <View style={{ width: "89%", height: '100%', alignSelf: 'center', borderRadius: 50 }}>
                                     <TouchableOpacity >
-                                        <Button title={I18n.t("DnaReportActivity.viewPdf")} onPress={() => {
-                                            this.navigate.push("Savepdfpath")
-                                        }} />
+                                        <Button
+                                            color="#404cb2"
+                                            title={I18n.t("DnaReportActivity.viewPdf")} onPress={() => {
+                                                this.navigate.push("Savepdfpath")
+                                            }} />
                                     </TouchableOpacity>
                                 </View>
                             </View>
