@@ -86,13 +86,7 @@ export default class TabHomeActivity extends Component<Props> {
 
                     <View style={{ width: '90%', height: px2dp(330), marginTop: px2dp(110), alignSelf: 'center' }}>
                         {/* 我的报告 */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChart")}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
-                                <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/home1.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text onPress={() => {
+                        <TouchableOpacity  onPress={() => {
                                         this.state.user == null ?
                                             this.navigate.push("Login")
                                             :
@@ -101,7 +95,13 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
 
-                                    }}
+                                    }}>
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                                <View style={{ width: '25%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/home1.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text
                                         style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabHomeActivity.myreport')}</Text>
                                     <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Scan your Kit and get your chronological Age data.</Text>
@@ -352,223 +352,6 @@ export default class TabHomeActivity extends Component<Props> {
                     </View>
                     <View style={{ heigh: px2dp(100), width: '100%' }}></View>
                     {/* 图片 */}
-                    {/* <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
-                    <View style={{ width: '90%', height: 389, alignSelf: 'center' }}>
-                        <Image style={{ width: '100%', height: 278, marginTop: 12 }} source={require('../image/enpic/index6.jpg')} resizeMode="contain" />
-                        <Text style={{ fontSize: 23, textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 34, marginTop: 0, color: '#333333' }}>{I18n.t('TabHomeActivity.kit')}</Text>
-                        <View style={{ borderBottomWidth: 1, borderColor: '#000000', width: '7%', alignSelf: 'center' }}></View>
-                        <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
-                            <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                            </View>
-                            <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                            </View>
-                        </View>
-                    </View>
-                </View> */}
-                    {/* epiage 购买 */}
-                    {/* <View style={{ backgroundColor: '#ffffff' }}>
-                    <View style={{ width: '90%',  alignSelf: 'center', marginTop: 23 ,marginBottom:23}}>
-                        <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index7.jpg')} resizeMode="contain" />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', fontSize: 18, color: '#4d4d4d', lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
-                        <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
-                            <View style={{ width: '85%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')}</Text> 
-                            </View>
-
-                            <View style={{ width: '15%', height: 45, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() =>{this.setState({ url: "https://epi-age.com/product/epiage/" }); this.setState({ display: true })}}>
-                                    <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
-                                </TouchableOpacity>
-                            </View>
-
-                        </View>
-                        <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34,marginTop:23 }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View> */}
-
-                    {/* <View style={{ backgroundColor: '#0071bc' }}>
-                    <View style={{ width: '90%',  alignSelf: 'center', marginTop: 34 }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, color: '#ffffff', textAlign: 'center', lineHeight: 45, fontWeight: '600' }}>{I18n.t('TabHomeActivity.appsystem')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>-{I18n.t('TabHomeActivity.personalrep')}-</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- {I18n.t('TabHomeActivity.question')} -</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29, marginBottom: 34 }}>- {I18n.t('TabHomeActivity.follow')} -</Text>
-                    </View>
-                    <View style={{ backgroundColor: '#0071bc' }}>
-                        <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index8.jpg')} resizeMode='cover' />
-                        <View style={{ width: '90%', height: 278, alignSelf: 'center', marginTop: 23, marginBottom: 23 }}>
-                            <View style={{ height: 278, justifyContent: 'space-around' }}>
-                                <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
-                                    <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap1.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.international')}</Text>
-                                    </View>
-                                    <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap2.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.dynrep')}</Text>
-                                    </View>
-                                </View>
-                                <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
-                                    <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap3.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.question2')}</Text>
-                                    </View>
-                                    <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap4.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'fantasy', fontSize: 12,lineHeight:16,  textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.machinelearn')}</Text>
-                                    </View>
-                                </View>
-                            </View>
-                        </View>
-                    </View>
-                </View> */}
-                    {/* <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <View style={{width: '90%', alignSelf: 'center', marginTop: 34,marginBottom:34 }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 24, textAlign: 'center', color: '#282828',lineHeight:38 }}>{I18n.t('TabHomeActivity.whatsame')}</Text>
-                        <Text style={{ fontSize: 18, fontFamily: 'fantasy', color: '#4d4d4d',textAlign:'center' ,lineHeight: 23,marginBottom:12}}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
-                        <Image style={{ width: '100%', height: 245, justifyContent: 'center' }} source={require('../image/enpic/index9.jpg')} resizeMode='contain' />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.sam')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
-                        <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
-                            <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}</Text>
-                            </View>
-
-                            <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() =>  {this.setState({ url: "https://epi-age.com/product/episame/" }); this.setState({ display: true })}}>
-                                    <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
-                                </TouchableOpacity>
-                            </View>
-
-                        </View>
-                        <TouchableOpacity style={{marginTop:23}} onPress={() => this.navigate.push("Same")}>
-                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34, }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
-                        </TouchableOpacity>
-                    </View>
-                </View> */}
-
-                    {/* <View style={{ backgroundColor: '#ffffff', }}>
-                    <View style={{ width: '90%', height: 489, marginTop: 56, alignSelf: 'center' }}> */}
-                    {/* <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChart")}>
-                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc4.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text onPress={() => {
-                                        this.state.user == null ?
-                                            this.navigate.push("Login")
-                                            :
-                                            this.state.user.privatekey ?
-                                                this.navigate.push("DnaReport")
-                                                :
-                                                this.navigate.push("RasEncryptionActivity")
-
-                                    }}
-                                        style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>
-                                        {I18n.t('TabHomeActivity.myreport')}
-                                    </Text>
-                                </View>
-                                <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                    {/* <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
-                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc3.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text
-                                        onPress={() => {
-                                            this.state.user == null ?
-                                                this.navigate.push("Login")
-                                                :
-                                                this.state.user.privatekey ?
-                                                    this.navigate.push("LifeStyleChart")
-                                                    :
-                                                    this.navigate.push("RasEncryptionActivity")
-                                        }}
-                                        style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
-                                </View>
-                                <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                    {/* <TouchableOpacity onPress={() => this.navigate.push("Testprocess")}>
-                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc10.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.testprocess')}</Text>
-                                </View>
-                                <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                    {/* <TouchableOpacity onPress={() => this.navigate.push("Check")}>
-                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc5.png')} resizeMode='center' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Order Record</Text>
-                                </View>
-                                <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                    {/* <TouchableOpacity onPress={() => this.navigate.push("QA")}>
-                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc1.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.qa')}</Text>
-                                </View>
-                                <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                    {/* <TouchableOpacity onPress={() => this.navigate.push("DataSecurity")}>
-                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc9.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.datasequrity')}</Text>
-                                </View>
-                                <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                    {/* <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
-                            <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
-                                <View style={{ width: '20%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/uc2.png')} resizeMode='contain' />
-                                </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.consent')}</Text>
-                                </View>
-                                <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                    {/* </View>
-                    <Text style={{ textAlign: 'center', fontFamily: 'fantasy',  fontSize: 16, textDecorationLine: 'underline',lineHeight:45 }}>{I18n.t('TabHomeActivity.disclaimer')}</Text>
-                    <Text style={{width:'90%', fontFamily: 'fantasy',alignSelf:'center', textAlign: 'center', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12,marginTop:34 }}>{I18n.t('TabHomeActivity.allright')}</Text>
-                </View> */}
                     <DropdownAlert ref={ref => this.dropDownAlertRef = ref} onTap={() => {
                         this.state.user == null ?
                             this.navigate.push("Login")
@@ -578,6 +361,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 :
                                 this.navigate.push("RasEncryptionActivity")
                     }} />
+                     <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20),fontFamily: 'fantasy'  }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </ScrollView >
             </View>
         );

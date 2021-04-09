@@ -3,6 +3,7 @@ import { Platform, StatusBar, Text, View, Image, ImageBackground, ScrollView, Bu
 import { I18n } from '../locales/i18n';
 import FitImage from 'react-native-fit-image';
 import { WebView } from 'react-native-webview';
+import { px2dp } from '../src/px2dp';
 export default class BiologicalActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -17,13 +18,9 @@ export default class BiologicalActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
+            <View style={{flex:1}}>
             <ScrollView>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                />
+                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
@@ -353,7 +350,8 @@ export default class BiologicalActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('BiologicalActivity.foot')}</Text>
                     </View>
                 </View>
-            </ScrollView >
+                </ScrollView >
+                </View>
         );
     }
 }

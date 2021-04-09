@@ -223,13 +223,17 @@ export const RootStack = createStackNavigator(
             screen: ReportActivity
         },
         Testprocess: {
-            screen: TestprocessActivity
+            screen: TestprocessActivity,
         },
         About: {
-            screen: TabAboutActivity
+            screen: TabAboutActivity,
+           
         },
         epicenter: {
-            screen: TabCenterActivity
+            screen: TabCenterActivity,
+            navigationOptions: {
+                header: null,
+            },
         },
         Company: {
             screen: CompanyActivity
@@ -395,7 +399,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'Main',
+        initialRouteName: 'Main',      
         defaultNavigationOptions: ({ navigation }) => {
             return (
 

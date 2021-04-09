@@ -5,24 +5,24 @@ import TabMallActivity from './TabMallActivity';
 import TabAboutActivity from './TabAboutActivity';
 import TabCenterActivity from './TabCenterActivity';
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
-
+import { px2dp } from '../src/px2dp';
 export default MainActivity = createBottomTabNavigator({
     Home: {
         screen: TabHomeActivity,
         navigationOptions: () => {
             //tab 的属性的属性
-           return {
-                tabBarLabel: 'HOME',
+            return {
+                tabBarLabel: 'Home',
                 tabBarIcon: ({ tintColor, focused }) => (
                         focused ?
                             <Image
                                 source={require("../image/tab/ic2_tab_home.png")}
-                                style={styles.iconStyle}
+                                style={styles.iconStyle} resizeMode='contain'
                             />
                             :
                             <Image
                                 source={require("../image/tab/ic1_tab_home.png")}
-                                style={styles.iconStyle}
+                                style={styles.iconStyle} resizeMode='contain'
                             />
                     )
             }
@@ -32,17 +32,17 @@ export default MainActivity = createBottomTabNavigator({
         screen: TabAboutActivity,
         navigationOptions: {
             //tab 属性
-            tabBarLabel: 'ABOUT',
+            tabBarLabel: 'About',
             tabBarIcon: ({ tintColor, focused }) => (
                 focused ?
                     <Image
                         source={require("../image/tab/ic2_tab_about.png")}
-                        style={styles.iconStyle}
+                        style={styles.iconStyle}resizeMode='contain'
                     />
                     :
                     <Image
                         source={require("../image/tab/ic1_tab_about.png")}
-                        style={styles.iconStyle}
+                        style={styles.iconStyle}resizeMode='contain'
                     />
             )
         }
@@ -51,9 +51,11 @@ export default MainActivity = createBottomTabNavigator({
         screen: TabMallActivity,
         navigationOptions: {
             //tab 的属性
-            tabBarLabel: 'SHOP',
+            tabBarLabel: 'Shop',
             tabBarIcon: ({ tintColor, focused }) => (
-                focused ? <Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle} /> : <Image source={require("../image/tab/ic1_tab_mall.png")} style={styles.iconStyle} />
+                focused ? <Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle} resizeMode='contain' />
+                    :
+                    <Image source={require("../image/tab/ic1_tab_mall.png")} style={styles.iconStyle} resizeMode='contain' />
             )
         }
     },
@@ -64,17 +66,17 @@ export default MainActivity = createBottomTabNavigator({
         screen: TabCenterActivity,
         navigationOptions: {
             //tab 属性
-            tabBarLabel: 'EPICENTER',
+            tabBarLabel: 'Epicenter',
             tabBarIcon: ({ tintColor, focused }) => (
                 focused ?
                     <Image
                         source={require("../image/tab/ic2_tab_user.png")}
-                        style={styles.iconStyle}
+                        style={styles.iconStyle} resizeMode='contain'
                     />
                     :
                     <Image
                         source={require("../image/tab/ic1_tab_user.png")}
-                        style={styles.iconStyle}
+                        style={styles.iconStyle} resizeMode='contain'
                     />
             )
 
@@ -99,14 +101,14 @@ export default MainActivity = createBottomTabNavigator({
             //共有属性
             showIcon: true,//是否显示图标，默认关闭
             showLabel: true,//是否显示label，默认开启
-            activeTintColor: '#0071BC',//label和icon的前景色 活跃状态下（选中）
+            activeTintColor: '#0071bc',//label和icon的前景色 活跃状态下（选中）
             inactiveTintColor: 'gray',//label和icon的前景色 活跃状态下（未选中）
         },
         navigationOptions: ({ navigation }) => ({
             title: navigation.state.routeName,
-            headerStyle: { backgroundColor: '#fff', },
-            headerTintColor: "#0071BC",
-            headerStyle: { height: 48, backgroundColor: '#0071BC' },
+            headerStyle: { backgroundColor: '#f3f4f5', },
+            headerTintColor: "#0071bc",
+            headerStyle: { height: px2dp(56), backgroundColor: '#b6b7b8' },
         }),
 
     });
@@ -125,7 +127,7 @@ MainActivity.navigationOptions = ({ navigation }) => {
 
 const styles = StyleSheet.create({
     iconStyle: {
-        width: Platform.OS === 'ios' ? 30 : 25,
-        height: Platform.OS === 'ios' ? 30 : 25
+        width: Platform.OS === 'ios' ? px2dp(25) : px2dp(25),
+        height: Platform.OS === 'ios' ? px2dp(25) : px2dp(25)
     },
 });

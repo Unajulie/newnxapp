@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 
 import { Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity, navigate } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
+import { px2dp } from '../src/px2dp';
 import { I18n } from '../locales/i18n';
 export default class TabAboutActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("TabHomeActivity.title"),
+            title: I18n.t("TabAboutActivity.title"),
         })
     }
     constructor(props) {
@@ -16,169 +17,115 @@ export default class TabAboutActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <ScrollView>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
-                {/* 公司简介  改版*/}
-                <View style={{ marginTop: 40 }}>
-                    <View style={{ width: '90%', height: 640, alignSelf: 'center' }}>
+            <View style={{ flex: 1 }}>
+                <ScrollView>
+                    <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
+                    {/* 公司简介  改版*/}
+                    <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(40) }}>
+                        {/* company introduction */}
                         <TouchableOpacity onPress={() => this.navigate.push("Company")}>
-                            <View style={{ borderRadius: 15, height: 100, flexDirection: 'row', marginBottom: 40,borderWidth:0.5 }}>
-                                <View style={{ width: '30%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '90%', height: 60 }} source={require('../image/icons/about1.png')} resizeMode='contain' />
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                                <View style={{ width: '25%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about1.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '60%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontWeight: '700', color: '#191A1B', }}>{I18n.t('TabAboutActivity.company1')}{I18n.t('TabAboutActivity.introduction1')}
-                                        {/*{"\n"} <Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Companies that research DNA methylation technology</Text> */}
-                                    </Text>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                        {I18n.t('TabAboutActivity.company1')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Guide personalized management of healthy life.</Text>
+
                                 </View>
-                                <View style={{ width: '10%', height: 80, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 24, fontWeight: '700',color: '#B6B7B8', textAlign: 'center' }}> &gt; </Text>
+                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
+                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                 </View>
                             </View>
                         </TouchableOpacity>
                         {/* 科学团队 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
-                            <View style={{  borderRadius: 15, height: 100, flexDirection: 'row', marginBottom: 40,borderWidth:0.5 }}>
-                                <View style={{ width: '30%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '90%', height: 60 }} source={require('../image/icons/about2.png')} resizeMode='contain' />
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                                <View style={{ width: '25%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about2.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '60%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontWeight: '700', color: '#191A1B' }}>{I18n.t('TabAboutActivity.science1')}{I18n.t('TabAboutActivity.team1')}
-                                        {/*{"\n"} <Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>We are the DNA methylation team</Text> */}
-                                    </Text>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                        {I18n.t('TabAboutActivity.science1')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>We are the DNA methylation team</Text>
+
                                 </View>
-                                <View style={{ width: '10%', height: 80, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 24, fontWeight: '700',color: '#B6B7B8', textAlign: 'center' }}> &gt; </Text>
+                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
+                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                 </View>
                             </View>
                         </TouchableOpacity>
                         {/* DNA甲基化 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Methylation")}>
-                            <View style={{  borderRadius: 15, height: 100, flexDirection: 'row', marginBottom: 40,borderWidth:0.5 }}>
-                                <View style={{ width: '30%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '90%', height: 60 }} source={require('../image/icons/about3.png')} resizeMode='contain' />
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                                <View style={{ width: '25%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about3.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '60%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontWeight: '700', color: '#191A1B' }}>{I18n.t('TabAboutActivity.dna1')}{I18n.t('TabAboutActivity.methylation1')}
-                                        {/*{"\n"} <Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>What is DNA methylation?</Text> */}
-                                    </Text>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                        {I18n.t('TabAboutActivity.dna1')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>DNA methylation is a chemical mark on DNA</Text>
+
                                 </View>
-                                <View style={{ width: '10%', height: 80, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 24, fontWeight: '700',color: '#B6B7B8', textAlign: 'center' }}> &gt; </Text>
+                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
+                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                 </View>
                             </View>
                         </TouchableOpacity>
                         {/* 生物学年龄检测 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <View style={{  borderRadius: 15, height: 100, flexDirection: 'row', marginBottom: 40,borderWidth:0.5 }}>
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                                <View style={{ width: '25%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about4.png')} resizeMode='contain' />
+                                </View>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                        {I18n.t('TabAboutActivity.biological1')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>The only age that counts is your biological age</Text>
+
+                                </View>
+                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
+                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
+                            <View style={{ borderRadius: 15, height: 100, flexDirection: 'row', marginBottom: 40, borderWidth: 0.5 }}>
                                 <View style={{ width: '30%', justifyContent: 'center' }}>
                                     <Image style={{ width: '90%', height: 60 }} source={require('../image/icons/about4.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '60%', justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, textAlign: 'left', fontWeight: '700', color: '#191A1B' }}>{I18n.t('TabAboutActivity.biological1')}{I18n.t('TabAboutActivity.age1')}
-                                        {/* {"\n"}<Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Is your biological age younger than your chronological age?</Text> */}
                                     </Text>
                                 </View>
                                 <View style={{ width: '10%', height: 80, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 24, fontWeight: '700',color: '#B6B7B8',textAlign: 'center' }}> &gt; </Text>
+                                    <Text style={{ fontSize: 24, fontWeight: '700', color: '#B6B7B8', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                         {/* 客户资料同意书 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
-                            <View style={{ borderRadius: 15, height: 100, flexDirection: 'row', marginBottom: 40,borderWidth:0.5 }}>
-                                <View style={{ width: '30%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '90%', height: 60 }} source={require('../image/icons/about5.png')} resizeMode='contain' />
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                                <View style={{ width: '25%', justifyContent: 'center' }}>
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about5.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '60%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontWeight: '700', color: '#191A1B'}}>{I18n.t('TabAboutActivity.consent1')}{I18n.t('TabAboutActivity.form1')}
-                                        {/*{"\n"} <Text style={{ fontSize: 14, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>lorem ipsum has been the industry's standad dummy text</Text>  */}
-                                    </Text>
+                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                        {I18n.t('TabAboutActivity.consent1')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>HKG epi THERAPEUTICS Ltd. User Consent Form</Text>
+
                                 </View>
-                                <View style={{ width: '10%', height: 80, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 24,  fontWeight: '700',color: '#B6B7B8', textAlign: 'center' }}> &gt; </Text>
+                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
+                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                 </View>
                             </View>
                         </TouchableOpacity>
                     </View>
-                </View>
-                {/* 公司简介 */}
-                {/* <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, overflow: 'hidden' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, height: 50,lineHeight:50 }}>{I18n.t('AboutActivity.company')}</Text>
-                    <TouchableOpacity onPress={() => this.navigate.push("Company")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="contain" source={require("../image/enpic/au1.png")}>
-                            <View style={{ width: '90%', alignSelf: 'center', flexDirection: "column", paddingLeft:10  }}>
-                                <View style={{ height: '10%' }}></View>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.company1')}</Text>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.introduction1')}</Text>
-                            </View>
-                        </ImageBackground>
-                    </TouchableOpacity>
-                </View> */}
-                {/* <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', overflow: 'hidden' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, height: 50,lineHeight:50 }}>{I18n.t('AboutActivity.science')}</Text>
-                    <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="contain" source={require("../image/enpic/au2.png")}>
-                            <View style={{ width: '90%', alignSelf: 'center', flexDirection: "column", paddingLeft:10 }}>
-                                <View style={{ height: '10%' }}></View>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.science1')}</Text>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.team1')}</Text>
-                            </View>
-                        </ImageBackground>
-                    </TouchableOpacity>
-
-                </View> */}
-                {/* <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', overflow: 'hidden' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, height: 50 ,lineHeight:50 }}>{I18n.t('AboutActivity.methylation')}</Text>
-                    <TouchableOpacity onPress={() => this.navigate.push("Methylation")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="contain" source={require("../image/enpic/au3.png")}>
-                            <View style={{ width: '90%', alignSelf: 'center', flexDirection: "column", paddingLeft:10  }}>
-                                <View style={{ height: '10%' }}></View>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.dna1')}</Text>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.methylation1')}</Text>
-                            </View>
-                        </ImageBackground>
-                    </TouchableOpacity>
-                </View> */}
-
-                {/* <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', overflow: 'hidden' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, height: 50,lineHeight:50  }}>{I18n.t('AboutActivity.biological')}</Text>
-                    <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="contain" source={require("../image/enpic/au5.png")}>
-                            <View style={{ width: '90%', alignSelf: 'center', flexDirection: "column", paddingLeft:10  }}>
-                                <View style={{ height: '10%' }}></View>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.biological1')}</Text>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.age1')}</Text>
-                            </View>
-                        </ImageBackground>
-                    </TouchableOpacity>
-                </View> */}
-                {/* <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', overflow: 'hidden' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, height: 50,lineHeight:50  }}>{I18n.t('AboutActivity.consentform')}</Text>
-                    <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="contain" source={require("../image/enpic/au4.png")}>
-                            <View style={{ width: '90%', alignSelf: 'center', flexDirection: "column", paddingLeft:10 }}>
-                                <View style={{ height: '10%' }}></View>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.consent1')}</Text>
-                                <Text style={{ fontSize: 23, color: '#ffffff', opacity: 0.6, fontWeight: "bold", fontStyle: 'italic' }}>{I18n.t('TabAboutActivity.form1')}</Text>
-                            </View>
-                        </ImageBackground>
-                    </TouchableOpacity>
-                </View> */}
-                <View style={{ height: 20, marginTop: 10 }}></View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('TabHomeActivity.allright')}</Text>
-            </ScrollView>
-
+                    {/* 公司简介 */}
+                    <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20),fontFamily: 'fantasy'  }}>{I18n.t('TabHomeActivity.allright')}</Text>
+                </ScrollView>
+            </View>
         );
     }
 }

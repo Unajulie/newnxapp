@@ -84,7 +84,6 @@
         "report2": "through the App"
     },
     "TabCenterActivity": {
-        "title": "EPICENTER",
         "centerlogin": "Login",
         "centerregis": "Register",
         "centerkey": "Private key",
@@ -335,7 +334,7 @@
     },
     "TabAboutActivity": {
         "title": "About Us",
-        "company1": "Company",
+        "company1": "Company Introduction",
         "introduction1": "Introduction",
         "science1": "Our Science",
         "team1": "Team",
@@ -343,7 +342,7 @@
         "methylation1": "Methylation",
         "biological1": "Biological",
         "age1": "Age",
-        "consent1": "Consent",
+        "consent1": "User Consent Form",
         "form1": "Form"
     },
     "ScienceteamActivity": {
@@ -603,7 +602,7 @@
         "eip": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ConsentActivity": {
-        "title": "User consent form",
+        "title": "User Consent Form",
         "customer": " HKG epi THERAPEUTICS Customer Data Consent Form",
         "users": "Dear Users",
         "welcome": "Welcome to HKG epi THERAPEUTICS Ltd.",
