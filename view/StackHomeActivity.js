@@ -43,7 +43,22 @@ import ZhiyuanConferencesActivity from './ZhiyuanConferencesActivity';
 import MethylationActivity from './MethylationActivity';
 import QuestionnaireActivity from './QuestionnaireActivity';
 import ConsentActivity from './ConsentActivity';
-import MoodChartActivity from './MoodChartActivity'
+import MoodChartActivity from './MoodChartActivity';
+import MoodChartPleasureActivity from './MoodChartPleasureActivity';
+import MoodChartDepressedActivity from './MoodChartDepressedActivity';
+import MoodChartAsleepActivity from './MoodChartAsleepActivity';
+import MoodChartEnergyActivity from './MoodChartEnergyActivity';
+import MoodChartOverEatingActivity from './MoodChartOverEatingActivity';
+import MoodChartFailureActivity from './MoodChartFailureActivity';
+import MoodChartFocusActivity from './MoodChartFocusActivity';
+import MoodChartSlowActivity from './MoodChartSlowActivity';
+import MoodChartAnxietyActivity from './MoodChartAnxietyActivity';
+import MoodChartNervousActivity from './MoodChartNervousActivity';
+import MoodChartLoseControlActivity from './MoodChartLoseControlActivity';
+import MoodChartWorryActivity from './MoodChartWorryActivity';
+import MoodChartLoseRelaxActivit from './MoodChartLoseRelaxActivit';
+import MoodChartRestLessActivity from './MoodChartRestLessActivity';
+import MoodChartIrritableActivity from './MoodChartIrritableActivity';
 import McGillChartActivity from './McGillChartActivity';
 import BiologicalActivity from './BiologicalActivity';
 import TestprocessActivity from './TestprocessActivity';
@@ -345,6 +360,51 @@ export const RootStack = createStackNavigator(
         MoodChart: {
             screen: MoodChartActivity
         },
+        MoodChartPleasure: {
+            screen: MoodChartPleasureActivity
+        },
+        MoodChartDepressed: {
+            screen: MoodChartDepressedActivity
+        },
+        MoodChartAsleep: {
+            screen: MoodChartAsleepActivity
+        },
+        MoodChartEnergy: {
+            screen: MoodChartEnergyActivity
+        },
+        MoodChartOverEating: {
+            screen: MoodChartOverEatingActivity
+        },
+        MoodChartFailure: {
+            screen: MoodChartFailureActivity
+        },
+        MoodChartFocus: {
+            screen: MoodChartFocusActivity
+        },
+        MoodChartSlow: {
+            screen: MoodChartSlowActivity
+        },
+        MoodChartAnxiety: {
+            screen: MoodChartAnxietyActivity
+        },
+        MoodChartNervous: {
+            screen: MoodChartNervousActivity
+        },
+        MoodChartLoseControl: {
+            screen: MoodChartLoseControlActivity
+        },
+        MoodChartWorry: {
+            screen: MoodChartWorryActivity
+        },
+        MoodChartLoseRelax: {
+            screen: MoodChartLoseRelaxActivit
+        },
+        MoodChartRestLess: {
+            screen: MoodChartRestLessActivity
+        },
+        MoodChartIrritable: {
+            screen: MoodChartIrritableActivity
+        },
         SleepChart: {
             screen: SleepChartActivity
         },
@@ -399,7 +459,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'Main',      
+        initialRouteName: 'MoodChart',      
         defaultNavigationOptions: ({ navigation }) => {
             return (
 
