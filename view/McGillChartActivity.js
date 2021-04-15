@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet,StatusBar, Text, View, Image,Alert,TouchableOpacity, Button, ScrollView } from 'react-native';
+import { Platform, StyleSheet, StatusBar, Text, View, Image, Alert, TouchableOpacity, Button, ScrollView } from 'react-native';
 import { I18n } from '../locales/i18n';
 import McGillChart from "./McGillChart"
+import { px2dp } from '../src/px2dp';
 
 type Props = {};
 export default class McGillChartActivity extends Component<Props> {
@@ -19,7 +20,7 @@ export default class McGillChartActivity extends Component<Props> {
         const onButtonPress = () => {
             Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
         };
-        const navigate = this.props.navigation;//此处可以自定义跳转属性
+        this.navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <ScrollView>
                 <StatusBar
@@ -29,9 +30,9 @@ export default class McGillChartActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View>
+                <View style={{ backgroundColor: '#F6F7F8' }}>
                     <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('McGillChartActivity.pain')}</Text></View>
-                    <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
+                    {/* <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
                         <View style={{ width: "92%",marginTop:23,marginBottom:23 }}>
                             <Text style={{}}>
                                 {I18n.t('McGillChartActivity.wideused')}
@@ -41,14 +42,251 @@ export default class McGillChartActivity extends Component<Props> {
                             </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                         </View>
-                    </View>
+                    </View> */}
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center" }}>
-                        <View style={{ width: "92%",marginTop:23,marginBottom:23 }}>
-                            <Text style={{ fontWeight: "bold", fontSize: 20 }}>{I18n.t('McGillChartActivity.feel')}</Text>
-                            <Text style={{ fontSize: 14 }}>{I18n.t('McGillChartActivity.following')}</Text>
+                        <View style={{ width: "90%", backgroundColor:'#EBECED',borderRadius:20  }}>
+                            <View style={{ width: "90%", marginTop: 24, marginBottom: 24,alignSelf:'center' }}>
+                                <Text style={{ fontWeight: "bold", fontSize: 20 }}>{I18n.t('McGillChartActivity.feel')}</Text>
+                                <Text style={{ fontSize: 14 }}>{I18n.t('McGillChartActivity.following')}</Text>
+                            </View>
                         </View>
                     </View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{height:px2dp(40)}}></View>
+                    <View style={{ backgroundColor: '#F6F7F8' }}>
+                        <View style={{ width: '90%', height: px2dp(1510), alignSelf: 'center' }}>
+                            {/* 1 throbbing */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartThrobbing")}
+                                style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Throbbing
+                                             </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/* shooting */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartShooting")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Shooting
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/* 3 stabbing */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartStabbing")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Stabbing
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/* 4 sharp */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartSharp")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sharp
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: 20 }}></View>
+                            {/* 5 cramping   */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartCramping")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Cramping
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*6  gnawing  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartGnawing")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Gnawing
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*7  burning  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartBurning")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Hot-Burning
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*8  aching  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartAching")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Aching
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*9  heavy  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartHeavy")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Heavy
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*10  tender  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartTender")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Tender
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*11  split  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartSplit")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Split
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*12  exhausting  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartExhausting")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Exhausting
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*13  sickening  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartSickening")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sickening
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*14  fearful */}
+                            <TouchableOpacity onPress={() => this.navigate.push("McGillChartFearful")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Fearful
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                        </View>
+                    </View>
+
+
+
+
+
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.throbbing')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -56,9 +294,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="throbbing"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.shooting')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -66,9 +304,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="shooting"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.stabbing')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -76,9 +314,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="stabbing"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.sharp')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -86,9 +324,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="sharp"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.cramping')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -96,9 +334,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="cramping"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.gnawing')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -106,9 +344,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="gnawing"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.hotburning')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -116,9 +354,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="burning"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.aching')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -126,9 +364,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="aching"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.heavy')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -136,9 +374,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="heavy"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.tender')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -146,9 +384,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="tender"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.splitting')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -156,9 +394,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="split"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.exhausting')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -166,9 +404,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="exhausting"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.sickening')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -176,9 +414,9 @@ export default class McGillChartActivity extends Component<Props> {
                             column="sickening"
                         />
                     </View>
-                    <View style={{height:34,width:'100%'}}></View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 350 }}>
+                    <View style={{ height: 34, width: '100%' }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title={I18n.t('McGillChartActivity.fearful')}
                             yAxisLabelName={I18n.t('McGillChartActivity.score')}
@@ -186,11 +424,11 @@ export default class McGillChartActivity extends Component<Props> {
                             column="fearful"
                         />
                     </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
                 </View>
-                <TouchableOpacity >
-                        <Button title="save" onPress={onButtonPress} color="#d62e2d" />
-                    </TouchableOpacity>
+                {/* <TouchableOpacity >
+                    <Button title="save" onPress={onButtonPress} color="#d62e2d" />
+                </TouchableOpacity> */}
             </ScrollView>
 
         );

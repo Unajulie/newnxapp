@@ -60,9 +60,30 @@ import MoodChartLoseRelaxActivit from './MoodChartLoseRelaxActivit';
 import MoodChartRestLessActivity from './MoodChartRestLessActivity';
 import MoodChartIrritableActivity from './MoodChartIrritableActivity';
 import McGillChartActivity from './McGillChartActivity';
+import McGillChartThrobbingActivity from './McGillChartThrobbingActivity';
+import McGillChartShootingActivity from './McGillChartShootingActivity';
+import McGillChartStabbingActivity from './McGillChartStabbingActivity';
+import McGillChartSharpActivity from './McGillChartSharpActivity';
+import McGillChartCrampingActivity from './McGillChartCrampingActivity';
+import McGillChartGnawingActivity from './McGillChartGnawingActivity';
+import McGillChartBurningActivity from './McGillChartBurningActivity';
+import McGillChartAchingActivity from './McGillChartAchingActivity';
+import McGillChartHeavyActivity from './McGillChartHeavyActivity';
+import McGillChartTenderActivity from './McGillChartTenderActivity';
+import McGillChartSplitActivity from './McGillChartSplitActivity';
+import McGillChartExhaustingActivity from './McGillChartExhaustingActivity';
+import McGillChartSickeningActivity from './McGillChartSickeningActivity';
+import McGillChartFearfulActivity from './McGillChartFearfulActivity';
 import BiologicalActivity from './BiologicalActivity';
 import TestprocessActivity from './TestprocessActivity';
 import SleepChartActivity from "./SleepChartActivity"
+import SleepChartAwakeActivity from "./SleepChartAwakeActivity"
+import SleepChartFallActivity from "./SleepChartFallActivity"
+import SleepChartQualityActivity from "./SleepChartQualityActivity"
+import SleepChartMoodActivity from "./SleepChartMoodActivity"
+import SleepChartAbilityActivity from "./SleepChartAbilityActivity"
+import SleepChartTroubleActivity from "./SleepChartTroubleActivity"
+import SleepChartEffectActivity from "./SleepChartEffectActivity"
 import DietChartActivity from "./DietChartActivity";
 import SameActivity from './SameActivity';
 import DataActivity from './DataActivity';
@@ -357,6 +378,48 @@ export const RootStack = createStackNavigator(
         McGillChart: {
             screen: McGillChartActivity
         },
+        McGillChartThrobbing: {
+            screen: McGillChartThrobbingActivity
+        },
+        McGillChartShooting: {
+            screen: McGillChartShootingActivity
+        },
+        McGillChartStabbing: {
+            screen: McGillChartStabbingActivity
+        },
+        McGillChartSharp: {
+            screen: McGillChartSharpActivity
+        },
+        McGillChartCramping: {
+            screen: McGillChartCrampingActivity
+        },
+        McGillChartGnawing: {
+            screen: McGillChartGnawingActivity
+        },
+        McGillChartBurning: {
+            screen: McGillChartBurningActivity
+        },
+        McGillChartAching: {
+            screen: McGillChartAchingActivity
+        },
+        McGillChartHeavy: {
+            screen: McGillChartHeavyActivity
+        },
+        McGillChartTender: {
+            screen: McGillChartTenderActivity
+        },
+        McGillChartSplit: {
+            screen: McGillChartSplitActivity
+        },
+        McGillChartExhausting: {
+            screen: McGillChartExhaustingActivity
+        },
+        McGillChartSickening: {
+            screen: McGillChartSickeningActivity
+        },
+        McGillChartFearful: {
+            screen: McGillChartFearfulActivity
+        },
         MoodChart: {
             screen: MoodChartActivity
         },
@@ -407,6 +470,27 @@ export const RootStack = createStackNavigator(
         },
         SleepChart: {
             screen: SleepChartActivity
+        },
+        SleepChartAwake: {
+            screen: SleepChartAwakeActivity
+        },
+        SleepChartFall: {
+            screen: SleepChartFallActivity
+        },
+        SleepChartQuality: {
+            screen: SleepChartQualityActivity
+        },
+        SleepChartMood: {
+            screen: SleepChartMoodActivity
+        },
+        SleepChartAbility: {
+            screen: SleepChartAbilityActivity
+        },
+        SleepChartTrouble: {
+            screen: SleepChartTroubleActivity
+        },
+        SleepChartEffect: {
+            screen: SleepChartEffectActivity
         },
         DietChart: {
             screen: DietChartActivity
@@ -459,7 +543,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'MoodChart',      
+        initialRouteName: 'SleepChart',      
         defaultNavigationOptions: ({ navigation }) => {
             return (
 

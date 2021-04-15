@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View,Alert, StatusBar, Button, ScrollView, TouchableOpacity } from 'react-native'
+import { Platform, StyleSheet, Text, View, Alert, StatusBar, Button, ScrollView, TouchableOpacity,Image } from 'react-native'
 import { I18n } from '../locales/i18n'
 import SleepStarChart from './SleepStarChart'
 import SleepSpinnerChart from './SleepSpinnerChart'
+import { px2dp } from '../src/px2dp';
 
 export default class SleepChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -13,14 +14,14 @@ export default class SleepChartActivity extends Component<Props> {
 
     constructor(props) {
         super(props);
-       
+
     }
 
     render() {
         const onButtonPress = () => {
             Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
         };
-        const navigate = this.props.navigation;//此处可以自定义跳转属性
+        this.navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <ScrollView>
                 <StatusBar
@@ -30,20 +31,146 @@ export default class SleepChartActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View>
-                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('SleepChartActivity.assessment')}</Text></View>
-                    <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
-                        <View style={{ width: "92%",marginTop:23,marginBottom:23 }}>
-                            <Text style={{marginBottom:12}}>
-                                {I18n.t('SleepChartActivity.people')}
-                            </Text>
-                            <Text style={{marginBottom:12}}>
-                                {I18n.t('SleepChartActivity.include')}
-                            </Text>
+                <View style={{ backgroundColor: '#F6F7F8' }}>
+                    <View style={{ width: "100%", height: 60, justifyContent: "center", alignItems: "center" }}>
+                        <View style={{ width: "90%", height: 60, justifyContent: "center" }}>
+                            <Text style={{ textAlign: 'left', fontSize: 24, fontWeight: "bold" }}>{I18n.t('SleepChartActivity.assessment')}</Text>
+                        </View>
+                    </View>
+                    <View style={{ width: "100%", justifyContent: "center", alignItems: "center" }}>
+                        <View style={{ width: "90%", backgroundColor: '#EBECED', borderRadius: 20 }}>
+                            <View style={{ width: "90%", marginTop: 24, marginBottom: 24, alignSelf: 'center' }}>
+                                <Text style={{ marginBottom: 12 }}>
+                                    {I18n.t('SleepChartActivity.people')}
+                                </Text>
+                                <Text style={{ marginBottom: 12 }}>
+                                    {I18n.t('SleepChartActivity.include')}
+                                </Text>
+
+                            </View>
                         </View>
                     </View>
 
-                    <View style={{ width: "100%", height: 410 ,marginTop:23,marginBottom:23 }}>
+                    <View style={{ height: px2dp(40) }}></View>
+                    <View style={{ backgroundColor: '#F6F7F8' }}>
+                        <View style={{ width: '90%', height: px2dp(800), alignSelf: 'center' }}>
+                            {/* 1 awake */}
+                            <TouchableOpacity onPress={() => this.navigate.push("SleepChartAwake")}
+                                style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Awake
+                                             </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*2 fallasleep */}
+                            <TouchableOpacity onPress={() => this.navigate.push("SleepChartFall")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Fall Asleep
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*3 sleepquality  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("SleepChartQuality")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sleep Quality
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*4 affectmood  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("SleepChartMood")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Affect Mood
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*5 affectability  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("SleepChartAbility")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Affect Ability
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*6 troubleyou  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("SleepChartTrouble")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Trouble You
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ height: px2dp(20) }}></View>
+                            {/*7 wheneffect  */}
+                            <TouchableOpacity onPress={() => this.navigate.push("SleepChartEffect")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <View style={{ height: px2dp(80), flexDirection: 'row', }}>
+                                    <View style={{ width: '20%', justifyContent: 'center' }}>
+                                        <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
+                                    </View>
+                                    <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>When Effect
+                                    </Text>
+                                    </View>
+                                    <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    </View>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+
+{/* 
+                    <View style={{ width: "100%", height: 410, marginTop: 23, marginBottom: 23 }}>
                         <SleepSpinnerChart
                             title={
                                 <View style={{ width: "90%", height: 75 }}>
@@ -59,8 +186,8 @@ export default class SleepChartActivity extends Component<Props> {
                             column="awake"
                         />
                     </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 410,marginTop:23,marginBottom:23  }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 410, marginTop: 23, marginBottom: 23 }}>
                         <SleepSpinnerChart
                             title={
                                 <View style={{ width: "90%", height: 75 }}>
@@ -76,8 +203,8 @@ export default class SleepChartActivity extends Component<Props> {
                             column="fallasleep"
                         />
                     </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23  }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 400, marginTop: 23, marginBottom: 23 }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -94,8 +221,8 @@ export default class SleepChartActivity extends Component<Props> {
                             column="sleepquality"
                         />
                     </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 415,marginTop:23,marginBottom:23  }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 415, marginTop: 23, marginBottom: 23 }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 60 }}>
@@ -111,9 +238,9 @@ export default class SleepChartActivity extends Component<Props> {
                             yAxisLabelValue="affectmood"
                             column="affectmood"
                         />
-                    </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 435,marginTop:23,marginBottom:23  }}>
+                    </View> */}
+                    {/* <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 435, marginTop: 23, marginBottom: 23 }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 80 }}>
@@ -129,9 +256,9 @@ export default class SleepChartActivity extends Component<Props> {
                             yAxisLabelValue="affectability"
                             column="affectability"
                         />
-                    </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 420 ,marginTop:23,marginBottom:23 }}>
+                    </View> */}
+                    {/* <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 420, marginTop: 23, marginBottom: 23 }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 60 }}>
@@ -148,8 +275,8 @@ export default class SleepChartActivity extends Component<Props> {
                             column="troubleyou"
                         />
                     </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 410,marginTop:23,marginBottom:23  }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View> */}
+                    {/* <View style={{ width: "100%", height: 410, marginTop: 23, marginBottom: 23 }}>
                         <SleepSpinnerChart
                             title={
                                 <View style={{ width: "90%", height: 75 }}>
@@ -167,7 +294,7 @@ export default class SleepChartActivity extends Component<Props> {
                     </View>
                     <TouchableOpacity >
                         <Button title="save" onPress={onButtonPress} color="#ff7668" />
-                    </TouchableOpacity>
+                    </TouchableOpacity> */}
                 </View>
             </ScrollView>
 
