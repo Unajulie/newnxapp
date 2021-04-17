@@ -67,7 +67,7 @@ node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\modules\
             }
 });
 
-ndroid-sdk-windows\sources\android-23\android\webkit\WebViewClient.java 的onReceivedSslError方法中添加如下代码
+android-sdk-windows\sources\android-23\android\webkit\WebViewClient.java 的onReceivedSslError方法中添加如下代码
 android-sdk-windows\sources\android-28\android\webkit\WebViewClient.java 的onReceivedSslError方法中添加如下代码
   public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
 			String message;

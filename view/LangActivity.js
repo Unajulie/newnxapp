@@ -3,7 +3,6 @@ import { NavigationActions, StackActions } from 'react-navigation';
 import { TouchableOpacity, StyleSheet, Text,Image, View,ScrollView } from 'react-native'
 import { I18n } from '../locales/i18n'
 
-type Props = {};
 export default class LangActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -19,7 +18,6 @@ export default class LangActivity extends Component<Props> {
         return (
             <ScrollView style={{flex:1}}>
                 <View>
-                    <View ></View>
                     <TouchableOpacity onPress={()=>{
                         I18n.locale = 'en'
                         this.props.navigation.dispatch(StackActions.reset({

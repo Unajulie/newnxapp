@@ -16,8 +16,8 @@ export default class TabHomeActivity extends Component<Props> {
     }
     static navigationOptions = {
         headerRight: (
-            <View style={{ width: 100, height: 50, justifyContent: "center", alignItems: "center" }}>
-                <Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/icons/user-logo.png")} />
+            <View style={{ width: px2dp(100), height: px2dp(50), justifyContent: "center", alignItems: "center" }}>
+                <Image style={{ height: px2dp(25), width: px2dp(25) }} resizeMode="contain" source={require("../image/icons/user-logo.png")} />
                 <Text style={{ color: "#fff" }} numberOfLines={1}>Hello</Text>
             </View>
         )

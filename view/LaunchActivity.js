@@ -33,8 +33,8 @@ export default class LaunchActivity extends Component {
             <View style={{ flex: 1, flexDirection: "column" }}>
                 <ScrollView>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
-                    <View style={{ width: "100%", height: 440, zIndex: 0, flex: 1 }}>
-                        <View style={{ width: "100%", height: 440 }}>
+                    <View style={{ width: "100%", height: px2dp(440), zIndex: 0, flex: 1 }}>
+                        <View style={{ width: "100%", height: px2dp(440) }}>
                             <Swiper
                                 height={px2dp(400)}//组件高度
                                 horizontal={true}//水平轮播

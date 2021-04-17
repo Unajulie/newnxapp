@@ -31,7 +31,6 @@ import DavidExperiencesActivity from './DavidExperiencesActivity';
 import DavidPublishedActivity from './DavidPublishedActivity';
 import DavidHonorActivity from './DavidHonorActivity';
 import DavidConferencesActivity from './DavidConferencesActivity';
-import HuiliActivity from './HuiliActivity';
 import ChifatActivity from './ChifatActivity';
 import ChifatExperiencesActivity from './ChifatExperiencesActivity';
 import ChifatPublishedActivity from './ChifatPublishedActivity';
@@ -103,6 +102,7 @@ import AgeAccelerateActivity from './AgeAccelerateActivity';
 import Manual4Activity from './Manual4Activity';
 import LaunchActivity from './LaunchActivity';
 import ReportActivity from './ReportActivity';
+import SettingActivity from './SettingActivity';
 const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 56;
 export const RootStack = createStackNavigator(
     {
@@ -114,146 +114,22 @@ export const RootStack = createStackNavigator(
         },
         Register: {
             screen: RegisterActivity,
-            navigationOptions: {
-
-                headerTintColor: 'black',
-                headerRight: null,
-                headerTitleStyle: {
-                    alignSelf: 'center',
-                    textAlign: 'center',
-                    flex: 1,
-                    fontWeight: 'bold',
-                    fontSize: px2dp(18),
-                },
-                headerTitleContainerStyle: {
-                    left: TITLE_OFFSET,
-                    right: TITLE_OFFSET,
-                },
-                headerStyle: {
-                    height: px2dp(80),
-                    backgroundColor: '#FBF0EC',
-
-                }
-            },
 
         },
         Login: {
             screen: LoginActivity,
-            navigationOptions: {
-
-                headerTintColor: 'black',
-                headerRight: null,
-                headerTitleStyle: {
-                    alignSelf: 'center',
-                    textAlign: 'center',
-                    flex: 1,
-                    fontWeight: 'bold',
-                    fontSize: px2dp(18),
-                },
-                headerTitleContainerStyle: {
-                    left: TITLE_OFFSET,
-                    right: TITLE_OFFSET,
-                },
-                headerStyle: {
-                    height: px2dp(80),
-                    backgroundColor: '#FBF0EC',
-
-                }
-            },
         },
         Forget: {
             screen: ForgetActivity,
-            navigationOptions: {
-
-                headerTintColor: 'black',
-                headerRight: null,
-                headerTitleStyle: {
-                    alignSelf: 'center',
-                    textAlign: 'center',
-                    flex: 1,
-                    fontWeight: 'bold',
-                    fontSize: px2dp(18),
-                },
-                headerTitleContainerStyle: {
-                    left: TITLE_OFFSET,
-                    right: TITLE_OFFSET,
-                },
-                headerStyle: {
-                    height: px2dp(80),
-                    backgroundColor: '#FBF0EC',
-
-                }
-            },
         },
         Consent: {
             screen: ConsentActivity,
-            navigationOptions: {
-
-                headerTintColor: 'black',
-                headerRight: null,
-                headerTitleStyle: {
-                    alignSelf: 'center',
-                    textAlign: 'center',
-                    flex: 1,
-                    fontWeight: 'bold',
-                    fontSize: px2dp(18),
-                },
-                headerTitleContainerStyle: {
-                    left: TITLE_OFFSET,
-                    right: TITLE_OFFSET,
-                },
-                headerStyle: {
-                    height: px2dp(80),
-                    backgroundColor: '#FBF0EC',
-
-                }
-            },
         },
         Main: {
             screen: MainActivity,
-            navigationOptions: {
-
-                headerTintColor: 'black',
-                headerTitleStyle: {
-                    alignSelf: 'center',
-                    textAlign: 'center',
-                    flex: 1,
-                    fontWeight: 'bold',
-                    fontSize: px2dp(18),
-                },
-                headerTitleContainerStyle: {
-                    left: TITLE_OFFSET,
-                    right: TITLE_OFFSET,
-                },
-                headerStyle: {
-                    height: px2dp(80),
-                    backgroundColor: '#FBF0EC',
-
-                }
-            },
         },
         DnaReport: {
             screen: DnaReportActivity,
-            navigationOptions: {
-
-                headerTintColor: 'black',
-                headerTitleStyle: {
-                    alignSelf: 'center',
-                    textAlign: 'center',
-                    flex: 1,
-                    fontWeight: 'bold',
-                    fontSize: px2dp(18),
-                },
-                headerTitleContainerStyle: {
-                    left: TITLE_OFFSET,
-                    right: TITLE_OFFSET,
-                },
-                headerStyle: {
-                    height: px2dp(80),
-                    backgroundColor: '#FBF0EC',
-
-                }
-            },
         },
         Report: {
             screen: ReportActivity
@@ -269,6 +145,12 @@ export const RootStack = createStackNavigator(
             screen: TabCenterActivity,
             navigationOptions: {
                 header: null,
+            },
+        },
+        Setting: {
+            screen: SettingActivity,
+            navigationOptions: {
+                headerRight: null,
             },
         },
         Company: {
@@ -313,9 +195,6 @@ export const RootStack = createStackNavigator(
         },
         DavidConferences: {
             screen: DavidConferencesActivity
-        },
-        Huili: {
-            screen: HuiliActivity
         },
         Chifat: {
             screen: ChifatActivity
@@ -370,7 +249,6 @@ export const RootStack = createStackNavigator(
         LifeStyleChart: {
             screen: LifeStyleChartActivity
         },
-
 
         Payment: {
             screen: PaymentActivity
@@ -543,7 +421,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'SleepChart',      
+        initialRouteName: 'Setting',      
         defaultNavigationOptions: ({ navigation }) => {
             return (
 
