@@ -49,9 +49,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>Stop Counting your Age!</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.stop")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>By birthdays or candles on the cake, wrinkles, crow's feet or the frown lines on your face — those are only numbers.</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.birthdays")}</Text>
                                         </View>
                                     </ImageBackground>
 
@@ -61,9 +61,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>How Old Are You, Really?</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.really")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>The only age that counts is your biological DNA age.</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.biological")}</Text>
                                         </View>
                                     </ImageBackground>
 
@@ -73,9 +73,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>Discover Your Biological Age</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.discover")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>Biological age can be measured with Only 2ml saliva sample</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.sample")}</Text>
                                         </View>
                                     </ImageBackground>
 
@@ -85,9 +85,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>Reverse Your Age</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.reverse")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>Importantly "epigenetics" in different from  "genetics" is potentially reversible by dietary interventions and life style changes.</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.changes")}</Text>
                                         </View>
                                     </ImageBackground>
 

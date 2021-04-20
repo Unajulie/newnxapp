@@ -245,7 +245,7 @@ export default class DavidActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Professional Experiences
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('DavidActivity.professional')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -261,7 +261,7 @@ export default class DavidActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro3.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Conferences
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('DavidActivity.conferences')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -277,7 +277,7 @@ export default class DavidActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro4.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Honors
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('DavidActivity.honor')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -293,7 +293,7 @@ export default class DavidActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Published Papers
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('DavidActivity.publshed')} 
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>

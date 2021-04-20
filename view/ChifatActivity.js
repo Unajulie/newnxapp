@@ -143,7 +143,7 @@ export default class ChifatActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Professional Experiences
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ChifatActivity.experiences')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -159,7 +159,7 @@ export default class ChifatActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Published Papers
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ChifatActivity.papers')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>

@@ -37,43 +37,43 @@ export default class DavidConferencesActivity extends Component<Props> {
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.forum')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.india')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.forum')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.india')}</Text></Text>
                         </View>
                     </View>
 
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.diseases')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.diseases')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
                         </View>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.conference')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.conference')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
                         </View>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.first')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.first')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
                         </View>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.reseach')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.reseach')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
                         </View>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.cell')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.france')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.cell')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.france')}</Text></Text>
                         </View>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.basic')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.basic')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
                         </View>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.health')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.london')}</Text></Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '76%', fontFamily: 'fantasy', lineHeight: 21, marginBottom: 18 }}>{I18n.t('DavidActivity.health')}<Text style={{width: '18%', fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.london')}</Text></Text>
                         </View>
                     </View>
 

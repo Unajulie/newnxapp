@@ -278,7 +278,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     <View style={{ marginLeft: px2dp(15), marginTop: px2dp(20) }}>
                                         <Text  style={{ fontWeight: 'bold', fontSize: px2dp(16), fontFamily: 'fantasy',}}>EpiAge</Text>
                                     </View>
-                                    <Text style={{ margin: px2dp(15), fontWeight: '200', fontSize: px2dp(14), fontFamily: 'serif', }}>The epigenetic age is a better parameter of our health well being and life span than our chronological age.</Text>
+                                    <Text style={{ margin: px2dp(15), fontWeight: '200', fontSize: px2dp(14), fontFamily: 'serif', }}>{I18n.t("DnaReportActivity.life")}</Text>
                                     <Image style={{ height: px2dp(140), width: '100%', borderRadius: px2dp(30) }} source={require('../image/enpic/index9.jpg')} resizeMode='cover' />
                                 </View>
                                 <View style={{ width: "100%", alignSelf: "center", height: px2dp(300), marginTop: px2dp(45) }}>
@@ -305,7 +305,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     }}>
                                         <View style={{ width: "100%", height: px2dp(50), justifyContent: 'center', flexDirection: 'row', alignSelf: "center", borderWidth: 1, borderColor: '#404cb2', borderRadius: px2dp(5), }} >
                                             <Image style={{ height: px2dp(30), width: px2dp(50), marginTop: px2dp(10) }} resizeMode='contain' source={require("../image/barcode.png")}></Image>
-                                            <Text style={{ color: '#404cb2', lineHeight: px2dp(50), fontWeight: 'bold', fontSize: px2dp(14), fontFamily: 'fantasy', }}>Scan Kit Barcode</Text>
+                                            <Text style={{ color: '#404cb2', lineHeight: px2dp(50), fontWeight: 'bold', fontSize: px2dp(14), fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.Scan")}</Text>
                                         </View>
                                     </TouchableOpacity>
                                     <View style={{ width: "100%", height: px2dp(50), backgroundColor: "#404cb2", borderRadius: px2dp(5), marginTop: px2dp(30), alignSelf: "center" }} >

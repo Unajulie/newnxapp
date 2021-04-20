@@ -225,7 +225,7 @@ export default class BiologicalActivity extends Component<Props> {
 
                         {/* epigenetic age Detection Method */}
                         <View style={{ width: '90%', alignSelf: 'center', backgroundColor: '#ffffff' }}>
-                            <Text style={{ fontSize: 24, fontFamily: 'fantasy', lineHeight: 27, color: '#000000', textAlignVertical: 'center', fontWeight: '700' }}>epigenetic Age Detection Method</Text>
+                            <Text style={{ fontSize: 24, fontFamily: 'fantasy', lineHeight: 27, color: '#000000', textAlignVertical: 'center', fontWeight: '700' }}>{I18n.t('BiologicalActivity.method')}</Text>
                         </View>
                         <View style={{ height: 20, width: 100 }}></View>
                         {/* 底部bio10小三图 */}

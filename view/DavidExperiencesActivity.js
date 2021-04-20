@@ -9,7 +9,7 @@ type Props = {};
 export default class DavidExperiencesActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: 'Professional Experiences',
+            title:  I18n.t('DavidActivity.professional'),
         })
     }
     constructor(props) {

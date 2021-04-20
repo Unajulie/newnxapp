@@ -41,12 +41,12 @@ export default class GoodsItem extends Component<Props> {
                             <Image style={{ width: 62, height: 67, alignSelf: 'center' }} source={this.props.imgpath} resizeMode='contain' />
                         </View>
                         <View style={{ width: '52%' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', height: 34, width: 200, fontSize: 16, color: '#0071bc' }}>{this.props.title}</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', height: 23, width: 178, fontSize: 12, lineHeight: 26 }}>{this.props.intro}</Text>
+                            <Text style={{ fontFamily: 'fantasy', height: 34, width: 200, fontSize: 16, color: '#0071bc' }}>{this.props.title}</Text>
+                            <Text style={{ fontFamily: 'fantasy', height: 23, width: 178, fontSize: 12, lineHeight: 26 }}>{this.props.intro}</Text>
                             <View style={{ width: 78, height: 23, flexDirection: 'row' }}>
-                                {/* <Text style={{ height: 23, fontFamily: 'NotoSansHans-Light', lineHeight: 31, textAlign: 'center', textDecorationLine: 'line-through' }}>{this.props.oldprice}</Text> */}
-                                <Text style={{ height: 23, fontFamily: 'NotoSansHans-Light', lineHeight: 28, textAlign: 'center', justifyContent: 'center', color: '#f15a24', fontSize: 18 }}>&nbsp;&nbsp;{this.props.newprice}</Text>
-                                <Text style={{ height: 23, fontFamily: 'NotoSansHans-Light', lineHeight: 28, textAlign: 'center', justifyContent: 'center', color: '#f15a24', fontSize: 18 }}>{this.props.unit}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                                {/* <Text style={{ height: 23, fontFamily: 'fantasy', lineHeight: 31, textAlign: 'center', textDecorationLine: 'line-through' }}>{this.props.oldprice}</Text> */}
+                                <Text style={{ height: 23, fontFamily: 'fantasy', lineHeight: 28, textAlign: 'center', justifyContent: 'center', color: '#f15a24', fontSize: 18 }}>&nbsp;&nbsp;{this.props.newprice}</Text>
+                                <Text style={{ height: 23, fontFamily: 'fantasy', lineHeight: 28, textAlign: 'center', justifyContent: 'center', color: '#f15a24', fontSize: 18 }}>{this.props.unit}&nbsp;&nbsp;&nbsp;&nbsp;</Text>
                                 <Text style={{ height: 23, width: 56, textAlign: 'center', color: '#ffffff', backgroundColor: '#cfcfcf' }}>Delete</Text>
                             </View>
                         </View>
@@ -55,7 +55,7 @@ export default class GoodsItem extends Component<Props> {
                                 <TouchableOpacity onPress={this.itemMin.bind(this)}>
                                     <Image style={{ width: 24, height: 24, alignSelf: 'center', marginTop: 5 }} source={require('../image/icons/min.png')} resizeMode='contain' />
                                 </TouchableOpacity>
-                                <Text style={{ alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontWeight: '700', textAlign: 'center' }}>{this.state.size}</Text>
+                                <Text style={{ alignSelf: 'center', fontFamily: 'fantasy', fontWeight: '700', textAlign: 'center' }}>{this.state.size}</Text>
                                 <TouchableOpacity onPress={this.itemAdd.bind(this)}>
                                     <Image style={{ width: 24, height: 24, alignSelf: 'center', marginTop: 5 }} source={require('../image/icons/plus.png')} resizeMode='contain' />
                                 </TouchableOpacity>

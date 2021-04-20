@@ -24,7 +24,7 @@ export default class CompanyActivity extends Component<Props> {
                     </ImageBackground>
                     <View style={{ width: '100%',marginTop:px2dp(-30),height:px2dp(400),zIndex:999,backgroundColor:'#ffffff',borderTopLeftRadius:px2dp(30),borderTopRightRadius:px2dp(30) }}>
                         <View style={{ marginTop: px2dp(20) }}>
-                            <Text style={{ width: '100%', height: px2dp(40), fontSize: px2dp(24), lineHeight: px2dp(40), fontFamily: 'fantasy', marginLeft: px2dp(15), color: 'black', fontWeight: '700' }}>Company introduction</Text>
+                            <Text style={{ width: '100%', height: px2dp(40), fontSize: px2dp(24), lineHeight: px2dp(40), fontFamily: 'fantasy', marginLeft: px2dp(15), color: 'black', fontWeight: '700' }}>{I18n.t('CompanyActivity.title')}</Text>
                         </View>
                         <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(20), flexDirection: 'row', borderBottomColor: '#f0f0f0' }}>
                             <Image style={{ height: px2dp(29), width: '10%' }} resizeMode='contain' source={require("../image/enpic/comp1.png")}></Image>

@@ -10,6 +10,17 @@ import LoginActivity from './LoginActivity';
 import ForgetActivity from './ForgetActivity';
 import RegisterActivity from './RegisterActivity';
 import LifeStyleChartActivity from './LifeStyleChartActivity';
+import LifeStyleMassActivity from './LifeStyleMassActivity';
+import LifeStyleHeartActivity from './LifeStyleHeartActivity';
+import LifeStyleBloodActivity from './LifeStyleBloodActivity';
+import LifeStyleCholesterolActivity from './LifeStyleCholesterolActivity';
+import LifeStyleVitaminsActivity from './LifeStyleVitaminsActivity';
+import LifeStyleDrugsActivity from './LifeStyleDrugsActivity';
+import LifeStyleMeditationActivity from './LifeStyleMeditationActivity';
+import LifeStyleSportActivity from './LifeStyleSportActivity';
+import LifeStyleSleepActivity from './LifeStyleSleepActivity';
+import LifeStyleSexActivity from './LifeStyleSexActivity';
+import LifeStyleHabitsActivity from './LifeStyleHabitsActivity';
 import DnaReportActivity from './DnaReportActivity';
 import PaymentActivity from './PaymentActivity';
 import ConfirmActivity from './ConfirmActivity';
@@ -249,6 +260,39 @@ export const RootStack = createStackNavigator(
         LifeStyleChart: {
             screen: LifeStyleChartActivity
         },
+        LifeStyleMass: {
+            screen: LifeStyleMassActivity
+        },
+        LifeStyleHeart: {
+            screen: LifeStyleHeartActivity
+        },
+        LifeStyleBlood: {
+            screen: LifeStyleBloodActivity
+        },
+        LifeStyleCholesterol: {
+            screen: LifeStyleCholesterolActivity
+        },
+        LifeStyleVitamins: {
+            screen: LifeStyleVitaminsActivity
+        },
+        LifeStyleDrugs: {
+            screen: LifeStyleDrugsActivity
+        },
+        LifeStyleMeditation: {
+            screen: LifeStyleMeditationActivity
+        },
+        LifeStyleSport: {
+            screen: LifeStyleSportActivity
+        },
+        LifeStyleSleep: {
+            screen: LifeStyleSleepActivity
+        },
+        LifeStyleSex: {
+            screen: LifeStyleSexActivity
+        },
+        LifeStyleHabits: {
+            screen: LifeStyleHabitsActivity
+        },
 
         Payment: {
             screen: PaymentActivity
@@ -421,7 +465,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'Setting',      
+        initialRouteName: 'Questionnaire',      
         defaultNavigationOptions: ({ navigation }) => {
             return (
 

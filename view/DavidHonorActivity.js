@@ -9,14 +9,14 @@ import { I18n } from '../locales/i18n';
 // 學術會議
 // const SecondRoute = () => (
 //     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.forum')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.india')}</Text></Text>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.diseases')} <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.conference')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.first')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.reseach')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.cell')}  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.france')}</Text></Text>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.basic')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
-//         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.health')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.london')} </Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.forum')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.india')}</Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.diseases')} <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.conference')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.first')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.reseach')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.cell')}  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.france')}</Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.basic')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
+//         <Text style={{ fontFamily: 'fantasy', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.health')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy' }}>{I18n.t('DavidActivity.london')} </Text></Text>
 //     </View>
 // );
 // const styles = StyleSheet.create({
@@ -68,21 +68,21 @@ export default class DavidHonorActivity extends Component<Props> {
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
                         <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14,  }}>2011</Text>
-                        <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.fellow')}</Text>
+                        <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.fellow')}</Text>
                         <Text style={{ height: 20, lineHeight: 20, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.israel')}</Text>
                     </View>
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
                         <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14,}}>2010</Text>
                         <Text style={{ height: 20, lineHeight: 20, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.alumni')}</Text>
-                        <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.award')}</Text>
+                        <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.award')}</Text>
                     </View>
 
                     <View style={{ height: 20 }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
                         <Text style={{ height: 40, lineHeight: 40, fontFamily: 'fantasy', textAlign: 'center', fontSize: 14, }}>2009</Text>
                         <Text style={{ height: 20, lineHeight: 20, fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.medical')}</Text>
-                        <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.award')}</Text>
+                        <Text style={{ height: 20, lineHeight: 20, fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize: 16 }}>{I18n.t('DavidActivity.award')}</Text>
                     </View>
 
                 </View>
