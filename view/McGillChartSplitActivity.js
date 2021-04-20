@@ -9,7 +9,7 @@ type Props = {};
 export default class McGillChartSplitActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: 'Split',
+            title: I18n.t('LifeStyleChartActivity.split'),
         })
     }
     constructor(props) {
