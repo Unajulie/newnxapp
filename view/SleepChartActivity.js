@@ -62,7 +62,7 @@ export default class SleepChartActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                     </View>
                                     <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Awake
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('SleepChartActivity.Awake')}
                                              </Text>
                                     </View>
                                     <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -78,7 +78,7 @@ export default class SleepChartActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                     </View>
                                     <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Fall Asleep
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('SleepChartActivity.Fall')}
                                     </Text>
                                     </View>
                                     <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -94,7 +94,7 @@ export default class SleepChartActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                     </View>
                                     <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sleep Quality
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('SleepChartActivity.Quality')}
                                     </Text>
                                     </View>
                                     <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -110,7 +110,7 @@ export default class SleepChartActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                     </View>
                                     <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Affect Mood
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('SleepChartActivity.affect')}
                                     </Text>
                                     </View>
                                     <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -126,7 +126,7 @@ export default class SleepChartActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                     </View>
                                     <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Affect Ability
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('SleepChartActivity.Ability')}
                                     </Text>
                                     </View>
                                     <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -142,7 +142,7 @@ export default class SleepChartActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                     </View>
                                     <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Trouble You
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('SleepChartActivity.Trouble')}
                                     </Text>
                                     </View>
                                     <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -158,7 +158,7 @@ export default class SleepChartActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                     </View>
                                     <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>When Effect
+                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('SleepChartActivity.When')}
                                     </Text>
                                     </View>
                                     <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>

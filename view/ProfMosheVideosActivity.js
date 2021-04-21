@@ -11,7 +11,7 @@ type Props = {};
 export default class ProfMosheVideosActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: 'Related Videos',
+            title: I18n.t('ProfMosheActivity.video'),
         })
     }
     constructor(props) {

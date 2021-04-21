@@ -11,7 +11,7 @@ type Props = {};
 export default class ProfMosheHonorsActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: 'Honors',
+            title: I18n.t('ProfMosheActivity.Honors'),
         })
     }
     constructor(props) {
@@ -31,7 +31,7 @@ export default class ProfMosheHonorsActivity extends Component<Props> {
 
                 <View style={{ height: 40 }}></View>
                 <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', }}>
-                    <Text style={{ height: 17, lineHeight: 19, fontFamily: 'fantasy', fontSize: 20, fontWeight: '700' }}>Honors</Text>
+                    <Text style={{ height: 17, lineHeight: 19, fontFamily: 'fantasy', fontSize: 20, fontWeight: '700' }}>{I18n.t('ProfMosheActivity.Honors')}</Text>
                 </View>
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
                     <View style={{ height: 20 }}></View>

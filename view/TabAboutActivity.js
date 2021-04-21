@@ -31,7 +31,7 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
                                     <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.company1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Guide personalized management of healthy life.</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.Guide')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -48,7 +48,7 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
                                     <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.science1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>We are the DNA methylation team</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.We')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -65,7 +65,7 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
                                     <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.dna1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>DNA methylation is a chemical mark on DNA</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.DNA')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -82,7 +82,7 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
                                     <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.biological1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>The only age that counts is your biological age</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.counts')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -113,7 +113,7 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
                                     <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.consent1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>HKG epi THERAPEUTICS Ltd. User Consent Form</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.THERAPEUTICS')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>

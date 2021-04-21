@@ -11,7 +11,7 @@ type Props = {};
 export default class ProfMosheSponsoredActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: 'Sponsored',
+            title:  I18n.t('ProfMosheActivity.Sponsored'),
         })
     }
     constructor(props) {
@@ -30,7 +30,7 @@ export default class ProfMosheSponsoredActivity extends Component<Props> {
                 </StatusBar>
                 <View style={{ height: 40 }}></View>
                 <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', }}>
-                    <Text style={{ height: 17, lineHeight: 19, fontFamily: 'fantasy', fontSize: 20, fontWeight: '700' }}>Sponsored</Text>
+                    <Text style={{ height: 17, lineHeight: 19, fontFamily: 'fantasy', fontSize: 20, fontWeight: '700' }}>{I18n.t('ProfMosheActivity.Sponsored')}</Text>
                 </View>
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
 

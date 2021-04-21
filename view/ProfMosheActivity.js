@@ -423,7 +423,7 @@ export default class ProfMosheActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Professional Experiences
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ProfMosheActivity.experiences')}
                                              </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -439,7 +439,7 @@ export default class ProfMosheActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro2.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Related Videos
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ProfMosheActivity.video')} 
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -455,7 +455,7 @@ export default class ProfMosheActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro3.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Career
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ProfMosheActivity.Career')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -471,7 +471,7 @@ export default class ProfMosheActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro4.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Honors
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ProfMosheActivity.Honors')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -487,7 +487,7 @@ export default class ProfMosheActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro5.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sponsored
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ProfMosheActivity.Sponsored')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -503,7 +503,7 @@ export default class ProfMosheActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Published Papers
+                                            <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ProfMosheActivity.papers')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>

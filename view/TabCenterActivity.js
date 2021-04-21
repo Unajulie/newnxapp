@@ -97,7 +97,7 @@ export default class CenterActivity extends Component {
                                             <Text
                                                 style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                                 {I18n.t('TabHomeActivity.myreport')}</Text>
-                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Scan your Kit and get your chronological Age data.</Text>
+                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.kit')}</Text>
 
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -123,7 +123,7 @@ export default class CenterActivity extends Component {
                                                             this.navigate.push("RasEncryptionActivity")
                                                 }}
                                                 style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}  </Text>
-                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Fill a questionnaires about your lifestyle</Text>
+                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.Fill')} </Text>
 
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -139,7 +139,7 @@ export default class CenterActivity extends Component {
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
                                             <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}{"\n"}
-                                                <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Step by step instrucations for a main workflow</Text>
+                                                <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.Step')}</Text>
                                             </Text>
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>

@@ -90,7 +90,10 @@
         "centerreport": "我的報告",
         "centerqa": "Q&A",
         "centerus": "聯繫我們",
-        "centerout": "退出"
+        "centerout": "退出",
+        "kit":"掃描您的套件並獲取您的年齡數據。",
+        "Fill":"填寫有關您的生活方式的調查表",
+        "Step":"主要工作流程的分步說明"
     },
     "AboutActivity": {
         "title": "關於我們",
@@ -354,7 +357,12 @@
         "biological1": "生物學",
         "age1": "年齡",
         "consent1": "客戶知情",
-        "form1": "同意書"
+        "form1": "同意書",
+        "Guide":"指導個性化健康生活管理。",
+        "We":"我們是DNA甲基化團隊",
+        "DNA":"DNA甲基化是DNA上的化學標記",
+        "counts":"唯一重要的年齡是您的生物學年齡",
+        "THERAPEUTICS":"HKG epi Epitherapies Ltd.用戶同意書"
     },
     "ScienceteamActivity": {
         "title": "科學團隊",
@@ -375,7 +383,7 @@
     },
     "ProfMosheActivity": {
         "title": "Moshe Szyf 教授",
-        "experiences": "| 專業履歷",
+        "experiences": "專業履歷",
         "pioneer": "研究表觀遺傳學的先驅學者",
         "inventor": "表觀遺傳學首個專利持有人",
         "patent": "首個DNA甲基化及癌症專利持有人 ",
@@ -399,7 +407,7 @@
         "department": "麥吉爾大學藥理學與",
         "themcgill": "治療學系",
         "Associate": "副教授",
-        "papers": "| 榮譽",
+        "papers": "發表論文",
         "member": "加拿大皇家學會院士",
         "ccnp": "CCNP神經心理藥理學創新獎",
         "radio": "加拿大廣播電台年度科學家獎",
@@ -423,7 +431,10 @@
         "science": "科學與工程研究",
         "inst": "加拿大國家癌症研究所和",
         "school": "麥吉爾醫學院",
-        "honorary": "2003--麥吉爾大學榮譽教授"
+        "honorary": "2003--麥吉爾大學榮譽教授",
+        "Career":"職業",
+        "Honors":"資質榮譽",
+        "Sponsored":"贊助商"
     },
     "DavidActivity": {
         "title": "戴維博士",
@@ -690,7 +701,22 @@
         "still": "閣下多久會受到焦躁/坐立不安的影響？",
         "irritable": "閣下多久會受到容易生氣影響？",
         "easily": "閣下多久會因擔心可怕事情或許會發生而受影響？",
-        "attack": "閣下有否受到焦慮症影響?"
+        "attack": "閣下有否受到焦慮症影響?",
+        "Pleasure":"樂趣",
+        "Depressed":"鬱悶",
+        "Asleep":"睡著",
+        "Energy":"活力",
+        "Eating":"飲食過量",
+        "Failure":"失敗",
+        "Focus":"重點",
+        "Slow":"慢慢",
+        "Anxiety":"焦慮",
+        "Nervous":"緊張",
+        "Control":"失去控制",
+        "Worry":"擔心",
+        "Relax":"難於放鬆",
+        "Less":"休息不足",
+        "Irritable":"煩躁"
     },
     "BiologicalActivity": {
         "title": "生物年齡檢測",
@@ -785,7 +811,15 @@
         "productivity": "回想過去一個月, 閣下的專注度，工作效率或保持清醒的能力在多大程度上受到了睡眠質素差的影響？",
         "general": " 回想過去一個月，睡眠不寧在多大程度上困擾著你？",
         "problem": "閣下多長時間存在睡眠問題？",
-        "month": "月"
+        "month": "月",
+        "Awake":"甦醒",
+        "Fall":"睡著",
+        "Quality":"睡眠質量",
+        "affect":"影響情緒",
+        "Ability":"影響力",
+        "Trouble":"麻煩您了",
+        "When":"何時生效"
+
     },
     "DietChartActivity": {
         "title": "飲食推薦",

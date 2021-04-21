@@ -9,7 +9,7 @@ type Props = {};
 export default class SleepChartAbilityActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: 'Affect Ability',
+            title: I18n.t('LifeStyleChartActivity.Ability'),
         })
     }
     constructor(props) {

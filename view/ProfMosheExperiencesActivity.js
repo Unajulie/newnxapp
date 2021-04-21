@@ -11,7 +11,7 @@ type Props = {};
 export default class ProfMosheExperiencesActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: 'Professional Experiences',
+            title: I18n.t('ProfMosheActivity.experiences'),
         })
     }
     constructor(props) {

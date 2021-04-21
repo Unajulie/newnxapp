@@ -31,7 +31,7 @@ export default class MethylationActivity extends Component<Props> {
                     <View style={{height:10,backgroundColor:'#0071bc'}}></View>
                     <View style={{ borderTopRightRadius: 20, borderTopLeftRadius: 20, backgroundColor: '#ffffff' }}>
                         <View style={{ height: 14 }}></View>
-                        <Text style={{ width: '100%', fontSize: 24, lineHeight: 40, fontFamily: 'fantasy', marginLeft: 15, color: 'black', height: 40,fontWeight:'700' }}>DNA Methylation</Text>
+                        <Text style={{ width: '100%', fontSize: 24, lineHeight: 40, fontFamily: 'fantasy', marginLeft: 15, color: 'black', height: 40,fontWeight:'700' }}>{I18n.t("MethylationActivity.title")}</Text>
                     </View>
                     {/* dna methylation */}
                     <View style={{ width: '100%', backgroundColor: '#ffffff' }}>

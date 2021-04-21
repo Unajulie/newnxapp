@@ -91,7 +91,10 @@
         "centerreport": "My Report",
         "centerqa": "Q&A",
         "centerus": "Contact Us",
-        "centerout": "Log Out"
+        "centerout": "Log Out",
+        "kit":"Scan your Kit and get your chronological Age data.",
+        "Fill":"Fill a questionnaires about your lifestyle",
+        "Step":"Step by step instrucations for a main workflow"
     },
     "AboutActivity": {
         "title": "About Us",
@@ -356,7 +359,12 @@
         "biological1": "Biological",
         "age1": "Age",
         "consent1": "User Consent Form",
-        "form1": "Form"
+        "form1": "Form",
+        "Guide":"Guide personalized management of healthy life.",
+        "We":"We are the DNA methylation team",
+        "DNA":"DNA methylation is a chemical mark on DNA",
+        "counts":"The only age that counts is your biological age",
+        "THERAPEUTICS":"HKG epi THERAPEUTICS Ltd. User Consent Form"
     },
     "ScienceteamActivity": {
         "title": "Science Team",
@@ -377,7 +385,7 @@
     },
     "ProfMosheActivity": {
         "title": "Moshe Szyf, Prof.",
-        "experiences": " Professional Experiences",
+        "experiences": "Professional Experiences",
         "pioneer": "Pioneer of the field of epigenetics",
         "inventor": "Inventor of the first broad patents in the field",
         "patent": "Inventor of the first patents on DNA methylation ",
@@ -388,7 +396,7 @@
         "professor": "Professor Department of Pharmacology and Therapeutics McGill University Montreal Canada",
         "resident": "Resident chief scientist of Beijing epidial medical diagnostic technology co., LTD.",
         "director": "Director of epigenetic institute, Beijing yizhuang innovation institute",
-        "video": "RELATED VIDEOS",
+        "video": "Related Videos",
         "o2o": "Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4",
         "hope": "Dr. Moshe Szyf , Science of Hope Conference 2017.mp4",
         "epigenetic": "Dr. Moshe Szyf, What is epigenetic and why knowing it will change your life .mp4",
@@ -401,7 +409,7 @@
         "department": "Department of Pharmacology and",
         "themcgill": "Therapeutics McGill",
         "Associate": "Associate Professor",
-        "papers": "| PUBLISHED PAPERS",
+        "papers": "Published Papers",
         "member": " Member of the Royal Society of Canada",
         "ccnp": "CCNP Neuropsychopharmacology, Innovation Award",
         "radio": "Radio Canada Annual Scientist Award",
@@ -426,7 +434,10 @@
         "science": "science and engineering research",
         "research": "Canadian council for Natural science and engineering research",
         "inst": "Canadian National Cancer Institute and",
-        "school": "McGill Medical School"
+        "school": "McGill Medical School",
+        "Career":"Career",
+        "Honors":"Honors",
+        "Sponsored":"Sponsored"
     },
     "DavidActivity": {
         "title": "David Cheishvili Ph.D.",
@@ -687,7 +698,23 @@
         "still": "How often have you been bothered by being so restless that it is hard to sit still?",
         "irritable": "How often have you been bothered by becoming easily annoyed or irritable?",
         "easily": "How often have you been bothered by becoming easily annoyed or irritable?",
-        "attack": "Have you had an anxiety attack (suddenly feeling fear or panic)?"
+        "attack": "Have you had an anxiety attack (suddenly feeling fear or panic)?",
+        "Pleasure":"Pleasure",
+        "Depressed":"Depressed",
+        "Asleep":"Asleep",
+        "Energy":"Energy",
+        "Eating":"Over Eating",
+        "Failure":"Failure",
+        "Focus":"Focus",
+        "Slow":"Slow",
+        "Anxiety":"Anxiety",
+        "Nervous":"Nervous",
+        "Control":"Lose Control",
+        "Worry":"Worry",
+        "Relax":"Lose Relax",
+        "Less":"Rest Less",
+        "Irritable":"Irritable"
+
     },
     "BiologicalActivity": {
         "title": "Epigenetic age",
@@ -784,7 +811,14 @@
         "productivity": "Thinking about the past month, to what extent has poor sleep affect your concentration, productivity, or ability to stay awake?",
         "general": "Thinking about the past month, to what extent has poor sleep troubled you in general?",
         "problem": "How long have you had a problem with your sleep?",
-        "month": "month"
+        "month": "month",
+        "Awake":"Awake",
+        "Fall":"Fall Asleep",
+        "Quality":"Sleep Quality",
+        "affect":"Affect Mood",
+        "Ability":"Affect Ability",
+        "Trouble":"Trouble You",
+        "When":"When Effect"
     },
     "DietChartActivity": {
         "title": "Diet Recommendation",
