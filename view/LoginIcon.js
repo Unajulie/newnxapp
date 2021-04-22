@@ -11,7 +11,6 @@ import Session from '../storage/Session';
 import { I18n } from '../locales/i18n'
 import { px2dp } from '../src/px2dp';
 
-type Props = {};
 export default class LoginIcon extends Component<Props> {
    
     constructor(props) {

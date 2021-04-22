@@ -8,6 +8,8 @@ import DropdownAlert from 'react-native-dropdownalert'
 import Session from '../storage/Session'
 import data from '../appdata'
 import { px2dp } from '../src/px2dp';
+import { SwipeablePanel } from 'rn-swipeable-panel';
+
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -32,7 +34,8 @@ export default class TabHomeActivity extends Component<Props> {
             user: null,
             display: false,
             showAlert: false,
-            url: ""
+            url: "",
+            swipeablePanelActive: false
         };
     }
     showAlert = () => {
@@ -86,16 +89,16 @@ export default class TabHomeActivity extends Component<Props> {
 
                     <View style={{ width: '90%', height: px2dp(330), marginTop: px2dp(110), alignSelf: 'center' }}>
                         {/* 我的报告 */}
-                        <TouchableOpacity  onPress={() => {
-                                        this.state.user == null ?
-                                            this.navigate.push("Login")
-                                            :
-                                            this.state.user.privatekey ?
-                                                this.navigate.push("DnaReport")
-                                                :
-                                                this.navigate.push("RasEncryptionActivity")
+                        <TouchableOpacity onPress={() => {
+                            this.state.user == null ?
+                                this.navigate.push("Login")
+                                :
+                                this.state.user.privatekey ?
+                                    this.navigate.push("DnaReport")
+                                    :
+                                    this.navigate.push("RasEncryptionActivity")
 
-                                    }}>
+                        }}>
                             <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/home1.png')} resizeMode='contain' />
@@ -113,7 +116,7 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                         {/* 问卷调查 */}
-                        <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
+                        <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}>
                             <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid' }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home2.png')} resizeMode='contain' />
@@ -267,7 +270,7 @@ export default class TabHomeActivity extends Component<Props> {
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View style={{ width: '100%', marginLeft: px2dp(20) }}>
-                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left',fontWeight:'bold', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>Products</Text>
+                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>Products</Text>
                                 </View>
                                 <View style={{ height: 30 }}></View>
                                 <View style={{ width: '90%', marginTop: px2dp(30) }}>
@@ -281,8 +284,8 @@ export default class TabHomeActivity extends Component<Props> {
                                             <Text style={{ fontSize: px2dp(14), fontFamily: 'fantasy', marginBottom: px2dp(10) }}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
                                             <TouchableOpacity onPress={() => this.navigate.push("Same")}>
                                                 <View style={{ flexDirection: 'row', width: '100%', height: px2dp(45), justifyContent: 'space-between', backgroundColor: '#E7E8EC', borderRadius: px2dp(5) }}>
-                                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', lineHeight: px2dp(45), height: px2dp(45),color:'#000000',fontWeight:'bold',marginLeft:px2dp(10), fontFamily: 'fantasy', }}>{I18n.t('TabHomeActivity.learnmore')}</Text>
-                                                    <Image style={{ height: px2dp(15), width: px2dp(15), marginRight: px2dp(10),marginTop:px2dp(15) }} source={require('../image/right-arr.png')} resizeMode='contain' />
+                                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', lineHeight: px2dp(45), height: px2dp(45), color: '#000000', fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', }}>{I18n.t('TabHomeActivity.learnmore')}</Text>
+                                                    <Image style={{ height: px2dp(15), width: px2dp(15), marginRight: px2dp(10), marginTop: px2dp(15) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                                 </View>
                                             </TouchableOpacity>
                                             <View style={{ height: 15 }}></View>
@@ -340,7 +343,7 @@ export default class TabHomeActivity extends Component<Props> {
                     <View style={{ height: 15 }}></View>
                     {/* 相关视频 */}
                     <View style={{ flex: 1, justifyContent: 'center', width: '90%', alignSelf: 'center' }}>
-                        <Text style={{  fontSize: px2dp(26),fontWeight:'bold', marginLeft: px2dp(10),fontFamily: 'fantasy',color:'#000000', marginBottom: px2dp(15) }}>{I18n.t('TabHomeActivity.video')}</Text>
+                        <Text style={{ fontSize: px2dp(26), fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', color: '#000000', marginBottom: px2dp(15) }}>{I18n.t('TabHomeActivity.video')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: px2dp(250), borderRadius: px2dp(20) }}
                             paused={true}
@@ -361,8 +364,46 @@ export default class TabHomeActivity extends Component<Props> {
                                 :
                                 this.navigate.push("RasEncryptionActivity")
                     }} />
-                     <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20),fontFamily: 'fantasy'  }}>{I18n.t('TabHomeActivity.allright')}</Text>
+                    <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20), fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </ScrollView >
+                <SwipeablePanel
+                    fullWidth={true}
+                    showCloseButton={true}
+                    closeOnTouchOutside={true}
+                    openLarge={true}
+                    isActive={this.state.swipeablePanelActive}
+                    onClose={() => { this.setState({ swipeablePanelActive: false }) }}
+                    onPressCloseButton={() => { this.setState({ swipeablePanelActive: false }) }}
+                >
+                    <ScrollView>
+                        <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(20) }}>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(18), color: '#000', height: px2dp(45), fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.about')}</Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16), color: '#000', lineHeight: px2dp(20), marginBottom: px2dp(10) }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: '#000', fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16), color: '#000', lineHeight: px2dp(20), marginBottom: px2dp(30) }}>{I18n.t('QuesnoteActivity.personalized')}</Text>
+                            {/* <View style={{ width: '45%', borderRadius: 10 }}>
+                                    <TouchableOpacity >
+                                        <Button style={{ backgroundColor: "#2196f3" }}
+                                            onPress={() => this.navigate.pop()}
+                                            title={I18n.t('QuesnoteActivity.back')}
+                                            color="#2196f3" />
+
+                                    </TouchableOpacity>
+                                </View> */}
+                            <View style={{ width: '90%',height:px2dp(50),alignSelf:'center', borderRadius: px2dp(5) }}>
+                                <TouchableOpacity >
+                                    <Button style={{width:'100%',height:px2dp(50), backgroundColor: "#404bc2", }}
+                                        onPress={() => this.navigate.push("Questionnaire")}
+                                        title={I18n.t('QuesnoteActivity.ques')}
+                                        fontFamily='fantasy'
+                                        textAllCaps={false}
+                                        color="#404bc2"
+                                        backgroundColor='#404bc2'
+                                    />
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </ScrollView>
+                </SwipeablePanel>
             </View>
         );
     }

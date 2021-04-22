@@ -48,7 +48,7 @@ export default class CenterActivity extends Component {
         return (
             //borderColor:"grey",borderWidth:1
             //alignItems:'center' 左右居中
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1 ,backgroundColor: '#f6f7f8'}}>
                 <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <ScrollView >
                     <View style={{ backgroundColor: '#e5e6e7' }}>
@@ -137,7 +137,7 @@ export default class CenterActivity extends Component {
                             : null}
                         {/* logout part end */}
 
-                        <View style={{ backgroundColor: '#f6f7f8', height: px2dp(180), alignItems: 'center', }}>
+                        {/* <View style={{ backgroundColor: '#f6f7f8', height: px2dp(180), alignItems: 'center', }}>
                             <View style={{ height: px2dp(60), width: '100%', marginTop: px2dp(20), }}>
 
                                 {this.state.user == null ?
@@ -161,12 +161,12 @@ export default class CenterActivity extends Component {
                                     </View>
                                 }
                             </View>
-                        </View>
+                        </View> */}
 
 
 
 
-                        {this.state.user != null ?
+                        {/* {this.state.user != null ?
                             <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
                                 <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
                                     <View style={{ width: "100%", height: 20 }}></View>
@@ -182,8 +182,8 @@ export default class CenterActivity extends Component {
                                         </View>
                                     </View>
                                 </View>
-                            </TouchableOpacity> : null}
-                        {this.state.user != null ?
+                            </TouchableOpacity> : null} */}
+                        {/* {this.state.user != null ?
                             <TouchableOpacity onPress={() => this.navigate.push("DnaReport")}>
                                 <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
                                     <View style={{ width: "100%", height: 20 }}></View>
@@ -200,7 +200,7 @@ export default class CenterActivity extends Component {
                                     </View>
                                 </View>
                             </TouchableOpacity>
-                            : null}
+                            : null} */}
                         {/* {this.state.user != null ?
                         <TouchableOpacity onPress={() => navigate.push("Contact")}>
                             <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
@@ -219,7 +219,7 @@ export default class CenterActivity extends Component {
                             </View>
                         </TouchableOpacity> : null} */}
 
-                        <TouchableOpacity onPress={() => this.navigate.push("QA")}>
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("QA")}>
                             <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
                                 <View style={{ width: "100%", height: 20 }}></View>
                                 <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
@@ -234,8 +234,8 @@ export default class CenterActivity extends Component {
                                     </View>
                                 </View>
                             </View>
-                        </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Contact")}>
+                        </TouchableOpacity> */}
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("Contact")}>
                             <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
                                 <View style={{ width: "100%", height: 20 }}></View>
                                 <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
@@ -250,8 +250,8 @@ export default class CenterActivity extends Component {
                                     </View>
                                 </View>
                             </View>
-                        </TouchableOpacity>
-                        {this.state.user != null ?
+                        </TouchableOpacity> */}
+                        {/* {this.state.user != null ?
                             <TouchableOpacity
                                 onPress={() => {
                                     Session.logout();
@@ -278,7 +278,7 @@ export default class CenterActivity extends Component {
                                 </View>
                             </TouchableOpacity>
                             : null
-                        }
+                        } */}
                     </View>
                 </ScrollView>
                 <SwipeablePanel

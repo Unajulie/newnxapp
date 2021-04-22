@@ -649,7 +649,7 @@
     },
     "McGillChartActivity": {
         "title": "McGill Pain Questionnaires",
-        "pain": "The McGill Pain Questionnaire",
+        "pain": "McGill Pain Questionnaire",
         "wideused": "Introduction: The Mcgill Pain Questionnaire(MPQ)(] has become one of the most wideused tests for the measurement of pain.",
         "provides": "It provides valuable information on thesensory, affective and evaluative dimensions of pain experience and is capablediscriminating among differentproblems [7].",
         "several": "The MPQ is not a perfect tooland several variants have been developed [2, 4,7]. Yet despite the usefulness ofspecialized alternative forms,",
@@ -828,7 +828,7 @@
         "source": "Source: Healthline",
         "recommen": "Recommendation:",
         "calories": "An average woman needs to eat about 2000 calories per day to maintain, and 1500 calories to lose one pound of weight per week. An average man needs 2500 calories to maintain, and 2000 to lose one pound of weight per week.",
-        "diet": "Please enter the name of your daily food",
+        "diet": "Search Food to calculate the calories",
         "foodd": "Food",
         "each": "Each",
         "edit": "Edit",
@@ -949,11 +949,11 @@
     "QuesnoteActivity": {
         "about": "About Questionnaires",
         "are": "The questionnaires are",
-        "optional": "optional to fill up.",
+        "optional": "optional to fill up. ",
         "however": "However, epigenetics affected by lifestyle as well as the environment. Our philosophy is that EpiAge tests make sense only within a dynamic life-long life style, environmental and health management system.",
         "personalized": "A personalized evaluation including intervention will be generated based on the health and lifestyle information you provided Updates on your health and lifestyle parameters periodically will activate the life-long personalized analysis report.",
         "title": "Notification",
-        "ques": "Continue",
+        "ques": "Understand",
         "back": "Cancel",
         "eip": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },

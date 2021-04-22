@@ -210,7 +210,7 @@ render() {
                     </View>
                     <View style={{ height: px2dp(60), alignItems: 'center', justifyContent: 'center' }}>
                         <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
-                            <Text style={{ fontSize: px2dp(14), color: '#0071bc',fontWeight:'bold',textDecorationLine:'underline' }}>{I18n.t('LoginActivity.ForgetPwd')}</Text>
+                            <Text style={{ fontSize: px2dp(14), color: '#404bc2',fontWeight:'bold',textDecorationLine:'underline' }}>{I18n.t('LoginActivity.ForgetPwd')}</Text>
                         </TouchableOpacity>
                     </View>
                     
@@ -218,7 +218,7 @@ render() {
                 <View style={{flex:1,marginTop:px2dp(120), height: px2dp(60),flexDirection:'row', alignItems: 'center', justifyContent: 'center' }} >
                         <Text style={{fontWeight:'bold' ,fontSize: px2dp(14), }}>{I18n.t('LoginActivity.noaccount')}</Text>
                         <TouchableOpacity onPress={() => this.navigate.push("Register")}>
-                            <Text style={{paddingLeft:px2dp(5), color: '#0071bc',textDecorationLine:'underline',fontWeight:'bold' }}>{I18n.t('LoginActivity.register')}</Text>
+                            <Text style={{paddingLeft:px2dp(5), color: '#404bc2',textDecorationLine:'underline',fontWeight:'bold' }}>{I18n.t('LoginActivity.register')}</Text>
                         </TouchableOpacity>
                     </View>
             </ScrollView>

@@ -8,6 +8,7 @@ import data from '../appdata'
 import moment from 'moment'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
 import { I18n } from '../locales/i18n';
+import { px2dp } from '../src/px2dp';
 
 export default class DietSliderChart extends Component<Props> {
     constructor(props) {
@@ -31,7 +32,7 @@ export default class DietSliderChart extends Component<Props> {
                     nameLocation: 'middle',
                     nameGap: 20,
                     type: "category",
-                    nameTextStyle: {fontSize:10, color: "#0071BC" },
+                    nameTextStyle: { fontSize: 10, color: "#0071BC" },
                     data: null
                 },
                 yAxis: {
@@ -112,12 +113,22 @@ export default class DietSliderChart extends Component<Props> {
                     {this.props.refTitle ? <View style={{ width: "90%", height: 25 }}><TouchableOpacity onPress={() => { this.setState({ display: true }) }}><Text style={{ fontSize: 14, color: "#0071BC", textDecorationLine: "underline" }}>{this.props.refTitle}</Text></TouchableOpacity></View> : null}
                     {this.props.desc ? this.props.desc : null}
                 </View>
-                <View style={{ height: 250, flexDirection: "row", width: "100%" }}>
-                    <View style={{ height: "100%", width: "96%" }}>
+                <View style={{ width: "100%",alignSelf:'center' }}>
+                    <View style={{ height: px2dp(250), width: "100%",alignSelf:'center' }}>
                         <ECharts ref={(ref) => { this.echarts = ref }} option={this.state.option} />
                     </View>
-                    <View style={{ height: "100%", width: "4%" }}>
+                    <Text style={{ fontSize: px2dp(16), height: px2dp(60), marginTop: px2dp(30), width: '90%',marginLeft:'5%', fontFamily: 'fantasy', fontWeight: 'bold', color: '#000' }}>You Could choose to record you calories by:</Text>
+                    <View style={{ width: "100%", borderRadius: px2dp(30), alignItems: 'center', lignSelf: 'center', marginBottom: px2dp(30), backgroundColor: '#f6f7f8' }}>
+                        <View style={{ flexDirection: 'row',height:px2dp(60),marginBottom:px2dp(20) }}>
+                            <View style={{ width: px2dp(30), height: px2dp(30), borderRadius: px2dp(50), marginLeft: px2dp(10), marginTop: px2dp(20), backgroundColor: '#000', }}>
+                                <Text style={{ fontSize: px2dp(20),height:px2dp(30), lineHeight:px2dp(30), fontWeight: 'bold', fontFamily: 'fantasy', color: '#fff', textAlign: 'center' }}>1</Text>
+                            </View>
+                            <Text style={{ fontSize: px2dp(16), marginTop: px2dp(30), marginLeft: px2dp(14), fontFamily: 'fantasy', color: '#000' }}>Slide the slider to record you calories</Text>
+                        </View>
                         <Slider
+                            style={{ marginBottom: px2dp(30) }}
+                            width={px2dp(100)}
+                            height={px2dp(200)}
                             value={this.props.sliderDefualtValue}
                             disabled={false}
                             min={0}
@@ -132,11 +143,9 @@ export default class DietSliderChart extends Component<Props> {
                                     this.load();
                                 })
                             }}
-                            width={30}
-                            height={200}
                             step={1}
                             borderRadius={5}
-                            ballIndicatorWidth={35}
+                            ballIndicatorWidth={px2dp(40)}
                             minimumTrackTintColor={[
                                 "rgb(146, 208, 80)",
                                 "rgb(146, 208, 80)",
@@ -147,9 +156,11 @@ export default class DietSliderChart extends Component<Props> {
                             maximumTrackTintColor="#ecf0f1"
                             showBallIndicator
                             ballIndicatorPosition={-40}
-                            ballIndicatorColor={"#0071BC"}
+                            ballIndicatorColor={"#404bc2"}
                             ballIndicatorTextColor={"white"}
                         />
+                        <View style={{ height: px2dp(50), width: '100%' }}>
+                        </View>
                     </View>
                 </View>
             </View>

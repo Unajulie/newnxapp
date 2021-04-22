@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, ImageBackground, StyleSheet } from 'react-native';
+import { View, Image, Text, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { px2dp } from '../src/px2dp';
 import { createStackNavigator, createAppContainer, Header } from 'react-navigation'
@@ -100,7 +100,6 @@ import DataActivity from './DataActivity';
 import RasEncryptionActivity from "./RasEncryptionActivity"
 import ContactActivity from './ContactActivity';
 import QAActivity from './QAActivity';
-import QuesnoteActivity from './QuesnoteActivity';
 import Manual1Activity from './Manual1Activity';
 import Manual2Activity from './Manual2Activity';
 import Manual3Activity from './Manual3Activity';
@@ -114,6 +113,7 @@ import Manual4Activity from './Manual4Activity';
 import LaunchActivity from './LaunchActivity';
 import ReportActivity from './ReportActivity';
 import SettingActivity from './SettingActivity';
+
 const TITLE_OFFSET = Platform.OS === 'ios' ? 70 : 56;
 export const RootStack = createStackNavigator(
     {
@@ -150,9 +150,9 @@ export const RootStack = createStackNavigator(
         },
         About: {
             screen: TabAboutActivity,
-           
+
         },
-        epicenter: {
+        Epicenter: {
             screen: TabCenterActivity,
             navigationOptions: {
                 header: null,
@@ -235,7 +235,19 @@ export const RootStack = createStackNavigator(
             screen: MethylationActivity
         },
         Questionnaire: {
-            screen: QuestionnaireActivity
+            screen: QuestionnaireActivity,
+            navigationOptions: ({ navigation }) => {
+                return ({
+                    headerRight:
+                        <TouchableOpacity onPress={() => {navigation.push("Manual3") }}>
+                            <View style={{ flex: 1, width: px2dp(100), height: px2dp(80), justifyContent: "center", alignItems: "center" }}>
+                                <Text style={{ width: px2dp(100),lineHeight:px2dp(80),fontFamily:'fantasy', textAlign: 'center',fontSize:px2dp(14),fontWeight:'bold',color:'#000' }}>Help</Text>
+                            </View>
+                        </TouchableOpacity>
+                }
+
+                )
+            }
         },
 
         Biological: {
@@ -343,7 +355,10 @@ export const RootStack = createStackNavigator(
             screen: McGillChartFearfulActivity
         },
         MoodChart: {
-            screen: MoodChartActivity
+            screen: MoodChartActivity,
+            navigationOptions: {
+                headerRight: null,
+            },
         },
         MoodChartPleasure: {
             screen: MoodChartPleasureActivity
@@ -415,7 +430,19 @@ export const RootStack = createStackNavigator(
             screen: SleepChartEffectActivity
         },
         DietChart: {
-            screen: DietChartActivity
+            screen: DietChartActivity,
+            navigationOptions: ({ navigation }) => {
+                return ({
+                    headerRight:
+                        <TouchableOpacity onPress={() => {navigation.push("Manual4") }}>
+                            <View style={{ flex: 1, width: px2dp(100), height: px2dp(80), justifyContent: "center", alignItems: "center" }}>
+                                <Text style={{ width: px2dp(100),lineHeight:px2dp(80),fontFamily:'fantasy', textAlign: 'center',fontSize:px2dp(14),fontWeight:'bold',color:'#000' }}>Help</Text>
+                            </View>
+                        </TouchableOpacity>
+                }
+
+                )
+            }
         },
         DataSecurity: {
             screen: DataActivity
@@ -425,9 +452,6 @@ export const RootStack = createStackNavigator(
         },
         QA: {
             screen: QAActivity
-        },
-        Quesnote: {
-            screen: QuesnoteActivity
         },
         Contact: {
             screen: ContactActivity
@@ -465,7 +489,7 @@ export const RootStack = createStackNavigator(
 
     },
     {
-        initialRouteName: 'Questionnaire',      
+        initialRouteName: 'Launch',
         defaultNavigationOptions: ({ navigation }) => {
             return (
 

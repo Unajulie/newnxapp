@@ -4,7 +4,7 @@ import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';
 import SleepStarChart from './SleepStarChart'
 import data from '../appdata'
-
+import { px2dp } from '../src/px2dp';
 type Props = {};
 export default class SleepChartMoodActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -22,21 +22,14 @@ export default class SleepChartMoodActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
-                <View style={{ height: 40 }}></View>
-                <View style={{ width: "100%", height: 415, marginTop: 23, marginBottom: 23 }}>
+                <StatusBar animated={true}  hidden={true} translucent={true} barStyle={'light-content'} />
+                <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(50), marginBottom: px2dp(20) }}>
                     <SleepStarChart
                         title={
-                            <View style={{ width: "90%", height: 60 }}>
-                                <View style={{ width: "100%", height: 10 }}></View>
-                                <View style={{ alignItems: "center" }}>
-                                    <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.mood')}</Text>
+                            <View style={{ width: "90%", height: px2dp(60) }}>
+                                <View style={{ width: "100%", height: px2dp(10) }}></View>
+                                <View style={{ alignItems: "center",marginTop:px2dp(10)}}>
+                                    <Text style={{ fontSize: px2dp(18),fontFamily:'fantasy',color:'#000', }}>{I18n.t('SleepChartActivity.mood')}</Text>
                                 </View>
                             </View>
                         }

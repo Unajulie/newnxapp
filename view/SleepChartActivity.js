@@ -24,26 +24,20 @@ export default class SleepChartActivity extends Component<Props> {
         this.navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <ScrollView>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
+                <StatusBar animated={true}  hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ backgroundColor: '#F6F7F8' }}>
-                    <View style={{ width: "100%", height: 60, justifyContent: "center", alignItems: "center" }}>
-                        <View style={{ width: "90%", height: 60, justifyContent: "center" }}>
-                            <Text style={{ textAlign: 'left', fontSize: 24, fontWeight: "bold" }}>{I18n.t('SleepChartActivity.assessment')}</Text>
+                    <View style={{ width: "100%", height: px2dp(60), justifyContent: "center", alignItems: "center" }}>
+                        <View style={{ width: "90%", height: px2dp(60), justifyContent: "center" }}>
+                            <Text style={{ textAlign: 'left', fontSize: px2dp(22),fontWeight: "bold",fontFamily:'fantasy',color:'#000' }}>{I18n.t('SleepChartActivity.assessment')}</Text>
                         </View>
                     </View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center" }}>
                         <View style={{ width: "90%", backgroundColor: '#EBECED', borderRadius: 20 }}>
-                            <View style={{ width: "90%", marginTop: 24, marginBottom: 24, alignSelf: 'center' }}>
-                                <Text style={{ marginBottom: 12 }}>
+                            <View style={{ width: "90%", marginTop: px2dp(20), marginBottom: px2dp(20), alignSelf: 'center' }}>
+                                <Text style={{ marginBottom: px2dp(10), fontFamily:'fantasy',color:'#000'}}>
                                     {I18n.t('SleepChartActivity.people')}
                                 </Text>
-                                <Text style={{ marginBottom: 12 }}>
+                                <Text style={{ marginBottom: px2dp(10),fontFamily:'fantasy',color:'#000' }}>
                                     {I18n.t('SleepChartActivity.include')}
                                 </Text>
 
