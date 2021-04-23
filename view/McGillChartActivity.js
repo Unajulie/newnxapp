@@ -74,11 +74,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.shooting')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Shooting
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -94,11 +90,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.stabbing')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Stabbing
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -114,11 +106,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.sharp')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sharp
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -134,11 +122,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.cramping')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Cramping
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -154,11 +138,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.gnawing')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Gnawing
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -174,11 +154,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.hotburning')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Hot-Burning
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -194,11 +170,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.aching')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Aching
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -214,11 +186,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.heavy')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Heavy
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -234,11 +202,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.tender')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Tender
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -254,11 +218,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.Split')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Split
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -274,11 +234,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.exhausting')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Exhausting
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -294,11 +250,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.sickening')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sickening
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -314,11 +266,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-<<<<<<< Updated upstream
-                                        <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.fearful')}
-=======
                                         <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Fearful
-                                            >>>>>>> Stashed changes
                                     </Text>
                                     </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>

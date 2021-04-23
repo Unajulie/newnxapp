@@ -17,7 +17,7 @@ export default class TabAboutActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1, backgroundColor: '#f6f7f8'  }}>
                 <ScrollView>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     {/* 公司简介  改版*/}

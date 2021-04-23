@@ -165,7 +165,10 @@ export const RootStack = createStackNavigator(
             },
         },
         Company: {
-            screen: CompanyActivity
+            screen: CompanyActivity,
+            navigationOptions: {
+                headerRight: null,
+            },
         },
         Scienceteam: {
             screen: ScienceteamActivity

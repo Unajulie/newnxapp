@@ -33,8 +33,8 @@ export default class LaunchActivity extends Component {
             <View style={{ flex: 1, flexDirection: "column" }}>
                 <ScrollView>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
-                    <View style={{ width: "100%", height: px2dp(440), zIndex: 0, flex: 1 }}>
-                        <View style={{ width: "100%", height: px2dp(440) }}>
+                    <View style={{ width: "100%", height: px2dp(460), zIndex: 0, flex: 1 }}>
+                        <View style={{ width: "100%", height: px2dp(460) }}>
                             <Swiper
                                 height={px2dp(400)}//组件高度
                                 horizontal={true}//水平轮播
@@ -96,7 +96,7 @@ export default class LaunchActivity extends Component {
                         </View>
                     </View>
                     <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(-30), height: px2dp(300), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: '#ffffff', zIndex: 999 }}>
-                        <View style={{ width: "100%", height: px2dp(45), marginTop: px2dp(30), justifyContent: "space-between", marginBottom: 30 }} >
+                        <View style={{ width: "100%", height: px2dp(45), marginTop: px2dp(50), justifyContent: "space-between", marginBottom: 30 }} >
                             <View style={{ width: "90%", height: px2dp(45), alignSelf: "center", marginBottom: px2dp(20), }}>
                                 <TouchableOpacity >
                                     <Button style={{ width: "100%", height: px2dp(45), borderRadius: px2dp(5), backgroundColor: "#404bc2" }}
@@ -135,8 +135,8 @@ export default class LaunchActivity extends Component {
 
                             }
                             <TouchableOpacity onPress={() => this.navigate.push('Main')}>
-                                <View style={{ width: "100%", height: px2dp(40), marginTop: px2dp(20) }}>
-                                    <Text style={{ width: "100%", height: px2dp(40), lineHeight: px2dp(40), color: "#404bc2", fontWeight: "700", fontFamily: 'fantasy', textDecorationLine: 'underline', textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
+                                <View style={{ width: "100%", marginBottom:px2dp(20), marginTop: px2dp(20), }}>
+                                    <Text style={{ width: "100%", color: "#404bc2", fontWeight: "700", fontFamily: 'fantasy', textDecorationLine: 'underline', textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>

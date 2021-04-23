@@ -149,8 +149,8 @@ export default class CenterActivity extends Component {
 
                             </View>
                         </View>
-
                     </View>
+                    <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20), fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </ScrollView>
                 <SwipeablePanel
                     fullWidth={true}
@@ -187,6 +187,7 @@ export default class CenterActivity extends Component {
                                 </TouchableOpacity>
                             </View>
                         </View>
+                        
                     </ScrollView>
                 </SwipeablePanel>
             </View>

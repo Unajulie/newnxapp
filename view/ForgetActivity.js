@@ -25,8 +25,8 @@ export default class ForgetActivity extends Component<Props> {
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'}>
                     </StatusBar>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <View style={{ height: px2dp(40), marginTop: px2dp(200), alignItems: 'flex-start', fontSize: px2dp(14), justifyContent: 'flex-start' }} >
-                            <Text style={{ color: '#000000', lineHeight: px2dp(20), fontSize: px2dp(14), fontWeight: 'bold', textAlign: 'center' }}>{I18n.t('ForgetActivity.link')}</Text>
+                        <View style={{ height: px2dp(70), marginTop: px2dp(160), fontSize: px2dp(14), justifyContent: 'flex-start' }} >
+                            <Text style={{ color: '#000000', lineHeight: px2dp(20), fontSize: px2dp(14), fontWeight: 'bold', textAlign: 'center',fontFamily: 'fantasy',  }}>{I18n.t('ForgetActivity.link')}</Text>
                         </View>
                         <View style={{ height: px2dp(50), marginTop: px2dp(20), marginBottom: px2dp(50), width: "100%" }}>
                             <Input style={{
@@ -49,7 +49,7 @@ export default class ForgetActivity extends Component<Props> {
 
                         <View>
                             <TouchableOpacity >
-                                <Button title={I18n.t("ForgetActivity.title")} disabled={this.state.disabled} onPress={() => {
+                                <Button color={'#303bc2'} title={I18n.t("ForgetActivity.title")} disabled={this.state.disabled} onPress={() => {
                                     if (!this.state.email) { this.setState({ disabled: true }); return }
                                     fetch(data.url + "user/sendpaswd.jhtml?email=" + this.state.email).then((data) => { data.text() }).then((data) => {
                                         Alert.alert("The reset password link has been sent to your mailbox")
@@ -57,10 +57,10 @@ export default class ForgetActivity extends Component<Props> {
                                 }} style={{ height: px2dp(50), borderRadius: px2dp(5) }} />
                             </TouchableOpacity>
                         </View>
-                        <View style={{ height: px2dp(60), flexDirection: 'row', marginTop: px2dp(150), alignItems: 'center', justifyContent: 'center' }}>
-                            <Text style={{ fontSize: px2dp(14), fontWeight: 'bold' }}>{I18n.t('ForgetActivity.back')}</Text>
+                        <View style={{ height: px2dp(60), flexDirection: 'row', marginTop: px2dp(150), alignItems: 'center',color:'#000', justifyContent: 'center' }}>
+                            <Text style={{ fontSize: px2dp(14), fontWeight: 'bold',fontFamily: 'fantasy',  }}>{I18n.t('ForgetActivity.back')}</Text>
                             <TouchableOpacity onPress={() => navigate.push("Login")}>
-                                <Text style={{ fontSize: px2dp(14), color: '#0071bc', fontWeight: 'bold', paddingLeft: px2dp(5) }}>{I18n.t('ForgetActivity.link2')}</Text>
+                                <Text style={{ fontSize: px2dp(14), color: '#404bc2', fontWeight: 'bold',textDecorationLine:'underline', paddingLeft: px2dp(5),fontFamily: 'fantasy',  }}>{I18n.t('ForgetActivity.link2')}</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

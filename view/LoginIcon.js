@@ -23,17 +23,17 @@ export default class LoginIcon extends Component<Props> {
         })
     }
     render() {
-        const optionsStyles = {
-            optionsContainer: {
-                backgroundColor: '#ffffff',
-                padding: 5,
-                width: 100
-            },
-            optionTouchable: {
-                underlayColor: 'gold',
-                activeOpacity: 70,
-            },
-        };
+        // const optionsStyles = {
+        //     optionsContainer: {
+        //         backgroundColor: '#ffffff',
+        //         padding: 5,
+        //         width: 100
+        //     },
+        //     optionTouchable: {
+        //         underlayColor: 'gold',
+        //         activeOpacity: 70,
+        //     },
+        // };
          //每一个screen组件中都自动具有了navigation属性
         //要强调的是navigation属性并不是所有的组件里都有，只有screen组件才自动接收该属性（被screen属性声明过的组件）
         //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
@@ -58,7 +58,7 @@ export default class LoginIcon extends Component<Props> {
                                 }
                             </View>
                         </MenuTrigger>
-                        {this.state.user != null ?
+                        {/* {this.state.user != null ?
                             <MenuOptions customStyles={optionsStyles}>
                                 <MenuOption onSelect={() => {
                                     Session.logout();
@@ -101,7 +101,7 @@ export default class LoginIcon extends Component<Props> {
                                     </View>
                                 </MenuOption>
                             </MenuOptions>
-                        }
+                        } */}
                     </Menu>
                 </View>
             </View >
