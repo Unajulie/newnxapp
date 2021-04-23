@@ -18,10 +18,10 @@ export default class ShafaatActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <ScrollView>
-                <View style={{ backgroundColor: '#0383DE' }}>
+            <ScrollView style={{ flex: 1 }}>
+                <View style={{ backgroundColor: '#e5e6e7' }}>
                     <View style={{ height: 120 }}></View>
-                    <View style={{ backgroundColor: '#F0F0F0', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
+                    <View style={{ backgroundColor: '#f6f7f8', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
                         <View style={{ width: '90%', }}>
                             <Image style={{ height: 99, width: '100%', marginTop: -60, marginLeft: -60 }} resizeMode="contain" source={require("../image/icons/Shafaat-2.png")}></Image>
                         </View>
@@ -30,13 +30,13 @@ export default class ShafaatActivity extends Component<Props> {
                         </View>
                         <View style={{ height: 40 }}></View>
                         <View style={{ width: '100%' }}>
-                            <View style={{ width: "90%", alignSelf: 'center', height: 300 }}>
-                                <Text style={{  lineHeight: 40, alignSelf: 'center' }}>{I18n.t('ScienceteamActivity.Shafaatmsg')}</Text>
+                            <View style={{ width: "90%", alignSelf: 'center', height: 500 }}>
+                                <Text style={{ lineHeight: 30, alignSelf: 'center' }}>{I18n.t('ScienceteamActivity.Shafaatmsg')}</Text>
                             </View>
                         </View>
 
-                        <View style={{height:60}}></View>
-                        <Text style={{  fontSize: 12, textAlign: 'center' }}>{I18n.t('ZhiyuanActivity.reserved')}</Text>
+                        <View style={{ height: 60 }}></View>
+                    
                     </View>
                 </View>
             </ScrollView >

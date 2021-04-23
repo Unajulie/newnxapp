@@ -6,6 +6,7 @@ import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-vie
 import { I18n } from '../locales/i18n';
 import VideoPlayer from 'react-native-video-controls'
 import data from '../appdata'
+import { px2dp } from '../src/px2dp';
 
 type Props = {};
 export default class ProfMosheCareerActivity extends Component<Props> {
@@ -20,7 +21,7 @@ export default class ProfMosheCareerActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <ScrollView>
+            <ScrollView style={{ flex: 1 }}>
                 <StatusBar
                     animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
                     hidden={true}  //是否隐藏状态栏。  
@@ -28,52 +29,51 @@ export default class ProfMosheCareerActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{height:40}}></View>
-                <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',}}>
-                    <Text style={{  height: 17, lineHeight: 19, fontFamily: 'fantasy',fontSize:20,fontWeight:'700' }}>Career</Text>  
+                <View style={{ height:px2dp(40) }}></View>
+                <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', }}>
+                    <Text style={{ height:px2dp(17), lineHeight:px2dp(19) , fontFamily: 'fantasy', fontSize:px2dp(20), fontWeight: '700' }}>Career</Text>
                 </View>
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
                     {/* 2007-2018 */}
-                    <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2007-2018</Text>  
-                        <Text style={{  height: 20, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('ProfMosheActivity.pharmacology')}</Text>
-                        <Text style={{ height:20,lineHeight: 18, fontFamily: 'fantasy', textAlign: 'center',fontSize:16  }}>{I18n.t('ProfMosheActivity.pharmacology2')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('ProfMosheActivity.chairman')}</Text>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius:px2dp(15), borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
+                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center',  }}>2007-2018</Text>
+                        <Text style={{ height:px2dp(20), lineheight:px2dp(18), fontFamily: 'fantasy', paddingLeft:px2dp(10), textAlign: 'center', fontWeight: '700', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.pharmacology')}</Text>
+                        <Text style={{ height:px2dp(20), lineheight:px2dp(18), fontFamily: 'fantasy', textAlign: 'center', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.pharmacology2')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45), textAlign: 'center', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.chairman')}</Text>
                     </View>
                     {/* 2003-2018 */}
-                    <View style={{height:20}}></View>
-                    <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2003-2018</Text>  
-                        <Text style={{  height: 16, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('ProfMosheActivity.mcgill')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('ProfMosheActivity.professor2')}</Text>
+                    <View style={{ height:px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius:px2dp(15), borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
+                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center',  }}>2003-2018</Text>
+                        <Text style={{ height:px2dp(16), lineheight:px2dp(18), fontFamily: 'fantasy', paddingLeft:px2dp(10), textAlign: 'center', fontWeight: '700', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.mcgill')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45), textAlign: 'center', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.professor2')}</Text>
                     </View>
                     {/* 2000-2021 */}
-                    <View style={{height:20}}></View>
-                    <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>2000-2021</Text>  
-                        <Text style={{  height: 16, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('ProfMosheActivity.department')}{I18n.t('ProfMosheActivity.themcgill')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('ProfMosheActivity.professor2')}</Text>
+                    <View style={{ height:px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius:px2dp(15), borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
+                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center',  }}>2000-2021</Text>
+                        <Text style={{ height:px2dp(16), lineheight:px2dp(18), fontFamily: 'fantasy', paddingLeft:px2dp(10), textAlign: 'center', fontWeight: '700', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.department')}{I18n.t('ProfMosheActivity.themcgill')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45), textAlign: 'center', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.professor2')}</Text>
                     </View>
-                     {/* 1993-2000 */}
-                     <View style={{height:20}}></View>
-                    <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>1993-2000</Text>  
-                        <Text style={{  height: 16, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('ProfMosheActivity.department')}{I18n.t('ProfMosheActivity.school')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
+                    {/* 1993-2000 */}
+                    <View style={{ height:px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius:px2dp(15), borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
+                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center',  }}>1993-2000</Text>
+                        <Text style={{ height:px2dp(16), lineheight:px2dp(18), fontFamily: 'fantasy', paddingLeft:px2dp(10), textAlign: 'center', fontWeight: '700', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.department')}{I18n.t('ProfMosheActivity.school')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45), textAlign: 'center', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
                     </View>
-                     {/* 1989-1993 */}
-                    <View style={{height:20}}></View>
-                    <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height: 22, lineHeight: 22, fontFamily: 'fantasy', textAlign: 'center',fontSize:14 }}>1989-1993</Text>  
-                        <Text style={{  height: 16, lineHeight: 18, fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:16  }}>{I18n.t('ProfMosheActivity.department')}{I18n.t('ProfMosheActivity.school')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineHeight: 45,textAlign: 'center',fontSize:16  }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
+                    {/* 1989-1993 */}
+                    <View style={{ height:px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius:px2dp(15), borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
+                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center',  }}>1989-1993</Text>
+                        <Text style={{ height:px2dp(16), lineheight:px2dp(18), fontFamily: 'fantasy', paddingLeft:px2dp(10), textAlign: 'center', fontWeight: '700', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.department')}{I18n.t('ProfMosheActivity.school')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45), textAlign: 'center', height:px2dp(16) }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
                     </View>
-         
+
                 </View>
 
-                {/* 荣誉 */}
+            
 
-                <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>
 
         );

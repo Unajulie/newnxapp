@@ -6,6 +6,7 @@ import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-vie
 import { I18n } from '../locales/i18n';
 import VideoPlayer from 'react-native-video-controls'
 import data from '../appdata'
+import { px2dp } from '../src/px2dp';
 
 type Props = {};
 export default class ProfMosheExperiencesActivity extends Component<Props> {
@@ -20,7 +21,7 @@ export default class ProfMosheExperiencesActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <ScrollView>
+            <ScrollView style={{flex:1}}>
                  <StatusBar
                     animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
                     hidden={true}  //是否隐藏状态栏。  
@@ -31,44 +32,44 @@ export default class ProfMosheExperiencesActivity extends Component<Props> {
                 {/* 专业履历 */}
                 <View style={{ paddingBottom: 20 }}>
                     <View>
-                        <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'fantasy', fontSize: 28, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.experiences')}</Text>
+                        <Text style={{ width: '90%', height:px2dp(67) , alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp(28), lineHeight:px2dp(67) , fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.experiences')}</Text>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.pioneer')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.pioneer')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16, }}>{I18n.t('ProfMosheActivity.inventor')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16), }}>{I18n.t('ProfMosheActivity.inventor')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.patent')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.patent')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.founder')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.founder')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.thought')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.thought')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.fellow')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.fellow')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.canadian')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.canadian')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.professor')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.professor')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.resident')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.resident')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize: 16 }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize: 16 }}>{I18n.t('ProfMosheActivity.director')}</Text>
+                            <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>●</Text><Text style={{ width: '94%', fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.director')}</Text>
                         </View>
                     </View>
                 </View>
                
         
-                <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+               
             </ScrollView>
 
         );

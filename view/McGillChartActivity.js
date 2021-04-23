@@ -22,7 +22,7 @@ export default class McGillChartActivity extends Component<Props> {
         this.navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ flex: 1, backgroundColor: '#F6F7F8' }}>
-                <ScrollView>
+                <ScrollView style={{flex:1}}>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     <View style={{ backgroundColor: '#F6F7F8' }}>
                         {/* <View style={{ width: "100%", height: px2dp(40),marginBottom:px2dp(20),marginTop:px2dp(20), justifyContent: "center" }}>

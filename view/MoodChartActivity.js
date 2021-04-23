@@ -22,7 +22,7 @@ export default class MoodChartActivity extends Component<Props> {
         this.navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ flex: 1, backgroundColor: '#F6F7F8' }}>
-                <ScrollView>
+                <ScrollView style={{flex:1}}>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     <View>
                         <View style={{ width: "100%", height: px2dp(30), backgroundColor: '#F6F7F8', marginTop: px2dp(20) }}>
@@ -52,7 +52,7 @@ export default class MoodChartActivity extends Component<Props> {
                             <View style={{ width: '90%', alignSelf: 'center' }}>
                                 {/* 1 pleasure */}
                                 <TouchableOpacity onPress={() => this.navigate.push("MoodChartPleasure")}
-                                    style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                    style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(50) }} source={require('../image/icons/mood-77.png')} resizeMode='contain' />
@@ -69,7 +69,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/* 2、Depressed */}
                                 <TouchableOpacity onPress={() => this.navigate.push("MoodChartDepressed")}
-                                    style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                    style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(50) }} source={require('../image/icons/mood-78.png')} resizeMode='contain' />
@@ -78,14 +78,14 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Depressed
                                     </Text>
                                         </View>
-                                        <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                        <View style={{ width: '15%', height:px2dp(80), justifyContent: 'center' }}>
                                             <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/* 3 asleep */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartAsleep")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartAsleep")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
@@ -101,7 +101,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/* 4 energy */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartEnergy")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartEnergy")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-80.png')} resizeMode='contain' />
@@ -117,7 +117,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: 20 }}></View>
                                 {/* 5 overeating  */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartOverEating")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartOverEating")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-81.png')} resizeMode='contain' />
@@ -133,7 +133,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*6  failure */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartFailure")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartFailure")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-82.png')} resizeMode='contain' />
@@ -149,7 +149,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*7  focus */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartFocus")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartFocus")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-83.png')} resizeMode='contain' />
@@ -165,7 +165,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*8  slow */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartSlow")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartSlow")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-84.png')} resizeMode='contain' />
@@ -181,7 +181,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*9  anxiety */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartAnxiety")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartAnxiety")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-85.png')} resizeMode='contain' />
@@ -197,7 +197,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*10  nervous */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartNervous")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartNervous")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-86.png')} resizeMode='contain' />
@@ -213,7 +213,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*11  losecontrol */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartLoseControl")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartLoseControl")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-87.png')} resizeMode='contain' />
@@ -229,7 +229,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*12  worry */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartWorry")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartWorry")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-88.png')} resizeMode='contain' />
@@ -245,7 +245,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*13  loserelax */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartLoseRelax")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartLoseRelax")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-89.png')} resizeMode='contain' />
@@ -261,7 +261,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*14  restless */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartRestLess")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartRestLess")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-90.png')} resizeMode='contain' />
@@ -277,7 +277,7 @@ export default class MoodChartActivity extends Component<Props> {
                                 </TouchableOpacity>
                                 <View style={{ height: px2dp(20) }}></View>
                                 {/*15  irritable */}
-                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartIrritable")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("MoodChartIrritable")} style={{ backgroundColor: '#FEFFFF', borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                                     <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-91.png')} resizeMode='contain' />
@@ -399,7 +399,7 @@ export default class MoodChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 450, marginTop: 23, marginBottom: 23 }}>
                         <MoodChart
                             title={
-                                <View style={{ width: "90%", height: 80 }}>
+                                <View style={{ width: "90%", height:px2dp(80) }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
                                         <Text style={{ fontSize: px2dp(18) }}>{I18n.t('MoodChartActivity.reading')}</Text>
