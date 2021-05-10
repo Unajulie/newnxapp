@@ -52,8 +52,8 @@ export default class DietChartActivity extends Component<Props> {
             for (let i in item) {
                 let view =
                     <View key={i} style={{ width: "100%", borderBottomWidth: 1, borderColor: "#808080" }}>
-                        <View style={{ width: "100%", flexDirection: "row" }}>
-                            <TouchableOpacity style={{ width: "85%", flexDirection: "row" }}
+                        <View style={{ width: "100%",alignSelf:'center', flexDirection: "row" }}>
+                            <TouchableOpacity style={{ width: "85%",alignSelf:'center', flexDirection: "row" }}
                                 onPress={() => {
                                     let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
                                     fetch(url).then(res => res.json()).then((data) => {
@@ -78,8 +78,8 @@ export default class DietChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             </TouchableOpacity>
-                            <View style={{ width: "15%" }}>
-                                <TouchableOpacity>
+                            <View style={{ width: "15%",marginTop:px2dp(40) }}>
+                                <TouchableOpacity style={{ marginTop: px2dp(40) }}>
                                     <Button color='#404bc2' title="add" onPress={() => {
                                         if (this.state.itembox.indexOf(item[i].id) == -1) {
                                             this.position += 1
@@ -105,9 +105,9 @@ export default class DietChartActivity extends Component<Props> {
                                                 let id = (new Date()).valueOf();
                                                 let dietview =
                                                     <View key={id} style={{ width: "90%", alignItems: "center", alignSelf: 'center' }}>
-                                                        <View style={{ width: "100%", flexDirection: "row", marginTop: px2dp(10) }}>
-                                                            <Text style={{ width: "40%", color: "#404bc2", fontSize: px2dp(14), fontFamily: 'fantasy', fontWeight: "bold", height: px2dp(20) }}>{diet.description ? (diet.description.length > 5 ? diet.description.substr(0, 18) + "..." : diet.description) : ""}</Text>
-                                                            <View style={{ width: "30%", height: px2dp(20), alignItems: "center" }}>
+                                                        <View style={{ width: "100%", height: px2dp(20), flexDirection: "row", marginTop: px2dp(10),justifyContent:'space-between' }}>
+                                                            <Text style={{width:'40%', color: "#404bc2", fontSize: px2dp(14), fontFamily: 'fantasy', fontWeight: "bold", }}>{diet.description ? (diet.description.length > 5 ? diet.description.substr(0, 18) + "..." : diet.description) : ""}</Text>
+                                                            <View style={{width:'30%'}}>
                                                                 <InputSpinner
                                                                     inputStyle={{ paddingVertical: 0 }}
                                                                     showBorder={true}
@@ -159,7 +159,7 @@ export default class DietChartActivity extends Component<Props> {
                                                                     }}
                                                                 />
                                                             </View>
-                                                            <View style={{ width: "30%" }}>
+                                                            <View style={{width:'30%'}}>
                                                                 <TouchableOpacity itemid={item[i].id} dataid={point} ref={(ref) => { this["type$$" + item[i].id] = ref }}
                                                                     onPress={() => {
                                                                         let size = this["type$$" + item[i].id].size == undefined ? 1 : this["type$$" + item[i].id].size
@@ -181,8 +181,8 @@ export default class DietChartActivity extends Component<Props> {
 
                                                                         })
                                                                     }} >
-                                                                    <View style={{width:px2dp(30),height:px2dp(20),borderRadius:px2dp(5),backgroundColor:'#404bc2'}}>
-                                                                        <Text style={{ fontWeight: "bold", textAlign: "right", width: "100%",color:'#fff', fontFamily: 'fantasy', fontSize: px2dp(14) }}>Remove</Text>
+                                                                    <View style={{width:px2dp(70), height:px2dp(20),alignSelf:'flex-end', borderRadius:px2dp(5),backgroundColor:'#404bc2'}}>
+                                                                        <Text style={{ width: "100%", fontWeight: "bold", textAlign: "center",color:'#fff', fontFamily: 'fantasy', fontSize: px2dp(12) }}>Remove</Text>
                                                                     </View>
                                                                 </TouchableOpacity>
                                                             </View>
@@ -214,10 +214,10 @@ export default class DietChartActivity extends Component<Props> {
     render() {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1,}}>
                 <ScrollView>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
-                    <View style={{ width: "100%", alignSelf: 'center', }}>
+                    <View style={{ width: "90%", alignSelf: 'center', marginBottom:px2dp(30)}}>
                         <View style={{ width: "100%", height: px2dp(20) }}></View>
                         <DietSliderChart
                             width={'90%'}

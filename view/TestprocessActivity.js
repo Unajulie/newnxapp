@@ -19,7 +19,7 @@ export default class TestprocessActivity extends Component<Props> {
         });
     }
     render() {
-        const navigate = this.props.navigation;
+        this.navigate = this.props.navigation;
         return (
             <ScrollView>
                 <StatusBar
@@ -81,7 +81,7 @@ export default class TestprocessActivity extends Component<Props> {
                 </TouchableOpacity>
                 <View style={{ height: 30 }}></View>
                 {/* DNA 發出報告 */}
-                <TouchableOpacity onPress={() => { this.state.user == null ? this.navigate.push("Login") : navigate.push("DnaReport") }}>
+                <TouchableOpacity onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("DnaReport") }}>
                     <ImageBackground style={{ width: '100%', }} source={require('../image/icons/tps7.png')} resizeMode='cover'>
                         <Text style={{ fontSize: 16, height: 72, lineHeight: 30, marginLeft:'30%' }}>{I18n.t('TestprocessActivity.report')}{"\n"}
                         <Text style={{fontSize: 16, textAlign: 'left',}}>{I18n.t('TestprocessActivity.report2')}</Text></Text>

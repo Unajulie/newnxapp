@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, StatusBar, Text, View, Alert, ScrollView, TouchableOpacity, Button } from 'react-native';
-import { NavigationActions, StackActions } from 'react-navigation';
+import { StatusBar, Text, View, Alert, ScrollView, TouchableOpacity, Button } from 'react-native';
 import { I18n } from '../locales/i18n';
+import { px2dp } from '../src/px2dp';
 import SleepSpinnerChart from './SleepSpinnerChart'
-import data from '../appdata'
 
-type Props = {};
 export default class SleepChartAwakeActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t('LifeStyleChartActivity.Awake'),
+            title: I18n.t('SleepChartActivity.Awake'),
         })
     }
     constructor(props) {
@@ -21,23 +19,13 @@ export default class SleepChartAwakeActivity extends Component<Props> {
         };
         this.navigate = this.props.navigation;
         return (
-            <ScrollView>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
-                <View style={{ height: 40 }}></View>
-                <View style={{ width: "100%", height: 410, marginTop: 23, marginBottom: 23 }}>
+            <ScrollView style={{ flex: 1 }}>
+                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
+                <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                     <SleepSpinnerChart
                         title={
-                            <View style={{ width: "90%", height: 75 }}>
-                                <View style={{ width: "100%", height: 10 }}></View>
-                                <View style={{ alignItems: "center" }}>
-                                    <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.total')}</Text>
-                                </View>
+                            <View style={{ width: "90%", marginTop: px2dp(20), marginBottom: px2dp(20) }}>
+                                <Text style={{ fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000' }}>{I18n.t('SleepChartActivity.total')}</Text>
                             </View>
                         }
                         unit={I18n.t('SleepChartActivity.util')}
@@ -46,12 +34,9 @@ export default class SleepChartAwakeActivity extends Component<Props> {
                         column="awake"
                     />
                 </View>
-                <View style={{ height: 160 }}></View>
-                <TouchableOpacity >
+                <TouchableOpacity style={{ marginBottom: px2dp(20),marginTop:px2dp(100),width:'90%',alignSelf:'center' }}>
                     <Button title="save" onPress={onButtonPress} color="#d62e2d" />
                 </TouchableOpacity>
-
-                {/* <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text> */}
             </ScrollView>
 
         );

@@ -62,7 +62,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ZhiyuanActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -107,15 +106,15 @@ export default class ZhiyuanActivity extends Component<Props> {
                 } */}
                 <View style={{ backgroundColor: '#e5e6e7' }}>
                     <View style={{ height:px2dp(120) }}></View>
-                    <View style={{ backgroundColor: '#f6f7f8', borderTopLeftRadius: px2dp(20), borderTopRightRadius: px2dp(20) }}>
+                    <View style={{ backgroundColor: '#f6f7f8', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }}>
                         <View style={{ width: '90%', }}>
                             <Image style={{ height:px2dp(99), width: '100%', marginTop: px2dp(-60), marginLeft:px2dp(-60)  }} resizeMode="contain" source={require("../image/icons/jason.png")}></Image>
                         </View>
                         <View style={{ borderTopLeftRadius: px2dp(20) , borderTopRightRadius:px2dp(20)  }}>
                             <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', paddingTop:px2dp(20) , paddingBottom:px2dp(20) , borderStyle: "dashed", borderBottomWidth: 0.5 }}>
-                                <Text style={{ fontSize:px2dp(18) , lineheight:px2dp(44) , textAlign: 'left', marginLeft:px2dp(29) , color: '#0071bc' }}>Zhiyuan Lv Ph.D.</Text>
-                                <Text style={{ fontSize:px2dp(16) , lineheight:px2dp(18) , textAlign: 'left', marginLeft:px2dp(20) , }}>{I18n.t('ZhiyuanActivity.manager')}</Text>
-                                <Text style={{ fontSize:px2dp(14) , lineheight:px2dp(18) , textAlign: 'left', marginLeft:px2dp(20) , fontStyle: 'italic' }}>{I18n.t('ZhiyuanActivity.beijing')}</Text>
+                                <Text style={{ fontSize:px2dp(18) , lineheight:px2dp(44) ,fontFamily:'fantasy', textAlign: 'left', marginLeft:px2dp(20) , color: '#0071bc' }}>Zhiyuan Lv Ph.D.</Text>
+                                <Text style={{ fontSize:px2dp(16) , lineheight:px2dp(18) ,fontFamily:'fantasy', textAlign: 'left', marginLeft:px2dp(20) , }}>{I18n.t('ZhiyuanActivity.manager')}</Text>
+                                <Text style={{ fontSize:px2dp(14) , lineheight:px2dp(18) ,fontFamily:'fantasy',textAlign: 'left', marginLeft:px2dp(20) , fontStyle: 'italic' }}>{I18n.t('ZhiyuanActivity.beijing')}</Text>
                             </View>
                         </View>
                         {/* 个人经历 */}
@@ -181,7 +180,6 @@ export default class ZhiyuanActivity extends Component<Props> {
                     </View>
                 </View> */}
 
-                        <View style={{ height:px2dp(20)  }}></View>
                         {/* 滑块 */}
                         {/* <TabView
                     navigationState={this.state}
@@ -274,8 +272,8 @@ export default class ZhiyuanActivity extends Component<Props> {
                     </View>
                 </View> */}
 
-                        <View style={{ marginTop:px2dp(40)  }}>
-                            <View style={{ width: '90%', height:px2dp(540) , alignSelf: 'center' }}>
+                        <View style={{ marginTop:px2dp(40),marginBottom:px2dp(40)  }}>
+                            <View style={{ width: '90%', alignSelf: 'center' }}>
                                 {/* experiences 经历*/}
                                 <TouchableOpacity onPress={() => this.navigate.push("ZhiyuanExperiences")}>
                                     <View style={{ borderRadius:px2dp(15) , borderWidth:px2dp(1) , borderColor: '#D6D7D8', height:px2dp(80) , flexDirection: 'row', backgroundColor: '#ffffff', }}>

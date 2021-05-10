@@ -11,7 +11,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ChifatPublishedActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -29,19 +28,12 @@ export default class ChifatPublishedActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView style={{flex:1}}>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
-              
-                <View>
+                 <StatusBar animated={true} hidden={true}  translucent={true} barStyle={'light-content'} />
+                {/* <View>
                     <Text style={{ width: '90%', height:px2dp(67) , alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp(28) , lineheight:px2dp(67) , fontWeight: 'bold' }}>{I18n.t('ChifatActivity.papers')}</Text>
-                </View>
+                </View> */}
 
-                <View style={{ marginTop: 20, marginBottom: 20 }}>
+                <View style={{ marginTop: px2dp(30),height:px2dp(300), marginBottom: px2dp(30) }}>
                     <View style={{ height:px2dp(15)  }}></View>
                     <View style={{ alignSelf: 'center', width: '90%', alignSelf: 'center', borderBottomWidth: 0.5, borderStyle: 'solid' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://academic.oup.com/gbe/article/6/12/3344/549730" }); this.setState({ display: true }) }}>

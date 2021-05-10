@@ -235,16 +235,12 @@ export default class ReportActivity extends Component<Props> {
                         }}>{I18n.t('DnaReportActivity.barcode')} | <Text style={{ color: '#000000', fontFamily: 'serif' }}>{this.state.barcode}</Text></Text>
 
                     </View>
-                    <View>
-                        {/* <Text>Chat with {params.meeego}</Text> */}
-
-                    </View>
                     {this.state.display == true ?
                         <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                             <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} startInLoadingState={true} />
-                            <View style={{ width: "100%", height: 35, backgroundColor: "#404cb2" }}>
-                                <TouchableOpacity style={{ width: "100%", height: "100%" }}>
-                                    <Button style={{ width: "100%", height: "100%", backgroundColor: "#404cb2" }} title
+                            <View style={{ width: "100%", height: px2dp(35), backgroundColor: "#404cb2" }}>
+                                <TouchableOpacity>
+                                    <Button style={{ width: "100%", height: "100%", backgroundColor: "#404cb2" }}
                                         color="#404cb2"
                                         onPress={() => { { this.setState({ display: false }) } }} />
                                 </TouchableOpacity>
@@ -300,20 +296,22 @@ export default class ReportActivity extends Component<Props> {
                                 :
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', height: px2dp(60), width: '80%', alignSelf: 'center' }}>
                                     <Image style={{ height: px2dp(50), marginTop: px2dp(10), width: '30%', alignItems: 'center', }} source={require('../image/olive-leaf.png')} resizeMode='contain' />
-                                    <Text style={{ lineHeight: px2dp(60), width: '60%', textAlign: 'center', color: '#000000', fontSize: px2dp(18), fontWeight: 'bold', fontFamily: 'serif', }}>NA(non-available)</Text>
+                                    <Text style={{ lineHeight: px2dp(60), width: '70%', textAlign: 'center', color: '#000000', fontSize: px2dp(14), fontWeight: 'bold', fontFamily: 'serif', }}>NA(non-available)</Text>
 
                                 </View>
                             }
-                            <Text style={{ width: '100%', height: px2dp(30), textAlign: 'center', lineHeight: px2dp(30), fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'serif', }}>Your Chronological Age</Text>
+                            <Text style={{ width: '100%', height: px2dp(30), textAlign: 'center', lineHeight: px2dp(30), fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'serif', }}>{I18n.t('DnaReportActivity.yourchro')}</Text>
                         </View>
 
                         <View style={{ width: '90%', height: px2dp(200), flexDirection: 'column', alignSelf: 'center', marginTop: px2dp(10), backgroundColor: '#f1f5f6', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
                             <View style={{ flexDirection: 'row', justifyContent: 'center', height: px2dp(60), width: '70%', alignSelf: 'center' }}>
                                 <Image style={{ height: px2dp(50), marginTop: px2dp(10), width: '30%', alignItems: 'center', }} source={require('../image/olive-leaf.png')} resizeMode='contain' />
-                                <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(30), fontFamily: 'serif', fontWeight: 'bold', fontFamily: 'fantasy', }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text>
+                                {/* <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(30), fontFamily: 'serif', fontWeight: 'bold', fontFamily: 'fantasy', }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text> */}
+                                <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(30), fontFamily: 'serif', fontWeight: 'bold', fontFamily: 'fantasy', }}>{parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2)}</Text>
+
                                 <Text style={{ lineHeight: px2dp(60), width: '30%', textAlign: 'center', fontSize: px2dp(18), color: '#000000', fontFamily: 'serif', fontWeight: '600', fontFamily: 'fantasy', }}>Years</Text>
                             </View>
-                            <Text style={{ width: '100%', height: px2dp(30), textAlign: 'center', lineHeight: px2dp(30), fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'fantasy', }}>Your Expected Chronological Age</Text>
+                            <Text style={{ width: '100%', height: px2dp(30), textAlign: 'center', lineHeight: px2dp(30), fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.yourexpchro')}</Text>
                             <View style={{ borderTopWidth: px2dp(1), borderTopColor: '#cdcdcd', borderStyle: 'dashed', }}></View>
                             <View style={{ height: px2dp(90), }}>
                                 <Text style={{ textAlign: 'center', fontSize: px2dp(14), color: '#000000', margin: px2dp(15), fontFamily: 'serif', }}>
@@ -321,21 +319,21 @@ export default class ReportActivity extends Component<Props> {
                                 </Text>
                             </View>
                         </View>
-                        <View style={{ width: '90%', height: px2dp(206), flexDirection: 'column', alignSelf: 'center', marginTop: px2dp(10), marginBottom: px2dp(100), backgroundColor: '#feffff', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
+                        <View style={{ width: '90%', height: px2dp(216), flexDirection: 'column', alignSelf: 'center', marginTop: px2dp(10), marginBottom: px2dp(100), backgroundColor: '#feffff', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
                             <Image style={{ height: px2dp(30), width: '15%', marginTop: px2dp(10) }} source={require('../image/dna-icon.png')} resizeMode='contain' />
-                            <View style={{ width: px2dp(100), height: px2dp(80), marginTop: px2dp(-20), alignSelf: 'center', borderRadius: px2dp(15), backgroundColor: '#ebeced' }}>
+                            <View style={{ width: px2dp(100), height: px2dp(80), marginTop: px2dp(-20), alignSelf: 'center', borderRadius: px2dp(15), backgroundColor: '#ebeced',}}>
                                 <Text style={{ textAlign: 'center', lineHeight: px2dp(80), color: '#000000', fontSize: px2dp(30), fontWeight: 'bold', fontFamily: 'fantasy' }}>{this.state.biological}</Text>
                             </View>
-                            <Text style={{ lineHeight: px2dp(30), textAlign: 'center', fontSize: px2dp(18), color: '#000000', fontWeight: '600', marginBottom: px2dp(50), fontFamily: 'serif', }}>Your Epigenetic Age</Text>
+                            <Text style={{ lineHeight: px2dp(30), textAlign: 'center', fontSize: px2dp(18), color: '#000000', fontWeight: '600', marginBottom: px2dp(50), fontFamily: 'serif', }}>{I18n.t('DnaReportActivity.yourbio')}</Text>
 
                             {this.state.rage == 0 ?
-                                this.state.biological < (-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144) ?
+                                this.state.biological < parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) ?
                                     <View style={{ height: px2dp(100), backgroundColor: '#ebeced', borderRadius: px2dp(15), }}>
                                         <View style={{ height: px2dp(60), width: px2dp(60), borderRadius: px2dp(50), backgroundColor: '#ebeced', alignSelf: 'center', marginTop: px2dp(-25) }}>
                                             <Image style={{ height: px2dp(40), width: px2dp(40), marginTop: px2dp(10), alignSelf: 'center' }} source={require('../image/smile-black.png')} resizeMode='contain' />
                                         </View>
                                         <Text style={{ textAlign: 'center', height: px2dp(70), fontSize: px2dp(14), color: '#000000', fontFamily: 'serif', }}>
-                                            {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>{I18n.t('DnaReportActivity.is')} {Math.abs((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144) - parseFloat(this.state.biological)).toFixed(2)}</Text> {I18n.t('DnaReportActivity.old')}</Text>
+                                            {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>{Math.abs(parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) - parseFloat(this.state.biological)).toFixed(2)}</Text> {I18n.t('DnaReportActivity.old')}</Text>
                                     </View>
                                     :
                                     <View style={{ height: px2dp(100), backgroundColor: '#ebeced', borderRadius: px2dp(15), }}>
@@ -343,7 +341,7 @@ export default class ReportActivity extends Component<Props> {
                                             <Image style={{ height: px2dp(40), width: px2dp(40), marginTop: px2dp(10), alignSelf: 'center' }} source={require('../image/sad-black.png')} resizeMode='contain' />
                                         </View>
                                         <Text style={{ textAlign: 'center', height: px2dp(70), fontSize: px2dp(14), color: '#000000', fontFamily: 'serif', }}>
-                                            {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>{Math.abs((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144) - parseFloat(this.state.biological)).toFixed(2)}</Text> {I18n.t('DnaReportActivity.old')}</Text>
+                                            {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>{Math.abs(parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) - parseFloat(this.state.biological)).toFixed(2)}</Text> {I18n.t('DnaReportActivity.old')}</Text>
                                     </View>
 
                                 :
@@ -375,7 +373,7 @@ export default class ReportActivity extends Component<Props> {
                                 </View>
                             </TouchableOpacity>
                         </View>
-                        <View style={{ width: '90%', height: px2dp(60), flexDirection: 'row', alignSelf: 'center', marginTop: px2dp(10), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
+                        {/* <View style={{ width: '90%', height: px2dp(60), flexDirection: 'row', alignSelf: 'center', marginTop: px2dp(10), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
                             <Text style={{ width: '68%', marginTop: px2dp(18), fontFamily: 'serif', marginLeft: px2dp(10), fontSize: px2dp(16), }}>{I18n.t('DnaReportActivity.calculate')}</Text>
                             <TouchableOpacity onPress={() => { this.setState({ url: "https://epigenexperts.ca/epigenetic-age-calculator/" }); this.setState({ display: true }) }} style={{ width: '20%', height: px2dp(35), }}>
                                 <View style={{ width: '100%', height: px2dp(35), marginTop: px2dp(12), backgroundColor: '#e7e8ec', fontSize: px2dp(12), borderRadius: px2dp(5), flexDirection: 'row' }}>
@@ -383,11 +381,10 @@ export default class ReportActivity extends Component<Props> {
                                     <Image style={{ height: px2dp(12), width: px2dp(12), backgroundColor: '#e7e8ec', color: '#cdcdcd', marginLeft: px2dp(15), marginTop: px2dp(12) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                 </View>
                             </TouchableOpacity>
-                        </View>
+                        </View> */}
 
-                        <View style={{ width: "100%", alignItems: "center", marginTop: px2dp(30) }}>
-
-                            <Image style={{ height: px2dp(225), width: '100%', borderTopRightRadius: px2dp(30), borderTopLeftRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep12.jpg")}></Image>
+                        <View style={{ width: "100%", alignItems: "center", marginTop: px2dp(30), backgroundColor: '#f6f7f8' }}>
+                            <Image style={{ height: px2dp(300), width: '100%', borderTopRightRadius: px2dp(30), borderTopLeftRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep12.jpg")}></Image>
                             <View style={{ width: '90%', alignSelf: 'center', }}>
                                 <View style={{ width: '100%', alignSelf: 'flex-end', marginTop: px2dp(-23), marginBottom: px2dp(34) }}>
                                     <Text style={{ alignSelf: 'flex-end', fontSize: px2dp(14), color: '#404cb2', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.how')}</Text>
@@ -638,8 +635,8 @@ export default class ReportActivity extends Component<Props> {
                     onPressCloseButton={() => { this.setState({ swipeablePanelActive: false }) }}
                 >
                     <View style={{ width: '90%', alignSelf: 'center', margin: px2dp(20) }}>
-                        <Text style={{ fontSize: px2dp(20), fontWeight: 'bold', color: '#000000', marginBottom: px2dp(20) }}>Technical Accuracy</Text>
-                        <Text style={{ fontSize: px2dp(16), color: '#000000', marginBottom: px2dp(10) }}>We performed three independent tests on your saliva using next generation sequencing technology. We provide you with an average of the three tests and the technical accuracy is to 100%, the closer the tests results were to each other.</Text>
+                        <Text style={{ fontSize: px2dp(20),fontFamily:'fantasy', fontWeight: 'bold', color: '#000000', marginBottom: px2dp(20) }}>Technical Accuracy</Text>
+                        <Text style={{ fontSize: px2dp(16),fontFamily:'fantasy', color: '#000000', marginBottom: px2dp(10) }}>We performed three independent tests on your saliva using next generation sequencing technology. We provide you with an average of the three tests and the technical accuracy is to 100%, the closer the tests results were to each other.</Text>
                     </View>
                 </SwipeablePanel>
             </View>

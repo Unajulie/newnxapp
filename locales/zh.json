@@ -4,6 +4,7 @@
     },
     "TabHomeActivity": {
         "title": "主頁",
+        "product":"產品",
         "video": "相關視頻",
         "biotitle": "DNA甲基化檢測生物學年齡 ",
         "1ml": "僅需2毫升唾液樣本即可進行檢測，方便又安全。",
@@ -90,7 +91,10 @@
         "centerreport":"我的報告",
         "centerqa":"Q&A",
         "centerus":"聯繫我們",
-        "centerout":"退出"
+        "centerout":"退出",
+        "kit":"掃描您的套件並獲取您的年齡數據。",
+        "fill":"填寫有關您的生活方式的調查表",
+        "step":"主要工作流程的分步說明"
     },
     "AboutActivity": {
         "title": "關於我們",
@@ -318,6 +322,7 @@
         "detectTime":"檢測時間",
         "intransit":"郵寄中",
         "remaining_days":"剩余天數",
+        "percentage":"Accomplish percentage",
         "Pendding":"待定"
     },
     "user_profile": {
@@ -891,8 +896,8 @@
     },
     "QAActivity": {
         "title": "Q&A",
-        "test": "1. EpiAging測試如何工作？",
-        "report": "2. 如何獲得我的EpiAging測試報告？",
+        "test": "1. 如何進行EpiAge生物學年齡檢測？",
+        "report": "2. 如何獲得我的EpiAge測試報告？",
         "fillques":"3.如何填寫問卷",
         "calfoot":"4.如何計算你攝入食物的卡路里？"
     },
@@ -901,7 +906,7 @@
         "phone":"(+852) 2354 8297",
         "utics":"info@hkgepitherapeutics.com",
         "http":"https://www.hkgepitherapeutics.com",
-        "hkg":"香港新界沙田香港科學園生物科技中心2號613室HKG epitherapeutics Limited"
+        "hkg":"香港新界沙田香港科學園生物科技中心2號3樓313-31室HKG epitherapeutics Limited"
     
     },
     "QuesnoteActivity": {

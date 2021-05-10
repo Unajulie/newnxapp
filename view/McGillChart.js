@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import Session from '../storage/Session';
@@ -7,8 +7,7 @@ import data from '../appdata'
 import moment from 'moment'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
 import { I18n } from '../locales/i18n';
-
-type Props = {};
+import { px2dp } from '../src/px2dp';
 export default class McGillChart extends Component<Props> {
     constructor(props) {
         super(props);
@@ -96,13 +95,12 @@ export default class McGillChart extends Component<Props> {
         return (
             <View style={{ width: "100%" }}>
                 <View style={{ width: "100%", flexDirection: "row" }}>
-                    <View style={{ width: "45%", height: 100 }}>
-                        <View style={{ width: "100%", height: 22 }}></View>
-                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: 16, fontWeight: "bold", textAlignVertical: "center", textAlign: "left" }}>{I18n.t('McGillChartActivity.how')}</Text></View>
-                        <View style={{ alignItems: "center" }}><Text style={{ color: "red", fontSize: 18, fontWeight: "bold" }}>{this.props.title}</Text></View>
-                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: 14, fontWeight: "bold" }}>{I18n.t('McGillChartActivity.like')}</Text></View>
+                    <View style={{ width: "45%",  marginTop: px2dp(20), marginBottom: px2dp(20)}}>
+                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: px2dp(16),color: "#000",fontFamily:'fantasy', fontWeight: "bold", textAlignVertical: "center", textAlign: "left" }}>{I18n.t('McGillChartActivity.how')}</Text></View>
+                        <View style={{ alignItems: "center" }}><Text style={{ color: "#000",fontFamily:'fantasy',  fontSize: px2dp(18), fontWeight: "bold" }}>{this.props.title}</Text></View>
+                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: px2dp(16),color: "#000",fontFamily:'fantasy',  fontWeight: "bold" }}>{I18n.t('McGillChartActivity.like')}</Text></View>
                     </View>
-                    <View style={{ width: "45%", height: 100, alignItems: "center", justifyContent: "center" }}>
+                    <View style={{ width: "45%", height: px2dp(100), alignItems: "center", justifyContent: "center" }}>
                         <View>
                             <AirbnbRating
                                 count={4}
@@ -127,7 +125,7 @@ export default class McGillChart extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <View style={{ height: 250, flexDirection: "row", width: "100%" }}>
+                <View style={{ height: px2dp(250), flexDirection: "row", width: "100%" }}>
                     <View style={{ height: "100%", width: "100%" }}>
                         <ECharts ref={(ref) => { this.echarts = ref }} option={this.state.option} />
                     </View>

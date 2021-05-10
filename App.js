@@ -29,71 +29,68 @@ export default class App extends Component<Props> {
   //   })
   // }
 
-  // componentDidMount() {
-  //   CodePush.sync(
-  //     {
-  //       deploymentKey: '8QRhFDxogSIdzaWKXUEpkwIk04jp5USlrEcooP',
-  //       updateDialog: false,
-  //       installMode: CodePush.InstallMode.IMMEDIATE //强制更新
-  //     },
-  //     (status) => {
-  //       switch (status) {
-  //         case CodePush.SyncStatus.UPDATE_IGNORED:
-  //           this.setState({ updateshow: false })
-  //           break;
-  //         case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
-  //           //console.log('download')
-  //           this.setState({ updateshow: true })
-  //           break;
-  //         case CodePush.SyncStatus.INSTALLING_UPDATE:
-  //           //console.log('installing')
-  //           this.setState({ updateshow: false })
-  //           break;
-  //         default:
-  //           this.setState({ updateshow: false })
-  //           break;
-  //       }
-  //     },
-  //     //自动回调
-  //     ({ receivedBytes, totalBytes }) => {
-  //       this.setState({ download: parseInt(receivedBytes * 100 / totalBytes) })
-  //     }
-  //   );
-  // }
+  componentDidMount() {
+    CodePush.sync(
+      {
+        deploymentKey: '8QRhFDxogSIdzaWKXUEpkwIk04jp5USlrEcooP',
+        updateDialog: false,
+        installMode: CodePush.InstallMode.IMMEDIATE //强制更新
+      },
+      (status) => {
+        switch (status) {
+          case CodePush.SyncStatus.UPDATE_IGNORED:
+            this.setState({ updateshow: false })
+            break;
+          case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
+            //console.log('download')
+            this.setState({ updateshow: true })
+            break;
+          case CodePush.SyncStatus.INSTALLING_UPDATE:
+            //console.log('installing')
+            this.setState({ updateshow: false })
+            break;
+          default:
+            this.setState({ updateshow: false })
+            break;
+        }
+      },
+      //自动回调
+      ({ receivedBytes, totalBytes }) => {
+        this.setState({ download: parseInt(receivedBytes * 100 / totalBytes) })
+      }
+    );
+  }
 
 
 
   render() {
-    return  <MenuProvider>
-    <RootStack />
-  </MenuProvider>
-    // return this.state.updateshow
-    //   ?
-    //   <View style={{
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     position: 'absolute',
-    //     height: Dimensions.get('screen').height,
-    //     width: Dimensions.get('screen').width,
-    //     zIndex: 10
-    //   }}>
-    //     <View style={{
-    //       paddingVertical: 12, paddingHorizontal: 20, flexDirection: 'row',
-    //       justifyContent: 'center', alignItems: 'center',
-    //       backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: 6
-    //     }}>
-    //       <ActivityIndicator
-    //         animating={true}
-    //         color={"#FFFFFF"}
-    //         size='large'
-    //       />
-    //       <Text style={{ marginLeft: 20, fontSize: 14, color: "#FFFFFF" }}>{this.state.download}%</Text>
-    //     </View>
-    //   </View>
-    //   :
-    //     <MenuProvider>
-    //       <RootStack />
-    //     </MenuProvider>
+    return this.state.updateshow
+      ?
+      <View style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        height: Dimensions.get('screen').height,
+        width: Dimensions.get('screen').width,
+        zIndex: 10
+      }}>
+        <View style={{
+          paddingVertical: 12, paddingHorizontal: 20, flexDirection: 'row',
+          justifyContent: 'center', alignItems: 'center',
+          backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: 6
+        }}>
+          <ActivityIndicator
+            animating={true}
+            color={"#FFFFFF"}
+            size='large'
+          />
+          <Text style={{ marginLeft: 20, fontSize: 14, color: "#FFFFFF" }}>{this.state.download}%</Text>
+        </View>
+      </View>
+      :
+        <MenuProvider>
+          <RootStack />
+        </MenuProvider>
         
   }
 }

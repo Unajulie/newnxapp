@@ -85,6 +85,7 @@
     },
     "TabCenterActivity": {
         "title": "EPICENTER",
+        "setting":"Settings",
         "centerlogin": "Connexion",
         "centerregis": "S'inscrire",
         "centerkey": "Clé privée",
@@ -94,8 +95,19 @@
         "centerus": "Nous contacter",
         "centerout": "Sortie",
         "kit": "Scannez votre kit et obtenez vos données chronologiques d'âge.",
-        "Fill": "Remplissez un questionnaire sur votre style de vie",
-        "Step": "Instructions étape par étape pour un flux de travail principal"
+        "fill": "Remplissez un questionnaire sur votre style de vie",
+        "step": "Instructions étape par étape pour un flux de travail principal"
+    },
+    "SettingActivity":{
+        "account":"ACCOUNT",
+        "language":"language",
+        "privatekey":"Private Key",
+        "about":"ABOUT",
+        "qa":"Q&A",
+        "datasecurity":"Data Security",
+        "terms":"Terms of Service",
+        "contact":"Contact Us",
+        "logout": "Log Out"
     },
     "AboutActivity": {
         "title": "About Us",
@@ -327,9 +339,13 @@
         "detectTime": "Temps de détection",
         "intransit": "Envoi postal",
         "remaining_days": "Le nombre de jours restants",
+        "percentage":"Accomplish percentage",
         "life":"L'âge épigénétique est un meilleur paramètre de notre santé et de notre durée de vie que notre âge chronologique.",
         "Scan":"Code-barres du kit de numérisation",
-        "Pendding": "En attente"
+        "Pendding": "En attente",
+        "newkit":"New Kit",
+        "registeredkit":"Registered Kit",
+        "buyepi":"No product yet? Buy Epiage Kit →"
     },
     "user_profile": {
         "title": "Your Profile"

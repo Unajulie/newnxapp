@@ -95,8 +95,8 @@ export default class LaunchActivity extends Component {
                             </Swiper>
                         </View>
                     </View>
-                    <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(-30), height: px2dp(300), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: '#ffffff', zIndex: 999 }}>
-                        <View style={{ width: "100%", height: px2dp(45), marginTop: px2dp(50), justifyContent: "space-between", marginBottom: 30 }} >
+                    <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(-30), height: px2dp(280), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: '#ffffff', zIndex: 999 }}>
+                        <View style={{ width: "100%", height: px2dp(45), marginTop: px2dp(40), justifyContent: "space-between", }} >
                             <View style={{ width: "90%", height: px2dp(45), alignSelf: "center", marginBottom: px2dp(20), }}>
                                 <TouchableOpacity >
                                     <Button style={{ width: "100%", height: px2dp(45), borderRadius: px2dp(5), backgroundColor: "#404bc2" }}
@@ -114,8 +114,8 @@ export default class LaunchActivity extends Component {
                                 </TouchableOpacity>
                             </View>
                             <View style={{ width: "90%", height: px2dp(45), alignSelf: "center", marginBottom: px2dp(20), }}>
-                                <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
-                                    <Button style={{ width: "100%", height: px2dp(45), backgroundColor: '#ffffff', borderWidth: px2dp(1), borderColor: '#404bc2', borderRadius: px2dp(5), }}>
+                                <TouchableOpacity >
+                                    <Button onPress={() => this.navigate.push("Mall")} style={{ width: "100%", height: px2dp(45), backgroundColor: '#ffffff', borderWidth: px2dp(1), borderColor: '#404bc2', borderRadius: px2dp(5), }}>
                                         <Text style={{ width: "100%", height: px2dp(45), color: "#404bc2", lineHeight: px2dp(45), textAlign: "center", fontFamily: 'fantasy', textAlignVertical: "center" }}>{I18n.t("LaunchActivity.buykit")}</Text>
                                     </Button>
                                 </TouchableOpacity>
@@ -131,7 +131,7 @@ export default class LaunchActivity extends Component {
                                     </TouchableOpacity>
                                 </View>
                                 :
-                                <View style={{ width: "100%", height: px2dp(60), }} />
+                                <View style={{ width: "100%", height: px2dp(30), }} />
 
                             }
                             <TouchableOpacity onPress={() => this.navigate.push('Main')}>

@@ -18,7 +18,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ZhiyuanConferencesActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -33,13 +32,12 @@ export default class ZhiyuanConferencesActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView style={{flex:1}}>
-
-                <View>
+                {/* <View>
                     <Text style={{ width: '90%', height:px2dp(67) , alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp(28) , lineheight:px2dp(67) , fontWeight: 'bold' }}>{I18n.t('ZhiyuanActivity.conferences')}</Text>
-                </View>
+                </View> */}
 
                 {/* conferences */}
-                <View style={{ marginTop:px2dp(20) , marginBottom:px2dp(20)  }}>
+                <View style={{ marginTop:px2dp(30) , marginBottom:px2dp(30)  }}>
                     <View style={{ width: '90%', alignSelf: 'center', paddingTop:px2dp(20) , justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '6%', fontFamily: 'fantasy', fontSize:px2dp(16)  }}>●</Text><Text style={{ width: '76%', fontFamily: 'FontAwesome', lineheight:px2dp(21) , marginBottom:px2dp(18) }}>{I18n.t('ZhiyuanActivity.society')}

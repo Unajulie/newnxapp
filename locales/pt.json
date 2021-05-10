@@ -85,6 +85,7 @@
     },
     "TabCenterActivity": {
         "title": "EPICENTER",
+        "setting":"Settings",
         "centerlogin": "Conecte-se",
         "centerregis": "registo",
         "centerkey": "Chave privada",
@@ -94,8 +95,19 @@
         "centerus": "Contate-Nos",
         "centerout": "Sair",
         "kit": "Digitalize seu Kit e obtenha seus dados cronológicos de idade.",
-        "Fill": "Preencha questionários sobre seu estilo de vida",
-        "Step": "Instruções passo a passo para um fluxo de trabalho principal"
+        "fill": "Preencha questionários sobre seu estilo de vida",
+        "step": "Instruções passo a passo para um fluxo de trabalho principal"
+    },
+    "SettingActivity":{
+        "account":"ACCOUNT",
+        "language":"language",
+        "privatekey":"Private Key",
+        "about":"ABOUT",
+        "qa":"Q&A",
+        "datasecurity":"Data Security",
+        "terms":"Terms of Service",
+        "contact":"Contact Us",
+        "logout": "Log Out"
     },
     "AboutActivity": {
         "title": "Sobre nós",
@@ -337,9 +349,13 @@
         "detectTime": "Tempo de Detecção",
         "intransit": "Enviando",
         "remaining_days": "O número restante de dias",
+        "percentage":"Accomplish percentage",
         "life":"A idade epigenética é um parâmetro melhor de nossa saúde, bem-estar e expectativa de vida do que nossa idade cronológica.",
         "Scan":"Código de barras do kit de digitalização",
-        "Pendding": "Pendente"
+        "Pendding": "Pendente",
+        "newkit":"New Kit",
+        "registeredkit":"Registered Kit",
+        "buyepi":"No product yet? Buy Epiage Kit →"
     },
     "user_profile": {
         "title": "Seu perfil"

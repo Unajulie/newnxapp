@@ -40,7 +40,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ZhiyuanHonorsActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -55,15 +54,13 @@ export default class ZhiyuanHonorsActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView style={{flex:1}}>
-
-                <View>
+                {/* <View>
                     <Text style={{ width: '90%', height:px2dp(67) , alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp(28) , lineheight:px2dp(67) , fontWeight: 'bold' }}>{I18n.t('ZhiyuanActivity.honors')}</Text>
-                </View>
+                </View> */}
 
                 {/* honors */}
-                <View style={{ marginTop:px2dp(20) , marginBottom:px2dp(20)  }}>
+                <View style={{ marginTop:px2dp(30) , marginBottom:px2dp(30)  }}>
 
-                    <View style={{ height:px2dp(20)  }}></View>
                     <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth:px2dp(1) , borderRadius:px2dp(15) , borderColor: '#B2B2B2', paddingBottom:px2dp(20) , paddingTop:px2dp(20) }} >
                         <Text style={{ height:px2dp(40) , lineheight:px2dp(30) , fontStyle: 'italic', fontFamily: 'FontAwesome' ,textAlign: 'center', fontSize:px2dp(14) ,fontWeight: '700', }}>{I18n.t('ZhiyuanActivity.trainee')}</Text>
                         <Text style={{ height:px2dp(40) , lineheight:px2dp(30) , fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.american')}</Text>

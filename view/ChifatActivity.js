@@ -11,7 +11,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ChifatActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -28,14 +27,8 @@ export default class ChifatActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <ScrollView style={{flex:1}}>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
+            <ScrollView style={{ flex: 1 }}>
+                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 {/* {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
@@ -46,16 +39,16 @@ export default class ChifatActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 } */}
-                <View style={{ backgroundColor: '#e5e6e7' }}>
-                    <View style={{ height:px2dp(120)  }}></View>
-                    <View style={{ backgroundColor: '#f6f7f8', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
+                <View style={{flex:1, backgroundColor: '#e5e6e7' }}>
+                    <View style={{ height: px2dp(120) }}></View>
+                    <View style={{ backgroundColor: '#f6f7f8', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }}>
                         <View style={{ width: '90%', }}>
-                            <Image style={{ height:px2dp(99) , width: '100%', marginTop:px2dp(-60), marginLeft: -60 }} resizeMode="contain" source={require("../image/icons/chifat.png")}></Image>
+                            <Image style={{ height: px2dp(99), width: '100%', marginTop: px2dp(-60), marginLeft: -60 }} resizeMode="contain" source={require("../image/icons/chifat.png")}></Image>
                         </View>
-                        <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', paddingTop: 20, paddingBottom: 20, borderStyle: "dotted", borderBottomWidth: 0.5 }}>
-                            <Text style={{ fontSize:px2dp(18) , lineheight:px2dp(44) , textAlign: 'left', marginLeft: 20, color: '#0071bc' }}>{I18n.t('ChifatActivity.title')}</Text>
-                            <Text style={{ fontSize:px2dp(16) , lineheight:px2dp(18) , textAlign: 'left', marginLeft: 20, }}>{I18n.t('ChifatActivity.senior')}</Text>
-                            <Text style={{ fontSize:px2dp(14) , lineheight:px2dp(18) , textAlign: 'left', marginLeft: 20, fontStyle: 'italic' }}>{I18n.t('ChifatActivity.ltb')}</Text>
+                        <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', paddingTop: px2dp(20), paddingBottom: px2dp(20), borderStyle: "dotted", borderBottomWidth: 0.5 }}>
+                            <Text style={{ fontSize: px2dp(18), lineheight: px2dp(44),fontFamily:'fantasy', textAlign: 'left', marginLeft: px2dp(20), color: '#0071bc' }}>{I18n.t('ChifatActivity.title')}</Text>
+                            <Text style={{ fontSize: px2dp(16), lineheight: px2dp(18), textAlign: 'left',fontFamily:'fantasy', marginLeft: px2dp(20), }}>{I18n.t('ChifatActivity.senior')}</Text>
+                            <Text style={{ fontSize: px2dp(14), lineheight: px2dp(18), textAlign: 'left',fontFamily:'fantasy', marginLeft: px2dp(20), fontStyle: 'italic' }}>{I18n.t('ChifatActivity.ltb')}</Text>
                         </View>
                         {/* 个人履历 */}
                         {/* <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
@@ -135,42 +128,42 @@ export default class ChifatActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View> */}
-                        <View style={{ marginTop:px2dp(40)  }}>
-                            <View style={{ width: '90%', height:px2dp(400) , alignSelf: 'center' }}>
+                        <View style={{ marginTop: px2dp(40),marginBottom:px2dp(40),height:px2dp(300) }}>
+                            <View style={{ width: '90%', alignSelf: 'center' }}>
                                 {/* experiences 经历*/}
                                 <TouchableOpacity onPress={() => this.navigate.push("ChifatExperiences")}>
-                                    <View style={{ borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', height:px2dp(80) , flexDirection: 'row', backgroundColor: '#ffffff', }}>
+                                    <View style={{ borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', height: px2dp(80), flexDirection: 'row', backgroundColor: '#ffffff', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
-                                            <Image style={{ width: '100%', height:px2dp(45)  }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
+                                            <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/pro1.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize:px2dp(18) , textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ChifatActivity.experiences')}
-                                    </Text>
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ChifatActivity.experiences')}
+                                            </Text>
                                         </View>
-                                        <View style={{ width: '15%', height:px2dp(80) , justifyContent: 'center' }}>
-                                            <Text style={{ fontSize:px2dp(20) , fontFamily: 'fantasy', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
+                                        <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                            <Text style={{ fontSize: px2dp(20), fontFamily: 'fantasy', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
-                                <View style={{ height:px2dp(20)  }}></View>
+                                <View style={{ height: px2dp(20) }}></View>
                                 {/* published 发表*/}
                                 <TouchableOpacity onPress={() => this.navigate.push("ChifatPublished")}>
-                                    <View style={{ borderColor: '#D6D7D8', borderRadius: 15, borderWidth: 1, height:px2dp(80) , flexDirection: 'row', backgroundColor: '#ffffff', }}>
+                                    <View style={{ borderColor: '#D6D7D8', borderRadius: 15, borderWidth: 1, height: px2dp(80), flexDirection: 'row', backgroundColor: '#ffffff', }}>
                                         <View style={{ width: '20%', justifyContent: 'center' }}>
-                                            <Image style={{ width: '100%', height:px2dp(45)  }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
+                                            <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/pro6.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize:px2dp(18) , textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ChifatActivity.papers')}
-                                    </Text>
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('ChifatActivity.papers')}
+                                            </Text>
                                         </View>
-                                        <View style={{ width: '15%', height:px2dp(80) , justifyContent: 'center' }}>
-                                            <Text style={{ fontSize:px2dp(20) , fontFamily: 'fantasy', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
+                                        <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
+                                            <Text style={{ fontSize: px2dp(20), fontFamily: 'fantasy', color: '#898989', textAlign: 'center', fontWeight: '700' }}> &gt; </Text>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
                             </View>
                         </View>
-                       
+
                     </View>
                 </View>
             </ScrollView >

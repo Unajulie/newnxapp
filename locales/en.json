@@ -5,6 +5,7 @@
     "TabHomeActivity": {
         "imgindex": "../image/enpic/index1.jpg",
         "title": "HOME",
+        "product":"Product",
         "video": "TEDx Video",
         "biotitle": "Epigenetic age Detection by DNA Methylation ",
         "1ml": "Only 2ml saliva sample is needed for detection, which is convinient and safe.",
@@ -86,15 +87,24 @@
     "TabCenterActivity": {
         "centerlogin": "Login",
         "centerregis": "Register",
-        "centerkey": "Data Security key pairs",
+        "setting":"Settings",
+        "centerkey": "Private Key",
         "Questionnaire": "Questionnaire",
         "centerreport": "My Report",
-        "centerqa": "Q&A",
-        "centerus": "Contact Us",
-        "centerout": "Log Out",
         "kit":"Scan your Kit and get your chronological Age data.",
-        "Fill":"Fill a questionnaires about your lifestyle",
-        "Step":"Step by step instrucations for a main workflow"
+        "fill":"Fill a questionnaires about your lifestyle",
+        "step":"Step by step instrucations for a main workflow"
+    },
+    "SettingActivity":{
+        "account":"ACCOUNT",
+        "language":"language",
+        "privatekey":"Private Key",
+        "about":"ABOUT",
+        "qa":"Q&A",
+        "datasecurity":"Data Security",
+        "terms":"Terms of Service",
+        "contact":"Contact Us",
+        "logout": "Log Out"
     },
     "AboutActivity": {
         "title": "About Us",
@@ -164,7 +174,7 @@
         "webmd": "WebMD",
         "dhea-recommon": "There is no standard dosage of DHEA. Some studies have used capsules dosed between 25 and 200 milligrams a day, or sometimes even higher, but it depends on the medical conditions being treated. Ask your doctor for advice.",
         "savedata": "Your data has been saved successfully!",
-        "title": "Life Style Questionnaire",
+        "title": "Life Style",
         "lifesques": "Life style Questionnaire",
         "healthy": "A healthy or unhealthy lifestyle will most likely be transmitted across generations. According to the study done by Case et al.",
         "become": "When a 0-3-year-old child has a mother who practices a healthy lifestyle, this child will be 27% more likely to become healthy and adopt the same lifestyle.",
@@ -271,7 +281,6 @@
         "open": "Preliminary studies show that dietary changes can cause deceleration of epigenetic clock in certain people, however this is still an open question. ( https://www.ncbi.nlm.nih.gov/pubmed/30350398)",
         "exercise": "Lifestyle changes including exercise and dietary habits have been recommended by national medical associations for some time, however, we need more data about the most advisable changes and they should be personalized.",
         "way": "A way for us to learn about advisable lifestyle changes is sharing our experiences with others and analyzing the impact of differences in lifestyle in a large population. This is now possible using sharing technologies such as Apps as well as artificial intelligence that could determine how different inputs such as 'lifestyle' habits affect an outcome--the 'epigenetic clock'.",
-       
         "position": "Personalized and systematic positioning",
         "health": "of our intelligent app for your health",
         "links": "Our App links you to information on recommended lifestyle behaviors by important US national medical association as well as possible nutritional supplements such as SAMe, vitamin A, D and C.",
@@ -289,22 +298,20 @@
         "coevolve": "We hope that together we will be able to coevolve your well being and our 'EpiAge' learning environment. ",
         "age-lower": "Chronological Age<Epigenetic Age",
         "age-higher": "Chronological Age>Epigenetic Age",
-        "expected": "Your Expected",
-        "your": "Your",
-        "chro": "/Chronological age/",
-        "bio": "/Epigenetic age/",
+        "yourchro": "Your Chronological Age",
+        "yourexpchro": "Your Expected Chronologicalage",
         "is": "Your Epigenetic age is",
-        "lower":"years lower than chronological age in the population.",
-        "higher":"years higher than chronological age in the population.",
-        "younger": "years lower than expected chronological age in the population.",
-        "old": "years higher than expected chronological age in the population.",
+        "lower":"years lower than your chronological age in the population.",
+        "higher":"years higher than your chronological age in the population.",
+        "younger": "years lower than your expected chronological age in the population.",
+        "old": "years higher than your expected chronological age in the population.",
         "yourbio": "Your Epigenetic age ",
         "otherolder": "The others, who were tested, whose Epigenetic age is higher than Chronological age",
         "otheryounger": "The others, who were tested, whose Epigenetic age is lower than Chronological age",
         "how":"HOW OLD ARE YOU?",
         "why":"Why is your",
         "epigenetic":"'Epigenetic age' important?",
-        "calculate":"Expected  EpiAge Calculator",
+        "calculate":"Expected EpiAge Calculator",
         "acceleration":"Age Acceleration Calculator",
         "buildPDF": "Build PDF",
         "viewPdf": "View PDF",
@@ -319,10 +326,10 @@
         "status": "Test Status",
         "barcode": "Barcode",
         "Registerkit": "Register Kit",
-        "yourage": "Enter Your Age(optional)",
+        "yourage": "Enter Your Chronological Age(optional)",
         "ageFormat": "Incorrect age format",
         "emailFormat":"Incorrect email format",
-        "allow":"Allow email notification",
+        "allow":"Allow email notification when the report is ready",
         "regtime":"Register Date",
         "baseinfo":"Basic information",
         "endtime":"Completion Date",
@@ -331,9 +338,14 @@
         "detectTime":"Detecttion Date",
         "intransit":"in-transit",
         "remaining_days":"Remaining days",
+        "percentage":"Accomplish percentage",
         "life":"The epigenetic age is a better parameter of our health well being and life span than our chronological age.",
+        "newkit":"New Kit",
+        "registeredkit":"Registered Kit",
+        "epiage1":"EpiAge",
         "Scan":"Scan Kit Barcode",
-        "Pendding":"Pendding"
+        "Pendding":"Pendding",
+        "buyepi":"No product yet? Buy Epiage Kit →"
     },
     "ReportActivity": {
         "title": "EpiAge Report"
@@ -839,7 +851,7 @@
     },
     "SameActivity": {
         "title": "SAMe introduction",
-        "what": "What is",
+        "what": "What is SAMe?",
         "what2": "SAMe?",
         "affacthealth": "SAMe is a natural product in the human body, which can affect human health.",
         "same": "SAMe",
@@ -932,6 +944,7 @@
         "titlemsg":"Message",
         "meg":"The public key and private key has been copied to your clipboard."
     },
+   
     "QAActivity": {
         "title": "Q&A",
         "test": "1. EpiAge App User Manual",
@@ -964,13 +977,13 @@
         "username": "Your username will be displayed here after you log in.",
         "gohome": "Go to “HOME” or “EPICENTER” and click “My report”.",
         "barcode": "Enter(or Scan) the barcode on your test tube and get your EpiAge report.",
-        "icon": "After entered your barcode, by clicking the icon to get your EpiAge test report",
-        "result": "Your EpiAge test result will be at the bottom of the page."
+        "icon": "After entered your barcode, by clicking the 'View Report'button to view your EpiAge test report",
+        "result": "Your EpiAge test result will display like that."
     },
     "Manual2Activity": {
         "title": "EpiAge App User Manual",
         "download": "Download the IOS App from the Apple Store or Android App from the Google Play Store.",
-        "gocenter": "Go to 'EPICENTER' and lick register to register an account.",
+        "gocenter": "Click 'Register Kit' and if you don't have an account,you will have to register one.",
         "fillregis": "Fill in the registration information.",
         "mailbox": "Go to the registration mailbox to activate your account.",
         "accountlogin": "Log in with the account you just registered.",
@@ -980,7 +993,7 @@
     },
     "Manual3Activity": {
         "title": "Questionnaire guidance",
-        "how":"How to fill out the questionnaire",
+        "how":"How to fill out the questionnaires",
         "slider1":"How to use the slider to fill out the data.",
         "ratingstart2":"How to use the rating star to fill out the data.",
         "enteefield3":"How to use the entering field to fill out the data."
@@ -1026,7 +1039,7 @@
         "stop":"Stop Counting your Age!",
         "birthdays":" By birthdays or candles on the cake, wrinkles, crow's feet or the frown lines on your face — those are only numbers.",
         "really":"How Old Are You, Really?",   
-        "biological":"The only age that counts is your biological DNA age.",
+        "biological":"The only age that counts is your biological DNA age",
         "discover":"Discover Your Biological Age",
         "sample":"Biological age can be measured with Only 2ml saliva sample",
         "reverse":"Reverse Your Age",

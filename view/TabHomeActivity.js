@@ -107,7 +107,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text
                                         style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabHomeActivity.myreport')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Scan your Kit and get your chronological Age data.</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.kit')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -133,7 +133,7 @@ export default class TabHomeActivity extends Component<Props> {
                                                     this.navigate.push("RasEncryptionActivity")
                                         }}
                                         style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}  </Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Fill a questionnaires about your lifestyle</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.fill')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -148,9 +148,9 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home3.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}{"\n"}
-                                        <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>Step by step instrucations for a main workflow</Text>
-                                    </Text>
+                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}</Text>
+                                        <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200',  fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
+                                    
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
@@ -243,10 +243,9 @@ export default class TabHomeActivity extends Component<Props> {
                             <TouchableOpacity >
 
                                 <View style={{ width: '100%', marginLeft: px2dp(20) }}>
-                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>Products</Text>
+                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold',color:'#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
                                 </View>
-                                <View style={{ height: px2dp(30), alignSelf: 'center' }}></View>
-                                <View style={{ width: '90%', marginTop: px2dp(30) }}>
+                                <View style={{ width: '90%',alignSelf:'center', marginTop: px2dp(30) }}>
                                     <View style={{
                                         width: '90%', alignSelf: 'center', marginBottom: px2dp(10), borderStyle: 'solid',
                                         borderWidth: px2dp(1.5), borderRadius: px2dp(20), borderColor: '#b6b7b8',
@@ -261,19 +260,16 @@ export default class TabHomeActivity extends Component<Props> {
                                                     <Image style={{ height: px2dp(15), width: px2dp(15), marginRight: px2dp(10), marginTop: px2dp(15) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                                 </View>
                                             </TouchableOpacity>
-                                            <View style={{ height: 15 }}></View>
+                                            <View style={{ height: px2dp(15) }}></View>
                                         </View>
                                     </View>
                                 </View>
-
-
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View style={{ width: '100%', marginLeft: px2dp(20) }}>
-                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>Products</Text>
+                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold',color:'#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
                                 </View>
-                                <View style={{ height: 30 }}></View>
-                                <View style={{ width: '90%', marginTop: px2dp(30) }}>
+                                <View style={{ width: '90%',alignSelf:'center', marginTop: px2dp(30) }}>
                                     <View style={{
                                         width: '90%', alignSelf: 'center', marginBottom: px2dp(10), borderStyle: 'solid',
                                         borderWidth: px2dp(1.5), borderRadius: px2dp(20), borderColor: '#b6b7b8',

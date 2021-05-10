@@ -42,7 +42,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class DavidActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -75,13 +74,7 @@ export default class DavidActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView style={{ flex: 1 }}>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
+               <StatusBar animated={true} hidden={true}  translucent={true} barStyle={'light-content'} />
                 {/* {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
@@ -99,9 +92,9 @@ export default class DavidActivity extends Component<Props> {
                             <Image style={{ height:px2dp(99) , width: '100%', marginTop: -60, marginLeft:px2dp(-60)}} resizeMode="contain" source={require("../image/icons/david.png")}></Image>
                         </View>
                         <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20, marginTop: 23, paddingBottom: 20, borderStyle: "dashed", borderBottomWidth: 0.5 }}>
-                            <Text style={{ fontSize:px2dp(18) , lineheight:px2dp(44) , textAlign: 'left', marginLeft:px2dp(20) , color: '#0071bc' }}>{I18n.t("DavidActivity.title")}</Text>
-                            <Text style={{ fontSize:px2dp(16) , lineheight:px2dp(18) , textAlign: 'left', marginLeft:px2dp(20) , }}>{I18n.t("DavidActivity.senior")}</Text>
-                            <Text style={{ fontSize:px2dp(14) , lineheight:px2dp(18) , textAlign: 'left', marginLeft:px2dp(20) , fontStyle: 'italic' }}>{I18n.t("DavidActivity.hkg")}</Text>
+                            <Text style={{ fontSize:px2dp(18) , lineheight:px2dp(44) , textAlign: 'left', marginLeft:px2dp(20) ,fontFamily:'fantasy', color: '#0071bc' }}>{I18n.t("DavidActivity.title")}</Text>
+                            <Text style={{ fontSize:px2dp(16) , lineheight:px2dp(18) , textAlign: 'left', marginLeft:px2dp(20) , fontFamily:'fantasy'}}>{I18n.t("DavidActivity.senior")}</Text>
+                            <Text style={{ fontSize:px2dp(14) , lineheight:px2dp(18) , textAlign: 'left', marginLeft:px2dp(20) ,fontFamily:'fantasy', fontStyle: 'italic' }}>{I18n.t("DavidActivity.hkg")}</Text>
                         </View>
                         {/* 專業履歷 */}
                         {/* <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
@@ -178,7 +171,6 @@ export default class DavidActivity extends Component<Props> {
                     </View>
                 </View> */}
 
-                        <View style={{ height:px2dp(20)  }}></View>
                         {/* 左右滑块 */}
                         {/* <TabView
                     navigationState={this.state}
@@ -237,8 +229,8 @@ export default class DavidActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View> */}
-                        <View style={{ marginTop: 40 }}>
-                            <View style={{ width: '90%', height:px2dp(540) , alignSelf: 'center' }}>
+                        <View style={{ marginTop: px2dp(40),marginBottom:px2dp(40) }}>
+                            <View style={{ width: '90%',  alignSelf: 'center' }}>
                                 {/* experiences 经历*/}
                                 <TouchableOpacity onPress={() => this.navigate.push("DavidExperiences")}>
                                     <View style={{ borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', height:px2dp(80) , flexDirection: 'row', backgroundColor: '#ffffff', }}>

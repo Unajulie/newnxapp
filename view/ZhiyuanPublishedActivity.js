@@ -62,7 +62,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ZhiyuanPublishedActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -77,12 +76,11 @@ export default class ZhiyuanPublishedActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView style={{flex:1}}>
-
-                <View>
+                {/* <View>
                     <Text style={{ width: '90%', height:px2dp(67) , alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp(28) , lineheight:px2dp(67) , fontWeight: 'bold' }}>{I18n.t('ZhiyuanActivity.papers')}</Text>
-                </View>
-                <View style={{ marginTop:px2dp(20) , marginBottom:px2dp(20)  }}>
-                    <View style={{ height:px2dp(15)  }}></View>
+                </View> */}
+                <View style={{ marginTop:px2dp(30) , marginBottom:px2dp(30)  }}>
+                    <View></View>
                     <View style={{ alignSelf: 'center', width: '90%', alignSelf: 'center', borderBottomWidth: 0.5, borderStyle: 'solid' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.pnas.org/content/113/37/E5434" }); this.setState({ display: true }) }}>
                             <Text style={{ height:px2dp(89) , lineheight:px2dp(25) , fontFamily: 'fantasy', fontSize:px2dp(14) , fontWeight: '700', color: '#3B3B3B' }}>

@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, StatusBar, Text, View, Alert, ScrollView, TouchableOpacity, Button } from 'react-native';
-import { NavigationActions, StackActions } from 'react-navigation';
+import {  StatusBar, Text, View, Alert, ScrollView, TouchableOpacity, Button } from 'react-native';
 import { I18n } from '../locales/i18n';
 import SliderLineChart from './SliderLineChart';
-import data from '../appdata'
-
-type Props = {};
+import { px2dp } from '../src/px2dp';
 export default class LifeStyleBloodActivity extends Component<Props> {
-    static navigationOptions = ({ navigation, screenProps }) => {
+    static navigationOptions = () => {
         return ({
             title: I18n.t('LifeStyleChartActivity.pressure'),
         })
@@ -22,17 +19,8 @@ export default class LifeStyleBloodActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
-                <View style={{ height: 40 }}></View>
-                <View style={{ width: "100%", height: 450, marginTop: 23, marginBottom: 23 }}>
-                    <View style={{ width: "100%", height: 10}}></View>
-                    <View style={{ height: 34, width: '100%' }}></View>
+                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
+                <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20)}}>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.systolic')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
@@ -47,20 +35,20 @@ export default class LifeStyleBloodActivity extends Component<Props> {
                         gradient={[["50%", "green", "120"], ["4.2%", "yellow", ""], ["4.2%", "#FFB233", ""], ["17%", "#CD5C5C", "180"], ["24.6%", "red", "240"]]}
                         desc={
                             <View style={{ width: "90%" }}>
-                                <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                <Text style={{ fontSize: px2dp(12),fontFamily:'fantasy' }}>
+                                    <Text style={{ fontWeight: "bold",fontFamily:'fantasy' }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     {I18n.t('LifeStyleChartActivity.bloods')}
                                 </Text>
                             </View>
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 400, marginTop: 23, marginBottom: 23 }}>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ height: 34, width: '100%' }}></View>
+                <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20)}}>
+                    <View style={{ width: "100%", height: px2dp(10), backgroundColor: "#efefef" }}></View>
+                    <View style={{ height: px2dp(30), width: '100%' }}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.diastolic')}
-                        max={160}
+                        max={px2dp(160)}
                         min={0}
                         sliderDefualtValue={80}
                         yAxisLabelValue="diastolicBP"
@@ -71,12 +59,9 @@ export default class LifeStyleBloodActivity extends Component<Props> {
 
                     />
                 </View>
-                <View style={{ height: 40 }}></View>
-                <TouchableOpacity >
+                <TouchableOpacity style={{ width: '90%', marginBottom: px2dp(20), marginTop: px2dp(50), width: '90%', alignSelf: 'center' }} >
                     <Button title="save" onPress={onButtonPress} color="#f7871e" />
                 </TouchableOpacity>
-
-                {/* <Text style={{ fontFamily: 'fantasy', fontSize: 12, textAlign: 'center' }}>@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text> */}
             </ScrollView>
 
         );

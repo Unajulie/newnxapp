@@ -62,7 +62,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ZhiyuanExperiencesActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -72,54 +71,49 @@ export default class ZhiyuanExperiencesActivity extends Component<Props> {
     constructor(props) {
         super(props);
     }
-   
+
     render() {
         this.navigate = this.props.navigation;
         return (
-            <ScrollView style={{flex:1}}>
-              
-                <View>
+            <ScrollView style={{ flex: 1 }}>
+                {/* <View>
                     <Text style={{ width: '90%', height:px2dp(67) , alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp(28) , lineheight:px2dp(67) , fontWeight: 'bold' }}>{I18n.t('ZhiyuanActivity.professional')}</Text>
-                </View>
-                <View style={{ marginTop:px2dp(20) , marginBottom:px2dp(20)  }}>
-                      {/* 2017-now */}
-                      <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height:px2dp(22) , lineheight:px2dp(22) , fontFamily: 'fantasy', textAlign: 'center',fontSize:px2dp(14) }}>2017-now</Text>  
-                        <Text style={{  height:px2dp(20) , lineheight:px2dp(20) , fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.epidial')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45) ,textAlign: 'center',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.ltd')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45) ,textAlign: 'center',fontSize:px2dp(16) }}>{I18n.t('ZhiyuanActivity.lab')}</Text>
+                </View> */}
+                <View style={{ marginTop: px2dp(30), marginBottom: px2dp(30) }}>
+                    {/* 2017-now */}
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: 20, paddingTop: 20 }} >
+                        <Text style={{ height: px2dp(22), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14) }}>2017-now</Text>
+                        <Text style={{ height: px2dp(50), fontFamily: 'fantasy', textAlign: 'center', fontWeight: '700', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.epidial')}</Text>
+                        <Text style={{ fontFamily: 'fantasy',  lineheight: px2dp(45), textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.ltd')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', ineheight: px2dp(45), textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.lab')}</Text>
                     </View>
-                    <View style={{ height:px2dp(20)  }}></View>
+                    <View style={{ height: px2dp(20) }}></View>
                     {/* 2012 –2015 */}
-                    <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height:px2dp(22) , lineheight:px2dp(22) , fontFamily: 'fantasy', textAlign: 'center',fontSize:px2dp(14) }}>2012 –2015</Text>  
-                        <Text style={{  height:px2dp(20) , lineheight:px2dp(20) , fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.usa')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45) ,textAlign: 'center',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.fellow')}</Text>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(22), lineheight: px2dp(22), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14) }}>2012 –2015</Text>
+                        <Text style={{ height: px2dp(50), lineheight: px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontWeight: '700', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.usa')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', lineheight: px2dp(45), textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.fellow')}</Text>
                     </View>
-                    <View style={{ height:px2dp(20) }}></View>
-                     {/* 2010 – 2012 */}
-                     <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height:px2dp(22) , lineheight:px2dp(22) , fontFamily: 'fantasy', textAlign: 'center',fontSize:px2dp(14) }}>2010 – 2012</Text>  
-                        <Text style={{  height:px2dp(20) , lineheight:px2dp(20) , fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.state')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45) ,textAlign: 'center',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.university')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45) ,textAlign: 'center',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.phd')}</Text>
+                    <View style={{ height: px2dp(20) }}></View>
+                    {/* 2010 – 2012 */}
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(22), lineheight: px2dp(22), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14) }}>2010 – 2012</Text>
+                        <Text style={{ height: px2dp(50), lineheight: px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontWeight: '700', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.state')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', lineheight: px2dp(45), textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.university')}</Text>
+                        <Text style={{ fontFamily: 'fantasy',lineheight: px2dp(45), textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.phd')}</Text>
                     </View>
-                    <View style={{ height:px2dp(20)  }}></View>
+                    <View style={{ height: px2dp(20) }}></View>
                     {/* 2006 - 2012 */}
-                    <View style={{ width: '90%', justifyContent:'center',alignSelf:'center',borderWidth:1,borderRadius:15,borderColor:'#B2B2B2',paddingBottom:20,paddingTop:20 }} >
-                        <Text style={{  height:px2dp(22) , lineheight:px2dp(22) , fontFamily: 'fantasy', textAlign: 'center',fontSize:px2dp(14) }}>2010 – 2012</Text>  
-                        <Text style={{  height:px2dp(20) , lineheight:px2dp(20) , fontFamily: 'fantasy', paddingLeft: 10, textAlign: 'center',fontWeight:'700',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.key')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45) ,textAlign: 'center',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.nanjing')}</Text>
-                        <Text style={{ fontFamily: 'fantasy', color: '#676A74', lineheight:px2dp(45) ,textAlign: 'center',fontSize:px2dp(16)  }}>{I18n.t('ZhiyuanActivity.candidate')}</Text>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(22), lineheight: px2dp(22), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14) }}>2010 – 2012</Text>
+                        <Text style={{ height: px2dp(50), lineheight: px2dp(20), fontFamily: 'fantasy',  textAlign: 'center', fontWeight: '700', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.key')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', lineheight: px2dp(45), textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.nanjing')}</Text>
+                        <Text style={{ fontFamily: 'fantasy',lineheight: px2dp(45), textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('ZhiyuanActivity.candidate')}</Text>
                     </View>
-                    <View style={{ height:px2dp(20)  }}></View>
-
-
                 </View>
 
-                <View style={{ height:px2dp(20)  }}></View>
-            
-                
+
+
                 {/* 论文 */}
                 {/* <View style={{ backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height:px2dp() 56, alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp() 18, fontWeight: 'bold', lineheight:px2dp() 56 }} >{I18n.t('ZhiyuanActivity.papers')}</Text>
@@ -199,8 +193,8 @@ export default class ZhiyuanExperiencesActivity extends Component<Props> {
                     </View>
                 </View> */}
 
-              
-              
+
+
             </ScrollView >
 
         );

@@ -39,7 +39,7 @@ export default class CenterActivity extends Component {
 
                         <View style={{ backgroundColor: '#e5e6e7', width: '100%', height: px2dp(80), }}>
                             <Text style={{ textAlign: 'right', height: px2dp(80), marginTop: px2dp(60), marginRight: px2dp(20), color: '#000000', fontSize: px2dp(16), fontWeight: 'bold', fontFamily: 'fantasy' }}
-                                onPress={() => { this.navigate.push("Setting") }}>Settings</Text>
+                                onPress={() => { this.navigate.push("Setting") }}>{I18n.t('TabCenterActivity.setting')}</Text>
                         </View>
 
                         <View style={{ height: px2dp(90), width: px2dp(90), marginLeft: px2dp(35), marginBottom: px2dp(-40), borderRadius: px2dp(15), borderColor: '#e5e6e7', borderWidth: px2dp(1.5), backgroundColor: '#feffff', zIndex: 999 }}>
@@ -96,7 +96,7 @@ export default class CenterActivity extends Component {
                                             <Text
                                                 style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                                 {I18n.t('TabHomeActivity.myreport')}</Text>
-                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.kit')}</Text>
+                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.kit')}</Text>
 
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -122,7 +122,7 @@ export default class CenterActivity extends Component {
                                                             this.navigate.push("RasEncryptionActivity")
                                                 }}
                                                 style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}  </Text>
-                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.Fill')} </Text>
+                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200',  fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.fill')} </Text>
 
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -138,7 +138,7 @@ export default class CenterActivity extends Component {
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
                                             <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}{"\n"}
-                                                <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.Step')}</Text>
+                                                <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200',  fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
                                             </Text>
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>

@@ -191,7 +191,6 @@ import { px2dp } from '../src/px2dp';
 //         flex: 1,
 //     },
 // });
-type Props = {};
 export default class ProfMosheActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -227,13 +226,7 @@ export default class ProfMosheActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView style={{ flex: 1 }}>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
+                <StatusBar animated={true} hidden={true}  translucent={true} barStyle={'light-content'} />
                 {/* display 这块触发的是三个切换页面 */}
                 {/* {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
@@ -247,14 +240,14 @@ export default class ProfMosheActivity extends Component<Props> {
                 } */}
                 <View style={{ backgroundColor: '#e5e6e7' }}>
                     <View style={{ height:px2dp(120) }}></View>
-                    <View style={{ backgroundColor: '#f6f7f8', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
+                    <View style={{ backgroundColor: '#f6f7f8', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }}>
                         <View style={{ width: '90%', }}>
                             <Image style={{ height:px2dp(99), width: '100%', marginTop: -60, marginLeft: -60 }} resizeMode="contain" source={require("../image/icons/prof.png")}></Image>
                         </View>
-                        <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', paddingTop: 20, paddingBottom: 20, borderStyle: "dotted", borderBottomWidth: 0.5 }}>
-                            <Text style={{ fontSize:px2dp(18), lineHeight:px2dp(44), textAlign: 'left', marginLeft:px2dp(20), color: '#0071bc' }}>{I18n.t('ScienceteamActivity.moshe')}</Text>
-                            <Text style={{ fontSize:px2dp(16), lineHeight:px2dp(18), textAlign: 'left', marginLeft:px2dp(20), }}>{I18n.t('ScienceteamActivity.ceo')}</Text>
-                            <Text style={{ fontSize:px2dp(14), lineHeight:px2dp(18), textAlign: 'left', marginLeft:px2dp(20), fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
+                        <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', paddingTop: px2dp(20), paddingBottom: px2dp(20), borderStyle: "dotted", borderBottomWidth: 0.5 }}>
+                            <Text style={{ fontSize:px2dp(18), lineHeight:px2dp(44), textAlign: 'left',fontFamily:'fantasy', marginLeft:px2dp(20), color: '#0071bc' }}>{I18n.t('ScienceteamActivity.moshe')}</Text>
+                            <Text style={{ fontSize:px2dp(16), lineHeight:px2dp(18), textAlign: 'left',fontFamily:'fantasy',  marginLeft:px2dp(20), }}>{I18n.t('ScienceteamActivity.ceo')}</Text>
+                            <Text style={{ fontSize:px2dp(14), lineHeight:px2dp(18), textAlign: 'left',fontFamily:'fantasy',  marginLeft:px2dp(20), fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                         </View>
                         {/* 专业履历 */}
                         {/* <View style={{ paddingBottom: 20 }}>
@@ -415,8 +408,8 @@ export default class ProfMosheActivity extends Component<Props> {
                     </View>
                 </View> */}
 
-                        <View style={{ marginTop: 40 }}>
-                            <View style={{ width: '90%', height: 740, alignSelf: 'center' }}>
+                        <View style={{ marginTop: px2dp(40),marginBottom:px2dp(40) }}>
+                            <View style={{ width: '90%',alignSelf: 'center' }}>
                                 {/* experiences */}
                                 <TouchableOpacity onPress={() => this.navigate.push("ProfMosheExperiences")} >
                                     <View style={{ borderRadius:px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', height:px2dp(80), flexDirection: 'row', backgroundColor: '#ffffff', }}>

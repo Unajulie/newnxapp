@@ -266,8 +266,8 @@ export default class DnaReportActivity extends Component<Props> {
                             borderRadius={px2dp(5)}
                             hasPadding={true}
                             options={[
-                                { label: "New Kit", value: "newkit", }, //images.feminino = require('./path_to/assets/img/feminino.png')
-                                { label: "Register Kit", value: "registerkit", } //images.masculino = require('./path_to/assets/img/masculino.png')
+                                { label: I18n.t("DnaReportActivity.newkit"), value: "newkit", }, //images.feminino = require('./path_to/assets/img/feminino.png')
+                                { label:I18n.t("DnaReportActivity.registeredkit"), value: "registerkit", } //images.masculino = require('./path_to/assets/img/masculino.png')
                             ]}
                             testID="gender-switch-selector"
                             accessibilityLabel="gender-switch-selector"
@@ -276,7 +276,7 @@ export default class DnaReportActivity extends Component<Props> {
                             <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(30) }}>
                                 <View style={{ width: '100%', height: px2dp(250), backgroundColor: '#ebeced', borderRadius: px2dp(30) }}>
                                     <View style={{ marginLeft: px2dp(15), marginTop: px2dp(20) }}>
-                                        <Text  style={{ fontWeight: 'bold', fontSize: px2dp(16), fontFamily: 'fantasy',}}>EpiAge</Text>
+                                        <Text  style={{ fontWeight: 'bold', fontSize: px2dp(16), fontFamily: 'fantasy',}}>{I18n.t("DnaReportActivity.epiage1")}</Text>
                                     </View>
                                     <Text style={{ margin: px2dp(15), fontWeight: '200', fontSize: px2dp(14), fontFamily: 'serif', }}>{I18n.t("DnaReportActivity.life")}</Text>
                                     <Image style={{ height: px2dp(140), width: '100%', borderRadius: px2dp(30) }} source={require('../image/enpic/index9.jpg')} resizeMode='cover' />
@@ -397,10 +397,12 @@ export default class DnaReportActivity extends Component<Props> {
                                                         contentVisible={true}
                                                         invisibleImage={require('../image/drop-down.png')}
                                                         visibleImage={require('../image/drop-up.png')}
+                                                        // invisibleImage={<Text style={{color:'red'}}>&gt;ppppp</Text>}
+                                                        // vis  ibleImage={ <Text>&lt;</Text>}
                                                         style={{ padding: px2dp(10) }}
                                                         header={
                                                             <View style={{ height: px2dp(75) }}>
-                                                                {this.state.display ?
+                                                               
                                                                     <View style={{
                                                                         width: px2dp(9),
                                                                         height: px2dp(9),
@@ -410,7 +412,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                         borderRadius: px2dp(15),
                                                                         marginTop: px2dp(5)
                                                                     }} />
-                                                                    : null}
+                                                                   
                                                                 <View style={{
                                                                     width: '100%',
                                                                     height: px2dp(50),
@@ -460,7 +462,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                         color: '#7f8081',
                                                                         fontSize: px2dp(14),
                                                                         fontFamily: 'fantasy',
-                                                                    }}>Accomplish percentage</Text>
+                                                                    }}>{I18n.t('DnaReportActivity.percentage')}</Text>
                                                                     <Text style={{ lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.processing}%</Text>
                                                                 </View>
                                                                 <View style={{ width: '100%', height: px2dp(40), alignSelf: 'center', borderBottomWidth: 1, borderBottomColor: '#cdcdcd' }}>
@@ -484,7 +486,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     <TextInput
                                                                         style={{ flex: 1, height: px2dp(50), width: '100%',fontFamily: 'fantasy', color: '#000000', fontWeight: 'bold', paddingVertical: 0, }}
                                                                         onChangeText={(barcode) => this.setState({ barcode })}
-                                                                        placeholder={'Enter Your Age'}
+                                                                        placeholder={I18n.t('DnaReportActivity.yourage')}
                                                                         keyboardType="numeric"
                                                                         placeholderTextColor='#cdcdcd'
                                                                         defaultValue={"0"}
@@ -533,6 +535,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                             isOn={this.state.switchonBox[j]}
                                                                             onColor="green"
                                                                             offColor="grey"
+                                                                            width="30%"
                                                                             labelStyle={{ color: "black", fontWeight: "900" }}
                                                                             size="small"
                                                                             onToggle={isOn => {
@@ -555,7 +558,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                                 })
                                                                             }}
                                                                         />
-                                                                        <Text style={{ fontSize: px2dp(12), marginLeft: px2dp(10),fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.allow")}</Text>
+                                                                        <Text style={{width:'60%',height:px2dp(30), fontSize: px2dp(12), marginLeft: px2dp(5),marginRight:px2dp(5), fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.allow")}</Text>
                                                                     </View>
                                                                 </View>
                                                             }
@@ -615,7 +618,7 @@ export default class DnaReportActivity extends Component<Props> {
                 </ScrollView >
                 {this.state.tabshow == true ?
                     <TouchableOpacity onPress={() => this.navigate.push("Mall")} style={{ width: '100%', height: px2dp(60), flex: 1, position: 'absolute', bottom: 0, left: 0, zIndex: 9999, backgroundColor: '#cdcdcd' }}>
-                        <Text style={{ height: px2dp(60), fontSize: px2dp(14), lineHeight: px2dp(60), fontWeight: 'bold', color: '#000000', textAlign: 'center', fontFamily: 'fantasy',}}>No product yet? Buy Epiage Kit →</Text>
+                        <Text style={{ height: px2dp(60), fontSize: px2dp(14), lineHeight: px2dp(60), fontWeight: 'bold', color: '#000000', textAlign: 'center', fontFamily: 'fantasy',}}>{I18n.t("DnaReportActivity.buyepi")}</Text>
                     </TouchableOpacity>
                     :
                     null

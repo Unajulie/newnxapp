@@ -28,7 +28,7 @@ export default class Manual1Activity extends Component<Props> {
 
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{  width: '7%', fontSize: px2dp(16), fontWeight: 'bold' , fontFamily: 'fantasy',lineHeight:px2dp(20)}}>☞ </Text>
-                        <Text style={{ fontSize: 16, }}>{I18n.t('Manual1Activity.username')}</Text>
+                        <Text style={{ fontSize: px2dp(16),  fontFamily: 'fantasy'}}>{I18n.t('Manual1Activity.username')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: px2dp(400) }} source={require('../image/enpic/man7.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>

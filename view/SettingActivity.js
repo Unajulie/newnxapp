@@ -48,18 +48,19 @@ export default class CenterActivity extends Component {
         return (
             //borderColor:"grey",borderWidth:1
             //alignItems:'center' 左右居中
-            <View style={{ flex: 1 ,backgroundColor: '#f6f7f8'}}>
+            <View style={{ flex: 1, backgroundColor: '#f6f7f8' }}>
                 <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <ScrollView >
                     <View style={{ backgroundColor: '#e5e6e7' }}>
                         <View style={{ backgroundColor: '#e5e6e7', width: '90%', alignSelf: 'center', height: px2dp(50), }}>
-                            <Text style={{ height: px2dp(50), lineHeight: px2dp(50), color: '#000000', fontSize: px2dp(16), fontWeight: 'bold', fontFamily: 'fantasy' }}>ACCOUNT</Text>
+                            <Text style={{ height: px2dp(50), lineHeight: px2dp(50), color: '#000000', fontSize: px2dp(16), fontWeight: 'bold', fontFamily: 'fantasy' }}>{I18n.t('SettingActivity.account')}</Text>
                         </View>
                         <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}>
                             <View style={{ backgroundColor: '#f6f7f8', height: px2dp(70), alignItems: 'center', borderBottomColor: '#e5e6e7', borderBottomWidth: px2dp(1.5) }}>
                                 <View style={{ width: '90%', alignSelf: 'center', height: px2dp(70), flexDirection: 'row', justifyContent: 'space-between' }}>
-                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>Language</Text>
-                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', }}>{this.state.regionValue}</Text>
+                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>{I18n.t('SettingActivity.language')}</Text>
+                                    {/* <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', }}>{this.state.regionValue}</Text> */}
+                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(25) }} resizeMode="contain" source={require("../image/right-arr.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -72,18 +73,18 @@ export default class CenterActivity extends Component {
                         <TouchableOpacity onPress={() => this.navigate.push("RasEncryptionActivity")}>
                             <View style={{ backgroundColor: '#f6f7f8', height: px2dp(70), alignItems: 'center', borderBottomColor: '#e5e6e7', borderBottomWidth: px2dp(1.5) }}>
                                 <View style={{ width: '90%', alignSelf: 'center', height: px2dp(70), flexDirection: 'row', justifyContent: 'space-between' }}>
-                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>Private Key</Text>
+                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>{I18n.t('SettingActivity.privatekey')}</Text>
                                     <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(25) }} resizeMode="contain" source={require("../image/right-arr.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ backgroundColor: '#e5e6e7', width: '90%', alignSelf: 'center', height: px2dp(50), }}>
-                            <Text style={{ height: px2dp(50), lineHeight: px2dp(50), color: '#000000', fontSize: px2dp(16), fontWeight: 'bold', fontFamily: 'fantasy' }}>ABOUT</Text>
+                            <Text style={{ height: px2dp(50), lineHeight: px2dp(50), color: '#000000', fontSize: px2dp(16), fontWeight: 'bold', fontFamily: 'fantasy' }}>{I18n.t('SettingActivity.about')}</Text>
                         </View>
                         <TouchableOpacity onPress={() => this.navigate.push("QA")}>
                             <View style={{ backgroundColor: '#f6f7f8', height: px2dp(70), alignItems: 'center', borderBottomColor: '#e5e6e7', borderBottomWidth: px2dp(1.5) }}>
                                 <View style={{ width: '90%', alignSelf: 'center', height: px2dp(70), flexDirection: 'row', justifyContent: 'space-between' }}>
-                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>Q&A</Text>
+                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>{I18n.t('SettingActivity.qa')}</Text>
                                     <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(25) }} resizeMode="contain" source={require("../image/right-arr.png")}></Image>
                                 </View>
                             </View>
@@ -91,7 +92,7 @@ export default class CenterActivity extends Component {
                         <TouchableOpacity onPress={() => this.navigate.push("DataSecurity")}>
                             <View style={{ backgroundColor: '#f6f7f8', height: px2dp(70), alignItems: 'center', borderBottomColor: '#e5e6e7', borderBottomWidth: px2dp(1.5) }}>
                                 <View style={{ width: '90%', alignSelf: 'center', height: px2dp(70), flexDirection: 'row', justifyContent: 'space-between' }}>
-                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>Data Security</Text>
+                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>{I18n.t('SettingActivity.datasecurity')}</Text>
                                     <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(25) }} resizeMode="contain" source={require("../image/right-arr.png")}></Image>
                                 </View>
                             </View>
@@ -100,7 +101,7 @@ export default class CenterActivity extends Component {
                         <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
                             <View style={{ backgroundColor: '#f6f7f8', height: px2dp(70), alignItems: 'center', borderBottomColor: '#e5e6e7', borderBottomWidth: px2dp(1.5) }}>
                                 <View style={{ width: '90%', alignSelf: 'center', height: px2dp(70), flexDirection: 'row', justifyContent: 'space-between' }}>
-                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>Terms of Service</Text>
+                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>{I18n.t('SettingActivity.terms')}</Text>
                                     <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(25) }} resizeMode="contain" source={require("../image/right-arr.png")}></Image>
                                 </View>
                             </View>
@@ -109,182 +110,40 @@ export default class CenterActivity extends Component {
                         <TouchableOpacity onPress={() => this.navigate.push("Contact")}>
                             <View style={{ backgroundColor: '#f6f7f8', height: px2dp(70), alignItems: 'center', borderBottomColor: '#e5e6e7', borderBottomWidth: px2dp(1.5) }}>
                                 <View style={{ width: '90%', alignSelf: 'center', height: px2dp(70), flexDirection: 'row', justifyContent: 'space-between' }}>
-                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>Contact Us</Text>
+                                    <Text style={{ lineHeight: px2dp(70), fontSize: px2dp(16), fontFamily: 'fantasy', color: '#000000' }}>{I18n.t('SettingActivity.contact')}</Text>
                                     <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(25) }} resizeMode="contain" source={require("../image/right-arr.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
-
-                        {/* logout part start*/}
-                        {this.state.user != null ?
-                            <TouchableOpacity
-                                onPress={() => {
-                                    Session.logout();
-                                    const resetAction = StackActions.reset({
-                                        index: 0,
-                                        actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                                    });
-                                    this.props.navigation.dispatch(resetAction);
-                                }
-                                }>
-                                <View style={{ width: '100%', height: px2dp(100), }}>
-                                    <View style={{ width: '90%', height: px2dp(40), alignSelf: 'center', justifyContent: 'center', marginTop: px2dp(30), borderWidth: px2dp(1.5), borderColor: '#f04727', borderRadius: px2dp(5), flexDirection: 'row' }}>
-                                        <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(10) }} resizeMode="contain" source={require("../image/logout.png")}></Image>
-                                        <Text style={{ color: '#f04727', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(40), marginLeft: px2dp(5), textAlign: 'center' }}>Log Out</Text>
-                                    </View>
-                                </View>
-                            </TouchableOpacity>
-                            : null}
-                        {/* logout part end */}
-
-                        {/* <View style={{ backgroundColor: '#f6f7f8', height: px2dp(180), alignItems: 'center', }}>
-                            <View style={{ height: px2dp(60), width: '100%', marginTop: px2dp(20), }}>
-
-                                {this.state.user == null ?
-                                    <View style={{ alignSelf: "center", flexDirection: 'row' }}>
-                                        <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf: 'center' }}>
-                                            <TouchableOpacity onPress={() => this.navigate.push("Login")}><Text style={{ fontSize: 18, color: "#000000", textAlign: "right", fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.centerlogin')}</Text></TouchableOpacity>
-                                        </View>
-                                        <View style={{ width: '10%', height: 25, justifyContent: 'center', alignSelf: 'center', }}>
-                                            <Text style={{ color: '#fff', textAlign: 'center' }}>|</Text></View>
-                                        <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf: 'center' }}>
-                                            <TouchableOpacity onPress={() => this.navigate.push("Register")}><Text style={{ fontSize: 18, color: "#000000", textAlign: "left", fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.centerregis')}</Text></TouchableOpacity>
-                                        </View>
-                                    </View>
-
-                                    :
-                                    <View style={{ width: '80%', height: px2dp(80), marginTop: px2dp(30), alignSelf: 'center' }}>
-                                        <Text style={{ color: "#000000", fontSize: px2dp(23), fontWeight: 'bold' }}>Hello, {this.state.user.nickname}</Text>
-                                        <TouchableOpacity onPress={() => { this.navigate.push("RasEncryptionActivity") }}>
-                                            <Text style={{ color: "#000000", fontSize: 18 }}>{I18n.t('TabCenterActivity.centerkey')}</Text>
-                                        </TouchableOpacity>
-                                    </View>
-                                }
-                            </View>
-                        </View> */}
-
-
-
-
-                        {/* {this.state.user != null ?
-                            <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
-                                <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                                    <View style={{ width: "100%", height: 20 }}></View>
-                                    <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                        <View style={{ height: 40, width: '25%', justifyContent: "center" }}>
-                                            <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc3.png")}></Image>
-                                        </View>
-                                        <View style={{ width: '50%', }}>
-                                            <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.Questionnaire')} </Text>
-                                        </View>
-                                        <View style={{ width: '20%', }}>
-                                            <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'fantasy' }}> &gt; </Text>
-                                        </View>
-                                    </View>
-                                </View>
-                            </TouchableOpacity> : null} */}
-                        {/* {this.state.user != null ?
-                            <TouchableOpacity onPress={() => this.navigate.push("DnaReport")}>
-                                <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                                    <View style={{ width: "100%", height: 20 }}></View>
-                                    <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                        <View style={{ height: 40, width: '25%', }}>
-                                            <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc4.png")}></Image>
-                                        </View>
-                                        <View style={{ width: '50%' }}>
-                                            <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerreport')}</Text>
-                                        </View>
-                                        <View style={{ width: '20%' }}>
-                                            <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
-                                        </View>
-                                    </View>
-                                </View>
-                            </TouchableOpacity>
-                            : null} */}
-                        {/* {this.state.user != null ?
-                        <TouchableOpacity onPress={() => navigate.push("Contact")}>
-                            <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                                <View style={{ width: "100%", height: 20 }}></View>
-                                <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                    <View style={{ height: 40, width: '25%', }}>
-                                        <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc5.png")}></Image>
-                                    </View>
-                                    <View style={{ height: 20, width: '50%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>Order Record</Text>
-                                    </View>
-                                    <View style={{ height: 20, width: '20%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
-                                    </View>
-                                </View>
-                            </View>
-                        </TouchableOpacity> : null} */}
-
-                        {/* <TouchableOpacity onPress={() => this.navigate.push("QA")}>
-                            <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                                <View style={{ width: "100%", height: 20 }}></View>
-                                <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                    <View style={{ height: 40, width: '25%', }}>
-                                        <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc1.png")}></Image>
-                                    </View>
-                                    <View style={{ width: '50%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}> {I18n.t('TabCenterActivity.centerqa')}</Text>
-                                    </View>
-                                    <View style={{ width: '20%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt;</Text>
-                                    </View>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                        {/* <TouchableOpacity onPress={() => this.navigate.push("Contact")}>
-                            <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                                <View style={{ width: "100%", height: 20 }}></View>
-                                <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                    <View style={{ height: 40, width: '25%', }}>
-                                        <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc6.png")}></Image>
-                                    </View>
-                                    <View style={{ width: '50%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerus')}</Text>
-                                    </View>
-                                    <View style={{ width: '20%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt;</Text>
-                                    </View>
-                                </View>
-                            </View>
-                        </TouchableOpacity> */}
-                        {/* {this.state.user != null ?
-                            <TouchableOpacity
-                                onPress={() => {
-                                    Session.logout();
-                                    const resetAction = StackActions.reset({
-                                        index: 0,
-                                        actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                                    });
-                                    this.props.navigation.dispatch(resetAction);
-                                }
-                                }>
-                                <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                                    <View style={{ width: "100%", height: 20 }}></View>
-                                    <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                        <View style={{ height: 40, width: '25%', }}>
-                                            <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc7.png")}></Image>
-                                        </View>
-                                        <View style={{ width: '50%' }}>
-                                            <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerout')}</Text>
-                                        </View>
-                                        <View style={{ width: '20%' }}>
-                                            <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
-                                        </View>
-                                    </View>
-                                </View>
-                            </TouchableOpacity>
-                            : null
-                        } */}
                     </View>
+                    {/* logout part start*/}
+                    {this.state.user != null ?
+                        <TouchableOpacity
+                            onPress={() => {
+                                Session.logout();
+                                const resetAction = StackActions.reset({
+                                    index: 0,
+                                    actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                                });
+                                this.props.navigation.dispatch(resetAction);
+                            }
+                            }>
+                            <View style={{ width: '100%', height: px2dp(100), }}>
+                                <View style={{ width: '90%', height: px2dp(40), alignSelf: 'center', justifyContent: 'center', marginTop: px2dp(30), borderWidth: px2dp(1.5), borderColor: '#f04727', borderRadius: px2dp(5), flexDirection: 'row' }}>
+                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginTop: px2dp(10) }} resizeMode="contain" source={require("../image/logout.png")}></Image>
+                                    <Text style={{ color: '#f04727', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(40), marginLeft: px2dp(5), textAlign: 'center' }}>{I18n.t('SettingActivity.logout')}</Text>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        : null}
+                    {/* logout part end */}
+
                 </ScrollView>
                 <SwipeablePanel
                     fullWidth={true}
                     showCloseButton={true}
                     closeOnTouchOutside={true}
+                    openLarge={true}
                     isActive={this.state.swipeablePanelActive}
                     onClose={() => { this.setState({ swipeablePanelActive: false }) }}
                     onPressCloseButton={() => { this.setState({ swipeablePanelActive: false }) }}

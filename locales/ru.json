@@ -85,6 +85,7 @@
     },
     "TabCenterActivity": {
         "title": "EPICENTER",
+        "setting":"Settings",
         "centerlogin": "Авторизоваться",
         "centerregis": "регистр",
         "centerkey": "Закрытый ключ",
@@ -94,8 +95,19 @@
         "centerus": "Свяжитесь с нами",
         "centerout": "выход",
         "kit": "Адсканіруйце камплект і атрымайце храналагічныя дадзеныя пра ўзрост.",
-        "Fill": "Запоўніце анкеты пра свой лад жыцця",
-        "Step": "Пакрокавыя інструкцыі для асноўнага працоўнага працэсу"
+        "fill": "Запоўніце анкеты пра свой лад жыцця",
+        "step": "Пакрокавыя інструкцыі для асноўнага працоўнага працэсу"
+    },
+    "SettingActivity":{
+        "account":"ACCOUNT",
+        "language":"language",
+        "privatekey":"Private Key",
+        "about":"ABOUT",
+        "qa":"Q&A",
+        "datasecurity":"Data Security",
+        "terms":"Terms of Service",
+        "contact":"Contact Us",
+        "logout": "Log Out"
     },
     "AboutActivity": {
         "title": "О нас",
@@ -328,9 +340,13 @@
         "detectTime": "начать проверку",
         "intransit": "в пути",
         "remaining_days": "Оставшееся количество дней",
+        "percentage":"Accomplish percentage",
         "life":"Эпігенетычны ўзрост з'яўляецца лепшым параметрам нашага самаадчування і працягласці жыцця, чым наш храналагічны ўзрост.",
         "Scan":"Набор сканавання штрых-кода",      
-        "Pendding": "В ожидании"
+        "Pendding": "В ожидании",
+        "newkit":"New Kit",
+        "registeredkit":"Registered Kit",
+        "buyepi":"No product yet? Buy Epiage Kit →"
     },
     "user_profile": {
         "title": "Your Profile"

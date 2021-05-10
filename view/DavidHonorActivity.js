@@ -39,56 +39,46 @@ export default class DavidHonorActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <ScrollView style={{flex:1}}>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
-
+            <ScrollView style={{ flex: 1 }}>
+                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 {/* 荣誉 */}
-                <View>
+                {/* <View>
                     <Text style={{ width: '90%', height:px2dp(67) , alignSelf: 'center', fontFamily: 'fantasy', fontSize:px2dp(28) , lineHeight:px2dp(67) , fontWeight: 'bold' }}>{I18n.t('DavidActivity.honor')}</Text>
+                </View> */}
+                <View style={{ marginTop: px2dp(30), marginBottom: px2dp(30) }}>
+                    <View style={{ height: px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(40), lineheight: px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14), }}>{I18n.t('DavidActivity.us')}</Text>
+                        <Text style={{ height: px2dp(80), lineheight: px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.cancer')}</Text>
+                    </View>
+
+                    <View style={{ height: px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(40), lineheight: px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14), }}>{I18n.t('DavidActivity.uspa')}</Text>
+                        <Text style={{ height: px2dp(80), lineheight: px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.dna')}</Text>
+                    </View>
+
+                    <View style={{ height: px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(40), lineheight: px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14), }}>2011</Text>
+                        <Text style={{ height: px2dp(20), lineheight: px2dp(20), fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.fellow')}</Text>
+                        <Text style={{ height: px2dp(20), lineheight: px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.israel')}</Text>
+                    </View>
+                    <View style={{ height: px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(40), lineheight: px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14), }}>2010</Text>
+                        <Text style={{ height: px2dp(20), lineheight: px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.alumni')}</Text>
+                        <Text style={{ height: px2dp(20), lineheight: px2dp(20), fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.award')}</Text>
+                    </View>
+
+                    <View style={{ height: px2dp(20) }}></View>
+                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom: px2dp(20), paddingTop: px2dp(20) }} >
+                        <Text style={{ height: px2dp(40), lineheight: px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(14), }}>2009</Text>
+                        <Text style={{ height: px2dp(20), lineheight: px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.medical')}</Text>
+                        <Text style={{ height: px2dp(20), lineheight: px2dp(20), fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('DavidActivity.award')}</Text>
+                    </View>
+
                 </View>
-                <View style={{ marginTop:px2dp(20) , marginBottom:px2dp(20)  }}>
-
-                    <View style={{ height:px2dp(20) }}></View>
-                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
-                        <Text style={{ height:px2dp(40), lineheight:px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(14),}}>{I18n.t('DavidActivity.us')}</Text>
-                        <Text style={{ height:px2dp(80), lineheight:px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.cancer')}</Text>
-                    </View>
-
-                    <View style={{ height:px2dp(20) }}></View>
-                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
-                        <Text style={{ height:px2dp(40), lineheight:px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(14), }}>{I18n.t('DavidActivity.uspa')}</Text>
-                        <Text style={{ height:px2dp(80), lineheight:px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.dna')}</Text>
-                    </View>
-
-                    <View style={{ height:px2dp(20) }}></View>
-                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
-                        <Text style={{ height:px2dp(40), lineheight:px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(14),  }}>2011</Text>
-                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.fellow')}</Text>
-                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.israel')}</Text>
-                    </View>
-                    <View style={{ height:px2dp(20) }}></View>
-                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
-                        <Text style={{ height:px2dp(40), lineheight:px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(14),}}>2010</Text>
-                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.alumni')}</Text>
-                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.award')}</Text>
-                    </View>
-
-                    <View style={{ height:px2dp(20) }}></View>
-                    <View style={{ width: '90%', justifyContent: 'center', alignSelf: 'center', borderWidth: 1, borderRadius: 15, borderColor: '#B2B2B2', paddingBottom:px2dp(20), paddingTop:px2dp(20) }} >
-                        <Text style={{ height:px2dp(40), lineheight:px2dp(40), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(14), }}>2009</Text>
-                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.medical')}</Text>
-                        <Text style={{ height:px2dp(20), lineheight:px2dp(20), fontWeight: '700', fontStyle: 'italic', fontFamily: 'fantasy', textAlign: 'center', fontSize:px2dp(16) }}>{I18n.t('DavidActivity.award')}</Text>
-                    </View>
-
-                </View>
-
-                
             </ScrollView >
 
         );

@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Alert, TouchableOpacity, Button, ScrollView, TextInput, Image } from 'react-native';
 import { I18n } from '../locales/i18n';
-import SliderLineChart from './SliderLineChart';
-import RatingChart from './RatingChart';
-import InputSpinner from "react-native-input-spinner";
-import BMIChart from './BMIChart';
-import { encrypt, decrypt } from 'react-native-simple-encryption';
 import { px2dp } from '../src/px2dp';
 export default class LifeStyleChartActivity extends Component<Props> {
-    static navigationOptions = ({ navigation, screenProps }) => {
+    static navigationOptions = () => {
         return ({
             title: I18n.t("LifeStyleChartActivity.title"),
         })
@@ -32,16 +27,16 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#F6F7F8' }}>
                     <View style={{ width: "100%", height:px2dp(60), justifyContent: "center", alignItems: "center" }}>
                         <View style={{ width: "90%", height:px2dp(60), justifyContent: "center" }}>
-                            <Text style={{ textAlign: 'left', fontSize: 24, fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.lifesques')}</Text>
+                            <Text style={{ textAlign: 'left', fontSize: px2dp(20),fontFamily:'fantasy', fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.lifesques')}</Text>
                         </View>
                     </View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center" }}>
-                        <View style={{ width: "90%", backgroundColor: '#EBECED', borderRadius: 20 }}>
-                            <View style={{ width: "90%", marginTop: 24, marginBottom: 24, alignSelf: 'center' }}>
-                                <Text style={{ marginBottom:px2dp(12) }}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
-                                <Text style={{ marginBottom:px2dp(12) }}>{I18n.t('LifeStyleChartActivity.become')}</Text>
-                                <Text style={{ marginBottom:px2dp(12) }}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
-                                <Text style={{ marginBottom:px2dp(12) }}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
+                        <View style={{ width: "90%", backgroundColor: '#EBECED', borderRadius: px2dp(20) }}>
+                            <View style={{ width: "90%", marginTop: px2dp(20), marginBottom: px2dp(20), alignSelf: 'center' }}>
+                                <Text style={{ marginBottom:px2dp(12),fontFamily:'fantasy' }}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
+                                <Text style={{ marginBottom:px2dp(12) ,fontFamily:'fantasy'}}>{I18n.t('LifeStyleChartActivity.become')}</Text>
+                                <Text style={{ marginBottom:px2dp(12),fontFamily:'fantasy' }}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
+                                <Text style={{ marginBottom:px2dp(12) ,fontFamily:'fantasy'}}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
 
                             </View>
                         </View>
@@ -54,13 +49,13 @@ export default class LifeStyleChartActivity extends Component<Props> {
                     <View style={{ width: '90%', height: px2dp(1140), alignSelf: 'center' }}>
                         {/* 1 Body Mass Index */}
                         <TouchableOpacity onPress={() => this.navigate.push("LifeStyleMass")}
-                            style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                            style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-70.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.body')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.body')}
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -70,160 +65,160 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*2 Heart  */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleHeart")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleHeart")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-71.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.hearts')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.hearts')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*3 Blood Pressure  */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleBlood")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleBlood")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-72.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.pressure')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.pressure')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*4 Cholesterol   */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleCholesterol")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleCholesterol")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-73.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Cholesterol')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Cholesterol')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*5 Vitamins   */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleVitamins")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleVitamins")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-74.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Vitamins')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Vitamins')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*6 Drugs   */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleDrugs")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleDrugs")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-75.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Drugs')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Drugs')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*7 Meditation  */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleMeditation")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleMeditation")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-76.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Meditation')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Meditation')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*8 sport  */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleSport")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleSport")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-80.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Sport')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Sport')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*9 Sleep   */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleSleep")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleSleep")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Sleep')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Sleep')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*10 Sex Life  */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleSex")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleSex")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-77.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.sex')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.sex')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: px2dp(20) }}></View>
                         {/*11 Bad Habits */}
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleHabits")} style={{ backgroundColor: '#FEFFFF', borderRadius: 15, borderWidth: 1, borderColor: '#D6D7D8', }}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleHabits")} style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
                             <View style={{ height: px2dp(80), flexDirection: 'row', }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/lifestyle-78.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Habits')}
+                                    <Text style={{ fontSize:px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#000', fontWeight: '700' }}>{I18n.t('LifeStyleChartActivity.Habits')}
                                     </Text>
                                 </View>
-                                <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
+                                <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>

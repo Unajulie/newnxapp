@@ -22,19 +22,11 @@ export default class ProfMosheVideosActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView style={{ flex: 1 }}>
-                <StatusBar
-                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
-                    hidden={true}  //是否隐藏状态栏。  
-                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
-                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
-
+                <StatusBar animated={true} hidden={true}  translucent={true} barStyle={'light-content'} />
                 {/* 相关影片 */}
-                <View style={{ height:px2dp(20) }}></View>
                 <View style={{ paddingTop:px2dp(20) , paddingBottom:px2dp(20) , backgroundColor: '#f0f0f0' }}>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <Text style={{ width: '90%', height:px2dp(67), fontFamily: 'fantasy', fontSize:px2dp(18), lineheight:px2dp(67), fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.video')}</Text>
+                        {/* <Text style={{ width: '90%', height:px2dp(67), fontFamily: 'fantasy', fontSize:px2dp(18), lineheight:px2dp(67), fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.video')}</Text> */}
                         <Text style={{ fontFamily: 'fantasy', fontSize:px2dp(16) }}>{I18n.t('ProfMosheActivity.o2o')}</Text>
 
                         <VideoPlayer
