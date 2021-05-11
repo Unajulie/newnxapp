@@ -22,3 +22,11 @@ android 需要安装  ios安装不了经纬度定位的组件，需要卸载
 yarn add @react-native-community/geolocation
 react-native link @react-native-community/geolocation
 yarn add react-native-location
+五.修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-drop-down-item
+index.js
+147行 this.animated.setValue(initialValue);前面加入以下代码 
+
+if(!this.animated){
+	  this.animated = new Animated.Value(this.props.contentVisible?this.state.headerHeight + this.state.contentHeight:this.state.headerHeight);
+	}

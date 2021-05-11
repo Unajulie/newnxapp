@@ -22,22 +22,22 @@ yarn add @react-native-community/geolocation
 react-native link @react-native-community/geolocation
 yarn add react-native-location
 
-修改
+1.修改
 D:\usr\local\workspace\nxapp\node_modules\react-native-swiper\src\index.js
 delete: ViewpagerAndroid
 add:import ViewPagerAndroid from '@react-native-community/viewpager';
 
-修改
+2.修改
 D:\usr\local\workspace\nxapp\node_modules\react-native-viewpager\Viewpager.js
 add: import ViewPageAndroid from 'react-native-viewpager'
 add: import PropTypes from 'prop-types';
 
-修改
+3.修改
 D:\usr\local\workspace\nxapp\node_modules\react-native-tab-view\src\PagerAndroid.js
 delete: ViewPagerAndroid,
 add:import ViewPagerAndroid from '@react-native-community/viewpager';
 
-修改
+4.修改
 D:\usr\local\workspace\nxapp\node_modules\react-native-modal-dropdown\components
 ModalDropdown.js
 delete: ListView
@@ -45,12 +45,21 @@ add:import ListView from 'deprecated-react-native-listview'
 add:import PropTypes from 'prop-types';
 (如果已经存在就不用再次引入）
 
-注释掉：D:\usr\local\workspace\nxapp\node_modules\graceful-fs\polyfills.js 61~63行
+5.注释掉：D:\usr\local\workspace\nxapp\node_modules\graceful-fs\polyfills.js 61~63行
 //fs.stat = statFix(fs.stat)
 //fs.fstat = statFix(fs.fstat)
 //fs.lstat = statFix(fs.lstat)
 
-修改源码
+6.修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-drop-down-item
+index.js
+147行this.animated.setValue(initialValue);前面加入以下代码 
+
+if(!this.animated){
+	  this.animated = new Animated.Value(this.props.contentVisible?this.state.headerHeight + this.state.contentHeight:this.state.headerHeight);
+	}
+
+7.修改源码
 node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\modules\network\OkHttpClientProvider.java 73行添加如下代码
 node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\packagerconnection\ReconnectingWebSocket.java 73行添加如下代码
 node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\devsupport\InspectorPackagerConnection.java 247行添加如下代码
@@ -85,7 +94,7 @@ android-sdk-windows\sources\android-28\android\webkit\WebViewClient.java 的onRe
 
 
 
-替换：
+8.替换：
 使用下面的代码替换nxapp\node_modules\react-native\react.gradle文件
 // Copyright (c) Facebook, Inc. and its affiliates.
 
