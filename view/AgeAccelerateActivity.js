@@ -91,7 +91,6 @@ export default class AgeAccelerateActivity extends Component<Props> {
                         }
 
                     </View>
-                    {/* <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('TabHomeActivity.allright')}</Text> */}
                 </ScrollView >
             </View>
         );

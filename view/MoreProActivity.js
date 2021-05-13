@@ -23,16 +23,16 @@ export default class MoreProActivity extends Component<Props> {
                 <View>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row' }}>
                         <View style={{ width: '100%' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 20, lineHeight: 24, marginTop: 10, textAlign: 'center' }}>Epi Series Products </Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#e95a24' }}>This series of products have been sold in Hong Kong and Macau. For purchase, please contact info@hkgepitherapeutics.com</Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 20, lineHeight: 24, marginTop: 10, textAlign: 'center' }}>Epi Series Products </Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 14, color: '#e95a24' }}>This series of products have been sold in Hong Kong and Macau. For purchase, please contact info@hkgepitherapeutics.com</Text>
                         </View>
 
                     </View>
                     <View style={{ width: '96%', alignSelf: 'center', flexDirection: 'row' }}>
                         <Image style={{ width: '15%', height: 123, justifyContent: 'center', }} source={require('../image/enpic/pro1.jpg')} resizeMode='contain' />
                         <View style={{ width: '85%', height: 123, paddingLeft: 6 }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, marginTop: 10 }}>EPILIVER (PATENT PENDING) </Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, }}>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 16, lineHeight: 18, marginTop: 10 }}>EPILIVER (PATENT PENDING) </Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 14, }}>
                                 About obtaining a test for early detection of liver cancer.
                                 We will need 5 mL of blood and a doctor's requisition to perform this test.
                             </Text>
@@ -41,8 +41,8 @@ export default class MoreProActivity extends Component<Props> {
                     <View style={{ width: '96%', alignSelf: 'center', flexDirection: 'row' }}>
                         <Image style={{ width: '15%', height: 123, justifyContent: 'center', }} source={require('../image/enpic/pro2.jpeg')} resizeMode='contain' />
                         <View style={{ width: '85%', height: 123, paddingLeft: 6 }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, marginTop: 10 }}>EPIBREAST (PATENT PENDING)</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, }}>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 16, lineHeight: 18, marginTop: 10 }}>EPIBREAST (PATENT PENDING)</Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 14, }}>
                             About obtaining a test for early detection of breast cancer.
                                 We will need 5 mL of blood and a doctor's requisition to perform this test.
                             
@@ -52,8 +52,8 @@ export default class MoreProActivity extends Component<Props> {
                     <View style={{ width: '96%', alignSelf: 'center', flexDirection: 'row' }}>
                         <Image style={{ width: '15%', height: 123, justifyContent: 'center', }} source={require('../image/enpic/pro3.jpeg')} resizeMode='contain' />
                         <View style={{ width: '85%', height: 123, paddingLeft: 6 }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, marginTop: 10 }}>EPISOCIALPSYCH</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, }}>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 16, lineHeight: 18, marginTop: 10 }}>EPISOCIALPSYCH</Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 14, }}>
                             Inquire about DNA methylation analysis of the candidate genes associated with social behavior and psychiatry (BDNF, OXTR, NR3C1, FKBP5, SLC64A, IL6) for clinical studies and clinical researcher provided as a service for free.
                             </Text>
                         </View>
@@ -61,8 +61,8 @@ export default class MoreProActivity extends Component<Props> {
                     <View style={{ width: '96%', alignSelf: 'center', flexDirection: 'row' }}>
                         <Image style={{ width: '15%', height: 123, justifyContent: 'center', }} source={require('../image/enpic/pro4.jpeg')} resizeMode='contain' />
                         <View style={{ width: '85%', height: 123, paddingLeft: 6 }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, marginTop: 10 }}></Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, }}>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 16, lineHeight: 18, marginTop: 10 }}></Text>
+                            <Text style={{ fontFamily: 'fantasy', fontSize: 14, }}>
                             TARGETED SEQUENCING FOR DNA METHYLATION ANALYSIS
                             
                             </Text>

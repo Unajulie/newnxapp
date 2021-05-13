@@ -69,8 +69,8 @@ export default class MallActivity extends Component<Props> {
             </View>
             // <ScrollView>
             //     <View>
-            //         <Text style={{ paddingLeft: 20, paddingTop: 12, fontFamily: 'NotoSansHans-Light', fontSize: 26, backgroundColor: '#ffffff' }}>Health Market</Text>
-            //         <Text style={{ paddingLeft: 20, color: '#e95a24', backgroundColor: '#efefef', fontFamily: 'NotoSansHans-Light' }}>Tip: An additional 20 USD courier fee is required</Text>
+            //         <Text style={{ paddingLeft: 20, paddingTop: 12, fontFamily: 'fantasy', fontSize: 26, backgroundColor: '#ffffff' }}>Health Market</Text>
+            //         <Text style={{ paddingLeft: 20, color: '#e95a24', backgroundColor: '#efefef', fontFamily: 'fantasy' }}>Tip: An additional 20 USD courier fee is required</Text>
             //         <View style={{ alignItems: 'center' }}>
             //             <GoodsItem
             //                 id={"1"}
@@ -95,26 +95,26 @@ export default class MallActivity extends Component<Props> {
             //             <View style={{ backgroundColor: '#efefef', height: 12, width: '100%' }}></View>
             //             <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row' }}>
             //                 <View style={{ width: '90%' }}>
-            //                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 24, marginTop: 10 }}>Epi Series Products </Text>
-            //                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#e95a24' }}>This series of products have been sold in Hong Kong and Macau. For purchase, please contact info@hkgepitherapeutics.com.</Text>
+            //                     <Text style={{ fontFamily: 'fantasy', fontSize: 18, lineHeight: 24, marginTop: 10 }}>Epi Series Products </Text>
+            //                     <Text style={{ fontFamily: 'fantasy', fontSize: 14, color: '#e95a24' }}>This series of products have been sold in Hong Kong and Macau. For purchase, please contact info@hkgepitherapeutics.com.</Text>
             //                 </View>
             //                 <View style={{ width: '10%', justifyContent: 'center' }}>
             //                     <TouchableOpacity style={{ width: "100%",height:56}}  onPress={() => { navigate.push("MorePro") }}>
-            //                         <Text style={{ textAlign: 'center', fontSize: 20, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+            //                         <Text style={{ textAlign: 'center', fontSize: 20, fontFamily: 'fantasy' }}> &gt; </Text>
             //                     </TouchableOpacity>
             //                 </View>
 
             //             </View>
             //             <View style={{ backgroundColor: '#efefef', height: 68, width: '100%', flexDirection: 'row', alignItems: 'center' }}>
-            //                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, width: 128, textAlign: 'center', paddingLeft: 10 }}>Promote code：</Text>
+            //                 <Text style={{ fontFamily: 'fantasy', fontSize: 16, width: 128, textAlign: 'center', paddingLeft: 10 }}>Promote code：</Text>
             //                 <View style={{ height: 34, alignContent: 'center', width: 167 }}>
             //                     <TextInput style={{ paddingVertical: 0, height: 34, borderRadius: 5, width: '100%', borderWidth: 1, borderColor: '#b3b3b3', paddingLeft: 10 }} />
             //                 </View>
             //             </View>
             //             <View style={{ width: '96%', alignSelf: 'center', flexDirection: 'row', height: 76, justifyContent: 'space-between' }}>
-            //                 <Text style={{ width: '50%', height: 56, fontFamily: 'NotoSansHans-Light', fontSize: 22, marginTop: 9, marginLeft: 9, textAlign: 'left' }}>Total: $979</Text>
+            //                 <Text style={{ width: '50%', height: 56, fontFamily: 'fantasy', fontSize: 22, marginTop: 9, marginLeft: 9, textAlign: 'left' }}>Total: $979</Text>
             //                 <TouchableOpacity  onPress={() => { navigate.push("Check") }}>
-            //                 <Text style={{ width: 123, height: 56, fontFamily: 'NotoSansHans-Light', fontSize: 22, marginTop: 9, textAlign: 'center', backgroundColor: '#f15a24', color: '#ffffff', }}  >Next</Text>
+            //                 <Text style={{ width: 123, height: 56, fontFamily: 'fantasy', fontSize: 22, marginTop: 9, textAlign: 'center', backgroundColor: '#f15a24', color: '#ffffff', }}  >Next</Text>
             //                 </TouchableOpacity>
             //             </View>
             //         </View>

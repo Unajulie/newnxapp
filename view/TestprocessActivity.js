@@ -88,7 +88,6 @@ export default class TestprocessActivity extends Component<Props> {
                     </ImageBackground>
                 </TouchableOpacity>
                 <View style={{ height: 30 }}></View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('TabHomeActivity.allright')}</Text>
             </ScrollView>
         );
     }

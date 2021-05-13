@@ -53,7 +53,6 @@ export default class Manual1Activity extends Component<Props> {
                     </View>
                     <Image style={{ width: '100%', height: px2dp(400) }} source={require('../image/enpic/man5.png')} resizeMode='contain' />
                 </View>
-                {/* <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}>{I18n.t('TabHomeActivity.allright')}</Text> */}
 
             </ScrollView >
         );
