@@ -259,7 +259,7 @@
 
     },
     "DnaReportActivity": {
-        "title": "Chronological Age",
+        "title": "Register Kit",
         "look": "People age at different rates. Some “look” and “feel” older than their chronological age while others look younger than their chronological age.",
         "parameter": "Our epigenetic age is a better parameter of our health well being and life span than our chronological age.",
         "hardware": "DNA is the hardware, genetics is the operating system and DNA methylation and other epigenetic factors are the software that programs the genome.",
@@ -300,7 +300,7 @@
         "age-higher": "Chronological Age>Epigenetic Age",
         "yourchro": "Your Chronological Age",
         "yourexpchro": "Your Expected Chronologicalage",
-        "is": "Your Epigenetic age is",
+        "is": "Your Expected Chronologicalage age is",
         "lower":"years lower than your chronological age in the population.",
         "higher":"years higher than your chronological age in the population.",
         "younger": "years lower than your expected chronological age in the population.",
@@ -326,7 +326,7 @@
         "status": "Test Status",
         "barcode": "Barcode",
         "Registerkit": "Register Kit",
-        "yourage": "Enter Your Chronological Age(optional)",
+        "yourage": "Your Chronological Age(optional)",
         "ageFormat": "Incorrect age format",
         "emailFormat":"Incorrect email format",
         "allow":"Allow email notification when the report is ready",

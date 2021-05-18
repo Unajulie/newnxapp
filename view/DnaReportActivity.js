@@ -484,7 +484,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                 <View style={{ flexDirection: 'row', height: px2dp(50), marginTop: px2dp(10), width: '100%', justifyContent: 'center', alignItems: 'center', borderColor: '#d0d1d2', borderWidth: px2dp(2), borderRadius: px2dp(5), }}>
                                                                     <Image style={{ height: px2dp(20), width: px2dp(30), marginLeft: px2dp(5) }} source={require('../image/person.png')} resizeMode='contain' />
                                                                     <TextInput
-                                                                        style={{ flex: 1, height: px2dp(50), width: '100%',fontFamily: 'fantasy', color: '#000000', fontWeight: 'bold', paddingVertical: 0, }}
+                                                                        style={{ flex: 1, height: px2dp(50), width: '100%',fontFamily: 'fantasy', color: '#000',fontSize:px2dp(14), paddingVertical: 0, }}
                                                                         onChangeText={(barcode) => this.setState({ barcode })}
                                                                         placeholder={I18n.t('DnaReportActivity.yourage')}
                                                                         keyboardType="numeric"
@@ -508,7 +508,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     <View style={{ flexDirection: 'row', height: px2dp(50), width: '100%', alignItems: 'center', borderColor: '#d0d1d2', borderWidth: px2dp(2), borderRadius: px2dp(5), }}>
                                                                         <Image style={{ height: px2dp(20), width: px2dp(30), marginLeft: px2dp(5) }} source={require('../image/notify.png')} resizeMode='contain' />
                                                                         <TextInput style={{
-                                                                            flex: 1, height: px2dp(50), width: '100%', color: '#000000', fontWeight: 'bold', paddingVertical: 0,fontFamily: 'fantasy',
+                                                                            flex: 1, height: px2dp(50), width: '100%', color: '#000000',fontSize:px2dp(14), fontWeight: 'bold', paddingVertical: 0,fontFamily: 'fantasy',
                                                                         }}
                                                                             errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5,fontFamily: 'fantasy', }}
                                                                             errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
