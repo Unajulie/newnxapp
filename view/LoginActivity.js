@@ -107,6 +107,14 @@ export default class LoginActivity extends Component<Props> {
                                             sessionuser.privatekey = result ? result.split(":")[1] : ""
                                             Session.save("sessionuser", sessionuser)
                                             this.setState({ animating: false })
+                                            if (sessionuser.publickey != "" && sessionuser.privatekey != "") {
+                                                const resetAction = StackActions.reset({
+                                                    index: 0,
+                                                    actions: [NavigationActions.navigate({ routeName: "Main" })],
+                                                });
+                                                this.props.navigation.dispatch(resetAction);
+                                            }
+                                          
                                         }).catch((e) => {
                                             console.info(e)
                                             Alert.alert("Message", e)

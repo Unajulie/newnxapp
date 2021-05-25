@@ -228,15 +228,15 @@ export default class TabHomeActivity extends Component<Props> {
                             // paginationStyle={{ bottom: 10 }}
                             showsPagination={false}//底部圆点
                             showsButtons={true}
-                            backgroundColor={'pink'}
+                            backgroundColor={'#fff'}
                             buttonWrapperStyle={{ position: 'absolute', top: px2dp(-210), paddingHorizontal: px2dp(30), paddingVertical: px2dp(30), display: 'flex', justifyContent: 'flex-end', }}
                             prevButton={
-                                <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10) }}>
-                                    <Image style={{ height: '100%', width: '100%' }} source={require('../image/arr-left.png')} resizeMode='center' />
+                                <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10),justifyContent:'center'}}>
+                                    <Image style={{ height: px2dp(30), width: px2dp(30),alignSelf:'center', }} source={require('../image/arr-left.png')} resizeMode='center' />
                                 </View>}
                             nextButton={
-                                <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30) }}>
-                                    <Image style={{ height: '100%', width: '100%' }} source={require('../image/arr-right.png')} resizeMode='center' />
+                                <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30),justifyContent:'center' }}>
+                                    <Image style={{ height: px2dp(30), width: px2dp(30),alignSelf:'center',justifyContent:'center'  }} source={require('../image/arr-right.png')} resizeMode='center' />
                                 </View>}
                             loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
                             autoplay={false}>

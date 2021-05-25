@@ -37,6 +37,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                 // this.setState({ btnSaveDisabled: true })
                 this.setState({ publickey: user.publickey })
                 this.setState({ privatekey: decrypt(user.publickey, user.uuid) })
+                
             }
 
         })
