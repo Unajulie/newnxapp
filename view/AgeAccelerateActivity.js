@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View, Image, TextInput, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, TextInput, ScrollView, } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { px2dp } from '../src/px2dp';
-type Props = {};
 export default class AgeAccelerateActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -12,11 +11,19 @@ export default class AgeAccelerateActivity extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
-            inputValue1: "",
-            inputValue2: "",
+            naturally: "",
+            biological: "",
         }
     }
-
+    componentDidMount() {
+        this.navigate = this.props.navigation;//此处可以自定义跳转属性
+        let biological = window.parseFloat(this.navigate.getParam("biological")).toFixed(2);
+        let naturally = window.parseFloat(this.navigate.getParam("naturally")).toFixed(2)
+        // let naturally = this.navigate.getParam("naturally") //{ "biological":"x",naturally:10}
+        this.setState({ biological })
+        this.setState({ naturally })
+        console.info("biological---" + this.state.biological+"naturally----"+this.state.naturally)
+}
     render() {
         this.navigate = this.props.navigation;
         return (
@@ -39,16 +46,17 @@ export default class AgeAccelerateActivity extends Component<Props> {
                             borderWidth: 1,
                             borderRadius: 5,
                             paddingVertical: 0,
-                            borderColor: this.state.inputValue2 == "" ? "#adadad" : "#404bc2",
+                            borderColor: this.state.biological == "" ? "#adadad" : "#404bc2",
                         }}
                             keyboardType='numeric'
                             onChangeText={(text1) => {
                                 const realage = text1.replace(/[^0-9.]/g, '');
                                 //可以打印看看是否过滤掉了非数字
                                 //console.log(newText)
-                                this.setState({ inputValue1: realage })
+                                this.setState({ naturally: realage })
                             }}
-                            value={this.state.inputValue1}
+                            // value={this.state.naturally}
+                            value={this.state.naturally}
 
                         />
 
@@ -68,7 +76,7 @@ export default class AgeAccelerateActivity extends Component<Props> {
                             borderWidth: 1,
                             borderRadius: 5,
                             paddingVertical: 0,
-                            borderColor: this.state.inputValue2 == "" ? "#adadad" : "#404bc2",
+                            borderColor: this.state.biological == "" ? "#adadad" : "#404bc2",
                         }}
                             // placeholder="Epigenetic age"
                             keyboardType='numeric'
@@ -76,17 +84,18 @@ export default class AgeAccelerateActivity extends Component<Props> {
                                 const epiage = text2.replace(/[^0-9.]/g, '');
                                 //可以打印看看是否过滤掉了非数字
                                 //console.log(newText)
-                                this.setState({ inputValue2: epiage })
+                                this.setState({ biological: epiage })
                             }}
-                            value={this.state.inputValue2}
+                            // value={this.state.biological}
+                            value={this.state.biological}
                         />
 
                         <Text style={{ fontSize: 20,marginTop:px2dp(50), fontWeight: '600', fontFamily: 'fantasy', height: 45, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.youraccis")}</Text>
-                        {this.state.inputValue2 == "" || this.state.inputValue1 == "" ?
+                        {this.state.biological == "" || this.state.naturally == "" ?
                             null
                             :
                             <View style={{ height: 56, fontSize: 'bold', width: '100%', alignItems: 'center', alignSelf: 'center', backgroundColor: '#404bc2', borderRadius: 5 }}>
-                                <Text style={{ fontSize: 45, fontWeight: '600', fontFamily: 'fantasy', lineHeight: 56, color: '#ffffff', textAlignVertical: 'center' }}> {(this.state.inputValue2 - (0.902 * this.state.inputValue1 + 4.564)).toFixed(2)}</Text>
+                                <Text style={{ fontSize: 45, fontWeight: '600', fontFamily: 'fantasy', lineHeight: 56, color: '#ffffff', textAlignVertical: 'center' }}> {(this.state.biological - (0.902 * this.state.naturally + 4.564)).toFixed(2)}</Text>
                             </View>
                         }
 

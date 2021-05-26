@@ -287,7 +287,7 @@ export default class ReportActivity extends Component<Props> {
                         </View>
                         <View style={{ width: '90%', height: px2dp(60), flexDirection: 'row', alignSelf: 'center', marginTop: px2dp(20), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
                             <Text style={{ width: '68%', marginTop: px2dp(18), fontFamily: 'fantasy', marginLeft: px2dp(10), fontSize: px2dp(16), }}>{I18n.t('DnaReportActivity.acceleration')}</Text>
-                            <TouchableOpacity onPress={() => this.navigate.push("AgeAccelerate")} style={{ width: '25%', height: px2dp(35), }}>
+                            <TouchableOpacity onPress={() => this.navigate.push("AgeAccelerate",{biological:this.state.biological,naturally:this.state.naturally})} style={{ width: '25%', height: px2dp(35), }}>
                                 <View style={{ width: '100%', height: px2dp(35), marginTop: px2dp(12), backgroundColor: '#e7e8ec', fontSize: px2dp(12), borderRadius: px2dp(5), flexDirection: 'row' }}>
                                     <Text style={{ fontWeight: 'bold', color: '#000000', marginLeft: px2dp(10), lineHeight: px2dp(35), fontFamily: 'fantasy', }}>GO</Text>
                                     <Image style={{ height: px2dp(12), width: px2dp(12), backgroundColor: '#e7e8ec', color: '#cdcdcd', marginLeft: px2dp(28), marginTop: px2dp(12) }} source={require('../image/right-arr.png')} resizeMode='contain' />
