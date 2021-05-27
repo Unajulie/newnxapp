@@ -95,7 +95,7 @@ export default class LaunchActivity extends Component {
                             </Swiper>
                         </View>
                     </View>
-                    <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(-30), height: px2dp(280), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: '#ffffff', zIndex: 999 }}>
+                    <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(-30), height: px2dp(300), borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: '#ffffff', zIndex: 999 }}>
                         <View style={{ width: "100%", height: px2dp(45), marginTop: px2dp(40), justifyContent: "space-between", }} >
                             <View style={{ width: "90%", height: px2dp(45), alignSelf: "center", marginBottom: px2dp(20), }}>
                                 <TouchableOpacity >
@@ -136,7 +136,7 @@ export default class LaunchActivity extends Component {
                             }
                             <TouchableOpacity onPress={() => this.navigate.push('Main')}>
                                 <View style={{ width: "100%", marginBottom:px2dp(20), marginTop: px2dp(20), }}>
-                                    <Text style={{ width: "100%", color: "#404bc2", fontWeight: "700", fontFamily: 'fantasy', textDecorationLine: 'underline', textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
+                                    <Text style={{ width: "100%",height: px2dp(45),lineHeight: px2dp(45), color: "#404bc2", fontWeight: "700", fontFamily: 'fantasy', textDecorationLine: 'underline', textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>
