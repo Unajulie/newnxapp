@@ -366,12 +366,11 @@ export default class TabHomeActivity extends Component<Props> {
                     fullWidth={true}
                     showCloseButton={true}
                     closeOnTouchOutside={true}
-                    openLarge={true}
+                    openLarge={false}
                     isActive={this.state.swipeablePanelActive}
                     onClose={() => { this.setState({ swipeablePanelActive: false }) }}
                     onPressCloseButton={() => { this.setState({ swipeablePanelActive: false }) }}
                 >
-                    <ScrollView>
                         <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                             <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(18), color: '#000', height: px2dp(45), fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.about')}</Text>
                             <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16), color: '#000', lineHeight: px2dp(20), marginBottom: px2dp(10) }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: '#000', fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
@@ -385,20 +384,18 @@ export default class TabHomeActivity extends Component<Props> {
 
                                     </TouchableOpacity>
                                 </View> */}
-                            <View style={{ width: '90%',height:px2dp(50),alignSelf:'center', borderRadius: px2dp(5) }}>
                                 <TouchableOpacity >
-                                    <Button style={{width:'100%',height:px2dp(50), backgroundColor: "#404bc2", }}
+                            <View style={{ width: '100%',height:px2dp(50),alignSelf:'center', borderRadius: px2dp(5), }}>
+                                    <Button style={{width:'100%',height:'100%',backgroundColor:'#404bc2'  }}
                                         onPress={() => this.navigate.push("Questionnaire")}
                                         title={I18n.t('QuesnoteActivity.ques')}
                                         fontFamily='fantasy'
                                         textAllCaps={false}
                                         color="#404bc2"
-                                        backgroundColor='#404bc2'
                                     />
-                                </TouchableOpacity>
                             </View>
+                                </TouchableOpacity>
                         </View>
-                    </ScrollView>
                 </SwipeablePanel>
             </View>
         );

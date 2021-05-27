@@ -56,7 +56,7 @@ export default class BiologicalActivity extends Component<Props> {
                         {/* 圆弧 */}
 
                         <View style={{ borderTopRightRadius: px2dp(30), borderTopLeftRadius: px2dp(30), marginTop: px2dp(-30), backgroundColor: '#ffffff' }}>
-                            <Text style={{ width: '90%', fontSize: px2dp(18),marginTop:px2dp(20), lineHeight: px2dp(30), fontFamily: 'fantasy', alignSelf:'center', color: 'black', height: px2dp(40), fontWeight: '700' }}>Epigenetic Age
+                            <Text style={{ width: '90%', fontSize: px2dp(18),marginTop:px2dp(20), lineHeight: px2dp(30), fontFamily: 'fantasy', alignSelf:'center', color: 'black', height: px2dp(40), fontWeight: '700' }}>{I18n.t('BiologicalActivity.title')}
                            </Text>
                         </View>
                         <View style={{ width: '100%', backgroundColor: '#ffffff' }}>

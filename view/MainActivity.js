@@ -4,6 +4,7 @@ import TabHomeActivity from './TabHomeActivity';
 import TabMallActivity from './TabMallActivity';
 import TabAboutActivity from './TabAboutActivity';
 import TabCenterActivity from './TabCenterActivity';
+import { I18n } from '../locales/i18n';
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import { px2dp } from '../src/px2dp';
 export default MainActivity = createBottomTabNavigator({
@@ -12,7 +13,7 @@ export default MainActivity = createBottomTabNavigator({
         navigationOptions: () => {
             //tab 的属性的属性
             return {
-                tabBarLabel: 'Home',
+                tabBarLabel: I18n.t("MainActivity.home"),
                 tabBarIcon: ({ tintColor, focused }) => (
                         focused ?
                             <Image

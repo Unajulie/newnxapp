@@ -525,7 +525,7 @@ export const RootStack = createStackNavigator(
                         right: TITLE_OFFSET,
                     },
                     headerStyle: {
-                        height: px2dp(80),
+                        height: px2dp(60),
                         backgroundColor: '#FBF0EC',
 
                     },
