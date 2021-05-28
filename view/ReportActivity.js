@@ -340,23 +340,23 @@ export default class ReportActivity extends Component<Props> {
                                 this.state.naturally > parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2)   ?
                                     <View style={{ height: px2dp(120), backgroundColor: '#ebeced', borderRadius: px2dp(15),marginTop:px2dp(20),marginBottom:px2dp(100) }}>
                                         <View style={{ height: px2dp(60), width: px2dp(60), borderRadius: px2dp(50), backgroundColor: '#ebeced', alignSelf: 'center', marginTop: px2dp(-25) }}>
-                                            <Image style={{ height: px2dp(40), width: px2dp(40), marginTop: px2dp(10), alignSelf: 'center' }} source={require('../image/sad-black.png')} resizeMode='contain' />
-                                        </View>
-                                        <Text style={{ textAlign: 'center', height: px2dp(70), fontSize: px2dp(14), color: '#000000', fontFamily: 'serif', }}>
-                                            {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>
-                                                {Math.abs(parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) - parseFloat(this.state.naturally)).toFixed(2)} </Text>
-                                            {I18n.t('DnaReportActivity.higher')}</Text>
-                                        <View style={{ width: '100%',height:px2dp(120)}}></View>
-                                    </View>
-                                    :
-                                    <View style={{ height: px2dp(120), backgroundColor: '#ebeced', borderRadius: px2dp(15),marginTop:px2dp(20),marginBottom:px2dp(100) }}>
-                                        <View style={{ height: px2dp(60), width: px2dp(60), borderRadius: px2dp(50), backgroundColor: '#ebeced', alignSelf: 'center', marginTop: px2dp(-25) }}>
                                             <Image style={{ height: px2dp(40), width: px2dp(40), marginTop: px2dp(10), alignSelf: 'center' }} source={require('../image/smile-black.png')} resizeMode='contain' />
                                         </View>
                                         <Text style={{ textAlign: 'center', height: px2dp(70), fontSize: px2dp(14), color: '#000000', fontFamily: 'serif', }}>
                                             {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>
                                                 {Math.abs(parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) - parseFloat(this.state.naturally)).toFixed(2)} </Text>
                                             {I18n.t('DnaReportActivity.lower')}</Text>
+                                        <View style={{ width: '100%',height:px2dp(120)}}></View>
+                                    </View>
+                                    :
+                                    <View style={{ height: px2dp(120), backgroundColor: '#ebeced', borderRadius: px2dp(15),marginTop:px2dp(20),marginBottom:px2dp(100) }}>
+                                        <View style={{ height: px2dp(60), width: px2dp(60), borderRadius: px2dp(50), backgroundColor: '#ebeced', alignSelf: 'center', marginTop: px2dp(-25) }}>
+                                            <Image style={{ height: px2dp(40), width: px2dp(40), marginTop: px2dp(10), alignSelf: 'center' }} source={require('../image/sad-black.png')} resizeMode='contain' />
+                                        </View>
+                                        <Text style={{ textAlign: 'center', height: px2dp(70), fontSize: px2dp(14), color: '#000000', fontFamily: 'serif', }}>
+                                            {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>
+                                                {Math.abs(parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) - parseFloat(this.state.naturally)).toFixed(2)} </Text>
+                                            {I18n.t('DnaReportActivity.higher')}</Text>
                                             <View style={{ width: '100%',height:px2dp(120)}}></View>
                                     </View>
                                 :
