@@ -246,11 +246,11 @@ export default class DietChartActivity extends Component<Props> {
                         />
                         <Text style={{ fontSize: px2dp(16), fontFamily: 'fantasy', fontWeight: 'bold',color:'#000', textAlign: 'center', textDecorationStyle: 'dashed', }}>Or</Text>
                         <View style={{ flex: 1, width: "100%", marginTop: px2dp(20), alignItems: "center", backgroundColor: '#f6f7f8', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30) }}>
-                            <View style={{ flexDirection: 'row', height: px2dp(60), marginBottom: px2dp(20), alignSelf: 'flex-start' }}>
-                                <View style={{ width: px2dp(30), height: px2dp(30), borderRadius: px2dp(50), marginLeft: px2dp(20), marginTop: px2dp(20), backgroundColor: '#000', }}>
+                            <View style={{ flexDirection: 'row', height: px2dp(60), marginBottom: px2dp(20),marginRight:'15%',}}>
+                                <View style={{ width: px2dp(30), height: px2dp(30), borderRadius: px2dp(50),marginLeft: '20%', marginTop: px2dp(20), backgroundColor: '#000', }}>
                                     <Text style={{ fontSize: px2dp(20), height: px2dp(30), lineHeight: px2dp(30), fontWeight: 'bold', fontFamily: 'fantasy', color: '#fff', textAlign: 'center' }}>2</Text>
                                 </View>
-                                <Text style={{ fontSize: px2dp(16), marginTop: px2dp(30), marginLeft: px2dp(14), fontFamily: 'fantasy', color: '#000' }}>{I18n.t('DietChartActivity.diet')}</Text>
+                                <Text style={{ fontSize: px2dp(16),height:px2dp(60), marginTop: px2dp(20), marginLeft: px2dp(14), fontFamily: 'fantasy', color: '#000' }}>{I18n.t('DietChartActivity.diet')}</Text>
                             </View>
                             <View style={{ width: '90%', height: px2dp(90), alignSelf: 'center', marginTop: px2dp(20) }}>
                                 <Search

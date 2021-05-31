@@ -18,6 +18,7 @@ export default class LifeStyleCholesterolActivity extends Component<Props> {
         };
         this.navigate = this.props.navigation;
         return (
+            <View style={{ flex: 1 }}>
             <ScrollView>
                 <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
@@ -65,12 +66,15 @@ export default class LifeStyleCholesterolActivity extends Component<Props> {
                             </View>
                         }
                     />
-                </View>
-                <TouchableOpacity style={{ width: '90%', marginBottom: px2dp(20), marginTop: px2dp(150), width: '90%', alignSelf: 'center' }} >
-                    <Button title="save" onPress={onButtonPress} color="#f7871e" />
-                </TouchableOpacity>
+                    </View>
+                    <View style={{width:'100%',height:px2dp(160)}}></View>
+                <TouchableOpacity >
+                            <View style={{ width: '90%', height: px2dp(40), backgroundColor: '#f7871e',borderRadius:px2dp(5), marginBottom: px2dp(20), alignSelf: 'center',justifyContent:'center' }}>
+                                <Text style={{color:'#fff',textAlign:'center',}} onPress={onButtonPress}>SAVE</Text>
+                            </View>
+                        </TouchableOpacity>
             </ScrollView>
-
+            </View>
         );
     }
 }

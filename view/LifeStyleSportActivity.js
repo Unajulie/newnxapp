@@ -45,8 +45,11 @@ export default class LifeStyleSportActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <TouchableOpacity style={{ width: '90%', marginBottom: px2dp(20), marginTop: px2dp(60), width: '90%', alignSelf: 'center' }}>
-                    <Button title="save" onPress={onButtonPress} color="#f7871e" />
+                <View style={{width:'100%',height:px2dp(80)}}></View>
+                <TouchableOpacity >
+                    <View style={{ width: '90%', height: px2dp(40), backgroundColor: '#f7871e', borderRadius: px2dp(5), marginBottom: px2dp(20), alignSelf: 'center', justifyContent: 'center' }}>
+                        <Text style={{ color: '#fff', textAlign: 'center', }} onPress={onButtonPress}>SAVE</Text>
+                    </View>
                 </TouchableOpacity>
             </ScrollView>
 

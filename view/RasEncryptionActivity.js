@@ -89,7 +89,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         }}
                                     />
                                 </View>
-                                <View style={{ width: "35%", marginLeft: '2%', height: px2dp(40), marginTop: px2dp(3) }}>
+                                <View style={{ width: "35%", marginLeft: '2%',backgroundColo:'#404bc2', height: px2dp(40), marginTop: px2dp(3) }}>
                                     {/* 将私钥发送到邮箱 */}
                                     <Button disabled={this.state.btnPublickeyDisabled}
                                         color='#404bc2'
@@ -141,7 +141,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         }}
                                     />
                                 </View>
-                                <View style={{ width: "35%", marginLeft: '2%', height: px2dp(40), marginTop: px2dp(3) }}>
+                                <View style={{ width: "35%",backgroundColo:'#404bc2', marginLeft: '2%', height: px2dp(40), marginTop: px2dp(3) }}>
                                     {/* 将私钥发送到邮箱 */}
                                     <Button disabled={this.state.btnPrivatekeyDisabled}
                                         color='#404bc2'
@@ -159,7 +159,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                 </View>
                             </View>
                             <View style={{ width: "90%", height: px2dp(150), alignSelf: 'center' }}>
-                                <View style={{ width: "100%", height: px2dp(45), marginTop: px2dp(10) }}>
+                                <View style={{ width: "100%", height: px2dp(45),backgroundColo:'#404bc2', marginTop: px2dp(10),borderRadius:px2dp(5) }}>
                                     <Button disabled={this.state.btnCopyDisabled}
                                         color='#404bc2'
                                         title={I18n.t("RasEncryptionActivity.copykeys")}
@@ -172,7 +172,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         }}
                                     />
                                 </View>
-                                <View style={{ width: "100%", height: px2dp(45), marginTop: px2dp(10) }}>
+                                <View style={{ width: "100%", height: px2dp(45),backgroundColo:'#404bc2', marginTop: px2dp(10),borderRadius:px2dp(5) }}>
                                     {/* 将私钥和公钥保存到本地 */}
                                     <Button disabled={this.state.btnSaveDisabled}
                                         color='#404bc2'

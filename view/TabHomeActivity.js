@@ -366,7 +366,7 @@ export default class TabHomeActivity extends Component<Props> {
                     fullWidth={true}
                     showCloseButton={true}
                     closeOnTouchOutside={true}
-                    openLarge={false}
+                    openLarge={true}
                     isActive={this.state.swipeablePanelActive}
                     onClose={() => { this.setState({ swipeablePanelActive: false }) }}
                     onPressCloseButton={() => { this.setState({ swipeablePanelActive: false }) }}
@@ -385,14 +385,9 @@ export default class TabHomeActivity extends Component<Props> {
                                     </TouchableOpacity>
                                 </View> */}
                                 <TouchableOpacity >
-                            <View style={{ width: '100%',height:px2dp(50),alignSelf:'center', borderRadius: px2dp(5), }}>
-                                    <Button style={{width:'100%',height:'100%',backgroundColor:'#404bc2'  }}
-                                        onPress={() => this.navigate.push("Questionnaire")}
-                                        title={I18n.t('QuesnoteActivity.ques')}
-                                        fontFamily='fantasy'
-                                        textAllCaps={false}
-                                        color="#404bc2"
-                                    />
+                            <View style={{ width: '100%',height:px2dp(40),borderRadius:px2dp(5), alignSelf:'center', backgroundColor:'#404bc2', }}>
+                                    <Text style={{width:'100%',height:'100%',alignContent:'center',lineHeight:px2dp(40), color:'#fff', fontFamily:'fantasy',textAlign:'center',  }}
+                                        onPress={() => this.navigate.push("Questionnaire")}>{I18n.t('QuesnoteActivity.ques')}</Text>
                             </View>
                                 </TouchableOpacity>
                         </View>

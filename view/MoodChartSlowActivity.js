@@ -33,8 +33,11 @@ export default class MoodChartSlowActivity extends Component<Props> {
                         column="slow"
                     />
                 </View>
-                <TouchableOpacity style={{ width: '90%', marginBottom: px2dp(20), marginTop: px2dp(100), width: '90%', alignSelf: 'center' }}>
-                    <Button title="save" onPress={onButtonPress} color="#685cf2" />
+                <View style={{width:'100%',height:px2dp(80)}}></View>
+                <TouchableOpacity >
+                    <View style={{ width: '90%', height: px2dp(40), backgroundColor: '#685cf2', borderRadius: px2dp(5), marginBottom: px2dp(20), alignSelf: 'center', justifyContent: 'center' }}>
+                        <Text style={{ color: '#fff', textAlign: 'center', }} onPress={onButtonPress}>SAVE</Text>
+                    </View>
                 </TouchableOpacity>
             </ScrollView>
 

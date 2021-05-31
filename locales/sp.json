@@ -2,6 +2,12 @@
     "LoginIcon": {
         "message": "Hi:Guest"
     },
+    "MainActivity":{
+        "home":"Home",
+        "about":"About",
+        "shop":"Shop",
+        "epicenter":"Epicenter"
+    },
     "TabHomeActivity": {
         "imgindex": "../image/enpic/index1.jpg",
         "title": "Casa",

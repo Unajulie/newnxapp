@@ -59,9 +59,10 @@ export default class LifeStyleBloodActivity extends Component<Props> {
 
                     />
                 </View>
-                <TouchableOpacity>
-                    <View style={{ width: '90%', marginBottom: px2dp(20), backgroundColor: '#4b4bc2', marginTop: px2dp(50), width: '90%', alignSelf: 'center' }} >
-                        <Button title="save" onPress={onButtonPress} color="#f7871e" style={{ backgroundColor: '#4b4bc2', }} />
+                <View style={{width:'100%',height:px2dp(60)}}></View>
+                <TouchableOpacity >
+                    <View style={{ width: '90%', height: px2dp(40), backgroundColor: '#f7871e', borderRadius: px2dp(5), marginBottom: px2dp(20),  alignSelf: 'center', justifyContent: 'center' }}>
+                        <Text style={{ color: '#fff', textAlign: 'center', }} onPress={onButtonPress}>SAVE</Text>
                     </View>
                 </TouchableOpacity>
             </ScrollView>

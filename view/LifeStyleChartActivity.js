@@ -23,20 +23,21 @@ export default class LifeStyleChartActivity extends Component<Props> {
         };
         this.navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
-            <ScrollView style={{ flex: 1 }}>
+            <View style={{ flex: 1 , backgroundColor: '#F6F7F8'}}>
+            <ScrollView >
                 <View style={{ backgroundColor: '#F6F7F8' }}>
                     <View style={{ width: "100%", height:px2dp(60), justifyContent: "center", alignItems: "center" }}>
                         <View style={{ width: "90%", height:px2dp(60), justifyContent: "center" }}>
-                            <Text style={{ textAlign: 'left', fontSize: px2dp(20),fontFamily:'fantasy', fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.lifesques')}</Text>
+                            <Text style={{ textAlign: 'left', fontSize: px2dp(20),fontFamily:'fantasy', fontWeight: "bold",color:'#000' }}>{I18n.t('LifeStyleChartActivity.lifesques')}</Text>
                         </View>
                     </View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center" }}>
                         <View style={{ width: "90%", backgroundColor: '#EBECED', borderRadius: px2dp(20) }}>
                             <View style={{ width: "90%", marginTop: px2dp(20), marginBottom: px2dp(20), alignSelf: 'center' }}>
-                                <Text style={{ marginBottom:px2dp(12),fontFamily:'fantasy' }}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
-                                <Text style={{ marginBottom:px2dp(12) ,fontFamily:'fantasy'}}>{I18n.t('LifeStyleChartActivity.become')}</Text>
-                                <Text style={{ marginBottom:px2dp(12),fontFamily:'fantasy' }}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
-                                <Text style={{ marginBottom:px2dp(12) ,fontFamily:'fantasy'}}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
+                                <Text style={{ marginBottom:px2dp(12),fontFamily:'fantasy',color:'#000' }}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
+                                <Text style={{ marginBottom:px2dp(12) ,fontFamily:'fantasy',color:'#000'}}>{I18n.t('LifeStyleChartActivity.become')}</Text>
+                                <Text style={{ marginBottom:px2dp(12),fontFamily:'fantasy',color:'#000' }}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
+                                <Text style={{ marginBottom:px2dp(12) ,fontFamily:'fantasy',color:'#000'}}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
 
                             </View>
                         </View>
@@ -45,8 +46,8 @@ export default class LifeStyleChartActivity extends Component<Props> {
 
 
                 <View style={{ height: px2dp(40) }}></View>
-                <View style={{ backgroundColor: '#F6F7F8' }}>
-                    <View style={{ width: '90%', height: px2dp(1140), alignSelf: 'center' }}>
+                <View>
+                    <View style={{ width: '90%', alignSelf: 'center' }}>
                         {/* 1 Body Mass Index */}
                         <TouchableOpacity onPress={() => this.navigate.push("LifeStyleMass")}
                             style={{ backgroundColor: '#FEFFFF', borderRadius: px2dp(15), borderWidth: 1, borderColor: '#D6D7D8', }}>
@@ -771,7 +772,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                     <Button title="save" onPress={onButtonPress} color="#f7871e" />
                 </TouchableOpacity> */}
             </ScrollView>
-
+            </View>
         );
     }
 }

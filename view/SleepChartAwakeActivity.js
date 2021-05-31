@@ -34,9 +34,12 @@ export default class SleepChartAwakeActivity extends Component<Props> {
                         column="awake"
                     />
                 </View>
-                <TouchableOpacity style={{ marginBottom: px2dp(20),marginTop:px2dp(100),width:'90%',alignSelf:'center' }}>
-                    <Button title="save" onPress={onButtonPress} color="#d62e2d" />
-                </TouchableOpacity>
+                <View style={{ width: '100%', height: px2dp(80) }}></View>
+                    <TouchableOpacity >
+                        <View style={{ width: '90%', height: px2dp(40), backgroundColor: '#d62e2d', borderRadius: px2dp(5), marginBottom: px2dp(20), alignSelf: 'center', justifyContent: 'center' }}>
+                            <Text style={{ color: '#fff', textAlign: 'center', }} onPress={onButtonPress}>SAVE</Text>
+                        </View>
+                    </TouchableOpacity>
             </ScrollView>
 
         );

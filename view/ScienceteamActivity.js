@@ -84,7 +84,7 @@ export default class ScienceteamActivity extends Component<Props> {
                         </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.navigate.push("Zhiyuan")} >
+                {/* <TouchableOpacity onPress={() => this.navigate.push("Zhiyuan")} >
                     <View style={{ width: '90%', height: px2dp(100),marginBottom:px2dp(20), alignSelf: 'center', flexDirection: 'row', borderRadius: px2dp(15), borderWidth: px2dp(1.5), borderColor: '#e5e6e7' }}>
                         <View style={{ width: '30%', justifyContent: 'center',borderRadius: px2dp(15)  }}>
                             <Image style={{ height: px2dp(80), width: '100%', margin: px2dp(3), borderRadius: px2dp(15) }} resizeMode='contain' source={require("../image/icons/jason1.png")}></Image>
@@ -103,7 +103,7 @@ export default class ScienceteamActivity extends Component<Props> {
                             <Image style={{ height: px2dp(15), width: px2dp(15), }} source={require('../image/right-arr.png')} resizeMode='contain' />
                         </View>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 <View style={{ height: px2dp(40), marginTop: px2dp(10), width: '90%', alignSelf: 'center' }}>
                     <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16),color:'#000', fontWeight: 'bold' }}>Scientific Advisory Board</Text>
                 </View>
