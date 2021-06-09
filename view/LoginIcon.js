@@ -3,8 +3,6 @@ import { NavigationActions, StackActions } from 'react-navigation'
 import {Text, View, Image,Modal,TouchableOpacity,Button } from 'react-native'
 import {
     Menu,
-    MenuOptions,
-    MenuOption,
     MenuTrigger,
 } from 'react-native-popup-menu';
 import Session from '../storage/Session';
@@ -43,12 +41,11 @@ export default class LoginIcon extends Component<Props> {
             <View>
                 <View style={{ width: px2dp(100), height: px2dp(80), justifyContent: "center", alignItems: "center" }}>
                     <Menu>
-                        <MenuTrigger>
                             <View style={{ width: '100%',height:px2dp(100), justifyContent: "center", alignItems: "center" }}>
                                 {this.state.user != null ?
                                     <View style={{ width: px2dp(120),height:px2dp(70),justifyContent: "center", alignItems: "center" }}>
                                         <Image style={{ height: px2dp(30), width: px2dp(30),marginBottom:px2dp(5) }} resizeMode="contain" source={require("../image/ic_login.png")} />
-                                        <Text style={{ color: '#000000',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>Hello, {this.state.user.nickname}</Text>
+                                        <Text style={{ color: '#000000',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>Hi, {this.state.user.nickname}</Text>
                                     </View>
                                     :
                                     <View style={{ width: px2dp(120), justifyContent: "center", alignItems: "center" }}>
@@ -57,7 +54,6 @@ export default class LoginIcon extends Component<Props> {
                                     </View>
                                 }
                             </View>
-                        </MenuTrigger>
                         {/* {this.state.user != null ?
                             <MenuOptions customStyles={optionsStyles}>
                                 <MenuOption onSelect={() => {

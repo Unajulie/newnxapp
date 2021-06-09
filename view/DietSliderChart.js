@@ -117,13 +117,13 @@ export default class DietSliderChart extends Component<Props> {
                     <View style={{ height: px2dp(250), width: "100%",alignSelf:'center' }}>
                         <ECharts ref={(ref) => { this.echarts = ref }} option={this.state.option} />
                     </View>
-                    <Text style={{ fontSize: px2dp(16), height: px2dp(60), marginTop: px2dp(30), width: '90%',marginLeft:'5%', fontFamily: 'fantasy', fontWeight: 'bold', color: '#000' }}>You Could choose to record you calories by:</Text>
+                    <Text style={{ fontSize: px2dp(16), height: px2dp(60), marginTop: px2dp(30), width: '90%',marginLeft:'5%', fontFamily: 'fantasy', fontWeight: 'bold', color: '#000' }}>{I18n.t('DietChartActivity.recordcalby')}</Text>
                     <View style={{ width: "100%", borderRadius: px2dp(30), alignItems: 'center', lignSelf: 'center', marginBottom: px2dp(30), backgroundColor: '#f6f7f8' }}>
                         <View style={{ flexDirection: 'row',height:px2dp(60),marginBottom:px2dp(20),marginRight:'10%', }}>
                             <View style={{ width: px2dp(30), height: px2dp(30), borderRadius: px2dp(50), marginLeft: '20%', marginTop: px2dp(20), backgroundColor: '#000', }}>
                                 <Text style={{ fontSize: px2dp(20),height:px2dp(30), lineHeight:px2dp(30), fontWeight: 'bold', fontFamily: 'fantasy', color: '#fff', textAlign: 'center' }}>1</Text>
                             </View>
-                            <Text style={{ fontSize: px2dp(16),height:px2dp(60),marginTop:px2dp(20), marginLeft: px2dp(14), fontFamily: 'fantasy', color: '#000' }}>Slide the slider to record you calories</Text>
+                            <Text style={{ fontSize: px2dp(16),height:px2dp(60),marginTop:px2dp(20), marginLeft: px2dp(14), fontFamily: 'fantasy', color: '#000' }}>{I18n.t('DietChartActivity.sliderecord')}</Text>
                         </View>
                         <Slider
                             style={{ marginBottom: px2dp(30) }}

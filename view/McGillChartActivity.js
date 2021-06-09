@@ -63,7 +63,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Throbbing
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.throbbing')}
                                              </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -79,7 +79,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Shooting
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.score')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
@@ -95,7 +95,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Stabbing
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.stabbing')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -111,7 +111,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sharp
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.sharp')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -127,7 +127,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Cramping
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.cramping')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -143,7 +143,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Gnawing
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.gnawing')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -159,7 +159,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Hot-Burning
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.hotburning')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -175,7 +175,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Aching
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.aching')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -191,7 +191,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Heavy
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.heavy')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -207,7 +207,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Tender
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.tender')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -223,7 +223,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Split
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.split')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -239,7 +239,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Exhausting
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.exhausting')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -255,7 +255,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sickening
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.sickening')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -271,7 +271,7 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Fearful
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('McGillChartActivity.fearful')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>

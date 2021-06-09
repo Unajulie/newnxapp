@@ -21,7 +21,7 @@ export default class LifeStyleHeartActivity extends Component<Props> {
         return (
                 <ScrollView>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
-                    <View style={{ width: "100%", marginTop: px2dp(30), marginBottom: px2dp(30) }}>
+                    <View style={{ width: "100%",height: px2dp(400), marginTop: px2dp(30), marginBottom: px2dp(30) }}>
                         <SliderLineChart
                         index={1}
                             title={I18n.t('LifeStyleChartActivity.heart')}

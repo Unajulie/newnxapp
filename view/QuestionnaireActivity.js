@@ -135,7 +135,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                                             <Text style={{ height: px2dp(40), width: '83%', fontFamily: 'fantasy', fontSize: 16, lineHeight: px2dp(20), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.mcgill')}</Text>
                                         </View>
                                         <View style={{ width: '90%', alignSelf: 'center' }}>
-                                            <Text style={{ height: px2dp(24), width: '100%', fontFamily: 'fantasy', fontSize: 14, lineHeight: px2dp(22), }}><Text style={{ color: '#000', fontWeight: 'bold' }}>{this.state.mcgillRate}%</Text> of 100% lifestyle information</Text>
+                                            <Text style={{ height: px2dp(24), width: '100%', fontFamily: 'fantasy', fontSize: 14, lineHeight: px2dp(22), }}><Text style={{ color: '#000', fontWeight: 'bold' }}>{this.state.mcgillRate}0%</Text> of 100% lifestyle information</Text>
                                             <ProgressBarAndroid color="#7f8081" styleAttr="Horizontal" progress={this.state.mcprogRate} indeterminate={false} style={{ marginTop: 1, borderRadius: px2dp(10) }} />
                                         </View>
                                     </View>

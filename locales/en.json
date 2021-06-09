@@ -814,7 +814,11 @@
         "caloriess": "Calories:",
         "kcal": "kcal",
         "fat": "Staturated Fat:",
-        "g": "g"
+        "g": "g",
+        "remove":"remove",
+        "sliderecord":"Slide the slider to record you calories",
+        "recordcalby":"You Could choose to record you calories by:"
+        
     },
     "SameActivity": {
         "title": "SAMe introduction",

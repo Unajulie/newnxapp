@@ -44,8 +44,8 @@ export default class LifeStyleBloodActivity extends Component<Props> {
                         }
                     />
                 </View>
+                <View style={{ width: "100%", height: px2dp(10), backgroundColor: "#efefef" }}></View>
                 <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
-                    <View style={{ width: "100%", height: px2dp(10), backgroundColor: "#efefef" }}></View>
                     <View style={{ height: px2dp(30), width: '100%' }}></View>
                     <SliderLineChart
                         index={2}
@@ -61,9 +61,9 @@ export default class LifeStyleBloodActivity extends Component<Props> {
 
                     />
                 </View>
-                <View style={{width:'100%',height:px2dp(60)}}></View>
+                <View style={{ width: '100%', height: px2dp(60) }}></View>
                 <TouchableOpacity >
-                    <View style={{ width: '90%', height: px2dp(40), backgroundColor: '#f7871e', borderRadius: px2dp(5), marginBottom: px2dp(20),  alignSelf: 'center', justifyContent: 'center' }}>
+                    <View style={{ width: '90%', height: px2dp(40), backgroundColor: '#f7871e', borderRadius: px2dp(5), marginBottom: px2dp(20), alignSelf: 'center', justifyContent: 'center' }}>
                         <Text style={{ color: '#fff', textAlign: 'center', }} onPress={onButtonPress}>SAVE</Text>
                     </View>
                 </TouchableOpacity>

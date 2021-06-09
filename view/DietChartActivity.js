@@ -182,7 +182,7 @@ export default class DietChartActivity extends Component<Props> {
                                                                         })
                                                                     }} >
                                                                     <View style={{width:px2dp(70), height:px2dp(20),alignSelf:'flex-end', borderRadius:px2dp(5),backgroundColor:'#404bc2'}}>
-                                                                        <Text style={{ width: "100%", fontWeight: "bold", textAlign: "center",color:'#fff', fontFamily: 'fantasy', fontSize: px2dp(12) }}>Remove</Text>
+                                                                        <Text style={{ width: "100%", fontWeight: "bold", textAlign: "center",color:'#fff', fontFamily: 'fantasy', fontSize: px2dp(12) }}>{I18n.t('DietChartActivity.remove')}</Text>
                                                                     </View>
                                                                 </TouchableOpacity>
                                                             </View>

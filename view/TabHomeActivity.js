@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Modal, StatusBar, Text, View, Image, ScrollView, ImageBackground, Dimensions, TouchableOpacity, Button } from 'react-native';
+import { StyleSheet, Modal, StatusBar, Text, View, Image, ScrollView, Platform, Dimensions, TouchableOpacity, Button } from 'react-native';
 import Swiper from 'react-native-swiper'
 import VideoPlayer from 'react-native-video-controls'
 import { I18n } from '../locales/i18n'
@@ -149,8 +149,8 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
                                     <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}</Text>
-                                        <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200',  fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
-                                    
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
+
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
                                     <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
@@ -218,9 +218,9 @@ export default class TabHomeActivity extends Component<Props> {
                             <Text style={{ fontSize: px2dp(16), textAlign: 'left', fontFamily: 'fantasy', lineHeight: px2dp(23) }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                         </View>
                     </View>
-                    <View style={{ height: 20 }}></View>
+                    <View style={{ height: px2dp(20) }}></View>
                     {/* 产品轮播点击跳转 */}
-                    <View style={{ width: "100%", height: 460 }}>
+                    <View style={{ width: "100%", height: px2dp(460), backgroundColor: '#f6f7f8' }}>
 
                         <Swiper
                             height={px2dp(460)}//组件高度
@@ -231,21 +231,33 @@ export default class TabHomeActivity extends Component<Props> {
                             backgroundColor={'#fff'}
                             buttonWrapperStyle={{ position: 'absolute', top: px2dp(-210), paddingHorizontal: px2dp(30), paddingVertical: px2dp(30), display: 'flex', justifyContent: 'flex-end', }}
                             prevButton={
-                                <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10),justifyContent:'center'}}>
-                                    <Image style={{ height: px2dp(20), width: px2dp(20),alignSelf:'center', }} source={require('../image/arr-left.png')} resizeMode='center' />
-                                </View>}
+                                Platform.OS == 'ios' ?
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
+                                        <Image style={{ height: '50%', width: '50%', alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='center' />
+                                    </View>
+                                    :
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='center' />
+                                    </View>
+
+                            }
                             nextButton={
-                                <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30),justifyContent:'center' }}>
-                                    <Image style={{ height: px2dp(20), width: px2dp(20),alignSelf:'center',justifyContent:'center'  }} source={require('../image/arr-right.png')} resizeMode='center' />
-                                </View>}
+                                Platform.OS == 'ios' ?
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30), justifyContent: 'center' }}>
+                                        <Image style={{ height: '50%', width: '50%', alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='center' />
+                                    </View>
+                                    :
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='center' />
+                                    </View>}
                             loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
                             autoplay={false}>
                             <TouchableOpacity >
 
                                 <View style={{ width: '100%', marginLeft: px2dp(20) }}>
-                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold',color:'#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
+                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', color: '#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
                                 </View>
-                                <View style={{ width: '90%',alignSelf:'center', marginTop: px2dp(30) }}>
+                                <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(30) }}>
                                     <View style={{
                                         width: '90%', alignSelf: 'center', marginBottom: px2dp(10), borderStyle: 'solid',
                                         borderWidth: px2dp(1.5), borderRadius: px2dp(20), borderColor: '#b6b7b8',
@@ -267,9 +279,9 @@ export default class TabHomeActivity extends Component<Props> {
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View style={{ width: '100%', marginLeft: px2dp(20) }}>
-                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold',color:'#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
+                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', color: '#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
                                 </View>
-                                <View style={{ width: '90%',alignSelf:'center', marginTop: px2dp(30) }}>
+                                <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(30) }}>
                                     <View style={{
                                         width: '90%', alignSelf: 'center', marginBottom: px2dp(10), borderStyle: 'solid',
                                         borderWidth: px2dp(1.5), borderRadius: px2dp(20), borderColor: '#b6b7b8',
@@ -338,14 +350,14 @@ export default class TabHomeActivity extends Component<Props> {
                     </View>
                     <View style={{ height: 15 }}></View>
                     {/* 相关视频 */}
-                    <View style={{ flex: 1, justifyContent: 'center', width: '90%', alignSelf: 'center',}}>
+                    <View style={{ flex: 1, justifyContent: 'center', width: '90%', alignSelf: 'center', }}>
                         <Text style={{ fontSize: px2dp(26), fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', color: '#000000', marginBottom: px2dp(15) }}>{I18n.t('TabHomeActivity.video')}</Text>
                         <VideoPlayer
-                            style={{ width: "100%", height: px2dp(250),}}
+                            style={{ width: "100%", height: px2dp(250), }}
                             paused={true}
                             fullscreen={true}
                             poster={'https://app.beijingepidial.com/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
-                            source={{ uri:'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA_Moshe_Szyf.mp4' }}
+                            source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA_Moshe_Szyf.mp4' }}
                             navigator={this.props.navigator}
                         />
                     </View>
@@ -371,11 +383,11 @@ export default class TabHomeActivity extends Component<Props> {
                     onClose={() => { this.setState({ swipeablePanelActive: false }) }}
                     onPressCloseButton={() => { this.setState({ swipeablePanelActive: false }) }}
                 >
-                        <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(20) }}>
-                            <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(18), color: '#000', height: px2dp(45), fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.about')}</Text>
-                            <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16), color: '#000', lineHeight: px2dp(20), marginBottom: px2dp(10) }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: '#000', fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
-                            <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16), color: '#000', lineHeight: px2dp(20), marginBottom: px2dp(30) }}>{I18n.t('QuesnoteActivity.personalized')}</Text>
-                            {/* <View style={{ width: '45%', borderRadius: 10 }}>
+                    <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(20) }}>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(18), color: '#000', height: px2dp(45), fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.about')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16), color: '#000', lineHeight: px2dp(20), marginBottom: px2dp(10) }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: '#000', fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
+                        <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(16), color: '#000', lineHeight: px2dp(20), marginBottom: px2dp(30) }}>{I18n.t('QuesnoteActivity.personalized')}</Text>
+                        {/* <View style={{ width: '45%', borderRadius: 10 }}>
                                     <TouchableOpacity >
                                         <Button style={{ backgroundColor: "#2196f3" }}
                                             onPress={() => this.navigate.pop()}
@@ -384,13 +396,13 @@ export default class TabHomeActivity extends Component<Props> {
 
                                     </TouchableOpacity>
                                 </View> */}
-                                <TouchableOpacity >
-                            <View style={{ width: '100%',height:px2dp(40),borderRadius:px2dp(5), alignSelf:'center', backgroundColor:'#404bc2', }}>
-                                    <Text style={{width:'100%',height:'100%',alignContent:'center',lineHeight:px2dp(40), color:'#fff', fontFamily:'fantasy',textAlign:'center',  }}
-                                        onPress={() => this.navigate.push("Questionnaire")}>{I18n.t('QuesnoteActivity.ques')}</Text>
+                        <TouchableOpacity >
+                            <View style={{ width: '100%', height: px2dp(40), borderRadius: px2dp(5), alignSelf: 'center', backgroundColor: '#404bc2', }}>
+                                <Text style={{ width: '100%', height: '100%', alignContent: 'center', lineHeight: px2dp(40), color: '#fff', fontFamily: 'fantasy', textAlign: 'center', }}
+                                    onPress={() => this.navigate.push("Questionnaire")}>{I18n.t('QuesnoteActivity.ques')}</Text>
                             </View>
-                                </TouchableOpacity>
-                        </View>
+                        </TouchableOpacity>
+                    </View>
                 </SwipeablePanel>
             </View>
         );

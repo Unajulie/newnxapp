@@ -58,7 +58,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(50) }} source={require('../image/icons/mood-77.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Pleasure
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Pleasure')}
                                              </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -75,7 +75,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(50) }} source={require('../image/icons/mood-78.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Depressed
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Depressed')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height:px2dp(80), justifyContent: 'center' }}>
@@ -91,7 +91,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-79.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Asleep
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Asleep')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -107,7 +107,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-80.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Energy
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Energy')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -123,7 +123,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-81.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Over Eating
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Eating')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -139,7 +139,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-82.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Failure
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Failure')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -155,7 +155,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-83.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Focus
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Focus')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -171,7 +171,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-84.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Slow
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Slow')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -187,7 +187,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-85.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Anxiety
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Anxiety')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -203,7 +203,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-86.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Nervous
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Nervous')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -219,7 +219,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-87.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Lose Control
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Control')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -235,7 +235,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-88.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Worry
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Worry')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -251,7 +251,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-89.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Lose Relax
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Relax')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -267,7 +267,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-90.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Rest Less
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Less')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
@@ -283,7 +283,7 @@ export default class MoodChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(45) }} source={require('../image/icons/mood-91.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Irritable
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>{I18n.t('MoodChartActivity.Irritable')}
                                     </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
