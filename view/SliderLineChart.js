@@ -132,13 +132,19 @@ export default class SliderLineChart extends Component<Props> {
                             defaultValue={0}
                             step={1}
                             onAfterChange={(value) => {
-                                //解密
-                                let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
-                                fetch(url).then(res => res.text()).then((data) => {
-                                    this.load();
-                                })
+                                (async () => {
+                                    let lifestylebox = await qsession.load("lifestylebox")
+                                    let index = this.props.index
+                                    lifestylebox[index] = 1;
+                                    //解密
+                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                    let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
+                                    fetch(url).then(res => res.text()).then((data) => {
+                                        this.load();
+                                    })
+                                })();
                             }}
+
                             maximumTrackTintColor="#dcdbdb"
                             minimumTrackTintColor="#577bff"
                             processHeight={30}

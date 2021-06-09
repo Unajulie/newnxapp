@@ -23,6 +23,7 @@ export default class McGillChartGnawingActivity extends Component<Props> {
                 <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20)}}>
                     <McGillChart
+                        index={5}
                         title={I18n.t('McGillChartActivity.gnawing')}
                         yAxisLabelName={I18n.t('McGillChartActivity.score')}
                         yAxisLabelValue="gnawing"

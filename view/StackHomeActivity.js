@@ -313,7 +313,8 @@ export const RootStack = createStackNavigator(
             screen: PaymentActivity
         },
         McGillChart: {
-            screen: McGillChartActivity
+            screen: McGillChartActivity,
+            
         },
         McGillChartThrobbing: {
             screen: McGillChartThrobbingActivity

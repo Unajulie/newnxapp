@@ -24,6 +24,7 @@ export default class LifeStyleMassActivity extends Component<Props> {
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     <View style={{ marginBottom: px2dp(30), marginTop: px2dp(30) }}>
                         <BMIChart
+                            index={0}
                             title={I18n.t('LifeStyleChartActivity.height')}
                             color={'#000'}
                             refTitle={I18n.t('LifeStyleChartActivity.source')}

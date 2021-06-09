@@ -143,25 +143,28 @@ export default class BMIChart extends Component<Props> {
                                 color={"#a0a0a0"}
                                 value={165}
                                 onChange={(height) => {
-                                    this.setState({ height })
-                                    //解密
-                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                    let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=height&value=" + height + "&utime=" + new Date().getTime();
-                                    fetch(url).then(res => res.text()).then(() => {
-                                        console.info(this.state.weight + "--" + this.state.height)
-                                        if (this.state.weight && this.state.height) {
-                                            let bmivalue = this.state.weight / Math.pow((this.state.height / 100), 2)
-                                            let uri = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
-                                            console.info(uri)
-                                            fetch(uri).then(res => res.text()).then((data) => {
-                                                if (data == "success") {
-                                                    this.load();
-                                                }
-                                            })
-                                        }
-                                    }).catch(function (error) {
-                                        console.log('There has been a problem with your fetch operation: ' + error.message);
-                                    });
+                                    (async () => {
+                                        let lifestylebox = await qsession.load("lifestylebox")
+                                        let index = this.props.index
+                                        lifestylebox[index] = 1;
+                                        this.setState({ height })
+                                        //解密
+                                        let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                        let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=height&value=" + height + "&utime=" + new Date().getTime();
+                                        fetch(url).then(res => res.text()).then(() => {
+                                            console.info(this.state.weight + "--" + this.state.height)
+                                            if (this.state.weight && this.state.height) {
+                                                let bmivalue = this.state.weight / Math.pow((this.state.height / 100), 2)
+                                                let uri = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
+                                                console.info(uri)
+                                                fetch(uri).then(res => res.text()).then((data) => {
+                                                    if (data == "success") {
+                                                        this.load();
+                                                    }
+                                                })
+                                            }
+                                        })();
+                                    })
                                 }}
                             />
                         </View>
@@ -210,7 +213,7 @@ export default class BMIChart extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: "100%", alignItems: "center" }}>
-                    <View style={{ width: "90%",marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "90%", marginTop: 23, marginBottom: 23 }}>
                         <Text style={{ fontSize: 12 }}>{I18n.t('LifeStyleChartActivity.bmicaltulate')}</Text>
                         <TouchableOpacity onPress={() => { this.setState({ bmiwebview: true }) }}><Text style={{ fontSize: 12, color: "#0071BC", textDecorationLine: "underline" }}>{I18n.t('LifeStyleChartActivity.bmisource')}</Text></TouchableOpacity>
                         <Text style={{ fontSize: 12, fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>

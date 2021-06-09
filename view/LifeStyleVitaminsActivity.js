@@ -23,6 +23,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.vitamin')}
                             refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
                             refUrl="https://www.mayoclinic.org/drugs-supplements-vitamin-d/art-20363792"
@@ -47,6 +48,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.vitaminc')}
                             refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
                             refUrl="https://www.mayoclinic.org/drugs-supplements-vitamin-c/art-20363932"
@@ -71,6 +73,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.vitamina')}
                             refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
                             refUrl="https://www.mayoclinic.org/drugs-supplements-vitamin-a/art-20365945"
@@ -95,6 +98,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.same')}
                             refTitle={I18n.t('LifeStyleChartActivity.webmd')}
                             refUrl="https://www.webmd.com/diet/supplement-guide-sam-e#1"
@@ -119,6 +123,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                        index={4}
                             title={I18n.t('LifeStyleChartActivity.nmn')}
                             refTitle={I18n.t('LifeStyleChartActivity.selfhacked')}
                             refUrl="https://content.selfdecode.com/nicotinamide-mononucleotide/"
@@ -143,6 +148,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.dhea')}
                             refTitle={I18n.t('LifeStyleChartActivity.webmd')}
                             refUrl="https://www.webmd.com/a-to-z-guides/dhea#1"
@@ -167,6 +173,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.tmg')}
                             refTitle={I18n.t('LifeStyleChartActivity.tmgwebsite')}
                             refUrl="https://examine.com/supplements/trimethylglycine/"
@@ -191,6 +198,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(500), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.lipoic')}
                             refTitle={I18n.t('LifeStyleChartActivity.lipoicwebsite')}
                             refUrl="https://www.drugs.com/mtm/alpha-lipoic-acid.html"
@@ -215,6 +223,7 @@ export default class LifeStyleVitaminsActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: px2dp(450), marginTop: px2dp(20), marginBottom: px2dp(50) }}>
                         <SliderLineChart
+                            index={4}
                             title={I18n.t('LifeStyleChartActivity.vitaminD2')}
                             refTitle={I18n.t('LifeStyleChartActivity.vitaminD2website')}
                             refUrl="https://www.lesswrong.com/posts/c5aycbSsSc38XWPEc/taking-vitamin-d3-with-k2-in-the-morning"

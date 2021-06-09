@@ -3,6 +3,7 @@ import { Platform, StatusBar, Text, View } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import Session from '../storage/Session';
+
 import data from '../appdata'
 import moment from 'moment'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
@@ -112,6 +113,7 @@ export default class SleepStarChart extends Component<Props> {
                                 size={20}
                                 ref={(ref) => { this.rating = ref }}
                                 onFinishRating={(value) => {
+                                   
                                     //解密
                                     let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     let url = data.url + "user/sleep/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
@@ -120,6 +122,7 @@ export default class SleepStarChart extends Component<Props> {
                                             this.load();
                                         }
                                     })
+                                
                                 }}
                             />
 

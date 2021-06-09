@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, StatusBar, Text, View, Image, Alert, TouchableOpacity, Button, ScrollView } from 'react-native';
+import { Platform, StyleSheet, StatusBar, Text, View, Image, Alert, TouchableOpacity, Button, ScrollView, DeviceEventEmitter } from 'react-native';
 import { I18n } from '../locales/i18n';
-import McGillChart from "./McGillChart"
+import qsession from '../storage/QSession';
 import { px2dp } from '../src/px2dp';
 
 export default class McGillChartActivity extends Component<Props> {
@@ -14,15 +14,20 @@ export default class McGillChartActivity extends Component<Props> {
     constructor(props) {
         super(props);
     }
+    componentDidMount() {
+      
+    }
 
     render() {
         const onButtonPress = () => {
             Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
         };
         this.navigate = this.props.navigation;//此处可以自定义跳转属性
+
         return (
+
             <View style={{ flex: 1, backgroundColor: '#F6F7F8' }}>
-                <ScrollView style={{flex:1}}>
+                <ScrollView style={{ flex: 1 }}>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     <View style={{ backgroundColor: '#F6F7F8' }}>
                         {/* <View style={{ width: "100%", height: px2dp(40),marginBottom:px2dp(20),marginTop:px2dp(20), justifyContent: "center" }}>
@@ -62,7 +67,7 @@ export default class McGillChartActivity extends Component<Props> {
                                              </Text>
                                         </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -74,11 +79,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Shooting
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Shooting
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: 80, justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',}} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -90,11 +95,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Stabbing
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Stabbing
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -106,11 +111,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sharp
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sharp
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -122,11 +127,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Cramping
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Cramping
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -138,11 +143,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Gnawing
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Gnawing
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -154,11 +159,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Hot-Burning
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Hot-Burning
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -170,11 +175,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Aching
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Aching
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -186,11 +191,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Heavy
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Heavy
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -202,11 +207,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Tender
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Tender
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -218,11 +223,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Split
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Split
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -234,11 +239,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Exhausting
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Exhausting
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -250,11 +255,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sickening
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Sickening
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>
@@ -266,11 +271,11 @@ export default class McGillChartActivity extends Component<Props> {
                                             <Image style={{ width: '100%', height: px2dp(30) }} source={require('../image/icons/life-66.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                        <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Fearful
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontFamily: 'fantasy', color: '#0A0A0A', fontWeight: '700' }}>Fearful
                                     </Text>
-                                    </View>
+                                        </View>
                                         <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                            <Image style={{ height: px2dp(30), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                            <Image style={{ height: px2dp(30), width: '46%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                         </View>
                                     </View>
                                 </TouchableOpacity>

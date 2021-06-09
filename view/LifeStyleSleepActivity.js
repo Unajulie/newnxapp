@@ -23,6 +23,7 @@ export default class LifeStyleSleepActivity extends Component<Props> {
                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ width: "100%",  height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20)}}>
                     <SliderLineChart
+                        index={8}
                         title={I18n.t('LifeStyleChartActivity.sleep')}
                         refTitle={I18n.t('LifeStyleChartActivity.foundation')}
                         refUrl="https://www.sleepfoundation.org/"

@@ -344,7 +344,7 @@ export default class ReportActivity extends Component<Props> {
                                         </View>
                                         <Text style={{ textAlign: 'center', height: px2dp(70), fontSize: px2dp(14), color: '#000000', fontFamily: 'serif', }}>
                                             {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>
-                                                {Math.abs(parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) - parseFloat(this.state.naturally)).toFixed(2)} </Text>
+                                                {Math.abs((parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044)).toFixed(2) - parseFloat(this.state.naturally)).toFixed(2)}</Text>
                                             {I18n.t('DnaReportActivity.lower')}</Text>
                                         <View style={{ width: '100%',height:px2dp(120)}}></View>
                                     </View>
@@ -355,7 +355,7 @@ export default class ReportActivity extends Component<Props> {
                                         </View>
                                         <Text style={{ textAlign: 'center', height: px2dp(70), fontSize: px2dp(14), color: '#000000', fontFamily: 'serif', }}>
                                             {I18n.t('DnaReportActivity.is')} <Text style={{ fontSize: px2dp(16), fontWeight: 'bold' }}>
-                                                {Math.abs(parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2) - parseFloat(this.state.naturally)).toFixed(2)} </Text>
+                                                {Math.abs((parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044)).toFixed(2) - parseFloat(this.state.naturally)).toFixed(2)}</Text>
                                             {I18n.t('DnaReportActivity.higher')}</Text>
                                             <View style={{ width: '100%',height:px2dp(120)}}></View>
                                     </View>

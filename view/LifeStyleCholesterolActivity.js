@@ -46,6 +46,7 @@ export default class LifeStyleCholesterolActivity extends Component<Props> {
                 <View style={{ width: "100%",  height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                     <View style={{ width: "100%", height: px2dp(10),marginBottom:px2dp(30), backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
+                    index={3}
                         title={I18n.t('LifeStyleChartActivity.resveratrol')}
                         refTitle={I18n.t('LifeStyleChartActivity.drug')}
                         refUrl="https://www.drugs.com/npp/resveratrol.html"

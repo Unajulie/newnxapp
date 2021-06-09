@@ -22,6 +22,7 @@ export default class LifeStyleMeditationActivity extends Component<Props> {
                 <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ width: "100%",  height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20)}}>
                     <SliderLineChart
+                        index={6}
                         title={I18n.t('LifeStyleChartActivity.meditation')}
                         refTitle={I18n.t('LifeStyleChartActivity.mayo')}
                         refUrl="https://www.mayoclinic.org/tests-procedures/meditation/in-depth/meditation/art-20045858"

@@ -6,9 +6,7 @@ import Session from '../storage/Session';
 import data from '../appdata'
 import moment from 'moment'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
-import { I18n } from '../locales/i18n';
 
-type Props = {};
 export default class RatingChart extends Component<Props> {
     constructor(props) {
         super(props);

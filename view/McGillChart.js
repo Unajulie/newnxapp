@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import Session from '../storage/Session';
+import qsession from '../storage/QSession';
 import data from '../appdata'
 import moment from 'moment'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
@@ -95,10 +96,10 @@ export default class McGillChart extends Component<Props> {
         return (
             <View style={{ width: "100%" }}>
                 <View style={{ width: "100%", flexDirection: "row" }}>
-                    <View style={{ width: "45%",  marginTop: px2dp(20), marginBottom: px2dp(20)}}>
-                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: px2dp(16),color: "#000",fontFamily:'fantasy', fontWeight: "bold", textAlignVertical: "center", textAlign: "left" }}>{I18n.t('McGillChartActivity.how')}</Text></View>
-                        <View style={{ alignItems: "center" }}><Text style={{ color: "#000",fontFamily:'fantasy',  fontSize: px2dp(18), fontWeight: "bold" }}>{this.props.title}</Text></View>
-                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: px2dp(16),color: "#000",fontFamily:'fantasy',  fontWeight: "bold" }}>{I18n.t('McGillChartActivity.like')}</Text></View>
+                    <View style={{ width: "45%", marginTop: px2dp(20), marginBottom: px2dp(20) }}>
+                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: px2dp(16), color: "#000", fontFamily: 'fantasy', fontWeight: "bold", textAlignVertical: "center", textAlign: "left" }}>{I18n.t('McGillChartActivity.how')}</Text></View>
+                        <View style={{ alignItems: "center" }}><Text style={{ color: "#000", fontFamily: 'fantasy', fontSize: px2dp(18), fontWeight: "bold" }}>{this.props.title}</Text></View>
+                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: px2dp(16), color: "#000", fontFamily: 'fantasy', fontWeight: "bold" }}>{I18n.t('McGillChartActivity.like')}</Text></View>
                     </View>
                     <View style={{ width: "45%", height: px2dp(100), alignItems: "center", justifyContent: "center" }}>
                         <View>
@@ -112,13 +113,18 @@ export default class McGillChart extends Component<Props> {
                                 ratingColor='red'
                                 ratingBackgroundColor='#c8c7c8'
                                 onFinishRating={(value) => {
-                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                    let url = data.url + "user/mcgill/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
-                                    fetch(url).then(res => res.text()).then((data) => {
-                                        if (data == "success") {
-                                            this.load();
-                                        }
-                                    })
+                                    (async () => {
+                                        let mcgillbox=await qsession.load("mcgillbox")
+                                        let index = this.props.index
+                                        mcgillbox[index] = 1;
+                                        let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                        let url = data.url + "user/mcgill/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
+                                        fetch(url).then(res => res.text()).then((data) => {
+                                            if (data == "success") {
+                                                this.load();
+                                            }
+                                        })
+                                    })();
                                 }}
                             />
 

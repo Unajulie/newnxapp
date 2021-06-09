@@ -23,6 +23,7 @@ export default class LifeStyleHeartActivity extends Component<Props> {
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     <View style={{ width: "100%", marginTop: px2dp(30), marginBottom: px2dp(30) }}>
                         <SliderLineChart
+                        index={1}
                             title={I18n.t('LifeStyleChartActivity.heart')}
                             refTitle={I18n.t('LifeStyleChartActivity.american')}
                             refUrl="https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/all-about-heart-rate-pulse"

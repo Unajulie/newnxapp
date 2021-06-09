@@ -22,6 +22,7 @@ export default class LifeStyleBloodActivity extends Component<Props> {
                 <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                     <SliderLineChart
+                        index={2}
                         title={I18n.t('LifeStyleChartActivity.systolic')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
                         refUrl="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings"
@@ -47,6 +48,7 @@ export default class LifeStyleBloodActivity extends Component<Props> {
                     <View style={{ width: "100%", height: px2dp(10), backgroundColor: "#efefef" }}></View>
                     <View style={{ height: px2dp(30), width: '100%' }}></View>
                     <SliderLineChart
+                        index={2}
                         title={I18n.t('LifeStyleChartActivity.diastolic')}
                         max={px2dp(160)}
                         min={0}

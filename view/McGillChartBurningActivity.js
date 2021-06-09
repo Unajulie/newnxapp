@@ -13,6 +13,7 @@ export default class McGillChartBurningActivity extends Component<Props> {
     constructor(props) {
         super(props);
     }
+   
     render() {
         const onButtonPress = () => {
             Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
@@ -23,6 +24,7 @@ export default class McGillChartBurningActivity extends Component<Props> {
                <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                     <McGillChart
+                        index={6}
                         title={I18n.t('McGillChartActivity.hotburning')}
                         yAxisLabelName={I18n.t('McGillChartActivity.score')}
                         yAxisLabelValue="burning"

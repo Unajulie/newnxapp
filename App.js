@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { Dimensions, StyleSheet, Text, View, Image, Alert, ActivityIndicator } from 'react-native';
 import RootStack from './view/StackHomeActivity';
 import { MenuProvider } from 'react-native-popup-menu';
-import AppIntro from 'rn-app-intro-screen';
 import CodePush from "react-native-code-push";
-import Session from './storage/Session';
-
+import qsession from './storage/QSession';
 const styles = StyleSheet.create({
   image: {
     width: Dimensions.get('screen').width,
@@ -18,6 +16,7 @@ const styles = StyleSheet.create({
 export default class App extends Component<Props> {
   constructor(props) {
     super(props)
+    qsession.init();
     this.state = {
       showapp: false,
       updateshow: false

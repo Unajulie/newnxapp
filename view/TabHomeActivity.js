@@ -338,14 +338,14 @@ export default class TabHomeActivity extends Component<Props> {
                     </View>
                     <View style={{ height: 15 }}></View>
                     {/* 相关视频 */}
-                    <View style={{ flex: 1, justifyContent: 'center', width: '90%', alignSelf: 'center' }}>
+                    <View style={{ flex: 1, justifyContent: 'center', width: '90%', alignSelf: 'center',}}>
                         <Text style={{ fontSize: px2dp(26), fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', color: '#000000', marginBottom: px2dp(15) }}>{I18n.t('TabHomeActivity.video')}</Text>
                         <VideoPlayer
-                            style={{ width: "100%", height: px2dp(250), borderRadius: px2dp(20) }}
+                            style={{ width: "100%", height: px2dp(250),}}
                             paused={true}
                             fullscreen={true}
-                            poster={data.url + 'static/images/ted.jpg'} //poster必须是url从互联网访问的形式
-                            source={{ uri: data.url + '/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
+                            poster={'https://app.beijingepidial.com/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
+                            source={{ uri:'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA_Moshe_Szyf.mp4' }}
                             navigator={this.props.navigator}
                         />
                     </View>

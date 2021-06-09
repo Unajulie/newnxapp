@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Alert, TouchableOpacity, Button, ScrollView, TextInput, Image } from 'react-native';
+import { Platform, StyleSheet, Text, View, TouchableOpacity, ScrollView,  Image } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { px2dp } from '../src/px2dp';
+
 export default class LifeStyleChartActivity extends Component<Props> {
     static navigationOptions = () => {
         return ({
@@ -16,11 +17,8 @@ export default class LifeStyleChartActivity extends Component<Props> {
         };
 
     }
-
+  
     render() {
-        const onButtonPress = () => {
-            Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
-        };
         this.navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ flex: 1 , backgroundColor: '#F6F7F8'}}>
@@ -60,7 +58,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -76,7 +74,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -92,7 +90,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -108,7 +106,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -124,7 +122,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -140,7 +138,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -156,7 +154,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -172,7 +170,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -188,7 +186,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -204,7 +202,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -220,7 +218,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                                     </Text>
                                 </View>
                                 <View style={{ width: '15%', height: px2dp(80), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(50), width: '46%', lineHeight: px2dp(80) }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
+                                    <Image style={{ height: px2dp(50), width: '46%',  }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
                                 </View>
                             </View>
                         </TouchableOpacity>

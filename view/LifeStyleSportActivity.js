@@ -24,6 +24,7 @@ export default class LifeStyleSportActivity extends Component<Props> {
                 <View style={{ height: 40 }}></View>
                 <View style={{ width: "100%", height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                     <SliderLineChart
+                    index={7}
                         title={I18n.t('LifeStyleChartActivity.cvh')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
                         refUrl="https://www.heart.org/en/healthy-living/fitness/fitness-basics/aha-recs-for-physical-activity-in-adults"

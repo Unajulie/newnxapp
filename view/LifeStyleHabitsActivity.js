@@ -23,6 +23,7 @@ export default class LifeStyleHabitsActivity extends Component<Props> {
                  <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                 <View style={{ width: "100%",height: px2dp(400), marginTop: px2dp(20), marginBottom: px2dp(20) }}>
                     <SliderLineChart
+                    index={10}
                         title={I18n.t('LifeStyleChartActivity.smoking')}
                         max={100}
                         min={0}
