@@ -232,11 +232,11 @@ export default class TabHomeActivity extends Component<Props> {
                             buttonWrapperStyle={{ position: 'absolute', top: px2dp(-210), paddingHorizontal: px2dp(30), paddingVertical: px2dp(30), display: 'flex', justifyContent: 'flex-end', }}
                             prevButton={
                                 Platform.OS == 'ios' ?
-                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'contain' }}>
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
                                         <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
                                     </View>
                                     :
-                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'contain' }}>
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
                                         <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
                                     </View>
                                 
