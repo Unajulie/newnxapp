@@ -94,7 +94,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                     <Button disabled={this.state.btnPublickeyDisabled}
                                         color='#404bc2'
                                         title={I18n.t('RasEncryptionActivity.generate')}
-                                        style={{ height: "100%", width: "100%" }}
+                                        style={{ height: "100%", width: "100%",backgroundColo:'#404bc2', }}
                                         onPress={() => {
                                             UUIDGenerator.getRandomUUID().then((uuid) => {
                                                 let publickey = uuid.substring(0, 18).toUpperCase()
@@ -146,7 +146,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                     <Button disabled={this.state.btnPrivatekeyDisabled}
                                         color='#404bc2'
                                         title={I18n.t('RasEncryptionActivity.generate')}
-                                        style={{ height: "100%", width: "100%" }}
+                                        style={{ height: "100%", width: "100%",backgroundColo:'#404bc2', }}
                                         onPress={() => {
                                             UUIDGenerator.getRandomUUID().then((uuid) => {
                                                 let privatekey = uuid.substring(0, 7).toUpperCase()
@@ -163,7 +163,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                     <Button disabled={this.state.btnCopyDisabled}
                                         color='#404bc2'
                                         title={I18n.t("RasEncryptionActivity.copykeys")}
-                                        style={{ width: '100%', height: '100%', textAlignVertical: "center" }}
+                                        style={{ width: '100%', height: '100%', textAlignVertical: "center" ,backgroundColo:'#404bc2',}}
                                         onPress={() => {
                                             // this.state({btnCopyDisabled:true})
                                             let keys = this.state.publickey + "\n" + this.state.privatekey
@@ -177,7 +177,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                     <Button disabled={this.state.btnSaveDisabled}
                                         color='#404bc2'
                                         title={I18n.t('RasEncryptionActivity.save')}
-                                        style={{ height: "100%", width: "100%" }}
+                                        style={{ height: "100%", width: "100%",backgroundColo:'#404bc2', }}
                                         onPress={() => {
                                             let id = this.state.user.id
                                             this.setState({ animating: true })

@@ -228,27 +228,28 @@ export default class TabHomeActivity extends Component<Props> {
                             // paginationStyle={{ bottom: 10 }}
                             showsPagination={false}//底部圆点
                             showsButtons={true}
-                            backgroundColor={'#fff'}
+                            backgroundColor={'#f6f7f8'}
                             buttonWrapperStyle={{ position: 'absolute', top: px2dp(-210), paddingHorizontal: px2dp(30), paddingVertical: px2dp(30), display: 'flex', justifyContent: 'flex-end', }}
                             prevButton={
                                 Platform.OS == 'ios' ?
-                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
-                                        <Image style={{ height: '50%', width: '50%', alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='center' />
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'contain' }}>
+                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
                                     </View>
                                     :
-                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
-                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='center' />
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'contain' }}>
+                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
                                     </View>
+                                
 
                             }
                             nextButton={
                                 Platform.OS == 'ios' ?
                                     <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30), justifyContent: 'center' }}>
-                                        <Image style={{ height: '50%', width: '50%', alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='center' />
+                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='contain' />
                                     </View>
                                     :
                                     <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30), justifyContent: 'center' }}>
-                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='center' />
+                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='contain' />
                                     </View>}
                             loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
                             autoplay={false}>
