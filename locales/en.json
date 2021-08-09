@@ -328,7 +328,7 @@
         "pdffail": "Failed to create pdf! Please check your network or contact customer service: support@epi-age.com",
         "titlemsg": "Message",
         "barcodesuccess":"Kit registered successfully",
-        "invalid": "Invalid barcode",
+        "invalid": "Invalid barcode,Please double-check case sensitivity letter and check your spelling(especially letter 'i','L','O'in lower or upper case)",
         "wait": "Your saliva sample is still in transit.\nThank you so much for your patience.",
         "pendingwait":"Our lab has received your Epiage saliva sample,it's now getting in line to wait for the examination.Thank you so much for your patience.",
         "processed": "Your barcode is being processed.It will take around 31 days from the day the test starts.Thank you so much for your patience.",

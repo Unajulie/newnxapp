@@ -13,9 +13,9 @@ import ProgressBarAnimated from 'react-native-progress-bar-animated';
 const customText = {
     style: {
         // fontFamily: 'serif',
-      fontFamily: Platform.OS === 'ios' ? 'HelveticaNeue' : 'Roboto',
+        fontFamily: Platform.OS === 'ios' ? 'HelveticaNeue' : 'Roboto',
     }
-  };
+};
 export default class DnaReportActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -117,7 +117,48 @@ export default class DnaReportActivity extends Component<Props> {
             // }
         }
     }
+    reload = () => {
+        let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+        fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
+            for (let i in data) {
+                let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 : data[i].curtime - data[i].pendingTime)
+                let time = {}
+                if (data[i].status == "in-transit") time.leftseconds = _31day
+                //pendding状态下当前时间离到期时间还剩多少毫秒到期
+                else if (data[i].status == "pending") time.leftseconds = (data[i].detectTime + _31day) - data[i].pendingTime
+                //processing状态下当前时间离到期时间还剩多少毫秒到期
+                else if (data[i].status == "processing") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
+                else if (data[i].status == "ready") { time.leftseconds = 0 }
+                let process = parseInt(((_31day - time.leftseconds) / _31day) * 100)
+                let vbarcode = {}
+                vbarcode.val = data[i].barcode
+                console.info(data[i].barcode + " allday:" + _31day / (24 * 3600 * 1000) + " move day:" + ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))
+                vbarcode.remain = parseFloat((_31day / (24 * 3600 * 1000) - ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))).toFixed(2)
+                vbarcode.stat = data[i].status
+                vbarcode.naturally = data[i].naturally
+                vbarcode.biological = data[i].biological
+                vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
+                vbarcode.detectTime = (data[i].status == "in-transit") ? I18n.t("DnaReportActivity.intransit") : new Date(data[i].detectTime).toLocaleDateString()
+                if (data[i].status == "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
+                else if (data[i].status == "pending") { vbarcode.endtime = I18n.t("DnaReportActivity.Pendding") }
+                else if (data[i].status == "processing") { vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString() }
+                else if (data[i].status == "ready") { vbarcode.endtime = I18n.t("DnaReportActivity.done") }
 
+                vbarcode.email = data[i].email
+                vbarcode.processing = process
+                vbarcode.switchon = data[i].allow == 1 ? true : false
+                this.state.itemBox.push(vbarcode)
+                this.state.ageBox[i] = vbarcode.naturally ? vbarcode.naturally : 0
+                this.state.switchonBox[i] = vbarcode.switchon
+                this.state.emailBox[i] = data[i].email
+            }
+            this.setState({ ageBox: this.state.ageBox })
+            this.setState({ itemBox: this.state.itemBox })
+            this.setState({ switchonBox: this.state.switchonBox })
+            this.setState({ emailBox: this.state.emailBox })
+            this.setState({ statusbar: true })
+        })
+    }
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
@@ -146,47 +187,6 @@ export default class DnaReportActivity extends Component<Props> {
                 option.series[1].data = v;
                 this.setState({ option });
                 this.echarts.webview.reload();
-            })
-            // ALTER TABLE epi.udata ADD pendingtime BIGINT DEFAULT 0 NOT NULL;
-            let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-            fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
-                for (let i in data) {
-                    let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 : data[i].curtime - data[i].pendingTime)
-                    let time = {}
-                    if (data[i].status == "in-transit") time.leftseconds = _31day
-                    //pendding状态下当前时间离到期时间还剩多少毫秒到期
-                    else if (data[i].status == "pending") time.leftseconds = (data[i].detectTime + _31day) - data[i].pendingTime
-                    //processing状态下当前时间离到期时间还剩多少毫秒到期
-                    else if (data[i].status == "processing") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
-                    else if (data[i].status == "ready") { time.leftseconds = 0 }
-                    let process = parseInt(((_31day - time.leftseconds) / _31day) * 100)
-                    let vbarcode = {}
-                    vbarcode.val = data[i].barcode
-                    console.info(data[i].barcode + " allday:" + _31day / (24 * 3600 * 1000) + " move day:" + ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))
-                    vbarcode.remain = parseFloat((_31day / (24 * 3600 * 1000) - ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))).toFixed(2)
-                    vbarcode.stat = data[i].status
-                    vbarcode.naturally = data[i].naturally
-                    vbarcode.biological = data[i].biological
-                    vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
-                    vbarcode.detectTime = (data[i].status == "in-transit") ? I18n.t("DnaReportActivity.intransit") : new Date(data[i].detectTime).toLocaleDateString()
-                    if (data[i].status == "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
-                    else if (data[i].status == "pending") { vbarcode.endtime = I18n.t("DnaReportActivity.Pendding") }
-                    else if (data[i].status == "processing") { vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString() }
-                    else if (data[i].status == "ready") { vbarcode.endtime = I18n.t("DnaReportActivity.done") }
-
-                    vbarcode.email = data[i].email
-                    vbarcode.processing = process
-                    vbarcode.switchon = data[i].allow == 1 ? true : false
-                    this.state.itemBox.push(vbarcode)
-                    this.state.ageBox[i] = vbarcode.naturally ? vbarcode.naturally : 0
-                    this.state.switchonBox[i] = vbarcode.switchon
-                    this.state.emailBox[i] = data[i].email
-                }
-                this.setState({ ageBox: this.state.ageBox })
-                this.setState({ itemBox: this.state.itemBox })
-                this.setState({ switchonBox: this.state.switchonBox })
-                this.setState({ emailBox: this.state.emailBox })
-                this.setState({ statusbar: true })
             })
         });
 
@@ -255,9 +255,12 @@ export default class DnaReportActivity extends Component<Props> {
                             initial={0}
                             onPress={value => {
                                 this.setState({ tabshow: value == 'newkit' ? true : false })
+                                if (!this.state.tabshow) {
+                                    this.reload();
+                                }
                             }}
-                            textStyle={{ fontWeight: 'bold',fontFamily:'fantasy' }}
-                            selectedTextStyle={{ fontWeight: 'bold',fontFamily:'fantasy' }}
+                            textStyle={{ fontWeight: 'bold', fontFamily: 'fantasy' }}
+                            selectedTextStyle={{ fontWeight: 'bold', fontFamily: 'fantasy' }}
                             textColor={'#404cb2'}
                             selectedColor={'#ffffff'}
                             buttonColor={'#404cb2'}
@@ -267,7 +270,7 @@ export default class DnaReportActivity extends Component<Props> {
                             hasPadding={true}
                             options={[
                                 { label: I18n.t("DnaReportActivity.newkit"), value: "newkit", }, //images.feminino = require('./path_to/assets/img/feminino.png')
-                                { label:I18n.t("DnaReportActivity.registeredkit"), value: "registerkit", } //images.masculino = require('./path_to/assets/img/masculino.png')
+                                { label: I18n.t("DnaReportActivity.registeredkit"), value: "registerkit", } //images.masculino = require('./path_to/assets/img/masculino.png')
                             ]}
                             testID="gender-switch-selector"
                             accessibilityLabel="gender-switch-selector"
@@ -276,7 +279,7 @@ export default class DnaReportActivity extends Component<Props> {
                             <View style={{ flex: 1, width: '100%', alignSelf: 'center', marginTop: px2dp(30) }}>
                                 <View style={{ width: '100%', height: px2dp(250), backgroundColor: '#ebeced', borderRadius: px2dp(30) }}>
                                     <View style={{ marginLeft: px2dp(15), marginTop: px2dp(20) }}>
-                                        <Text  style={{ fontWeight: 'bold', fontSize: px2dp(16), fontFamily: 'fantasy',}}>{I18n.t("DnaReportActivity.epiage1")}</Text>
+                                        <Text style={{ fontWeight: 'bold', fontSize: px2dp(16), fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.epiage1")}</Text>
                                     </View>
                                     <Text style={{ margin: px2dp(15), fontWeight: '200', fontSize: px2dp(14), fontFamily: 'serif', }}>{I18n.t("DnaReportActivity.life")}</Text>
                                     <Image style={{ height: px2dp(140), width: '100%', borderRadius: px2dp(30) }} source={require('../image/enpic/index9.jpg')} resizeMode='cover' />
@@ -285,7 +288,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     <View style={{ flexDirection: 'row', height: px2dp(50), width: '100%', justifyContent: 'center', alignItems: 'center', borderColor: '#404cb2', borderWidth: 1, borderRadius: px2dp(5), }}>
                                         <Image style={{ height: px2dp(30), width: px2dp(50), marginLeft: px2dp(5) }} source={require('../image/barcode.png')} resizeMode='contain' />
                                         <TextInput
-                                            style={{ flex: 1, height: px2dp(50), color: '#000000', fontWeight: 'bold', paddingVertical: 0,fontFamily: 'fantasy', }}
+                                            style={{ flex: 1, height: px2dp(50), color: '#000000', fontWeight: 'bold', paddingVertical: 0, fontFamily: 'fantasy', }}
                                             onChangeText={(barcode) => this.setState({ barcode })}
                                             placeholder={I18n.t("DnaReportActivity.yourbarcode")}
                                             placeholderTextColor='#cdcdcd'
@@ -334,14 +337,18 @@ export default class DnaReportActivity extends Component<Props> {
                                                             this.setState({ statusbar: true })
                                                         }
                                                         Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.wait"))
+                                                        this.setState({ tabshow:false })
+                                                        
                                                         break
                                                     case "pending":
                                                         this.setState({ statusbar: false })
                                                         Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.pendingwait"))
+                                                        this.setState({ tabshow: false })
                                                         break;
                                                     case "processing":
                                                         this.setState({ visual: false })
                                                         Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
+                                                        this.setState({ tabshow: false })
                                                         break;
                                                     case "ready":
                                                         this.setState({ statusbar: true })
@@ -362,9 +369,11 @@ export default class DnaReportActivity extends Component<Props> {
                                                         {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
                                                         {/* 从而重新刷新webview数据 */ }
                                                         this.echarts.webview.reload();
+                                                        this.setState({ tabshow: false })
                                                         break;
                                                 }
                                                 this.setState({ display: false })
+
                                             })
 
                                         }}>
@@ -402,17 +411,17 @@ export default class DnaReportActivity extends Component<Props> {
                                                         style={{ padding: px2dp(10) }}
                                                         header={
                                                             <View style={{ height: px2dp(75) }}>
-                                                               
-                                                                    <View style={{
-                                                                        width: px2dp(9),
-                                                                        height: px2dp(9),
-                                                                        backgroundColor: '#404cb2',
-                                                                        borderColor: '#404cb2',
-                                                                        borderStyle: 'solid',
-                                                                        borderRadius: px2dp(15),
-                                                                        marginTop: px2dp(5)
-                                                                    }} />
-                                                                   
+
+                                                                <View style={{
+                                                                    width: px2dp(9),
+                                                                    height: px2dp(9),
+                                                                    backgroundColor: '#404cb2',
+                                                                    borderColor: '#404cb2',
+                                                                    borderStyle: 'solid',
+                                                                    borderRadius: px2dp(15),
+                                                                    marginTop: px2dp(5)
+                                                                }} />
+
                                                                 <View style={{
                                                                     width: '100%',
                                                                     height: px2dp(50),
@@ -427,7 +436,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                         color: '#7f8081',
                                                                         fontWeight: 'bold',
                                                                         fontFamily: 'fantasy',
-                                                                    }}>{I18n.t('DnaReportActivity.barcode')} | <Text style={{ color: '#000000',fontFamily: 'fantasy', }}>{barcode.val}</Text></Text>
+                                                                    }}>{I18n.t('DnaReportActivity.barcode')} | <Text style={{ color: '#000000', fontFamily: 'fantasy', }}>{barcode.val}</Text></Text>
 
                                                                 </View>
                                                             </View>
@@ -435,22 +444,22 @@ export default class DnaReportActivity extends Component<Props> {
 
                                                         <View key={barcode.val} style={{ width: px2dp(290), height: px2dp(560), borderTopWidth: px2dp(1), borderTopColor: 'grey', overflow: 'hidden' }}>
                                                             <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.regtime')}</Text>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', textAlign: 'justify',fontFamily: 'fantasy', }}>{barcode.createTime}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.regtime')}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', textAlign: 'justify', fontFamily: 'fantasy', }}>{barcode.createTime}</Text>
                                                             </View>
                                                             <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.detectTime')}</Text>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.detectTime}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.detectTime')}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', fontFamily: 'fantasy', }}>{barcode.detectTime}</Text>
                                                             </View>
                                                             {barcode.stat == "ready" ?
                                                                 <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.status')}</Text>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.endtime}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.status')}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', fontFamily: 'fantasy', }}>{barcode.endtime}</Text>
                                                                 </View>
                                                                 :
                                                                 <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081',fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.endtime')}</Text>
-                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.endtime}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.endtime')}</Text>
+                                                                    <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', fontFamily: 'fantasy', }}>{barcode.endtime}</Text>
                                                                 </View>
                                                             }
                                                             {/* progress bar start */}
@@ -463,7 +472,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                         fontSize: px2dp(14),
                                                                         fontFamily: 'fantasy',
                                                                     }}>{I18n.t('DnaReportActivity.percentage')}</Text>
-                                                                    <Text style={{ lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000',fontFamily: 'fantasy', }}>{barcode.processing}%</Text>
+                                                                    <Text style={{ lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', fontFamily: 'fantasy', }}>{barcode.processing}%</Text>
                                                                 </View>
                                                                 <View style={{ width: '100%', height: px2dp(40), alignSelf: 'center', borderBottomWidth: 1, borderBottomColor: '#cdcdcd' }}>
                                                                     <ProgressBarAnimated
@@ -484,7 +493,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                 <View style={{ flexDirection: 'row', height: px2dp(50), marginTop: px2dp(10), width: '100%', justifyContent: 'center', alignItems: 'center', borderColor: '#d0d1d2', borderWidth: px2dp(2), borderRadius: px2dp(5), }}>
                                                                     <Image style={{ height: px2dp(20), width: px2dp(30), marginLeft: px2dp(5) }} source={require('../image/person.png')} resizeMode='contain' />
                                                                     <TextInput
-                                                                        style={{ flex: 1, height: px2dp(50), width: '100%',fontFamily: 'fantasy', color: '#000',fontSize:px2dp(14), paddingVertical: 0, }}
+                                                                        style={{ flex: 1, height: px2dp(50), width: '100%', fontFamily: 'fantasy', color: '#000', fontSize: px2dp(14), paddingVertical: 0, }}
                                                                         onChangeText={(barcode) => this.setState({ barcode })}
                                                                         placeholder={I18n.t('DnaReportActivity.yourage')}
                                                                         keyboardType="numeric"
@@ -508,9 +517,9 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     <View style={{ flexDirection: 'row', height: px2dp(50), width: '100%', alignItems: 'center', borderColor: '#d0d1d2', borderWidth: px2dp(2), borderRadius: px2dp(5), }}>
                                                                         <Image style={{ height: px2dp(20), width: px2dp(30), marginLeft: px2dp(5) }} source={require('../image/notify.png')} resizeMode='contain' />
                                                                         <TextInput style={{
-                                                                            flex: 1, height: px2dp(50), width: '100%', color: '#000000',fontSize:px2dp(14), fontWeight: 'bold', paddingVertical: 0,fontFamily: 'fantasy',
+                                                                            flex: 1, height: px2dp(50), width: '100%', color: '#000000', fontSize: px2dp(14), fontWeight: 'bold', paddingVertical: 0, fontFamily: 'fantasy',
                                                                         }}
-                                                                            errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5,fontFamily: 'fantasy', }}
+                                                                            errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5, fontFamily: 'fantasy', }}
                                                                             errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
                                                                             placeholder={'Notification email'}
                                                                             placeholderTextColor='#cdcdcd'
@@ -558,7 +567,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                                 })
                                                                             }}
                                                                         />
-                                                                        <Text style={{width:'60%',height:px2dp(30), fontSize: px2dp(12), marginLeft: px2dp(5),marginRight:px2dp(5), fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.allow")}</Text>
+                                                                        <Text style={{ width: '60%', height: px2dp(30), fontSize: px2dp(12), marginLeft: px2dp(5), marginRight: px2dp(5), fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.allow")}</Text>
                                                                     </View>
                                                                 </View>
                                                             }
@@ -582,6 +591,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                                 repdata.biological = biological
                                                                                 repdata.naturally = this.state.ageBox[i]
                                                                                 repdata.barcode = barcode.val
+                                                                                repdata.accuracy=barcode.accuracy
                                                                                 // repdata.btnBuildPdfdisabled= this.setState({ btnBuildPdfdisabled: false })
                                                                                 this.navigate.push("Report", repdata)
                                                                             })
@@ -596,7 +606,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     })
 
                                                                 }}>
-                                                                    <Text style={{ width: "100%", height: px2dp(50), textAlign: "center", lineHeight: px2dp(50), color: "white", fontSize: px2dp(16),fontFamily: 'fantasy', }}>View Report</Text>
+                                                                    <Text style={{ width: "100%", height: px2dp(50), textAlign: "center", lineHeight: px2dp(50), color: "white", fontSize: px2dp(16), fontFamily: 'fantasy', }}>View Report</Text>
                                                                 </TouchableOpacity>
                                                             </View>
                                                             {/* notify me by email end */}
@@ -618,7 +628,7 @@ export default class DnaReportActivity extends Component<Props> {
                 </ScrollView >
                 {this.state.tabshow == true ?
                     <TouchableOpacity onPress={() => this.navigate.push("Mall")} style={{ width: '100%', height: px2dp(60), flex: 1, position: 'absolute', bottom: 0, left: 0, zIndex: 9999, backgroundColor: '#cdcdcd' }}>
-                        <Text style={{ height: px2dp(60), fontSize: px2dp(14), lineHeight: px2dp(60), fontWeight: 'bold', color: '#000000', textAlign: 'center', fontFamily: 'fantasy',}}>{I18n.t("DnaReportActivity.buyepi")}</Text>
+                        <Text style={{ height: px2dp(60), fontSize: px2dp(14), lineHeight: px2dp(60), fontWeight: 'bold', color: '#000000', textAlign: 'center', fontFamily: 'fantasy', }}>{I18n.t("DnaReportActivity.buyepi")}</Text>
                     </TouchableOpacity>
                     :
                     null

@@ -17,7 +17,7 @@ export default class QuestionnaireActivity extends Component<Props> {
 
     }
 
-    componentDidMount() {
+    async componentDidMount() {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
         });
