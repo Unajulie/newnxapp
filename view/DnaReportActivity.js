@@ -137,6 +137,7 @@ export default class DnaReportActivity extends Component<Props> {
                 vbarcode.stat = data[i].status
                 vbarcode.naturally = data[i].naturally
                 vbarcode.biological = data[i].biological
+                vbarcode.accuracy= data[i].accuracy
                 vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
                 vbarcode.detectTime = (data[i].status == "in-transit") ? I18n.t("DnaReportActivity.intransit") : new Date(data[i].detectTime).toLocaleDateString()
                 if (data[i].status == "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
