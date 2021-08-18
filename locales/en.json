@@ -354,7 +354,8 @@
         "epiage1":"EpiAge",
         "Scan":"Scan Kit Barcode",
         "Pendding":"Pendding",
-        "buyepi":"No product yet? Buy Epiage Kit →"
+        "buyepi":"No product yet? Buy Epiage Kit →",
+        "kitready":"Barcode registration is successful, please click 'Registered Kit' Barcode registration is successful.Please click \"Registered Kit\" to view the progress status "
     },
     "ReportActivity": {
         "title": "EpiAge Report"

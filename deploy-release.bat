@@ -1,2 +1,2 @@
 @echo off
-cd android && gradlew clean && cd .. && npx react-native run-android --variant=release
+cd android && gradlew clean && gradlew --stop && cd .. && npx react-native run-android --variant=release

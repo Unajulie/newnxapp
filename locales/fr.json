@@ -350,7 +350,8 @@
         "Pendding": "En attente",
         "newkit":"New Kit",
         "registeredkit":"Registered Kit",
-        "buyepi":"No product yet? Buy Epiage Kit →"
+        "buyepi":"No product yet? Buy Epiage Kit →",
+        "kitready":"L'enregistrement du code-barres est réussi, veuillez cliquer sur 'Kit enregistré' pour afficher l'état d'avancement"
     },
     "user_profile": {
         "title": "Your Profile"

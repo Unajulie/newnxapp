@@ -322,8 +322,15 @@
         "detectTime":"檢測時間",
         "intransit":"郵寄中",
         "remaining_days":"剩余天數",
-        "percentage":"Accomplish percentage",
-        "Pendding":"待定"
+        "percentage":"完成百分比",
+        "life":"与实际年龄相比，表观遗传年龄是我们健康状况和寿命的更好参数。",
+        "newkit":"註冊條碼",
+        "registeredkit":"已註冊條碼",
+        "epiage1":"EpiAge",
+        "Scan":"掃描套件條碼",
+        "Pendding":"待办状态",
+        "buyepi":"每購買產品? 購買 Epiage Kit →",
+        "kitready":"條碼註冊成功，請點擊'註冊條碼'查看進度狀態"
     },
     "user_profile": {
         "title": "Your Profile"

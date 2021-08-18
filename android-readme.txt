@@ -1,7 +1,7 @@
 先执行 deploy-debug.bat 进行调试编译，这样可以看到一些错误的编译信息，当没问题之后，在执行deploy-release.bat
 
 首先：熱部署更新
-react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 
 之后：热部署上传：code-push release-react nxapp  android --d Production --noDuplicateReleaseError
 
@@ -13,6 +13,28 @@ MYAPP_RELEASE_STORE_PASSWORD=believeus
 MYAPP_RELEASE_KEY_PASSWORD=believeus
 org.gradle.configureondemand=true
 
+每次编译上传需要D:\usr\local\workspace\newnxapp\android\app\build.gradle
+ 163行：output.versionCodeOverride =versionCodes.get(abi) * 179499984 + defaultConfig.versionCode
+ 中的179499984数字比之前的大即可
+
+react native 启动时node窗口闪退
+node版本过高。找到项目中的 node_modules\metro-config\src\defaults\blacklist.js
+var sharedBlacklist = [
+  /node_modules[/\\]react[/\\]dist[/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+修改为：
+var sharedBlacklist = [
+  /node_modules[\/\\]react[\/\\]dist[\/\\].*/,
+  /website\/node_modules\/.*/,
+  /heapCapture\/bundle\.js/,
+  /.*\/__tests__\/.*/
+];
+
+
+
 一、Android版本必须安装react-native 0.60.5版本
 
 二、在android版本必须安装react-native 0.60.5版本必须修改如下代码
@@ -23,35 +45,35 @@ react-native link @react-native-community/geolocation
 yarn add react-native-location
 
 1.修改
-D:\usr\local\workspace\nxapp\node_modules\react-native-swiper\src\index.js
+D:\usr\local\workspace\newnxapp\node_modules\react-native-swiper\src\index.js
 delete: ViewpagerAndroid
 add:import ViewPagerAndroid from '@react-native-community/viewpager';
 
 2.修改
-D:\usr\local\workspace\nxapp\node_modules\react-native-viewpager\Viewpager.js
+D:\usr\local\workspace\newnxapp\node_modules\react-native-viewpager\Viewpager.js
 add: import ViewPageAndroid from 'react-native-viewpager'
 add: import PropTypes from 'prop-types';
 
 3.修改
-D:\usr\local\workspace\nxapp\node_modules\react-native-tab-view\src\PagerAndroid.js
+D:\usr\local\workspace\newnxapp\node_modules\react-native-tab-view\src\PagerAndroid.js
 delete: ViewPagerAndroid,
 add:import ViewPagerAndroid from '@react-native-community/viewpager';
 
 4.修改
-D:\usr\local\workspace\nxapp\node_modules\react-native-modal-dropdown\components
+D:\usr\local\workspace\newnxapp\node_modules\react-native-modal-dropdown\components
 ModalDropdown.js
 delete: ListView
 add:import ListView from 'deprecated-react-native-listview'
 add:import PropTypes from 'prop-types';
 (如果已经存在就不用再次引入）
 
-5.注释掉：D:\usr\local\workspace\nxapp\node_modules\graceful-fs\polyfills.js 61~63行
+5.注释掉：D:\usr\local\workspace\newnxapp\node_modules\graceful-fs\polyfills.js 61~63行
 //fs.stat = statFix(fs.stat)
 //fs.fstat = statFix(fs.fstat)
 //fs.lstat = statFix(fs.lstat)
 
 6.修改
-D:\usr\local\workspace\nxapp\node_modules\react-native-drop-down-item
+D:\usr\local\workspace\newnxapp\node_modules\react-native-drop-down-item
 index.js
 147行this.animated.setValue(initialValue);前面加入以下代码 
 
@@ -67,7 +89,7 @@ nxapp\node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\de
 node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\modules\websocket\WebSocketModule.java 91行添加如下代码
 
 .hostnameVerifier(new javax.net.ssl.HostnameVerifier() {
-            @Override
+            
             public boolean verify(String hostname, javax.net.ssl.SSLSession sslSession) {
                 java.util.List<String> verifyHost=java.util.Arrays.asList(new String[]{"www.beijingepidial.com","app.epi-age.com"});
                 if (verifyHost.contains(hostname))

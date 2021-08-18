@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, StatusBar, Dimensions, Text, View, Animated, ScrollView, Alert, TextInput, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, StatusBar, ActivityIndicator, Text, View, Animated, ScrollView, Alert, TextInput, TouchableOpacity, Image } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { px2dp } from '../src/px2dp';
 import SwitchSelector from "react-native-switch-selector";
@@ -10,6 +10,7 @@ import data from '../appdata'
 import Input from "react-native-input-validation"
 import DropDownItem from "react-native-drop-down-item";
 import ProgressBarAnimated from 'react-native-progress-bar-animated';
+import { func } from 'prop-types';
 const customText = {
     style: {
         // fontFamily: 'serif',
@@ -39,6 +40,8 @@ export default class DnaReportActivity extends Component<Props> {
             barcode: '',
             btnBuildPdfdisabled: true,
             display: false,
+            switchtap:0,
+            animating:true
 
             // option: {
             //     legend: {
@@ -119,6 +122,9 @@ export default class DnaReportActivity extends Component<Props> {
     }
     reload = () => {
         let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+        this.setState({ itemBox: [] })
+        this.setState({ ageBox: []})
+        this.setState({animating:true})
         fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
             for (let i in data) {
                 let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 : data[i].curtime - data[i].pendingTime)
@@ -158,25 +164,26 @@ export default class DnaReportActivity extends Component<Props> {
             this.setState({ switchonBox: this.state.switchonBox })
             this.setState({ emailBox: this.state.emailBox })
             this.setState({ statusbar: true })
+            this.setState({animating:false})
         })
     }
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
 
-            // fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
-            //     let v = []
-            //     for (var i in data) {
-            //         let naturally = window.parseFloat(data[i].naturally).toFixed(2)
-            //         let biological = window.parseFloat(data[i].biological).toFixed(2)
-            //         v.push([naturally, biological])
-            //     }
-            //     let option = Object.assign({}, this.state.option);
-            //     option.series[0].data = v;
-            //     this.setState({ option });
-            //     this.echarts.webview.reload();
+            fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
+                let v = []
+                for (var i in data) {
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(2)
+                    let biological = window.parseFloat(data[i].biological).toFixed(2)
+                    v.push([naturally, biological])
+                }
+                let option = Object.assign({}, this.state.option);
+                option.series[0].data = v;
+                this.setState({ option });
+                this.echarts.webview.reload();
 
-            // })
+            })
             fetch(data.url + "/user/report/findNtrGtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
@@ -253,12 +260,14 @@ export default class DnaReportActivity extends Component<Props> {
                 <ScrollView>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(30) }}>
                         <SwitchSelector
-                            initial={0}
+                            initial={this.state.switchtap}
                             onPress={value => {
-                                this.setState({ tabshow: value == 'newkit' ? true : false })
-                                if (!this.state.tabshow) {
-                                    this.reload();
-                                }
+                                this.setState({ tabshow: value == 'newkit' ? true : false },function(){
+                                    if (!this.state.tabshow) {
+                                        this.reload();
+                                    }
+                                })
+                                
                             }}
                             textStyle={{ fontWeight: 'bold', fontFamily: 'fantasy' }}
                             selectedTextStyle={{ fontWeight: 'bold', fontFamily: 'fantasy' }}
@@ -338,39 +347,19 @@ export default class DnaReportActivity extends Component<Props> {
                                                             this.setState({ statusbar: true })
                                                         }
                                                         Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.wait"))
-                                                        this.setState({ tabshow:false })
                                                         
                                                         break
                                                     case "pending":
                                                         this.setState({ statusbar: false })
                                                         Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.pendingwait"))
-                                                        this.setState({ tabshow: false })
+ 
                                                         break;
                                                     case "processing":
                                                         this.setState({ visual: false })
                                                         Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
-                                                        this.setState({ tabshow: false })
                                                         break;
                                                     case "ready":
-                                                        this.setState({ statusbar: true })
-                                                        this.setState({ btnBuildPdfdisabled: false })
-                                                        let option = Object.assign({}, this.state.option);
-                                                        let biological = window.parseFloat(data.biological).toFixed(2);
-                                                        let naturally = window.parseFloat(data.naturally).toFixed(2)
-                                                        this.setState({ biological })
-                                                        this.setState({ naturally })
-                                                        let i = biological > naturally ? 0 : 1;
-                                                        this.echarts.webview.reload();
-                                                        option.series[i].markPoint.data[0].value = biological
-                                                        option.series[i].markPoint.data[0].xAxis = naturally
-                                                        option.series[i].markPoint.data[0].yAxis = biological
-                                                        this.setState({ option })
-                                                        this.setState({ visual: true })
-                                                        {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
-                                                        {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
-                                                        {/* 从而重新刷新webview数据 */ }
-                                                        this.echarts.webview.reload();
-                                                        this.setState({ tabshow: false })
+                                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.kitready"));
                                                         break;
                                                 }
                                                 this.setState({ display: false })
@@ -387,6 +376,7 @@ export default class DnaReportActivity extends Component<Props> {
                             :
                             // Second page start
                             <View style={{ width: '100%', marginTop: px2dp(30), }}>
+                                {this.state.animating?<ActivityIndicator animating={this.state.animating} style = {{flex: 1,justifyContent: 'center',alignItems: 'center',size:"large"}}/>:null}
                                 {this.state.itemBox ?
                                     this.state.itemBox.map((barcode, i) => {
                                         let j = i

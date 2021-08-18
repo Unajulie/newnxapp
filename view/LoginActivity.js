@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Text, View, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { Text, View, TouchableOpacity, ScrollView, Alert ,ActivityIndicator} from 'react-native';
 import Toast from 'react-native-root-toast';
 import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';
@@ -74,6 +74,7 @@ export default class LoginActivity extends Component<Props> {
         this.password.blur();
     }
     onSubmit() {
+        this.setState({ animating: true })
         let errors = {};
         let success = true;
         let url = data.url + "user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password);
@@ -95,7 +96,7 @@ export default class LoginActivity extends Component<Props> {
                             else {
                                 if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                                 if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-                                this.setState({ animating: true })
+                                
                                 this.setState({ disabled: true })
                                 Session.save("sessionuser", sessionuser)
                                 let path = RNFS.DocumentDirectoryPath + '/' + md5.hex_md5(sessionuser.mail) + '.txt'
@@ -170,7 +171,9 @@ render() {
         <View style={{ flex: 1 }}>
             <ScrollView>
                 <View style={{ width: '90%', alignSelf: 'center' }}>
-                    <View style={{ marginBottom: px2dp(10), marginTop: px2dp(150) }}>
+                    <View style={{ height: px2dp(60),width:"100%"}}></View>
+                    {this.state.animating ? <ActivityIndicator size="large" color="#404cb2" /> : null}
+                    <View style={{ marginBottom: px2dp(10), marginTop: px2dp(120) }}>
                         <OutlinedTextField
                             ref={this.emailRef}
                             value={this.state.email}
@@ -201,7 +204,6 @@ render() {
                             returnKeyType='done'
                             label='Password'
                             error={errors.password}
-                            maxLength={30}
                             characterRestriction={20}
                             renderRightAccessory={this.renderPasswordAccessory}
                         />
