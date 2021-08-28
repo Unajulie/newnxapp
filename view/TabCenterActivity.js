@@ -55,14 +55,14 @@ export default class CenterActivity extends Component {
                             <View style={{ height: px2dp(80), width: '100%', marginTop: px2dp(20), }}>
 
                                 {this.state.user == null ?
-                                    <View style={{ height: px2dp(80), width: '80%', alignSelf: "center",marginTop:px2dp(50), flexDirection: 'row' }}>
-                                        <TouchableOpacity style={{width:'40%'}} onPress={() => this.navigate.push("Login")}>
+                                    <View style={{ height: px2dp(80), width: '80%', alignSelf: "center", marginTop: px2dp(50), flexDirection: 'row' }}>
+                                        <TouchableOpacity style={{ width: '40%' }} onPress={() => this.navigate.push("Login")}>
                                             <Text style={{ width: '100%', height: px2dp(40), fontSize: px2dp(18), color: "#000", textAlign: 'right', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.centerlogin')}
                                             </Text>
                                         </TouchableOpacity>
-                                        <Text style={{width:'20%',textAlign:'center',fontSize:px2dp(20),fontWeight:'bold'}}>|</Text>
-                                        <TouchableOpacity style={{width:'40%'}} onPress={() => this.navigate.push("Register")}>
-                                            <Text style={{ width: '100%', height: px2dp(40), fontSize: px2dp(18), color: "#000",textAlign:'left', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.centerregis')}</Text>
+                                        <Text style={{ width: '20%', textAlign: 'center', fontSize: px2dp(20), fontWeight: 'bold' }}>|</Text>
+                                        <TouchableOpacity style={{ width: '40%' }} onPress={() => this.navigate.push("Register")}>
+                                            <Text style={{ width: '100%', height: px2dp(40), fontSize: px2dp(18), color: "#000", textAlign: 'left', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.centerregis')}</Text>
                                         </TouchableOpacity>
                                     </View>
 
@@ -92,11 +92,11 @@ export default class CenterActivity extends Component {
                                         <View style={{ width: '25%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/home1.png')} resizeMode='contain' />
                                         </View>
-                                        <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <View style={{ width: '65%', justifyContent: 'center', overflow: 'hidden' }}>
                                             <Text
-                                                style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                                style={{ overflow: 'hidden', height: px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                                 {I18n.t('TabHomeActivity.myreport')}</Text>
-                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.kit')}</Text>
+                                            <Text style={{ overflow: 'hidden', height: px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.kit')}</Text>
 
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -110,7 +110,7 @@ export default class CenterActivity extends Component {
                                         <View style={{ width: '25%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home2.png')} resizeMode='contain' />
                                         </View>
-                                        <View style={{ width: '65%', justifyContent: 'center' }}>
+                                        <View style={{ width: '65%', height: px2dp(90), justifyContent: 'center', overflow: 'hidden' }}>
                                             <Text
                                                 onPress={() => {
                                                     this.state.user == null ?
@@ -121,8 +121,8 @@ export default class CenterActivity extends Component {
                                                             :
                                                             this.navigate.push("RasEncryptionActivity")
                                                 }}
-                                                style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}  </Text>
-                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200',  fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.fill')} </Text>
+                                                style={{ overflow: 'hidden', height: px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
+                                            <Text style={{ overflow: 'hidden', height: px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.fill')} </Text>
 
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -137,15 +137,31 @@ export default class CenterActivity extends Component {
                                             <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home3.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', justifyContent: 'center' }}>
-                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}{"\n"}
-                                                <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200',  fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
-                                            </Text>
+                                            <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}</Text>
+                                            <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
+
                                         </View>
                                         <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
                                             <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                         </View>
                                     </View>
                                 </TouchableOpacity>
+
+                                {/* <TouchableOpacity onPress={() => this.navigate.push("Testprocess")}>
+                                    <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid' }}>
+                                        <View style={{ width: '25%', justifyContent: 'center',height: px2dp(90), }}>
+                                            <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home3.png')} resizeMode='contain' />
+                                        </View>
+                                        <View style={{ width: '65%',height: px2dp(90), justifyContent: 'center',overflow:'hidden' }}>
+                                            <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}
+                                                <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200',  fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
+                                            </Text>
+                                        </View>
+                                        <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
+                                            <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
+                                        </View>
+                                    </View>
+                                </TouchableOpacity> */}
 
                             </View>
                         </View>
@@ -175,9 +191,9 @@ export default class CenterActivity extends Component {
 
                                     </TouchableOpacity>
                                 </View> */}
-                            <View style={{ width: '90%',height:px2dp(50),alignSelf:'center', borderRadius: px2dp(5) }}>
+                            <View style={{ width: '90%', height: px2dp(50), alignSelf: 'center', borderRadius: px2dp(5) }}>
                                 <TouchableOpacity >
-                                    <Button style={{width:'100%',height:px2dp(50), backgroundColor: "#404bc2" }}
+                                    <Button style={{ width: '100%', height: px2dp(50), backgroundColor: "#404bc2" }}
                                         onPress={() => this.navigate.push("Questionnaire")}
                                         title={I18n.t('QuesnoteActivity.ques')}
                                         fontFamily='fantasy'
@@ -187,7 +203,7 @@ export default class CenterActivity extends Component {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                        
+
                     </ScrollView>
                 </SwipeablePanel>
             </View>

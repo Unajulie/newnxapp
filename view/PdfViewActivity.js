@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, Container } from 'react-native';
+import { StyleSheet,View, } from 'react-native';
 import { WebView } from 'react-native-webview';
 import Session from '../storage/Session'
 
-type Props = {};
 export default class PdfViewActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({

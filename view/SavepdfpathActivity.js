@@ -24,7 +24,7 @@ export default class SavepdfpathActivity extends Component<Props> {
                 let uuid = savepathbox[i].split(":")[1]
                 let locale = savepathbox[i].split(":")[2]
                 let view =
-                    <View key={i} style={{ borderBottomColor: "#e0e0e0", borderBottomWidth: 1, height: px2dp(60),}}>
+                    <View key={i} style={{ borderBottomColor: "#e0e0e0", borderBottomWidth: 1, height: px2dp(80),}}>
                         <View style={{ width: "100%", flexDirection: "row", height: "100%", height: px2dp(40),margin:px2dp(10) }}>
                             <View style={{ width: "70%", flexDirection: "row", height: "100%", height: px2dp(50) }} key={i} >
                                 <View style={{ width: "100%", flexDirection: "row", height: "100%", height: px2dp(50) }}>
@@ -36,11 +36,12 @@ export default class SavepdfpathActivity extends Component<Props> {
                                     </View>
                                 </View>
                             </View>
-                            <View style={{ width: "25%", height: px2dp(30), marginBottom: px2dp(10),marginRight:px2dp(10) }}>
+                            <View style={{ width: "25%", height: px2dp(50), marginBottom: px2dp(10),fontSize:px2dp(14), marginRight:px2dp(10) }}>
                                 <Button
                                     title={I18n.t("SavepdfpathActivity.btncp")}
                                     color="#404cb2"
                                     fontFamily='fantasy'
+                                    style={{fontSize:px2dp(10)}}
                                     onPress={() => {
                                         let url = data.url + "user/report/" + barcode + "/" + I18n.locale + "/pdf.jhtml"
                                         Clipboard.setString(url);

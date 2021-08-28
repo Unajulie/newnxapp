@@ -27,10 +27,10 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about1.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.company1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.Guide')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.Guide')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -44,10 +44,10 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about2.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.science1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.We')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.We')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -61,10 +61,10 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about3.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.dna1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.DNA')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.DNA')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -78,10 +78,10 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about4.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.biological1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.counts')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.counts')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -109,10 +109,10 @@ export default class TabAboutActivity extends Component<Props> {
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about5.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
                                         {I18n.t('TabAboutActivity.consent1')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.THERAPEUTICS')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.THERAPEUTICS')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>

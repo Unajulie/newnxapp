@@ -279,7 +279,7 @@ export default class ReportActivity extends Component<Props> {
                             </View>
                         </View>
                         <View style={{ width: '90%', height: px2dp(60), flexDirection: 'row', alignSelf: 'center', marginTop: px2dp(20), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
-                            <Text style={{ width: '68%', marginTop: px2dp(18), marginLeft: px2dp(10), fontSize: px2dp(16), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.accuracy')} -<Text style={{ color: '#000000', fontWeight: 'bold', fontFamily: 'fantasy', }}>&nbsp; { this.state.accuracy}%</Text></Text>
+                            <Text style={{ width: '68%', marginTop: px2dp(18), marginLeft: px2dp(10), fontSize: px2dp(14), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.accuracy')} -<Text style={{ color: '#000000', fontWeight: 'bold', fontFamily: 'fantasy', }}>&nbsp; { this.state.accuracy}%</Text></Text>
                             <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })} style={{ width: '25%', height: px2dp(35), }}>
                                 <View style={{ width: '100%', height: px2dp(35), marginTop: px2dp(12), backgroundColor: '#e7e8ec', fontSize: px2dp(12), borderRadius: px2dp(5), flexDirection: 'row' }}>
                                     <Text style={{ fontWeight: 'bold', color: '#000000', marginLeft: px2dp(10), lineHeight: px2dp(35), fontFamily: 'fantasy', }}>INFO</Text>
@@ -288,7 +288,7 @@ export default class ReportActivity extends Component<Props> {
                             </TouchableOpacity>
                         </View>
                         <View style={{ width: '90%', height: px2dp(60), flexDirection: 'row', alignSelf: 'center', marginTop: px2dp(20), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
-                            <Text style={{ width: '68%', marginTop: px2dp(18), fontFamily: 'fantasy', marginLeft: px2dp(10), fontSize: px2dp(16), }}>{I18n.t('DnaReportActivity.acceleration')}</Text>
+                            <Text style={{ width: '68%', marginTop: px2dp(18), fontFamily: 'fantasy', marginLeft: px2dp(10), fontSize: px2dp(14), }}>{I18n.t('DnaReportActivity.acceleration')}</Text>
                             <TouchableOpacity onPress={() => this.navigate.push("AgeAccelerate",{biological:this.state.biological,naturally:this.state.naturally})} style={{ width: '25%', height: px2dp(35), }}>
                                 <View style={{ width: '100%', height: px2dp(35), marginTop: px2dp(12), backgroundColor: '#e7e8ec', fontSize: px2dp(12), borderRadius: px2dp(5), flexDirection: 'row' }}>
                                     <Text style={{ fontWeight: 'bold', color: '#000000', marginLeft: px2dp(10), lineHeight: px2dp(35), fontFamily: 'fantasy', }}>GO</Text>
