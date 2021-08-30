@@ -115,7 +115,7 @@ export default class RegisterActivity extends Component<Props> {
         ['region', 'username', 'email', 'password', 'confirmpw']
             .forEach((name) => {
                 let value = this[name].value();
-                console.info(value)
+                console.info(value+"ppppppppppppppp")
                 // console.info("test email"+value.split(" ").join(""))
                 if ('region' === name && !value) {
                     errors[name] = 'Should not be empty';
@@ -129,12 +129,8 @@ export default class RegisterActivity extends Component<Props> {
                 } else if ('password' === name && !value) {
                     errors[name] = 'Should not be empty';
                     success = false
-                    if ('password' === name && value.length < 6) {
-                        errors[name] = 'Too short'
-                        success = false
-                    }
 
-                } else if ('confirmpw' === name && value !== this['password'].value()) {
+                } else if ('confirmpw' === name && value && value !== this['password'].value()) {
                     errors[name] = 'Different from the previous one'
                     success = false
                 }
@@ -225,11 +221,9 @@ export default class RegisterActivity extends Component<Props> {
                                     ref={this.RegionRef}
                                     value={this.state.region}
                                     autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocusRegion}
                                     onChangeText={this.onChangeText}
                                     onSubmitEditing={this.onSubmitRegion}
-                                    returnKeyType='next'
                                     label='Region'
                                     error={errors.region}
                                 />
@@ -239,11 +233,9 @@ export default class RegisterActivity extends Component<Props> {
                                     ref={this.usernameRef}
                                     value={this.state.username}
                                     autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocus}
                                     onChangeText={this.onChangeText}
                                     onSubmitEditing={this.onSubmitUserName}
-                                    returnKeyType='next'
                                     label='User Name'
                                     error={errors.username}
                                 />
@@ -255,11 +247,9 @@ export default class RegisterActivity extends Component<Props> {
                                     keyboardType='email-address'
                                     autoCapitalize='none'
                                     autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
                                     onFocus={this.onFocus}
                                     onChangeText={this.onChangeText}
                                     onSubmitEditing={this.onSubmitEmail}
-                                    returnKeyType='next'
                                     label='Email Address'
                                     error={errors.email}
                                 />
@@ -271,7 +261,6 @@ export default class RegisterActivity extends Component<Props> {
                                     value={this.state.password}
                                     autoCapitalize='none'
                                     autoCorrect={false}
-                                    enablesReturnKeyAutomatically={true}
                                     clearTextOnFocus={false}
                                     onFocus={this.onFocus}
                                     onChangeText={this.onChangeText}
@@ -279,7 +268,6 @@ export default class RegisterActivity extends Component<Props> {
                                     returnKeyType='done'
                                     label='Password'
                                     error={errors.password}
-                                    maxLength={30}
                                     characterRestriction={20}
                                     renderRightAccessory={this.renderPasswordAccessory}
                                 />
@@ -290,7 +278,6 @@ export default class RegisterActivity extends Component<Props> {
                                 value={this.state.confirmpw}
                                 autoCapitalize='none'
                                 autoCorrect={false}
-                                enablesReturnKeyAutomatically={true}
                                 clearTextOnFocus={true}
                                 onFocus={this.onFocus}
                                 onChangeText={this.onChangeText}
@@ -298,7 +285,6 @@ export default class RegisterActivity extends Component<Props> {
                                 returnKeyType='done'
                                 label='Confirm Password'
                                 error={errors.confirmpw}
-                                maxLength={30}
                                 characterRestriction={20}
                                 renderRightAccessory={this.renderConfirmpwAccessory}
                             />
