@@ -37,7 +37,7 @@ export default class LoginActivity extends Component<Props> {
         this.emailRef = this.updateRef.bind(this, 'email');
         this.passwordRef = this.updateRef.bind(this, 'password');
 
-        this.state = { animating: false, disabled: true, secureTextEntry: true, };
+        this.state = { animating: false, disabled: true, secureTextEntry: true,signin:true };
     }
     onFocus() {
         let { errors = {} } = this.state;
@@ -54,13 +54,18 @@ export default class LoginActivity extends Component<Props> {
     }
 
     onChangeText(text) {
+     
         ['email', 'password']
-            .map((name) => ({ name, ref: this[name] }))
-            .forEach(({ name, ref }) => {
-                if (ref.isFocused()) {
-                    this.setState({ [name]: text });
-                }
-            });
+        .map((name) => ({ name, ref: this[name] }))
+        .forEach(({ name, ref }) => {
+            if (ref.isFocused()) {
+                this.setState({ [name]: text });
+            }
+        });
+        if(this.state.email&&this.state.password){
+            this.setState({signin:false})
+        }
+        console.info(text)
     }
 
     onAccessoryPress() {
@@ -74,7 +79,7 @@ export default class LoginActivity extends Component<Props> {
         this.password.blur();
     }
     onSubmit() {
-        this.setState({ animating: true })
+        this.setState({ animating: true,signin:true })
         let errors = {};
         let success = true;
         let url = data.url + "user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password);
@@ -83,19 +88,21 @@ export default class LoginActivity extends Component<Props> {
                 let value = this[name].value();
                 if ('email' === name && !(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(value))) {
                     errors[name] = 'Email invlid';
+                    this.setState({signin:false});
                     success = false
                 } else if ('password' === name && !value) {
                     errors[name] = 'Should not be empty';
+                    this.setState({signin:false});
                     success = false
                 }
             });
                 if (success = true) {
                     fetch(url, { method: 'GET' }).then(res => res.json())
                         .then(sessionuser => {
-                            if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                            if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER });this.setState({ signin: false,animating:false }); return; }
                             else {
-                                if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-                                if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                                if (sessionuser.password != md5.hex_md5(this.state.password)) {Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER });this.setState({ signin: false ,animating:false}); return; }
+                                if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER });this.setState({ signin: false,animating:false }); return; }
                                 
                                 this.setState({ disabled: true })
                                 Session.save("sessionuser", sessionuser)
@@ -210,6 +217,7 @@ render() {
                     </View>
                     <View style={{ marginTop: px2dp(20) }}>
                         <RaisedTextButton
+                        disabled={this.state.signin}
                             onPress={this.onSubmit}
                             title='Sign In'
                             color={'#404bc2'}
@@ -227,7 +235,7 @@ render() {
                 </View>
                 <View style={{flex:1,marginTop:px2dp(120), height: px2dp(60),flexDirection:'row', alignItems: 'center', justifyContent: 'center' }} >
                         <Text style={{fontWeight:'bold' ,fontSize: px2dp(14),fontFamily: 'fantasy',  }}>{I18n.t('LoginActivity.noaccount')}</Text>
-                        <TouchableOpacity onPress={() => this.navigate.push("Register")}>
+                        <TouchableOpacity  onPress={() => this.navigate.push("Register")}>
                             <Text style={{paddingLeft:px2dp(5), color: '#404bc2',textDecorationLine:'underline',fontWeight:'bold',fontFamily: 'fantasy',  }}>{I18n.t('LoginActivity.register')}</Text>
                         </TouchableOpacity>
                     </View>

@@ -33,11 +33,11 @@ export default class MallActivity extends Component<Props> {
     }
     componentDidMount() {
         //获取经纬度
-        Geolocation.getCurrentPosition(data =>{ 
-            this.setState({latitude:data.latitude})
-            this.setState({longitude:data.longitude})
-            console.log(data)
-        });
+        // Geolocation.getCurrentPosition(data =>{ 
+        //     this.setState({latitude:data.latitude})
+        //     this.setState({longitude:data.longitude})
+        //     console.log(data)
+        // });
     }
     render() {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
@@ -51,7 +51,7 @@ export default class MallActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                {I18n.locale == 'ru'
+                {/* {I18n.locale == 'ru'
                     ?
                     <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.kz/product/epiage/" }} />
                     :
@@ -64,8 +64,8 @@ export default class MallActivity extends Component<Props> {
                           <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.kz/product/epiage/" }} />
                            :
                          <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epi-age.com/shop/" }} />
-                }
-                       
+                } */}
+                        <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epi-age.com/shop/" }} />
             </View>
             // <ScrollView>
             //     <View>

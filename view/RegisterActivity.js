@@ -47,7 +47,8 @@ export default class RegisterActivity extends Component<Props> {
             region: "",
             secureTextEntry: true,
             resecureTextEntry: true,
-            swipeablePanelActive: false
+            swipeablePanelActive: false,
+            //signup:true 
         };
     }
 
@@ -77,13 +78,19 @@ export default class RegisterActivity extends Component<Props> {
     }
 
     onChangeText(text) {
+        // console.info(text);
         ['region', 'username', 'email', 'password', 'confirmpw']
             .map((name) => ({ name, ref: this[name] }))
             .forEach(({ name, ref }) => {
                 if (ref.isFocused()) {
-                    this.setState({ [name]: text.split(" ").join("") });
+                    this.setState({ [name]: text.trim() });
+                    // console.info(this.state[name])
+                   
                 }
             });
+            // if(this.state.region&&this.state.username&&this.state.email&&this.state.password&&this.state.confirmpw){
+            //     this.setState({ signup: false })
+            // }
     }
 
     onAccessoryPress() {
@@ -108,32 +115,41 @@ export default class RegisterActivity extends Component<Props> {
         this.confirmpw.blur();
     }
 
-
+   // adb tcpip 5555
+   // adb connect ip
     onSubmit() {
         let errors = {};
         let success = true;
-        ['region', 'username', 'email', 'password', 'confirmpw']
-            .forEach((name) => {
+        this.setState({ animating: true});
+        // this.setState({signup:true}); //此处一定要有一个分号，如果没有分号编译器编译会导致运行异常
+        ['region','username','email','password','confirmpw'].forEach((name) => {
                 let value = this[name].value();
-                console.info(value+"ppppppppppppppp")
-                // console.info("test email"+value.split(" ").join(""))
                 if ('region' === name && !value) {
                     errors[name] = 'Should not be empty';
+                    // this.setState({signup:false});
                     success = false
 
-                } else if ('username' === name && !value) {
+                } else if ('username' === name && !value) {                 
                     errors[name] = 'Should not be empty';
+                    success = false
+                    // this.setState({signup:false});
                 } else if ('email' === name && !(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(value))) {
                     errors[name] = 'Email invlid';
+                    // this.setState({signup:false});
                     success = false
                 } else if ('password' === name && !value) {
                     errors[name] = 'Should not be empty';
+                    // this.setState({signup:false});
                     success = false
 
-                } else if ('confirmpw' === name && value && value !== this['password'].value()) {
+                }else if('confirmpw' === name){
+                    if(!value){
+                        errors[name] = 'Should not be empty'
+                    }else if (value !== this['password'].value()) {
                     errors[name] = 'Different from the previous one'
                     success = false
                 }
+            }
             });
 
 
@@ -148,14 +164,17 @@ export default class RegisterActivity extends Component<Props> {
             }).then(res => res.text()).then((data) => {
                 if (data == "error") {
                     Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.registered'))
+                    // this.setState({signup:false});
                     return
                 }
                 if (data == "success") {
                     Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.activation'))
+                    // this.setState({signup:false});
                     return
                 }
                 if (data = "network-error") {
                     Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.again'))
+                    // this.setState({signup:false});
                     return
                 }
             })
@@ -291,6 +310,7 @@ export default class RegisterActivity extends Component<Props> {
                             <View style={{ marginTop: px2dp(20) }}>
                                 <RaisedTextButton
                                     onPress={this.onSubmit}
+                                    // disabled={this.state.signup}
                                     title='Sign Up'
                                     color={'#404bc2'}
                                     titleColor='white'
