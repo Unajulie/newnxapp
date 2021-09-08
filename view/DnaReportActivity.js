@@ -129,12 +129,23 @@ export default class DnaReportActivity extends Component<Props> {
             for (let i in data) {
                 let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 : data[i].curtime - data[i].pendingTime)
                 let time = {}
-                if (data[i].status == "in-transit") time.leftseconds = _31day
-                //pendding状态下当前时间离到期时间还剩多少毫秒到期
-                else if (data[i].status == "pending") time.leftseconds = (data[i].detectTime + _31day) - data[i].pendingTime
+                //POST_FROM_LAB是从实验室发出样本到客户再邮寄回样本的这段时间统称为in-transit/POST_FROM_LAB
+               if(data[i].labevent){
+                if (data[i].labevent == "POST_FROM_LAB") time.leftseconds = _31day
+                //pending状态下实验室接收到样本的时间状态下当前时间离到期时间还剩多少毫秒到期
+                else if (data[i].labevent=="PARCEL_RECEIVED") time.leftseconds = (data[i].detectTime + _31day) - data[i].pendingTime
                 //processing状态下当前时间离到期时间还剩多少毫秒到期
-                else if (data[i].status == "processing") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
-                else if (data[i].status == "ready") { time.leftseconds = 0 }
+                else if (data[i].labevent == "REGISTERED_IN_LIMS") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
+                else if (data[i].labevent == "WAITING_DNA_PREP") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
+                else if (data[i].labevent == "SEQUENCING") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
+                else if (data[i].labevent == "COMPLETED") { time.leftseconds = 0 }
+            }else{
+                if (data[i].status== "in-transit") {time.leftseconds = _31day }
+                else if(data[i].status== "pending"){time.leftseconds = _31day}
+                else if(data[i].status== "processing"){ time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime}
+                else if(data[i].status== "ready"){time.leftseconds = 0 }
+                
+            }
                 let process = parseInt(((_31day - time.leftseconds) / _31day) * 100)
                 let vbarcode = {}
                 vbarcode.val = data[i].barcode
@@ -144,13 +155,24 @@ export default class DnaReportActivity extends Component<Props> {
                 vbarcode.naturally = data[i].naturally
                 vbarcode.biological = data[i].biological
                 vbarcode.accuracy= data[i].accuracy
+                vbarcode.uploadTime = new Date(data[i].uploadTime).toLocaleDateString()
                 vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
-                vbarcode.detectTime = (data[i].status == "in-transit") ? I18n.t("DnaReportActivity.intransit") : new Date(data[i].detectTime).toLocaleDateString()
-                if (data[i].status == "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
-                else if (data[i].status == "pending") { vbarcode.endtime = I18n.t("DnaReportActivity.Pendding") }
-                else if (data[i].status == "processing") { vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString() }
-                else if (data[i].status == "ready") { vbarcode.endtime = I18n.t("DnaReportActivity.done") }
 
+                vbarcode.detectTime = (data[i].status == "POST_FROM_LAB") ? I18n.t("DnaReportActivity.intransit") :data[i].detectTime==0? I18n.t("DnaReportActivity.intransit"): new Date(data[i].detectTime).toLocaleDateString()
+                if(data[i].labevent){
+                    if (data[i].labevent == "POST_FROM_LAB") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
+                    else if (data[i].labevent == "PARCEL_RECEIVED") { vbarcode.endtime = I18n.t("DnaReportActivity.parcelreceived") }
+                    else if (data[i].labevent == "REGISTERED_IN_LIMS") {vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString() }
+                    else if (data[i].labevent == "WAITING_DNA_PREP") { vbarcode.endtime = I18n.t("DnaReportActivity.waitdnaprep") }
+                    else if (data[i].labevent == "SEQUENCING") { vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString()  }
+                    else if (data[i].labevent == "COMPLETED") { vbarcode.endtime = I18n.t("DnaReportActivity.completed") }
+                }else{
+                    if (data[i].status== "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
+                    else if(data[i].status== "pending"){vbarcode.endtime = I18n.t("DnaReportActivity.parcelreceived")}
+                    else if(data[i].status== "processing"){ vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString() }
+                    else if(data[i].status== "ready"){ vbarcode.endtime = I18n.t("DnaReportActivity.completed")}
+                    
+                }
                 vbarcode.email = data[i].email
                 vbarcode.processing = process
                 vbarcode.switchon = data[i].allow == 1 ? true : false
@@ -436,11 +458,11 @@ export default class DnaReportActivity extends Component<Props> {
                                                         <View key={barcode.val} style={{ width: px2dp(290), height: px2dp(560), borderTopWidth: px2dp(1), borderTopColor: 'grey', overflow: 'hidden' }}>
                                                             <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
                                                                 <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.regtime')}</Text>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', textAlign: 'justify', fontFamily: 'fantasy', }}>{barcode.createTime}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', textAlign: 'justify', fontFamily: 'fantasy', }}>{barcode.uploadTime}</Text>
                                                             </View>
                                                             <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
                                                                 <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#7f8081', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.detectTime')}</Text>
-                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', fontFamily: 'fantasy', }}>{barcode.detectTime}</Text>
+                                                                <Text style={{ height: px2dp(50), lineHeight: px2dp(50), fontSize: px2dp(14), color: '#000000', fontFamily: 'fantasy', }}> {barcode.detectTime}</Text>
                                                             </View>
                                                             {barcode.stat == "ready" ?
                                                                 <View style={{ height: px2dp(50), width: '100%', justifyContent: 'space-between', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#cdcdcd', borderStyle: 'dotted', }}>
