@@ -138,7 +138,7 @@ export default class DnaReportActivity extends Component<Props> {
                 else if (data[i].labevent == "REGISTERED_IN_LIMS") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
                 else if (data[i].labevent == "WAITING_DNA_PREP") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
                 else if (data[i].labevent == "SEQUENCING") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
-                else if (data[i].labevent == "COMPLETED") { time.leftseconds = 0 }
+                else if (data[i].labevent == "Completed") { time.leftseconds = 0 }
             }else{
                 if (data[i].status== "in-transit") {time.leftseconds = _31day }
                 else if(data[i].status== "pending"){time.leftseconds = _31day}
@@ -158,14 +158,19 @@ export default class DnaReportActivity extends Component<Props> {
                 vbarcode.uploadTime = new Date(data[i].uploadTime).toLocaleDateString()
                 vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
 
-                vbarcode.detectTime = (data[i].status == "POST_FROM_LAB") ? I18n.t("DnaReportActivity.intransit") :data[i].detectTime==0? I18n.t("DnaReportActivity.intransit"): new Date(data[i].detectTime).toLocaleDateString()
+                 //data sync from HK lims
+                 if(data[i].status == "POST_FROM_LAB")  vbarcode.detectTime=I18n.t("DnaReportActivity.intransit");
+                 //data sync from levan
+                 else if(data[i].detectTime==0) vbarcode.detectTime=I18n.t("DnaReportActivity.intransit");
+                 else vbarcode.detectTime=new Date(data[i].detectTime).toLocaleDateString();
+                // vbarcode.detectTime = (data[i].status == "POST_FROM_LAB") ? I18n.t("DnaReportActivity.intransit") :data[i].detectTime==0? I18n.t("DnaReportActivity.intransit"): new Date(data[i].detectTime).toLocaleDateString()
                 if(data[i].labevent){
                     if (data[i].labevent == "POST_FROM_LAB") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
                     else if (data[i].labevent == "PARCEL_RECEIVED") { vbarcode.endtime = I18n.t("DnaReportActivity.parcelreceived") }
                     else if (data[i].labevent == "REGISTERED_IN_LIMS") {vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString() }
                     else if (data[i].labevent == "WAITING_DNA_PREP") { vbarcode.endtime = I18n.t("DnaReportActivity.waitdnaprep") }
                     else if (data[i].labevent == "SEQUENCING") { vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString()  }
-                    else if (data[i].labevent == "COMPLETED") { vbarcode.endtime = I18n.t("DnaReportActivity.completed") }
+                    else if (data[i].labevent == "Completed") { vbarcode.endtime = I18n.t("DnaReportActivity.completed") }
                 }else{
                     if (data[i].status== "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
                     else if(data[i].status== "pending"){vbarcode.endtime = I18n.t("DnaReportActivity.parcelreceived")}

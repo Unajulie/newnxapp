@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Modal, StatusBar, Text, View, Image, ScrollView, Platform, Dimensions, TouchableOpacity, Button } from 'react-native';
+import { StyleSheet, Modal, StatusBar, Text, View, Image,Alert, ScrollView, Platform, Dimensions, TouchableOpacity, Button } from 'react-native';
 import Swiper from 'react-native-swiper'
 import VideoPlayer from 'react-native-video-controls'
 import { I18n } from '../locales/i18n'
@@ -116,13 +116,15 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                         {/* 问卷调查 */}
-                        <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}>
+                        {/* <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}> */}
+                        <TouchableOpacity onPress={()=>Alert.alert('Notification','The questionnaires are under maintenance, will make accessible again when it has been finished!')}>
+                       
                             <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid' }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home2.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text
+                                    {/* <Text
                                         onPress={() => {
                                             this.state.user == null ?
                                                 this.navigate.push("Login")
@@ -132,7 +134,8 @@ export default class TabHomeActivity extends Component<Props> {
                                                     :
                                                     this.navigate.push("RasEncryptionActivity")
                                         }}
-                                        style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}  </Text>
+                                        style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}  </Text> */}
+                                    <Text  style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
                                     <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.fill')}</Text>
 
                                 </View>
@@ -402,6 +405,10 @@ export default class TabHomeActivity extends Component<Props> {
                                 <Text style={{ width: '100%', height: '100%', alignContent: 'center', lineHeight: px2dp(40), color: '#fff', fontFamily: 'fantasy', textAlign: 'center', }}
                                     onPress={() => this.navigate.push("Questionnaire")}>{I18n.t('QuesnoteActivity.ques')}</Text>
                             </View>
+                            {/* <View style={{ width: '100%', height: px2dp(40), borderRadius: px2dp(5), alignSelf: 'center', backgroundColor: '#404bc2', }}>
+                                <Text style={{ width: '100%', height: '100%', alignContent: 'center', lineHeight: px2dp(40), color: '#fff', fontFamily: 'fantasy', textAlign: 'center', }}
+                                    onPress={ Alert.alert("Notification","Notification")}>{I18n.t('QuesnoteActivity.ques')}</Text>
+                            </View> */}
                         </TouchableOpacity>
                     </View>
                 </SwipeablePanel>

@@ -70,13 +70,13 @@ export default class QuestionnaireActivity extends Component<Props> {
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80) }}>
                                     <View style={{ width: '94%', height: px2dp(80) }}>
                                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#b6b7b8', borderStyle: 'dotted' }}>
-                                            <Image style={{ height: px2dp(30), width: '16%', }} resizeMode='contain' source={require("../image/icons/life-64.png")}></Image>
-                                            <Text style={{ height: px2dp(40), width: '83%', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(30), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.lifestyle')}</Text>
+                                            <Image style={{ height: px2dp(30), width: '16%',marginTop:px2dp(20) }} resizeMode='contain' source={require("../image/icons/life-64.png")}></Image>
+                                            <Text style={{ height: px2dp(80), width: '83%', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(80), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.lifestyle')}</Text>
                                         </View>
-                                        <View style={{ width: '90%', alignSelf: 'center' }}>
+                                        {/* <View style={{ width: '90%', alignSelf: 'center' }}>
                                             <Text style={{ height: px2dp(24), width: '100%', fontFamily: 'fantasy', fontSize: px2dp(14), lineHeight: px2dp(22), }}><Text style={{ color: '#000', fontWeight: 'bold' }}>{this.state.lifestyleRate}0%</Text> of 100% lifestyle information</Text>
                                             <ProgressBarAndroid color="#7f8081" styleAttr="Horizontal" progress={this.state.lfprogRate} indeterminate={false} style={{ marginTop: px2dp(1), borderRadius: px2dp(50) }} />
-                                        </View>
+                                        </View> */}
                                     </View>
                                     <View style={{ width: '8%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80), justifyContent: 'center' }}>
                                         <Image style={{ height: px2dp(80), width: '100%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
@@ -98,13 +98,13 @@ export default class QuestionnaireActivity extends Component<Props> {
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80) }}>
                                     <View style={{ width: '92%', height: px2dp(80) }}>
                                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#b6b7b8', borderStyle: 'dotted' }}>
-                                            <Image style={{ height: px2dp(30), width: '16%', }} resizeMode='contain' source={require("../image/icons/life-65.png")}></Image>
-                                            <Text style={{ height: px2dp(40), width: '83%', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(30), color: '#000', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.mood')}</Text>
+                                            <Image style={{ height: px2dp(30), width: '16%',marginTop:px2dp(20) }} resizeMode='contain' source={require("../image/icons/life-65.png")}></Image>
+                                            <Text style={{ height: px2dp(80), width: '83%', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(80), color: '#000', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.mood')}</Text>
                                         </View>
-                                        <View style={{ width: '90%', alignSelf: 'center' }}>
+                                        {/* <View style={{ width: '90%', alignSelf: 'center' }}>
                                             <Text style={{ height: px2dp(24), width: '100%', fontFamily: 'fantasy', fontSize: px2dp(14), lineHeight: px2dp(22), }}><Text style={{ color: '#000', fontWeight: 'bold' }}>0%</Text> of 100% lifestyle information</Text>
                                             <ProgressBarAndroid color="#7f8081" styleAttr="Horizontal" progress={0} indeterminate={false} style={{ marginTop: 1 }} />
-                                        </View>
+                                        </View> */}
                                     </View>
                                     <View style={{ width: '8%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80), justifyContent: 'center' }}>
                                         <Image style={{ height: px2dp(80), width: '100%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
@@ -131,13 +131,13 @@ export default class QuestionnaireActivity extends Component<Props> {
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80) }}>
                                     <View style={{ width: '92%', height: px2dp(80) }}>
                                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#b6b7b8', borderStyle: 'dotted' }}>
-                                            <Image style={{ height: px2dp(30), width: '16%', }} resizeMode='contain' source={require("../image/icons/life-66.png")}></Image>
-                                            <Text style={{ height: px2dp(40), width: '83%', fontFamily: 'fantasy', fontSize: 16, lineHeight: px2dp(20), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.mcgill')}</Text>
+                                            <Image style={{ height: px2dp(30), width: '16%',marginTop:px2dp(20) }} resizeMode='contain' source={require("../image/icons/life-66.png")}></Image>
+                                            <Text style={{ height: px2dp(80), width: '83%', fontFamily: 'fantasy', fontSize: px2dp(14), lineHeight: px2dp(80), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.mcgill')}</Text>
                                         </View>
-                                        <View style={{ width: '90%', alignSelf: 'center' }}>
+                                        {/* <View style={{ width: '90%', alignSelf: 'center' }}>
                                             <Text style={{ height: px2dp(24), width: '100%', fontFamily: 'fantasy', fontSize: 14, lineHeight: px2dp(22), }}><Text style={{ color: '#000', fontWeight: 'bold' }}>{this.state.mcgillRate}0%</Text> of 100% lifestyle information</Text>
                                             <ProgressBarAndroid color="#7f8081" styleAttr="Horizontal" progress={this.state.mcprogRate} indeterminate={false} style={{ marginTop: 1, borderRadius: px2dp(10) }} />
-                                        </View>
+                                        </View> */}
                                     </View>
                                     <View style={{ width: '8%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80), justifyContent: 'center' }}>
                                         <Image style={{ height: px2dp(80), width: '100%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
@@ -160,14 +160,14 @@ export default class QuestionnaireActivity extends Component<Props> {
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80) }}>
                                     <View style={{ width: '92%', height: px2dp(80) }}>
                                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#b6b7b8', borderStyle: 'dotted' }}>
-                                            <Image style={{ height: px2dp(26), width: '16%', }} resizeMode='contain' source={require("../image/icons/life-67.png")}></Image>
+                                            <Image style={{ height: px2dp(26), width: '16%',marginTop:px2dp(20) }} resizeMode='contain' source={require("../image/icons/life-67.png")}></Image>
                                             <Text style={{ height: px2dp(40), width: '1%' }}></Text>
-                                            <Text style={{ height: px2dp(40), width: '83%', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(30), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.sleep')}</Text>
+                                            <Text style={{ height: px2dp(80), width: '83%', fontFamily: 'fantasy', fontSize: px2dp(16), lineHeight: px2dp(80), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.sleep')}</Text>
                                         </View>
-                                        <View style={{ width: '90%', alignSelf: 'center' }}>
+                                        {/* <View style={{ width: '90%', alignSelf: 'center' }}>
                                             <Text style={{ height: px2dp(24), width: '100%', fontFamily: 'fantasy', fontSize: px2dp(14), lineHeight: px2dp(22), }}><Text style={{ color: '#000', fontWeight: 'bold' }}>0%</Text> of 100% lifestyle information</Text>
                                             <ProgressBarAndroid color="#7f8081" styleAttr="Horizontal" progress={0} indeterminate={false} style={{ marginTop: 1 }} />
-                                        </View>
+                                        </View> */}
                                     </View>
                                     <View style={{ width: '8%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80), justifyContent: 'center' }}>
                                         <Image style={{ height: px2dp(80), width: '100%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>
@@ -189,13 +189,13 @@ export default class QuestionnaireActivity extends Component<Props> {
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80) }}>
                                     <View style={{ width: '92%', height: px2dp(80) }}>
                                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', borderBottomWidth: px2dp(1), borderColor: '#b6b7b8', borderStyle: 'dotted' }}>
-                                            <Image style={{ height: px2dp(30), width: '16%', }} resizeMode='contain' source={require("../image/icons/life-68.png")}></Image>
-                                            <Text style={{ height: px2dp(40), width: '83%', fontFamily: 'fantasy', fontSize: 16, lineHeight: px2dp(30), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.diet')}</Text>
+                                            <Image style={{ height: px2dp(30), width: '16%',marginTop:px2dp(20) }} resizeMode='contain' source={require("../image/icons/life-68.png")}></Image>
+                                            <Text style={{ height: px2dp(80), width: '83%', fontFamily: 'fantasy', fontSize: 16, lineHeight: px2dp(80), color: '#0D0D0D', fontWeight: '700' }}>{I18n.t('QuestionnaireActivity.diet')}</Text>
                                         </View>
-                                        <View style={{ width: '90%', alignSelf: 'center' }}>
+                                        {/* <View style={{ width: '90%', alignSelf: 'center' }}>
                                             <Text style={{ height: px2dp(24), width: '100%', fontFamily: 'fantasy', fontSize: 14, lineHeight: px2dp(22), }}><Text style={{ color: '#000', fontWeight: 'bold' }}>0%</Text> of 100% lifestyle information</Text>
                                             <ProgressBarAndroid color="#7f8081" styleAttr="Horizontal" progress={0} indeterminate={false} style={{ marginTop: 1 }} />
-                                        </View>
+                                        </View> */}
                                     </View>
                                     <View style={{ width: '8%', alignSelf: 'center', flexDirection: 'row', height: px2dp(80), justifyContent: 'center' }}>
                                         <Image style={{ height: px2dp(80), width: '100%', }} resizeMode='contain' source={require("../image/icons/left-1.png")}></Image>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, StatusBar, Button, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, View, Image, StatusBar, Button, ScrollView,Alert, TouchableOpacity } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';
@@ -105,13 +105,14 @@ export default class CenterActivity extends Component {
                                     </View>
                                 </TouchableOpacity>
                                 {/* 问卷调查 */}
-                                <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}>
+                                {/* <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}> */}
+                                <TouchableOpacity  onPress={()=>Alert.alert('Notification','The questionnaires are under maintenance, will make accessible again when it has been finished.')}>
                                     <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid' }}>
                                         <View style={{ width: '25%', justifyContent: 'center' }}>
                                             <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home2.png')} resizeMode='contain' />
                                         </View>
                                         <View style={{ width: '65%', height: px2dp(90), justifyContent: 'center', overflow: 'hidden' }}>
-                                            <Text
+                                            {/* <Text
                                                 onPress={() => {
                                                     this.state.user == null ?
                                                         this.navigate.push("Login")
@@ -121,7 +122,8 @@ export default class CenterActivity extends Component {
                                                             :
                                                             this.navigate.push("RasEncryptionActivity")
                                                 }}
-                                                style={{ overflow: 'hidden', height: px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
+                                                style={{ overflow: 'hidden', height: px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text> */}
+                                            <Text style={{ overflow: 'hidden', height: px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
                                             <Text style={{ overflow: 'hidden', height: px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.fill')} </Text>
 
                                         </View>
@@ -193,8 +195,15 @@ export default class CenterActivity extends Component {
                                 </View> */}
                             <View style={{ width: '90%', height: px2dp(50), alignSelf: 'center', borderRadius: px2dp(5) }}>
                                 <TouchableOpacity >
-                                    <Button style={{ width: '100%', height: px2dp(50), backgroundColor: "#404bc2" }}
+                                    {/* <Button style={{ width: '100%', height: px2dp(50), backgroundColor: "#404bc2" }}
                                         onPress={() => this.navigate.push("Questionnaire")}
+                                        title={I18n.t('QuesnoteActivity.ques')}
+                                        fontFamily='fantasy'
+                                        color="#404bc2"
+                                        backgroundColor='#404bc2'
+                                    /> */}
+                                    <Button style={{ width: '100%', height: px2dp(50), backgroundColor: "#404bc2" }}
+                                        onPress={()=>{Alert.alert("Notification","The questionnaires are under maintenance, will make accessible again when it has been finished!")} }
                                         title={I18n.t('QuesnoteActivity.ques')}
                                         fontFamily='fantasy'
                                         color="#404bc2"
