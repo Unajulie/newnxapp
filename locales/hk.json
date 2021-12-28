@@ -899,7 +899,9 @@
         "save": "保存",
         "copykeys":"複製公鑰私鑰",
         "titlemsg":"提示",
-        "meg":"公鑰和私鑰已復製到剪貼板。"
+        "meg":"公鑰和私鑰已復製到剪貼板。",
+        "emailsendfailed":"網絡延遲，郵件發送失敗，請重新點擊「保存」按鈕，再次發送郵件。" ,
+        "emailsendsuccess":"郵件發送成功"
     },
     "QAActivity": {
         "title": "Q&A",

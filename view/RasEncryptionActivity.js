@@ -9,6 +9,10 @@ import UUIDGenerator from 'react-native-uuid-generator'
 import { encrypt, decrypt } from 'react-native-simple-encryption'
 import data from '../appdata'
 import { px2dp } from '../src/px2dp';
+// import Mailer from 'react-native-mail';
+
+
+
 
 export default class RasEncryptionActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -77,6 +81,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                                 if (publickey.length != 0) {
                                                     this.setState({ btnSaveDisabled: false })
                                                     this.setState({ btnCopyDisabled: false })
+                                                    
 
                                                 } else {
                                                     this.setState({ btnSaveDisabled: true })
@@ -192,18 +197,32 @@ export default class RasEncryptionActivity extends Component<Props> {
                                                 user.privatekey = this.state.privatekey
                                                 user.publickey = this.state.publickey
                                                 Session.save("sessionuser", user)
+                                    
                                                 this.setState({ animating: false })
                                                 //先将之前的文件删除
                                                 //将私钥和公钥写入文件中
                                                 RNFS.writeFile(path, this.state.publickey + ":" + this.state.privatekey, 'utf8')
                                                     .then((success) => {
                                                         Alert.alert("Message", I18n.t("RasEncryptionActivity.success"), [{
-                                                            text: "OK", onPress: () => {
-                                                                const resetAction = StackActions.reset({
-                                                                    index: 0,
-                                                                    actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                                                                });
-                                                                this.props.navigation.dispatch(resetAction);
+                                                            text: "SEND TO EMAIL", onPress: () => { 
+                                                                fetch(data.url + "user/secretKey/sendmail.jhtml?mail=" + user.mail + "&publickey=" + this.state.publickey+ "&privatekey=" + this.state.privatekey) 
+                                                                .then(res => res.text()).then((data) => { 
+                                                                if (data == "success") {
+                                                                Alert.alert("Message", I18n.t("RasEncryptionActivity.emailsendsuccess"), [{
+                                                                    text: "OK", onPress: () => { 
+
+                                                                        const resetAction = StackActions.reset({
+                                                                            index: 0,
+                                                                            actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                                                                        });
+                                                                        this.props.navigation.dispatch(resetAction);
+                                                                    }
+                                                                }])
+                                                              }else{
+                                                                Alert.alert("Message", I18n.t("RasEncryptionActivity.emailsendfailed"))
+                                                                this.setState({ btnSaveDisabled: false })
+                                                              }
+                                            })
                                                             }
                                                         }])
                                                     })
@@ -214,6 +233,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         }} />
                                 </View>
 
+                               
 
                                 <View style={{ width: "90%", alignItems: "center" }}>
                                     <View style={{ width: "100%", height: px2dp(45) }}>

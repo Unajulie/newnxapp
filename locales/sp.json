@@ -963,7 +963,9 @@
         "save": "GUARDAR",
         "copykeys": "COPIA DE CLAVES",
         "titlemsg": "Mensaje",
-        "meg": "La clave pública y la clave privada se han copiado en su portapapeles."
+        "meg": "La clave pública y la clave privada se han copiado en su portapapeles.",
+        "emailsendfailed":"La red se retrasa y falla el envío del correo electrónico, haga clic en el botón 'Guardar' nuevamente para enviar el correo electrónico.",
+        "emailsendsuccess":"El correo enviado con éxito"
     },
     "QAActivity": {
         "title": "Q&A",

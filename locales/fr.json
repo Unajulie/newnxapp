@@ -948,7 +948,9 @@
         "save": "sauver",
         "copykeys": "TOUCHES DE COPIE",
         "titlemsg": "Message",
-        "meg": "La clé publique et la clé privée ont été copiées dans votre presse-papiers."
+        "meg": "La clé publique et la clé privée ont été copiées dans votre presse-papiers.",
+        "emailsendfailed":"Le réseau est retardé et l'envoi de l'e-mail échoue, veuillez cliquer à nouveau sur le bouton 'Enregistrer' pour envoyer l'e-mail.",
+        "emailsendsuccess":"Courrier envoyé avec succès"
     },
     "QAActivity": {
         "title": "Q&A",

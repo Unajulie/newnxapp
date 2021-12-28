@@ -917,7 +917,9 @@
         "save": "Save",
         "copykeys":"COPY KEYS",
         "titlemsg":"Message",
-        "meg":"The public key and private key has been copied to your clipboard."
+        "meg":"The public key and private key has been copied to your clipboard.",
+        "emailsendfailed":"The network is delayed and the email sending fails, please click the 'SAVE'  button again to send the email.",
+        "emailsendsuccess":"Mail sent successfully"
     },
    
     "QAActivity": {
