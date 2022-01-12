@@ -157,13 +157,12 @@ export default class DnaReportActivity extends Component<Props> {
                 vbarcode.accuracy= data[i].accuracy
                 vbarcode.uploadTime = new Date(data[i].uploadTime).toLocaleDateString()
                 vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
-
-                 //data sync from HK lims
-                 if(data[i].status == "POST_FROM_LAB")  vbarcode.detectTime=I18n.t("DnaReportActivity.intransit");
-                 //data sync from levan
-                 else if(data[i].detectTime==0) vbarcode.detectTime=I18n.t("DnaReportActivity.intransit");
-                 else vbarcode.detectTime=new Date(data[i].detectTime).toLocaleDateString();
-                // vbarcode.detectTime = (data[i].status == "POST_FROM_LAB") ? I18n.t("DnaReportActivity.intransit") :data[i].detectTime==0? I18n.t("DnaReportActivity.intransit"): new Date(data[i].detectTime).toLocaleDateString()
+                //data sync from HK lims
+                if(data[i].status == "POST_FROM_LAB")  vbarcode.detectTime=I18n.t("DnaReportActivity.intransit");
+                //data sync from levan
+                else if(data[i].detectTime==0 && data[i].biological>0) vbarcode.detectTime=new Date(data[i].uploadTime).toLocaleDateString();
+                else if(data[i].detectTime==0) vbarcode.detectTime=I18n.t("DnaReportActivity.intransit");
+                //vbarcode.detectTime = (data[i].status == "POST_FROM_LAB") ? I18n.t("DnaReportActivity.intransit") :data[i].detectTime==0? I18n.t("DnaReportActivity.intransit"): new Date(data[i].detectTime).toLocaleDateString()
                 if(data[i].labevent){
                     if (data[i].labevent == "POST_FROM_LAB") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
                     else if (data[i].labevent == "PARCEL_RECEIVED") { vbarcode.endtime = I18n.t("DnaReportActivity.parcelreceived") }
