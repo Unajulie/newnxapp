@@ -314,6 +314,7 @@
         "old": "ans plus élevé que l'âge chronologique attendu dans la population.",
         "yourbio": "(avec un numéro dedans) Votre âge épigénétique ",
         "otherolder": "Autres personnes testées dont l'âge épigénétique est supérieur à l'âge chronologique",
+        "Chartdescription":"Le graphique affiche les résultats obtenus auprès de nos clients qui ont accepté de révéler leur âge chronologique. Chaque place représente un client. La ligne bleue représente la moyenne de la population. La ligne rouge représente l'intervalle de confiance à 95 % de la moyenne. Cela signifie que si votre tache se situe dans les lignes rouges, vous êtes sûr à 95 % que vos résultats correspondent à la moyenne de la population et que votre âge biologique n'est pas différent de celui de la personne moyenne qui a été testée avec ce test. Si vous êtes au-dessus des lignes rouges, vous êtes plus âgé et si vous êtes en dessous des lignes rouges, vous êtes plus jeune que la moyenne de la population. Les lignes vertes représentent 95 % de la population. Si votre point est au-dessus des lignes vertes, vous êtes biologiquement plus âgé que 95% de la population et si vous êtes en dessous des lignes vertes, vous êtes plus jeune que 95% de nos clients.",
         "otheryounger": "Autres personnes testées dont l'âge épigénétique est inférieur à l'âge chronologique",
         "how": "QUEL ÂGE AVEZ-VOUS?",
         "why": "Pourquoi votre",

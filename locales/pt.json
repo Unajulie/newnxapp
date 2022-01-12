@@ -324,6 +324,7 @@
         "old": "anos maior que a idade cronológica esperada na população.",
         "yourbio": "(com um número) Sua idade epigenética ",
         "otherolder": "Outras pessoas que foram testadas, cuja idade epigenética é maior que a idade cronológica",
+        "Chartdescription":"O gráfico mostra os resultados obtidos de nossos clientes que concordaram em revelar sua idade cronológica. Cada ponto representa um cliente. A linha azul representa a média da população. A linha vermelha representa o intervalo de confiança de 95% da média. Isso significa que, se o seu ponto estiver dentro das linhas vermelhas, você está 95% confiante de que seus resultados se encaixam na média da população e sua idade biológica não é diferente da média das pessoas testadas com este teste. Se você estiver acima das linhas vermelhas, você é mais velho e se estiver abaixo das linhas vermelhas, você é mais jovem que a média da população. As linhas verdes representam onde estão 95% da população. Se o seu ponto estiver acima das linhas verdes, você é biologicamente mais velho que 95% da população e se estiver abaixo das linhas verdes, você tem menos de 95% dos nossos clientes.",
         "otheryounger": "Outras pessoas que foram testadas, cuja idade epigenética é menor que a idade cronológica",
         "how": "QUANTOS ANOS VOCÊ TEM?",
         "why": "Por que a sua",

@@ -323,6 +323,7 @@
         "younger": "años menor que la edad cronológica esperada en la población.",
         "old": "años mayor que la edad cronológica esperada en la población.",
         "yourbio": "Tu edad epigenética ",
+        "Chartdescription":"El gráfico muestra los resultados obtenidos de nuestros clientes que aceptaron revelar su edad cronológica. Cada punto representa un cliente. La línea azul representa la media de la población. La línea roja representa el intervalo de confianza del 95% de la media. Eso significa que si su lugar está dentro de las líneas rojas, tiene un 95 % de confianza en que sus resultados se ajustan al promedio de la población y su edad biológica no es diferente a la de la persona promedio que se sometió a esta prueba. Si está por encima de las líneas rojas, es mayor y si está por debajo de las líneas rojas, es más joven que el promedio de la población. Las líneas verdes representan donde se encuentra el 95% de la población. Si tu punto está por encima de las líneas verdes, eres biológicamente mayor que el 95 % de la población y si estás por debajo de las líneas verdes, eres menor que el 95 % de nuestros clientes.",
         "otherolder": "Los otros, que fueron evaluados, cuya edad epigenética es más alta que la edad cronológica.",
         "otheryounger": "Los otros, que fueron evaluados, cuya edad epigenética es menor que la edad cronológica.",
         "how": "¿CUANTOS AÑOS TIENES?",

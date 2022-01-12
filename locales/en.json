@@ -316,6 +316,7 @@
         "old": "years higher than your expected chronological age in the population.",
         "yourbio": "Your Epigenetic age ",
         "otherolder": "The others, who were tested, whose Epigenetic age is higher than Chronological age",
+        "Chartdescription":"The plot displays results obtained from our customers who agreed to reveal their chronological age. Each spot represents one customer. The blue line represents the mean of the population. The red line represents the 95% confidence interval of the mean. That means that if your spot is within the red lines, you are 95% confident that your results fit the population average and your biological age is not different than the average person who was tested with this test. If you are above the red lines, you are older and if you are below the red lines, you are younger than the average of the population. The green lines represent where 95% of the population stand. If your point is above the green lines, you are biologically older than 95% of the population and if you are below the green lines, you are younger than 95% of our customers.",
         "otheryounger": "The others, who were tested, whose Epigenetic age is lower than Chronological age",
         "how":"HOW OLD ARE YOU?",
         "why":"Why is your",
