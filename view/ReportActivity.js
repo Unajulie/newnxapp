@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, ImageBackground, Alert, Dimensions, ScrollView, Clipboard, TouchableOpacity, ActivityIndicator, Modal, Button } from 'react-native';
-//  import { ECharts } from "react-native-echarts-wrapper"
+ import { ECharts } from "react-native-echarts-wrapper"
 import { decrypt } from 'react-native-simple-encryption'
 import { WebView } from 'react-native-webview';
 import data from '../appdata'
@@ -8,7 +8,7 @@ import Session from '../storage/Session'
 import { I18n } from '../locales/i18n'
 import { px2dp } from '../src/px2dp';
 import { SwipeablePanel } from 'rn-swipeable-panel';
-//  import * as ecStat from 'echarts-stat';
+// import * as ecStat from 'echarts-stat';
 
 
 export default class ReportActivity extends Component<Props> {
@@ -37,112 +37,112 @@ export default class ReportActivity extends Component<Props> {
             display: false,
             pdfbox: [],
             // lineardata:null,
-            // option: {
-            //     legend: {
-            //         data: ['Chronological Age<Epigenetic Age', 'Chronological Age>Epigenetic Age']
-            //     },
-            //     xAxis: [{
-            //         name: 'Chronological Age',
-            //         type: 'value',
-            //         nameLocation: 'middle',
-            //         nameGap: 20,
-            //         scale: true,
-            //         nameTextStyle: { color: "#404cb2", },
-            //         axisLabel: {
-            //             formatter: '{value}'
-            //         }
-            //     }],
-            //     yAxis: [{
-            //         name: 'Epigenetic Age',
-            //         nameLocation: 'middle',
-            //         nameGap: 22,
-            //         nameRotate: 90,
-            //         type: 'value',
-            //         scale: true,
-            //         nameTextStyle: { color: "#404cb2", },
-            //         axisLabel: {
-            //             formatter: '{value}'
-            //         }
-            //     }],
-            //     series: [
-            //         {
-            //             name: 'Chronological Age<Epigenetic Age',
-            //             type: 'scatter',
-            //             style: { fontFamily: 'fantasy', },
-            //             //圆点的颜色为红色
-            //             itemStyle: {
-            //                 normal: {
-            //                     color: 'red',
-            //                     fontFamily: 'fantasy',
-            //                 }
-            //             },
-            //             //自然年龄<生物学年龄
-            //             data: null,
-            //             markPoint: {
-            //                 data: [
-            //                     {
-            //                         name: 'Epigenetic Age',
-            //                         value: null,
-            //                         xAxis: null,
-            //                         yAxis: null
-            //                     }
-            //                 ]
-            //             },
-            //         },
-            //         {
-            //             name: 'Chronological Age>Epigenetic Age',
-            //             type: 'scatter',
-            //             style: { fontFamily: 'fantasy', },
-            //             //圆点的颜色为绿色
-            //             itemStyle: {
-            //                 normal: {
-            //                     color: 'green',
-            //                     fontFamily: 'fantasy'
-            //                 }
-            //             },
-            //             //自然年龄>生物学年龄
-            //             data: null,
-            //             markPoint: {
-            //                 data: [
-            //                     {
-            //                         name: 'Epigenetic Age',
-            //                         value: null,
-            //                         xAxis: null,
-            //                         yAxis: null
-            //                     }
-            //                 ]
-            //             },
-            //         },
+            option: {
+                legend: {
+                    data: ['Chronological Age<Epigenetic Age', 'Chronological Age>Epigenetic Age']
+                },
+                xAxis: [{
+                    name: 'Chronological Age',
+                    type: 'value',
+                    nameLocation: 'middle',
+                    nameGap: 20,
+                    scale: true,
+                    nameTextStyle: { color: "#404cb2", },
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                }],
+                yAxis: [{
+                    name: 'Epigenetic Age',
+                    nameLocation: 'middle',
+                    nameGap: 22,
+                    nameRotate: 90,
+                    type: 'value',
+                    scale: true,
+                    nameTextStyle: { color: "#404cb2", },
+                    axisLabel: {
+                        formatter: '{value}'
+                    }
+                }],
+                series: [
+                    {
+                        name: 'Chronological Age<Epigenetic Age',
+                        type: 'scatter',
+                        style: { fontFamily: 'fantasy', },
+                        //圆点的颜色为红色
+                        itemStyle: {
+                            normal: {
+                                color: 'red',
+                                fontFamily: 'fantasy',
+                            }
+                        },
+                        //自然年龄<生物学年龄
+                        data: null,
+                        markPoint: {
+                            data: [
+                                {
+                                    name: 'Epigenetic Age',
+                                    value: null,
+                                    xAxis: null,
+                                    yAxis: null
+                                }
+                            ]
+                        },
+                    },
+                    {
+                        name: 'Chronological Age>Epigenetic Age',
+                        type: 'scatter',
+                        style: { fontFamily: 'fantasy', },
+                        //圆点的颜色为绿色
+                        itemStyle: {
+                            normal: {
+                                color: 'green',
+                                fontFamily: 'fantasy'
+                            }
+                        },
+                        //自然年龄>生物学年龄
+                        data: null,
+                        markPoint: {
+                            data: [
+                                {
+                                    name: 'Epigenetic Age',
+                                    value: null,
+                                    xAxis: null,
+                                    yAxis: null
+                                }
+                            ]
+                        },
+                    },
                    
-            //             {
-            //                 name: 'line',
-            //                 type: 'line',
-            //                 showSymbol: false,
-            //                 data: null,
-            //                 markPoint: {
-            //                     itemStyle: {
-            //                         normal: {
-            //                             color: 'transparent'
-            //                         }
-            //                     },
-            //                     label: {
-            //                         normal: {
-            //                             show: true,
-            //                             formatter:null,
-            //                             textStyle: {
-            //                                 color: '#333',
-            //                                 fontSize: 14
-            //                             }
-            //                         }
-            //                     },
-            //                     data: [{
-            //                         coord: null
-            //                     }]
-            //                 }
-            //             },
+                        // {
+                        //     name: 'line',
+                        //     type: 'line',
+                        //     showSymbol: false,
+                        //     data: null,
+                        //     markPoint: {
+                        //         itemStyle: {
+                        //             normal: {
+                        //                 color: 'transparent'
+                        //             }
+                        //         },
+                        //         label: {
+                        //             normal: {
+                        //                 show: true,
+                        //                 formatter:null,
+                        //                 textStyle: {
+                        //                     color: '#333',
+                        //                     fontSize: 14
+                        //                 }
+                        //             }
+                        //         },
+                        //         data: [{
+                        //             coord: null
+                        //         }]
+                        //     }
+                        // },
                 
-            //     ]
-            // }
+                ]
+            }
         };
 
 
@@ -151,7 +151,7 @@ export default class ReportActivity extends Component<Props> {
     componentDidMount() {
         this.navigate = this.props.navigation;//此处可以自定义跳转属性
         // console.info(this.navigate)
-        // let option = Object.assign({}, this.state.option);
+        let option = Object.assign({}, this.state.option);
         let biological = window.parseFloat(this.navigate.getParam("biological")).toFixed(2);
         // let naturally = window.parseFloat(this.navigate.getParam("naturally")).toFixed(2)
         let naturally = this.navigate.getParam("naturally") //{ "biological":"x",naturally:10}
@@ -164,52 +164,52 @@ export default class ReportActivity extends Component<Props> {
         this.setState({accuracy})
         // this.setState({regequation})
         // console.info("sleiiowieoii " + this.state.barcode)
-        // let i = biological > naturally ? 0 : 1;
-        // option.series[i].markPoint.data[0].value = biological
+        let i = biological > naturally ? 0 : 1;
+        option.series[i].markPoint.data[0].value = biological
         // //自然年龄
         // this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
         // this.setState({ ageBox: this.state.ageBox })
-        // //自然年龄
-        // option.series[i].markPoint.data[0].xAxis = naturally
-        // option.series[i].markPoint.data[0].yAxis = biological
+        //自然年龄
+        option.series[i].markPoint.data[0].xAxis = naturally
+        option.series[i].markPoint.data[0].yAxis = biological
        
-        // this.setState({ option })
-        // this.echarts.webview.reload()
+        this.setState({ option })
+        this.echarts.webview.reload()
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
             console.info("rage is"+ this.state.naturally)
-            // fetch(data.url + "user/report/findAllNB.jhtml").then(res => res.json()).then((data) => {
+            fetch(data.url + "user/report/findAllNB.jhtml").then(res => res.json()).then((data) => {
                 
-            //     let upper=[]
-            //     let lower=[]
-            //     let lineardata=[]
-            //     for (var i in data) {
-            //         let naturally = window.parseFloat(data[i].naturally).toFixed(2)
-            //         let biological = window.parseFloat(data[i].biological).toFixed(2)
-            //         lineardata.push([parseFloat(naturally), parseFloat(biological)])
-            //         if(naturally>biological){
-            //             lower.push([parseFloat(naturally), parseFloat(biological)])
-            //         }else{
-            //             upper.push([parseFloat(naturally), parseFloat(biological)])
-            //     }
-            //     }
-            //     let option = Object.assign({}, this.state.option);
-            //     option.series[1].data = lower;
-            //     option.series[0].data = upper;
+                let upper=[]
+                let lower=[]
+                // let lineardata=[]
+                for (var i in data) {
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(2)
+                    let biological = window.parseFloat(data[i].biological).toFixed(2)
+                    // lineardata.push([parseFloat(naturally), parseFloat(biological)])
+                    if(naturally>biological){
+                        lower.push([parseFloat(naturally), parseFloat(biological)])
+                    }else{
+                        upper.push([parseFloat(naturally), parseFloat(biological)])
+                }
+                }
+                let option = Object.assign({}, this.state.option);
+                option.series[1].data = lower;
+                option.series[0].data = upper;
                
-            //     /**Begin liangxiaoyuan 2022.1.10 addReason: linear Regression expression */
-            //     let myRegression = ecStat.regression('linear',lineardata);
-            //     option.series[2].data=myRegression.points;
-            //     option.series[2].markPoint.label.normal.formatter=myRegression.expression;
-            //     option.series[2].markPoint.data[0].coord= myRegression.points[myRegression.points.length - 1]
+                // /**Begin liangxiaoyuan 2022.1.10 addReason: linear Regression expression */
+                // let myRegression = ecStat.regression('linear',lineardata);
+                // option.series[2].data=myRegression.points;
+                // option.series[2].markPoint.label.normal.formatter=myRegression.expression;
+                // option.series[2].markPoint.data[0].coord= myRegression.points[myRegression.points.length - 1]
                 
-            //      /**End liangxiaoyuan 2022.1.10 addReason:linear Regression expression*/
-            //     this.setState({ option });
-            //     /**Begin liangxiaoyuan 2022.1.10 addReason: linear Regression expression */
-            //     this.setState({ lineardata })
-            //     /**End liangxiaoyuan 2022.1.10 addReason:linear Regression expression*/
-            //     this.echarts.webview.reload();
-            // })
+                 /**End liangxiaoyuan 2022.1.10 addReason:linear Regression expression*/
+                this.setState({ option });
+                /**Begin liangxiaoyuan 2022.1.10 addReason: linear Regression expression */
+                // this.setState({ lineardata })
+                /**End liangxiaoyuan 2022.1.10 addReason:linear Regression expression*/
+                this.echarts.webview.reload();
+            })
 
             // ALTER TABLE epi.udata ADD pendingtime BIGINT DEFAULT 0 NOT NULL;
             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
@@ -296,27 +296,27 @@ export default class ReportActivity extends Component<Props> {
 
                         <View style={{ width: "100%", height: 5, backgroundColor: "#f5f5f5" }}></View>
                         <View style={{ height: px2dp(300), width: "100%", alignSelf: 'center', marginTop: 34 }}>
-                        <Image style={{ height: px2dp(300), width: '100%', }} resizeMode='contain' source={require("../image/enpic/rep14.jpg")}></Image>
+                        {/* <Image style={{ height: px2dp(300), width: '100%', borderTopRightRadius: px2dp(30), borderTopLeftRadius: px2dp(30) }} resizeMode='contain' source={require("../image/enpic/rep14.jpg")}></Image> */}
                             {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */}
                             {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */}
                             {/* 从而重新刷新webview数据 */}
-                            {/* <ECharts lineardata={this.state.lineardata} option={this.state.option} ref={(ref) => { this.echarts = ref }} /> */}
+                            <ECharts  option={this.state.option} ref={(ref) => { this.echarts = ref }} />
                         </View>
                         {this.state.display ? <ActivityIndicator size="large" color="#404cb2" /> : null}
-                        <View style={{ width: '90%', height: px2dp(370), alignSelf: 'center', marginTop: px2dp(20), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', padding: px2dp(5), }}>
-                            {/* <View style={{ flexDirection: 'row', margin: px2dp(15) }}>
+                        <View style={{ width: '90%', height: px2dp(190), alignSelf: 'center', marginTop: px2dp(20), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', padding: px2dp(5), }}>
+                            <View style={{ flexDirection: 'row', margin: px2dp(15) }}>
                                 <Image style={{ height: px2dp(18), width: px2dp(18), }} resizeMode="contain" source={require("../image/icons/rep-green.png")}></Image>
                                 <Image style={{ height: px2dp(18), width: px2dp(18), marginLeft: px2dp(5) }} resizeMode="contain" source={require("../image/icons/rep-red.png")}></Image>
                                 <Text style={{ width: '88%', fontSize: px2dp(14), fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.yourbio')} </Text>
-                            </View> */}
+                            </View>
                             <View style={{ flexDirection: 'row', margin: px2dp(5) }}>
                                 <Text style={{ width: '12%', paddingLeft: px2dp(10), fontSize: px2dp(14), color: 'red' }}>●</Text>
-                                <Text style={{ width: '88%', fontSize: px2dp(12), fontWeight: 'bold', lineHeight: px2dp(18), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.Chartdescription')}</Text>
+                                <Text style={{ width: '88%', fontSize: px2dp(12), fontWeight: 'bold', lineHeight: px2dp(18), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.otherolder')}</Text>
                             </View>
-                            {/* <View style={{ flexDirection: 'row', margin: px2dp(5) }}>
+                            <View style={{ flexDirection: 'row', margin: px2dp(5) }}>
                                 <Text style={{ width: '12%', paddingLeft: px2dp(12), fontSize: px2dp(14), color: 'green' }}>●</Text>
                                 <Text style={{ width: '88%', fontSize: px2dp(12), fontWeight: 'bold', lineHeight: px2dp(18), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.otheryounger')}</Text>
-                            </View> */}
+                            </View>
                         </View>
                         <View style={{ width: '90%', height: px2dp(60), flexDirection: 'row', alignSelf: 'center', marginTop: px2dp(20), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
                             <Text style={{ width: '68%', marginTop: px2dp(18), marginLeft: px2dp(10), fontSize: px2dp(14), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.accuracy')} -<Text style={{ color: '#000000', fontWeight: 'bold', fontFamily: 'fantasy', }}>&nbsp; {this.state.accuracy}%</Text></Text>
@@ -633,7 +633,7 @@ export default class ReportActivity extends Component<Props> {
                                                                 Session.save("pdfsavepath", savepathbox)
                                                                 this.setState({ animating: false })
                                                                 let url = data.url + "user/report/" + this.state.barcode + "/" + I18n.locale + "/pdf.jhtml"
-                                                                Clipboard.setString(url);
+                                                                  Clipboard.setString(url);
                                                                 Alert.alert(I18n.t("SavepdfpathActivity.titlemsg"), I18n.t("SavepdfpathActivity.copy"))                                                                                
                                                                 
                                                             } else {
