@@ -512,14 +512,14 @@ export const RootStack = createStackNavigator(
                     // //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
                     // //所以需要在此处添加 navigation={navigation}，那么LoginIcon中的pros就能有navigation这个对象了
                     // headerRight: <LoginIcon navigation={navigation} />
-                    headerTintColor: 'black',
+                    headerTintColor: 'white',
                     headerTitleStyle: {
                         alignSelf: 'center',
                         textAlign: 'center',
                         flex: 1,
                         fontWeight: 'bold',
                         fontSize: px2dp(18),
-                        fontFamily: 'fantasy',
+                        fontFamily: 'Roboto-Medium',
                     },
                     headerTitleContainerStyle: {
                         left: TITLE_OFFSET,
@@ -527,7 +527,7 @@ export const RootStack = createStackNavigator(
                     },
                     headerStyle: {
                         height: px2dp(60),
-                        backgroundColor: '#FBF0EC',
+                        backgroundColor: '#5168ff',
 
                     },
                     headerRight: <LoginIcon navigation={navigation} />

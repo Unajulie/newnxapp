@@ -374,7 +374,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                         }
                                                         Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.wait"))
                                                         
-                                                        break
+                                                        break;
                                                     case "pending":
                                                         this.setState({ statusbar: false })
                                                         Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.pendingwait"))
@@ -595,7 +595,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     this.setState({ rage: this.state.ageBox[j] })
                                                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                                                     fetch(data.url + "/user/report/" + uuid + "/" + barcode.val + "/findEmail.jhtml").then(data => data.json()).then((udata) => {
-                                                                        if (barcode.stat == "ready") {
+                                                                        if (udata.status == "ready") {
                                                                             this.setState({ animating: true })
                                                                             this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
                                                                             this.setState({ ageBox: this.state.ageBox })
@@ -603,21 +603,24 @@ export default class DnaReportActivity extends Component<Props> {
                                                                             //更改实际年龄
                                                                             fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
                                                                                 let biological = window.parseFloat(barcode.biological).toFixed(2);
-                                                                                let naturally = this.state.ageBox[j]
                                                                                 let repdata = {}
                                                                                 repdata.biological = biological
-                                                                                repdata.naturally = this.state.ageBox[i]
+                                                                                repdata.naturally = this.state.ageBox[j]
                                                                                 repdata.barcode = barcode.val
                                                                                 repdata.accuracy=barcode.accuracy
                                                                                 // repdata.btnBuildPdfdisabled= this.setState({ btnBuildPdfdisabled: false })
                                                                                 this.navigate.push("Report", repdata)
                                                                             })
-                                                                        } else if (barcode.stat == "processing") {
+                                                                        } else if (udata.status == "processing") {
                                                                             this.setState({ visual: false })
                                                                             Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
-                                                                        } else if (barcode.stat == "pending") {
+                                                                        } else if (udata.status == "pending") {
                                                                             this.setState({ visual: false })
                                                                             Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pendingwait"));
+                                                                        }
+                                                                        else if (udata.status == "in-transit") {
+                                                                            this.setState({ visual: false })
+                                                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
                                                                         }
                                                                         this.setState({ barcode: barcode.val })
                                                                     })

@@ -68,7 +68,7 @@ export default class TabHomeActivity extends Component<Props> {
             }
         });
         return (
-            <View style={{ flex: 1, backgroundColor: '#f6f7f8' }}>
+            <View style={{ flex: 1, backgroundColor: '#ffffff' ,}}>
                 <ScrollView>
                     <StatusBar
                         animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
@@ -87,9 +87,10 @@ export default class TabHomeActivity extends Component<Props> {
                         </Modal> : null
                     }
 
-                    <View style={{ width: '90%', height: px2dp(330), marginTop: px2dp(110), alignSelf: 'center' }}>
-                        {/* 我的报告 */}
-                        <TouchableOpacity onPress={() => {
+                <View style={{ width: '90%', height: px2dp(380), marginTop: px2dp(110), alignSelf: 'center',}}>
+                    <View style={{  height: px2dp(240), width: '90%',flexDirection: 'row', marginBottom: px2dp(30), backgroundColor: '#ffffff', borderColor: '#b6b7b8', }}> 
+                         {/* 我的报告 */}
+                         <TouchableOpacity onPress={() => {
                             this.state.user == null ?
                                 this.navigate.push("Login")
                                 :
@@ -99,19 +100,20 @@ export default class TabHomeActivity extends Component<Props> {
                                     this.navigate.push("RasEncryptionActivity")
 
                         }}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
-                                <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/home1.png')} resizeMode='contain' />
+                            
+                            <View style={{ borderRadius: px2dp(25), height: px2dp(250), width: '90%', marginBottom: px2dp(10), borderWidth: px2dp(1.5), backgroundColor: '#ffe8f0', borderColor: '#ffe8f0', borderStyle: 'solid', }}>
+                                <View style={{  height: px2dp(250), width: '100%',flexDirection: 'column',flex: 1,alignItems: 'center',  }}>
+                                <View style={{ width: '100%',height: px2dp(30)}}></View>
+                                <View style={{ width: '100%', textAlign:'center'}}>
+                                    <Image style={{ width: '100%', height: px2dp(80), }} source={require('../image/icons/h01.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                <View style={{ width: '65%',marginTop: px2dp(15)}}>
                                     <Text
-                                        style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                        style={{ fontSize: px2dp(18), textAlign: 'center', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>
                                         {I18n.t('TabHomeActivity.myreport')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.kit')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', fontWeight: '200', fontFamily: 'Roboto-Light' }}>{I18n.t('TabCenterActivity.kit')}</Text>
 
                                 </View>
-                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
                                 </View>
                             </View>
                         </TouchableOpacity>
@@ -119,11 +121,13 @@ export default class TabHomeActivity extends Component<Props> {
                         {/* <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}> */}
                         <TouchableOpacity onPress={()=>Alert.alert('Notification','The questionnaires are under maintenance, will make accessible again when it has been finished!')}>
                        
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid' }}>
-                                <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home2.png')} resizeMode='contain' />
+                            <View style={{ borderRadius: px2dp(25), height: px2dp(250), width: '90%', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#e6dbff', borderColor: '#e6dbff', borderStyle: 'solid'}}>
+                            <View style={{  height: px2dp(250), width: '100%',flexDirection: 'column',flex: 1,alignItems: 'center'}}>
+                                <View style={{ width: '100%',height: px2dp(30)}}></View>
+                                <View style={{ width: '100%',textAlign:'center'}}>
+                                    <Image style={{ width: '100%', height: px2dp(80) }} source={require('../image/icons/h02.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center' }}>
+                                <View style={{ width: '65%', marginTop: px2dp(15),alignItems:'center'}}>
                                     {/* <Text
                                         onPress={() => {
                                             this.state.user == null ?
@@ -135,29 +139,27 @@ export default class TabHomeActivity extends Component<Props> {
                                                     this.navigate.push("RasEncryptionActivity")
                                         }}
                                         style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}  </Text> */}
-                                    <Text  style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.fill')}</Text>
+                                    <Text  style={{width: '120%',height: px2dp(25),fontSize: px2dp(18),textAlign: 'center', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', fontWeight: '200', fontFamily: 'Roboto-Light' }}>{I18n.t('TabCenterActivity.fill')}</Text>
 
                                 </View>
-                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
-                                </View>
+                                </View> 
                             </View>
-                        </TouchableOpacity>
+                        </TouchableOpacity>        
+                    </View>
+                       
                         {/* 测试流程 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Testprocess")}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid' }}>
+                            <View style={{ borderRadius: px2dp(25), height: px2dp(90), flexDirection: 'row', borderWidth: px2dp(1.5), backgroundColor: '#caffec', borderColor: '#caffec', borderStyle: 'solid'  }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/home3.png')} resizeMode='contain' />
+                                    <Image style={{ width: '100%', height: px2dp(60) }} source={require('../image/icons/h03.png')} resizeMode='contain' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.testprocess')}</Text>
-                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'fantasy' }}>{I18n.t('TabCenterActivity.step')}</Text>
+                                    <Text style={{ fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>{I18n.t('TabHomeActivity.testprocess')}</Text>
+                                    <Text style={{ fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', fontFamily: 'Roboto-Light' }}>{I18n.t('TabCenterActivity.step')}</Text>
 
                                 </View>
-                                <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
-                                    <Image style={{ height: px2dp(20), width: px2dp(20), marginLeft: px2dp(5) }} source={require('../image/right-arr.png')} resizeMode='contain' />
-                                </View>
+                                
                             </View>
                         </TouchableOpacity>
 
@@ -215,65 +217,65 @@ export default class TabHomeActivity extends Component<Props> {
                     </ImageBackground>
                 </View> */}
                     <View style={{ width: '100%', marginTop: px2dp(20), }}>
-                        <View style={{ width: '90%', alignSelf: 'center', marginBottom: px2dp(20), padding: px2dp(20), backgroundColor: '#EBECED', borderRadius: px2dp(15) }}>
-                            <Text style={{ fontSize: px2dp(20), color: '#000000', textAlign: 'left', fontFamily: 'fantasy', lineHeight: px2dp(34), marginBottom: 19, fontWeight: 'bold' }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
-                            <Text style={{ fontSize: px2dp(16), textAlign: 'left', fontFamily: 'fantasy', lineHeight: px2dp(23), marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
-                            <Text style={{ fontSize: px2dp(16), textAlign: 'left', fontFamily: 'fantasy', lineHeight: px2dp(23) }}>{I18n.t('TabHomeActivity.testresult')}</Text>
+                        <View style={{ width: '90%', alignSelf: 'center', marginBottom: px2dp(20), padding: px2dp(20), backgroundColor: '#f2f2f4', borderRadius: px2dp(25) }}>
+                            <Text style={{ fontSize: px2dp(20), color: '#333333', textAlign: 'left', fontFamily: 'Roboto-Medium', lineHeight: px2dp(34), marginBottom: 19, fontWeight: 'bold' }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
+                            <Text style={{ fontSize: px2dp(16), textAlign: 'left', fontFamily: 'Roboto-Light', lineHeight: px2dp(23), marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
+                            <Text style={{ fontSize: px2dp(16), textAlign: 'left', fontFamily: 'Roboto-Light', lineHeight: px2dp(23) }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                         </View>
                     </View>
                     <View style={{ height: px2dp(20) }}></View>
                     {/* 产品轮播点击跳转 */}
-                    <View style={{ width: "100%", height: px2dp(460), backgroundColor: '#f6f7f8' }}>
-
+                    <View style={{ width: "100%", height: px2dp(660), backgroundColor: '#f6f7f8' }}>
+                    <View style={{ width: "100%", height: px2dp(760), }}>
                         <Swiper
-                            height={px2dp(460)}//组件高度
+                            height={px2dp(760)}//组件高度
                             horizontal={true}//水平轮播
                             // paginationStyle={{ bottom: 10 }}
                             showsPagination={false}//底部圆点
                             showsButtons={true}
-                            backgroundColor={'#f6f7f8'}
-                            buttonWrapperStyle={{ position: 'absolute', top: px2dp(-210), paddingHorizontal: px2dp(30), paddingVertical: px2dp(30), display: 'flex', justifyContent: 'flex-end', }}
+                            backgroundColor={'#ffffff'}
+                            buttonWrapperStyle={{ position: 'absolute', top: px2dp(-360), paddingHorizontal: px2dp(30), paddingVertical: px2dp(30), display: 'flex', justifyContent: 'flex-end', }}
                             prevButton={
                                 Platform.OS == 'ios' ?
                                     <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
-                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
+                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
                                     </View>
                                     :
                                     <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#eaebec', borderRadius: px2dp(30), marginRight: px2dp(10), justifyContent: 'center' }}>
-                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
+                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', }} source={require('../image/arr-left.png')} resizeMode='contain' />
                                     </View>
                                 
 
                             }
                             nextButton={
                                 Platform.OS == 'ios' ?
-                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30), justifyContent: 'center' }}>
-                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='contain' />
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#5187f5', borderRadius: px2dp(30), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='contain' />
                                     </View>
                                     :
-                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#d2d3d4', borderRadius: px2dp(30), justifyContent: 'center' }}>
-                                        <Image style={{ height: px2dp(30), width: px2dp(30), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='contain' />
+                                    <View style={{ height: px2dp(40), width: px2dp(40), backgroundColor: '#5187f5', borderRadius: px2dp(30), justifyContent: 'center' }}>
+                                        <Image style={{ height: px2dp(20), width: px2dp(20), alignSelf: 'center', justifyContent: 'center' }} source={require('../image/arr-right.png')} resizeMode='contain' />
                                     </View>}
                             loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
                             autoplay={false}>
                             <TouchableOpacity >
 
                                 <View style={{ width: '100%', marginLeft: px2dp(20) }}>
-                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', color: '#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
+                                    <Text style={{ fontSize: px2dp(24), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
                                 </View>
-                                <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(30) }}>
+                                <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(30) ,height: px2dp(550)}}>
+                                <Image style={{ width: '100%', height: px2dp(550), borderRadius: px2dp(20) }} source={require('../image/enpic/h04.png')} resizeMode="contain" />
                                     <View style={{
-                                        width: '90%', alignSelf: 'center', marginBottom: px2dp(10), borderStyle: 'solid',
-                                        borderWidth: px2dp(1.5), borderRadius: px2dp(20), borderColor: '#b6b7b8',
+                                        width: '90%', alignSelf: 'center', marginBottom: px2dp(40), borderStyle: 'solid',
+                                        position: 'absolute',
+                                        top: px2dp(180)
                                     }}>
-                                        <View style={{ width: '90%', alignSelf: 'center', }}>
-                                            <Image style={{ width: '100%', height: px2dp(200), borderRadius: px2dp(20) }} source={require('../image/enpic/bio2.jpg')} resizeMode="contain" />
-                                            <Text style={{ fontSize: px2dp(18), color: '#000000', fontFamily: 'fantasy', marginBottom: px2dp(10), fontWeight: 'bold' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
-                                            <Text style={{ fontSize: px2dp(14), fontFamily: 'fantasy', marginBottom: px2dp(10) }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
+                                        <View style={{ width: '90%', alignSelf: 'center',flex: 1,justifyContent: 'center',alignItems: 'center', }}>
+                                            <Text style={{marginTop: px2dp(5), fontSize: px2dp(22), color: '#ffffff', fontFamily: 'Roboto-Bold_0', marginBottom: px2dp(10), fontWeight: 'bold' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
+                                            <Text style={{marginTop: px2dp(15), fontSize: px2dp(18), textAlign:'center',color: '#ffffff',fontFamily: 'Roboto-Medium', marginBottom: px2dp(10) }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
                                             <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                                                <View style={{ flexDirection: 'row', width: '100%', height: px2dp(45), justifyContent: 'space-between', backgroundColor: '#E7E8EC', borderRadius: px2dp(5) }}>
-                                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', lineHeight: px2dp(45), height: px2dp(45), color: '#000000', fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', }}>{I18n.t('TabHomeActivity.learnmore')}</Text>
-                                                    <Image style={{ height: px2dp(15), width: px2dp(15), marginRight: px2dp(10), marginTop: px2dp(15) }} source={require('../image/right-arr.png')} resizeMode='contain' />
+                                                <View style={{  marginTop: px2dp(40),width: '100%', height: px2dp(45), justifyContent: 'space-between',  borderWidth: px2dp(1.5), borderRadius: px2dp(5), borderColor: '#ffffff' }}>
+                                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', lineHeight: px2dp(45), height: px2dp(45), color: '#ffffff', fontWeight: 'bold', marginLeft: px2dp(60),marginRight: px2dp(60), fontFamily: 'Roboto-Bold_0', }}>{I18n.t('TabHomeActivity.learnmore')}</Text>
                                                 </View>
                                             </TouchableOpacity>
                                             <View style={{ height: px2dp(15) }}></View>
@@ -283,21 +285,22 @@ export default class TabHomeActivity extends Component<Props> {
                             </TouchableOpacity>
                             <TouchableOpacity>
                                 <View style={{ width: '100%', marginLeft: px2dp(20) }}>
-                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', color: '#000', fontFamily: 'fantasy', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
+                                    <Text style={{ fontSize: px2dp(26), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium', lineHeight: px2dp(34) }}>{I18n.t('TabHomeActivity.product')}</Text>
                                 </View>
-                                <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(30) }}>
+                                <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(30),height: px2dp(550) }}>
+                                <Image style={{ width: '100%', height: px2dp(550), borderRadius: px2dp(20) }} source={require('../image/enpic/h05.png')} resizeMode="contain" />
                                     <View style={{
-                                        width: '90%', alignSelf: 'center', marginBottom: px2dp(10), borderStyle: 'solid',
-                                        borderWidth: px2dp(1.5), borderRadius: px2dp(20), borderColor: '#b6b7b8',
+                                        width: '90%', alignSelf: 'center', marginBottom: px2dp(40), borderStyle: 'solid',
+                                        position: 'absolute',
+                                        top: px2dp(180)
                                     }}>
-                                        <View style={{ width: '90%', alignSelf: 'center', }}>
-                                            <Image style={{ width: '100%', height: px2dp(200), borderRadius: px2dp(20) }} source={require('../image/enpic/index9.jpg')} resizeMode="contain" />
-                                            <Text style={{ fontSize: px2dp(18), color: '#000000', fontFamily: 'fantasy', marginBottom: px2dp(10), fontWeight: 'bold' }}>{I18n.t('TabHomeActivity.sam')}</Text>
-                                            <Text style={{ fontSize: px2dp(14), fontFamily: 'fantasy', marginBottom: px2dp(10) }}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
+                                        <View style={{ width: '90%', alignSelf: 'center', flex: 1,justifyContent: 'center',alignItems: 'center',}}>
+                                            <Text style={{ marginTop: px2dp(5),fontSize: px2dp(22), color: '#ffffff', fontFamily: 'Roboto-Bold_0', marginBottom: px2dp(10), fontWeight: 'bold' }}>{I18n.t('TabHomeActivity.sam')}</Text>
+                                            <Text style={{ marginTop: px2dp(15),fontSize: px2dp(18),color: '#ffffff', fontFamily: 'Roboto-Medium', marginBottom: px2dp(10) }}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
                                             <TouchableOpacity onPress={() => this.navigate.push("Same")}>
-                                                <View style={{ flexDirection: 'row', width: '100%', height: px2dp(45), justifyContent: 'space-between', backgroundColor: '#E7E8EC', borderRadius: px2dp(5) }}>
-                                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', lineHeight: px2dp(45), height: px2dp(45), color: '#000000', fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', }}>{I18n.t('TabHomeActivity.learnmore')}</Text>
-                                                    <Image style={{ height: px2dp(15), width: px2dp(15), marginRight: px2dp(10), marginTop: px2dp(15) }} source={require('../image/right-arr.png')} resizeMode='contain' />
+                                                <View style={{  marginTop: px2dp(40), width: '100%', height: px2dp(45), justifyContent: 'space-between', borderWidth: px2dp(1.5), borderRadius: px2dp(5), borderColor: '#ffffff' }}>
+                                                    <Text style={{ fontSize: px2dp(14), textAlign: 'center', lineHeight: px2dp(45), height: px2dp(45), color: '#ffffff', fontWeight: 'bold', marginLeft: px2dp(60),marginRight: px2dp(60), fontFamily: 'Roboto-Bold_0', }}>{I18n.t('TabHomeActivity.learnmore')}</Text>
+                                                  
                                                 </View>
                                             </TouchableOpacity>
                                             <View style={{ height: 15 }}></View>
@@ -352,10 +355,11 @@ export default class TabHomeActivity extends Component<Props> {
                         </View> */}
                         </Swiper >
                     </View>
+                </View>
                     <View style={{ height: 15 }}></View>
                     {/* 相关视频 */}
                     <View style={{ flex: 1, justifyContent: 'center', width: '90%', alignSelf: 'center', }}>
-                        <Text style={{ fontSize: px2dp(26), fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'fantasy', color: '#000000', marginBottom: px2dp(15) }}>{I18n.t('TabHomeActivity.video')}</Text>
+                        <Text style={{ fontSize: px2dp(26), fontWeight: 'bold', marginLeft: px2dp(10), fontFamily: 'Roboto-Bold_0', color: '#333333', marginBottom: px2dp(15) }}>{I18n.t('TabHomeActivity.video')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: px2dp(250), }}
                             paused={true}
@@ -376,7 +380,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 :
                                 this.navigate.push("RasEncryptionActivity")
                     }} />
-                    <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20), fontFamily: 'fantasy' }}>{I18n.t('TabHomeActivity.allright')}</Text>
+                    <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20),color:'#999999', marginTop: px2dp(20), fontFamily: 'Roboto-Light' }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </ScrollView >
                 <SwipeablePanel
                     fullWidth={true}

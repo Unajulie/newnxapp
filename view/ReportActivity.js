@@ -340,7 +340,7 @@ export default class ReportActivity extends Component<Props> {
                             {parseFloat(this.state.naturally) > 0 ?
                                 <View style={{ flexDirection: 'row', justifyContent: 'center', height: px2dp(60), width: '55%', alignSelf: 'center' }}>
                                     <Image style={{ height: px2dp(50), marginTop: px2dp(10), width: '30%', alignItems: 'center', }} source={require('../image/olive-leaf.png')} resizeMode='contain' />
-                                    <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(30), fontWeight: 'bold', fontFamily: 'fantasy', }}>{this.state.naturally}</Text>
+                                    <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(25), fontWeight: 'bold', fontFamily: 'fantasy', }}>{this.state.naturally}</Text>
                                     <Text style={{ lineHeight: px2dp(60), width: '30%', textAlign: 'center', fontSize: px2dp(18), color: '#000000', fontWeight: '600', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.years')}</Text>
 
                                 </View>
@@ -357,7 +357,7 @@ export default class ReportActivity extends Component<Props> {
                             <View style={{ flexDirection: 'row', justifyContent: 'center', height: px2dp(60), width: '70%', alignSelf: 'center' }}>
                                 <Image style={{ height: px2dp(50), marginTop: px2dp(10), width: '30%', alignItems: 'center', }} source={require('../image/olive-leaf.png')} resizeMode='contain' />
                                 {/* <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(30), fontFamily: 'fantasy', fontWeight: 'bold', fontFamily: 'fantasy', }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text> */}
-                                <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(30), fontFamily: 'fantasy', fontWeight: 'bold', fontFamily: 'fantasy', }}>{parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2)}</Text>
+                                <Text style={{ lineHeight: px2dp(60), width: '40%', textAlign: 'center', color: '#000000', fontSize: px2dp(25), fontFamily: 'fantasy', fontWeight: 'bold', fontFamily: 'fantasy', }}>{parseFloat((parseFloat(this.state.biological) - 8.9657) / 0.9044).toFixed(2)}</Text>
 
                                 <Text style={{ lineHeight: px2dp(60), width: '30%', textAlign: 'center', fontSize: px2dp(18), color: '#000000', fontFamily: 'fantasy', fontWeight: '600', fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.years')}</Text>
                             </View>
@@ -372,7 +372,7 @@ export default class ReportActivity extends Component<Props> {
                         <View style={{ width: '90%', height: px2dp(230), flexDirection: 'column', alignSelf: 'center', marginTop: px2dp(20), marginBottom: px2dp(50), backgroundColor: '#feffff', borderRadius: px2dp(15), borderWidth: px2dp(1), borderColor: '#cdcdcd', }}>
                             <Image style={{ height: px2dp(30), width: '15%', marginTop: px2dp(20) }} source={require('../image/dna-icon.png')} resizeMode='contain' />
                             <View style={{ width: px2dp(100), height: px2dp(80), marginTop: px2dp(-20), alignSelf: 'center', borderRadius: px2dp(15), backgroundColor: '#ebeced',}}>
-                                <Text style={{ textAlign: 'center', lineHeight: px2dp(80), color: '#000000', fontSize: px2dp(30), fontWeight: 'bold', fontFamily: 'fantasy' }}>{this.state.biological}</Text>
+                                <Text style={{ textAlign: 'center', lineHeight: px2dp(80), color: '#000000', fontSize: px2dp(25), fontWeight: 'bold', fontFamily: 'fantasy' }}>{this.state.biological}</Text>
                             </View>
                             <Text style={{ lineHeight: px2dp(30), textAlign: 'center', fontSize: px2dp(18), color: '#000000', fontWeight: 'bold', marginBottom: px2dp(30), fontFamily: 'fantasy', }}>{I18n.t('DnaReportActivity.yourbio')}</Text>
 

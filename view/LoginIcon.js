@@ -39,18 +39,18 @@ export default class LoginIcon extends Component<Props> {
         
         return (
             <View>
-                <View style={{ width: px2dp(100), height: px2dp(80), justifyContent: "center", alignItems: "center" }}>
+                <View style={{ width: px2dp(100), height: px2dp(80), justifyContent: "center", alignItems: "center"}}>
                     <Menu>
                             <View style={{ width: '100%',height:px2dp(100), justifyContent: "center", alignItems: "center" }}>
                                 {this.state.user != null ?
                                     <View style={{ width: px2dp(120),height:px2dp(70),justifyContent: "center", alignItems: "center" }}>
                                         <Image style={{ height: px2dp(30), width: px2dp(30),marginBottom:px2dp(5) }} resizeMode="contain" source={require("../image/ic_login.png")} />
-                                        <Text style={{ color: '#000000',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>Hi, {this.state.user.nickname}</Text>
+                                        <Text numberOfLines={1} style={{ color: '#fff',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>Hi, {this.state.user.nickname}</Text>
                                     </View>
                                     :
                                     <View style={{ width: px2dp(120), justifyContent: "center", alignItems: "center" }}>
-                                        <Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/icons/user-logo.png")} />
-                                        <Text style={{  color: '#000000',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>{I18n.t('LoginIcon.message')}</Text>
+                                        <Image style={{ height: px2dp(30), width: px2dp(30) }} resizeMode="contain" source={require("../image/icons/user.png")} />
+                                        <Text style={{  color: '#fff',fontFamily:'Roboto-Light',fontSize:px2dp(12),textAlign:'center' }}>{I18n.t('LoginIcon.message')}</Text>
                                     </View>
                                 }
                             </View>

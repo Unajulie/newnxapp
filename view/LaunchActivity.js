@@ -49,9 +49,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.stop")}</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'Roboto-Bold_0', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.stop")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.birthdays")}</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'Roboto-Light', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.birthdays")}</Text>
                                         </View>
                                     </ImageBackground>
 
@@ -61,9 +61,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.really")}</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'Roboto-Bold_0', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.really")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.biological")}</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'Roboto-Light', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.biological")}</Text>
                                         </View>
                                     </ImageBackground>
 
@@ -73,9 +73,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.discover")}</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'Roboto-Bold_0', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.discover")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.sample")}</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'Roboto-Light', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.sample")}</Text>
                                         </View>
                                     </ImageBackground>
 
@@ -85,9 +85,9 @@ export default class LaunchActivity extends Component {
                                         <View style={{ flex: 1, width: px2dp(80), height: px2dp(80), borderRadius: px2dp(50), margin: px2dp(20), marginTop: px2dp(60), backgroundColor: "#ffffff", position: "absolute" }}>
                                             <Image style={{ width: '100%', height: px2dp(80), borderRadius: px2dp(50) }} source={require('../image/icons/logo.png')} resizeMode="contain" />
                                         </View>
-                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'fantasy', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.reverse")}</Text>
+                                        <Text style={{ flex: 1, zIndex: 33, marginTop: px2dp(160), margin: px2dp(20), color: '#ffffff', fontFamily: 'Roboto-Bold_0', fontSize: px2dp(40), fontWeight: '600' }}>{I18n.t("LaunchActivity.reverse")}</Text>
                                         <View style={{ flex: 1.2, height: px2dp(100), width: '100%', borderTopLeftRadius: px2dp(30), borderTopRightRadius: px2dp(30), backgroundColor: 'rgba(125, 125, 125, 0.6)' }}>
-                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'fantasy', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.changes")}</Text>
+                                            <Text style={{ color: '#ffffff', fontSize: px2dp(15), fontWeight: '300', margin: px2dp(20), fontFamily: 'Roboto-Light', lineHeight: px2dp(19) }}>{I18n.t("LaunchActivity.changes")}</Text>
                                         </View>
                                     </ImageBackground>
 
@@ -109,14 +109,14 @@ export default class LaunchActivity extends Component {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")}
                                     >
-                                        <Text style={{ width: "100%", height: px2dp(45), fontSize: px2dp(16), lineHeight: px2dp(45), color: "#ffffff", textAlign: "center", fontFamily: 'fantasy', textAlignVertical: "center", }}>{this.state.user == null ? I18n.t("LaunchActivity.registerkit") : I18n.t("LaunchActivity.myreport")} </Text>
+                                        <Text style={{ width: "100%", height: px2dp(45), fontSize: px2dp(16), lineHeight: px2dp(45), color: "#ffffff", textAlign: "center", fontFamily: 'Roboto-Medium', textAlignVertical: "center", }}>{this.state.user == null ? I18n.t("LaunchActivity.registerkit") : I18n.t("LaunchActivity.myreport")} </Text>
                                     </Button>
                                 </TouchableOpacity>
                             </View>
                             <View style={{ width: "90%", height: px2dp(45), alignSelf: "center", marginBottom: px2dp(20), }}>
                                 <TouchableOpacity >
                                     <Button onPress={() => this.navigate.push("Mall")} style={{ width: "100%", height: px2dp(45), backgroundColor: '#ffffff', borderWidth: px2dp(1), borderColor: '#404bc2', borderRadius: px2dp(5), }}>
-                                        <Text style={{ width: "100%", height: px2dp(45), color: "#404bc2", lineHeight: px2dp(45), textAlign: "center", fontFamily: 'fantasy', textAlignVertical: "center" }}>{I18n.t("LaunchActivity.buykit")}</Text>
+                                        <Text style={{ width: "100%", height: px2dp(45), color: "#404bc2", lineHeight: px2dp(45), textAlign: "center", fontFamily: 'Roboto-Medium', textAlignVertical: "center" }}>{I18n.t("LaunchActivity.buykit")}</Text>
                                     </Button>
                                 </TouchableOpacity>
                             </View>
@@ -126,7 +126,7 @@ export default class LaunchActivity extends Component {
                                     <TouchableOpacity>
                                         <Button style={{ width: "100%", height: px2dp(45), backgroundColor: '#ffffff', borderRadius: px2dp(5), borderWidth: px2dp(1), borderColor: '#404bc2' }}
                                             onPress={() => this.navigate.push('Login')}>
-                                            <Text style={{ width: "100%", height: px2dp(45), color: "#404bc2", lineHeight: px2dp(45), textAlign: "center", fontFamily: 'fantasy', textAlignVertical: "center" }}>{I18n.t("LaunchActivity.signin")}</Text>
+                                            <Text style={{ width: "100%", height: px2dp(45), color: "#404bc2", lineHeight: px2dp(45), textAlign: "center", fontFamily: 'Roboto-Medium', textAlignVertical: "center" }}>{I18n.t("LaunchActivity.signin")}</Text>
                                         </Button>
                                     </TouchableOpacity>
                                 </View>
@@ -136,7 +136,7 @@ export default class LaunchActivity extends Component {
                             }
                             <TouchableOpacity onPress={() => this.navigate.push('Main')}>
                                 <View style={{ width: "100%", marginBottom:px2dp(20), marginTop: px2dp(20), }}>
-                                    <Text style={{ width: "100%",height: px2dp(45),lineHeight: px2dp(45), color: "#404bc2", fontWeight: "700", fontFamily: 'fantasy', textDecorationLine: 'underline', textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
+                                    <Text style={{ width: "100%",height: px2dp(45),lineHeight: px2dp(45), color: "#404bc2", fontWeight: "700", fontFamily: 'Roboto-Medium', textDecorationLine: 'underline', textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.readmore")}</Text>
                                 </View>
                             </TouchableOpacity>
                         </View>

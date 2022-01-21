@@ -16,21 +16,21 @@ export default class TabAboutActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         return (
-            <View style={{ flex: 1, backgroundColor: '#f6f7f8'  }}>
+            <View style={{ flex: 1, backgroundColor: '#ffffff'  }}>
                 <ScrollView>
                     <StatusBar animated={true} hidden={true} translucent={true} barStyle={'light-content'} />
                     {/* 公司简介  改版*/}
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: px2dp(40) }}>
                         {/* company introduction */}
                         <TouchableOpacity onPress={() => this.navigate.push("Company")}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#f6f7fb', borderColor: '#f6f7fb', borderStyle: 'solid', }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about1.png')} resizeMode='contain' />
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/About01.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
-                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',marginTop: px2dp(10),overflow:'hidden' }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>
                                         {I18n.t('TabAboutActivity.company1')}</Text>
-                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.Guide')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#666666', fontFamily: 'Roboto-Light' }}>{I18n.t('TabAboutActivity.Guide')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -40,14 +40,14 @@ export default class TabAboutActivity extends Component<Props> {
                         </TouchableOpacity>
                         {/* 科学团队 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#f6f7fb', borderColor: '#f6f7fb', borderStyle: 'solid', }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about2.png')} resizeMode='contain' />
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/About02.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
-                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden',marginTop: px2dp(10) }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>
                                         {I18n.t('TabAboutActivity.science1')}</Text>
-                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.We')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#666666', fontFamily: 'Roboto-Light' }}>{I18n.t('TabAboutActivity.We')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -57,14 +57,14 @@ export default class TabAboutActivity extends Component<Props> {
                         </TouchableOpacity>
                         {/* DNA甲基化 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Methylation")}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#f6f7fb', borderColor: '#f6f7fb', borderStyle: 'solid', }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about3.png')} resizeMode='contain' />
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/About03.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
-                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden',marginTop: px2dp(10)}}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>
                                         {I18n.t('TabAboutActivity.dna1')}</Text>
-                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.DNA')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#666666', fontFamily: 'Roboto-Light' }}>{I18n.t('TabAboutActivity.DNA')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -74,14 +74,14 @@ export default class TabAboutActivity extends Component<Props> {
                         </TouchableOpacity>
                         {/* 生物学年龄检测 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#f6f7fb', borderColor: '#f6f7fb', borderStyle: 'solid', }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about4.png')} resizeMode='contain' />
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/About04.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
-                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden',marginTop: px2dp(10) }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>
                                         {I18n.t('TabAboutActivity.biological1')}</Text>
-                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.counts')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#666666', fontFamily: 'Roboto-Light' }}>{I18n.t('TabAboutActivity.counts')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -105,14 +105,14 @@ export default class TabAboutActivity extends Component<Props> {
                         </TouchableOpacity> */}
                         {/* 客户资料同意书 */}
                         <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
-                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#ffffff', borderColor: '#b6b7b8', borderStyle: 'solid', }}>
+                            <View style={{ borderRadius: px2dp(15), height: px2dp(90), flexDirection: 'row', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#f6f7fb', borderColor: '#f6f7fb', borderStyle: 'solid', }}>
                                 <View style={{ width: '25%', justifyContent: 'center' }}>
-                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/about5.png')} resizeMode='contain' />
+                                    <Image style={{ width: '100%', height: px2dp(60), }} source={require('../image/icons/About05.png')} resizeMode='contain' />
                                 </View>
-                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden' }}>
-                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#000000', fontFamily: 'fantasy' }}>
+                                <View style={{ width: '65%', justifyContent: 'center',overflow:'hidden',marginTop: px2dp(10) }}>
+                                    <Text style={{overflow:'hidden',height:px2dp(30), fontSize: px2dp(18), textAlign: 'left', fontWeight: 'bold', color: '#333333', fontFamily: 'Roboto-Medium' }}>
                                         {I18n.t('TabAboutActivity.consent1')}</Text>
-                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#000000', fontFamily: 'fantasy' }}>{I18n.t('TabAboutActivity.THERAPEUTICS')}</Text>
+                                    <Text style={{overflow:'hidden',height:px2dp(50), fontSize: px2dp(14), textAlign: 'left', fontWeight: '200', color: '#666666', fontFamily: 'Roboto-Light' }}>{I18n.t('TabAboutActivity.THERAPEUTICS')}</Text>
 
                                 </View>
                                 <View style={{ width: '10%', height: px2dp(90), justifyContent: 'center' }}>
@@ -122,7 +122,7 @@ export default class TabAboutActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                     {/* 公司简介 */}
-                    <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20),fontFamily: 'fantasy'  }}>{I18n.t('TabHomeActivity.allright')}</Text>
+                    <Text style={{ fontSize: px2dp(12), textAlign: 'center', marginBottom: px2dp(20), marginTop: px2dp(20),fontFamily: 'Roboto-Light',color:'#999999'  }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </ScrollView>
             </View>
         );

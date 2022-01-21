@@ -8,7 +8,7 @@ import { I18n } from '../locales/i18n';
 import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 import { px2dp } from '../src/px2dp';
 export default MainActivity = createBottomTabNavigator({
-    Home: {
+    HOME: {
         screen: TabHomeActivity,
         navigationOptions: () => {
             //tab 的属性的属性
@@ -17,12 +17,12 @@ export default MainActivity = createBottomTabNavigator({
                 tabBarIcon: ({ tintColor, focused }) => (
                         focused ?
                             <Image
-                                source={require("../image/tab/ic2_tab_home.png")}
+                                source={require("../image/tab/home02.png")}
                                 style={styles.iconStyle} resizeMode='contain'
                             />
                             :
                             <Image
-                                source={require("../image/tab/ic1_tab_home.png")}
+                                source={require("../image/tab/home01.png")}
                                 style={styles.iconStyle} resizeMode='contain'
                             />
                     )
@@ -37,12 +37,12 @@ export default MainActivity = createBottomTabNavigator({
             tabBarIcon: ({ tintColor, focused }) => (
                 focused ?
                     <Image
-                        source={require("../image/tab/ic2_tab_about.png")}
+                        source={require("../image/tab/about02.png")}
                         style={styles.iconStyle}resizeMode='contain'
                     />
                     :
                     <Image
-                        source={require("../image/tab/ic1_tab_about.png")}
+                        source={require("../image/tab/about01.png")}
                         style={styles.iconStyle}resizeMode='contain'
                     />
             )
@@ -54,9 +54,9 @@ export default MainActivity = createBottomTabNavigator({
             //tab 的属性
             tabBarLabel: I18n.t("MainActivity.shop"),
             tabBarIcon: ({ tintColor, focused }) => (
-                focused ? <Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle} resizeMode='contain' />
+                focused ? <Image source={require("../image/tab/shop02.png")} style={styles.iconStyle} resizeMode='contain' />
                     :
-                    <Image source={require("../image/tab/ic1_tab_mall.png")} style={styles.iconStyle} resizeMode='contain' />
+                    <Image source={require("../image/tab/shop01.png")} style={styles.iconStyle} resizeMode='contain' />
             )
         }
     },
@@ -71,12 +71,12 @@ export default MainActivity = createBottomTabNavigator({
             tabBarIcon: ({ tintColor, focused }) => (
                 focused ?
                     <Image
-                        source={require("../image/tab/ic2_tab_user.png")}
+                        source={require("../image/tab/user02.png")}
                         style={styles.iconStyle} resizeMode='contain'
                     />
                     :
                     <Image
-                        source={require("../image/tab/ic1_tab_user.png")}
+                        source={require("../image/tab/user01.png")}
                         style={styles.iconStyle} resizeMode='contain'
                     />
             )
@@ -94,7 +94,7 @@ export default MainActivity = createBottomTabNavigator({
         //按 back 键是否跳转到第一个Tab(首页)， none 为不跳转
         backBehavior: "none",
         //进入App的首页
-        initialRouteName: 'Home',
+        initialRouteName: 'HOME',
         //设置Tab标签的属性
         tabBarOptions: {
             //Android属性
