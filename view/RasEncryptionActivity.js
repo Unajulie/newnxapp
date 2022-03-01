@@ -190,6 +190,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                             this.setState({ btnPublickeyDisabled: true })
                                             this.setState({ btnSaveDisabled: true })
                                             this.setState({ btnCopyDisabled: true })
+                                            if(this.state.publickey&&this.state.privatekey){
                                             //用public key加密private key生成加密的priavekey
                                             let cipher = encrypt(this.state.publickey, this.state.privatekey)
                                             fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher).then(user => user.json()).then((user) => {
@@ -230,6 +231,15 @@ export default class RasEncryptionActivity extends Component<Props> {
                                                         Alert.alert("Message", err)
                                                     });
                                             })
+                                        }else{
+                                            Alert.alert("Message", I18n.t("RasEncryptionActivity.generatekey"))
+                                            this.setState({ animating: false })
+                                            this.setState({ btnPrivatekeyDisabled: false })
+                                            this.setState({ btnPublickeyDisabled: false })
+                                            this.setState({ btnSaveDisabled: false })
+                                            this.setState({ btnCopyDisabled: false})
+                                         
+                                        }
                                         }} />
                                 </View>
 

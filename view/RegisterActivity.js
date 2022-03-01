@@ -160,8 +160,9 @@ export default class RegisterActivity extends Component<Props> {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: "mail=" + this.state.email + "&password=" + this.state.password + "&nickname=" + this.state.nickname + "&region=" + this.state.region
+                body: "mail=" + this.state.email + "&password=" + this.state.password + "&nickname=" + this.state.username + "&region=" + this.state.region
             }).then(res => res.text()).then((data) => {
+                console.info(this.state.username)
                 if (data == "error") {
                     Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.registered'))
                     // this.setState({signup:false});

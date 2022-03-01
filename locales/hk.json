@@ -902,7 +902,8 @@
         "titlemsg":"提示",
         "meg":"公鑰和私鑰已復製到剪貼板。",
         "emailsendfailed":"網絡延遲，郵件發送失敗，請重新點擊「保存」按鈕，再次發送郵件。" ,
-        "emailsendsuccess":"郵件發送成功"
+        "emailsendsuccess":"郵件發送成功",
+        "generatekey":"為了保證您能查詢報告請生成公鑰和私鑰"
     },
     "QAActivity": {
         "title": "Q&A",

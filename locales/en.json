@@ -920,7 +920,8 @@
         "titlemsg":"Message",
         "meg":"The public key and private key has been copied to your clipboard.",
         "emailsendfailed":"The network is delayed and the email sending fails, please click the 'SAVE'  button again to send the email.",
-        "emailsendsuccess":"Mail sent successfully"
+        "emailsendsuccess":"Mail sent successfully",
+        "generatekey":"In order to ensure that you can query the report, please generate the public key and private key"
     },
    
     "QAActivity": {

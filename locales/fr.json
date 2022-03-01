@@ -951,7 +951,8 @@
         "titlemsg": "Message",
         "meg": "La clé publique et la clé privée ont été copiées dans votre presse-papiers.",
         "emailsendfailed":"Le réseau est retardé et l'envoi de l'e-mail échoue, veuillez cliquer à nouveau sur le bouton 'Enregistrer' pour envoyer l'e-mail.",
-        "emailsendsuccess":"Courrier envoyé avec succès"
+        "emailsendsuccess":"Courrier envoyé avec succès",
+        "generatekey":"Afin de vous assurer que vous pouvez interroger le rapport, veuillez générer la clé publique et la clé privée"
     },
     "QAActivity": {
         "title": "Q&A",

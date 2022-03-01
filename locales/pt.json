@@ -958,7 +958,8 @@
         "titlemsg": "mensagem",
         "meg": "A chave pública e a chave privada foram copiadas para a área de transferência.",
         "emailsendfailed":"A rede está atrasada e o envio de e-mail falha, clique no botão 'SALVAR' novamente para enviar o e-mail.",
-        "emailsendsuccess":"Correio enviado com sucesso"
+        "emailsendsuccess":"Correio enviado com sucesso",
+        "generatekey":"Para garantir que você possa consultar o relatório, gere a chave pública e a chave privada"
     },
     "QAActivity": {
         "title": "Q&A",

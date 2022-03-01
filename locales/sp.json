@@ -966,7 +966,8 @@
         "titlemsg": "Mensaje",
         "meg": "La clave pública y la clave privada se han copiado en su portapapeles.",
         "emailsendfailed":"La red se retrasa y falla el envío del correo electrónico, haga clic en el botón 'Guardar' nuevamente para enviar el correo electrónico.",
-        "emailsendsuccess":"El correo enviado con éxito"
+        "emailsendsuccess":"El correo enviado con éxito",
+        "generatekey":"Para asegurarse de que puede consultar el informe, genere la clave pública y la clave privada"
     },
     "QAActivity": {
         "title": "Q&A",
