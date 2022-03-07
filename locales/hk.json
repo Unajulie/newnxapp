@@ -32,7 +32,7 @@
         "consent": "用戶知情同意書",
         "disclaimer": "免責聲明",
         "disclaimertext": "EpiAging測試並非旨在作為健康信息或醫學數據，也不用於篩選，診斷，治療，預防或評估任何疾病或狀況的風險。 epiAging服務是根據DNA中DNA甲基化的評估確定表觀遺傳的年齡。 我們不收集遺傳數據。 該測試適用於21歲以上的個人。 美國食品藥品監督管理局尚未清除或批准此服務。",
-        "allright": " @2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "allright": " @2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "old":"您",
         "you":"幾歲呢？",
         "only":"唯一重要的年齡",
@@ -126,10 +126,10 @@
         "register": "帳戶註冊",
         "language":"語言切換",
         "Invalid": {
-            "Email": "電子郵件無效",
+            "Email": "電子郵件無效（請確保您使用的是在應用程序上註冊的帳戶）",
             "PWD": "密碼無效",
             "NetFail": "網絡無法連接",
-            "unactive": "電子郵件未啟動"
+            "unactive": "電子郵件未激活（請點擊您註冊郵箱中的鏈接激活它或檢查垃圾郵件文件夾）"
         },
         "ForgetPwd": "忘記密碼?"
     },
@@ -145,7 +145,7 @@
         "privacy": "服務條款和隱私權聲明。",
         "message": "資訊",
         "registered": "郵箱已注册",
-        "activation": "用戶啟動連結已發送到您的注册郵箱，請按一下此處的連結進行啟動。",
+        "activation": "用戶啟動連結已發送到您的注册郵箱，請按一下此處的連結進行激活（或請檢查垃圾郵件）。",
         "again": "網絡錯誤！重來一次",
         "account": "已經有帳戶了?",
         "login": "登入"
@@ -267,8 +267,7 @@
         "open": "初步研究表明，飲食改變可能導致某些人的生物時鐘減慢。這仍處於開放討論階段。 ( https://www.ncbi.nlm.nih.gov/pubmed/30350398)",
         "exercise": "生活模式的改變包括運動和飲食習慣的改變。雖然已被國家醫學協會推薦了一段時間，但是我們需要更多關於較高效的改變的數據；這些改變應該經過個性化設計的。",
         "way": "有無數用戶與我們分享經驗，我們才能夠向測試人仕改善咨詢質素；同時持續分析生活模式改變所帶來的影響。透過共享科技(如應用程式和人工智能) ，我們可以查出不同生活習慣會如何影響生物時鐘。",
-        "position": "我們的智能應用程序",
-        "health": "個性化和系統地定位您的健康",
+        "lifestylerecom":"生活方式建議",
         "links": "我們的應用程式會把由美國國家醫學協會推薦的生活模式資訊及建議經超鏈結提供及閣下；同時會推介相關營養補充品例如 SAMe, 維他命A, D 及C。",
         "updated": "這些資料會經常更新；我們建議用家定時參考鏈結的內容。這些建議是基於“科學”今天所知道的。雖然並不完美，隨著更多的數據和更多的分析，我們的科學也在改進提升。",
         "first": "我們的報告首先會顯示閣下的生活方式參數與建議參數的分別。你能參考第一份報告的分析結果決定進行怎樣的改變。",
@@ -452,7 +451,7 @@
         "medical": "2009年-多倫多校友和朋友",
         "excellence": "醫學卓越獎",
         "publshed": "論文著作",
-        "all": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "all": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "forum": "2017第六屆亞洲染色質和染色體論壇",
         "india": "（印度海德拉巴）",
         "diseases": "2016年第三屆加拿大發展與疾病表觀遺傳學會議",
@@ -524,7 +523,7 @@
         "university": "香港大學",
         "assistaant": "研究助理",
         "papers": "論文著作",
-        "rights": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "rights": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ZhiyuanActivity": {
         "title": "呂志遠博士後研究生",
@@ -555,7 +554,7 @@
         "journal": "免疫分析與免疫化學",
         "board": "學術期刊編委",
         "papers": "論文著作",
-        "reserved": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "reserved": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "society": "美國免疫學家學會2015年年會",
         "newusa": "（美國新奧爾良）",
         "third": "2014年東南亞免疫學研討會第三屆年會",
@@ -600,7 +599,7 @@
         "biological": "相比於檢測實際年齡，量度生物年齡能更有效衡量我們的健康以及身體情況。",
         "acceleration": "研究顯示，“DNA甲基化年齡”加速是預測早期死亡和慢性疾病的因素。",
         "bydietary": "動物實驗結果反映出，飲食習慣的改變是可能逆轉生物時鐘的。",
-        "epi": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "epi": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "QuestionnaireActivity": {
         "title": "問卷調查",
@@ -610,7 +609,7 @@
         "sleep":"睡眠自我評估",
         "diet":"飲食推薦",
         "how":"如何填寫問卷？",
-        "eip":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "eip":"@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ConsentActivity": {
         "title": "客戶同意書",
@@ -637,7 +636,7 @@
         "security": "數據安全",
         "accordance": "根據《數據保護條例》關於數據保護的規定，閣下有權要求訪問、糾正或刪除閣下的個人數據，或限制與閣下數據有關的處理及數據可移動性。閣下可以通過聯繫（info@hkgepitherapeutics.com）行使此權利。閣下的數據會被加密和防火牆保護。同意接受條款之後，閣下將收到一個純粹的ID號碼，通過該ID號你可以進行數據錄入同時對系統保持匿名狀態。",
         "agree": "同意",
-        "ved": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "ved": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "McGillChartActivity": {
         "title": "麥吉爾疼痛問卷",
@@ -765,7 +764,7 @@
         "analyze": "我們最先進的實驗室將分析您的表觀遺傳數據以計算您的生物學年齡，並且您可以通過APP查看個性化報告。",
         "step5": "第5步：改變生活方式，改善您的健康",
         "lifestyle": "我們還將分析您的生活方式數據。 您不斷改變生活方式並進行報告。 您會定期收到有關進度訂單的個性化報告，這些報告會定期進行新的EpiAging測試以評估您的進度。 新的分析將提供一些建議。 不斷改進和測試您的epiAge。",
-        "foot": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "foot": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "counts":"唯一重要的年齡是",
         "danage":"您的生物DNA年齡"
     },
@@ -856,7 +855,7 @@
         "when": "注意事項",
         "should": "SAMe 不應與醫生處方藥物一同服用。 ",
         "taking": "如果閣下正在服用藥物並考慮使用SAMe作為補充劑，請諮詢醫生SAMe是否與所服用藥物有相沖。",
-        "ltd": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "ltd": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "DataActivity": {
         "title": "數據安全",
@@ -879,7 +878,7 @@
         "not": "根據我們的數據安全聲明，我們將不會擁有或保存用戶的私鑰來解密用戶數據，請保存您唯一的私鑰。",
         "lost":"設置私鑰後，將不允許更改。 如果更改了私鑰，則所有先前保存的健康數據都將丟失。 新的健康數據將使用新的私鑰加密，並且只能設置一次。",
         "save":"根據數據安全聲明和HIPPA法律，我們將沒有或保存用戶的私鑰來解密用戶數據。",
-        "eip":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "eip":"@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "RasEncryptionActivity": {
         "title": "數據安全設定",
@@ -929,7 +928,7 @@
         "title": "問卷聲明",
         "ques": "繼續",
         "back": "取消",
-        "epi":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "epi":"@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "Manual1Activity": {
         "title": "獲得EpiAging測試報告",

@@ -64,7 +64,7 @@ export default class ScienceteamActivity extends Component<Props> {
                         </View>
                     </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.navigate.push("Chifat")} >
+                {/* <TouchableOpacity onPress={() => this.navigate.push("Chifat")} >
                     <View style={{ width: '90%', height: px2dp(100),marginBottom:px2dp(20), alignSelf: 'center', flexDirection: 'row', borderRadius: px2dp(15), borderWidth: px2dp(1.5), borderColor: '#e5e6e7' }}>
                         <View style={{ width: '30%', justifyContent: 'center' }}>
                             <Image style={{ height: px2dp(80), width: '100%', margin: px2dp(3), borderRadius: px2dp(15) }} resizeMode='contain' source={require("../image/icons/chifat1.png")}></Image>
@@ -83,7 +83,7 @@ export default class ScienceteamActivity extends Component<Props> {
                             <Image style={{ height: px2dp(15), width: px2dp(15), }} source={require('../image/right-arr.png')} resizeMode='contain' />
                         </View>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
                 {/* <TouchableOpacity onPress={() => this.navigate.push("Zhiyuan")} >
                     <View style={{ width: '90%', height: px2dp(100),marginBottom:px2dp(20), alignSelf: 'center', flexDirection: 'row', borderRadius: px2dp(15), borderWidth: px2dp(1.5), borderColor: '#e5e6e7' }}>
                         <View style={{ width: '30%', justifyContent: 'center',borderRadius: px2dp(15)  }}>

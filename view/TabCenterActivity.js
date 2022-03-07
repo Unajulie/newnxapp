@@ -68,9 +68,9 @@ export default class CenterActivity extends Component {
 
                                     :
                                     <View style={{ width: '80%', height: px2dp(80), marginTop: px2dp(30), alignSelf: 'center' }}>
-                                        <Text style={{ color: "#000000", fontSize: px2dp(23), fontWeight: 'bold' }}>Hello, {this.state.user.nickname}</Text>
+                                        <Text style={{ color: "#000000", fontSize: px2dp(23), fontWeight: 'bold' }}>Hi, {this.state.user.nickname=="undefined"?"epiAge user":this.state.user.nickname}</Text>
                                         <TouchableOpacity onPress={() => { this.navigate.push("RasEncryptionActivity") }}>
-                                            <Text style={{ color: "#000000", fontSize: 18 }}>{I18n.t('TabCenterActivity.centerkey')}</Text>
+                                            <Text style={{ color: "#000000", fontSize: 18,textDecorationLine:'underline' }}>{I18n.t('TabCenterActivity.centerkey')}</Text>
                                         </TouchableOpacity>
                                     </View>
                                 }

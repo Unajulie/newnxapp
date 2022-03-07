@@ -82,11 +82,16 @@ export default class BiologicalActivity extends Component<Props> {
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ width: '8%', fontSize: px2dp(18), color: '#6A6A79' }}>★</Text>
-                                    <Text style={{ width: '92%', fontSize: px2dp(14), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: 21 }}>{I18n.t('BiologicalActivity.paradigm')}</Text>
+                                    <Text style={{ width: '92%', fontSize: px2dp(14), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: 21 }}>{I18n.t('BiologicalActivity.paradigm')}
+                                    
+                                    </Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ width: '8%', fontSize: px2dp(18), color: '#6A6A79' }}>★</Text>
-                                    <Text style={{ width: '92%', fontSize: px2dp(14), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: 21 }}>{I18n.t('BiologicalActivity.suggest')}</Text>
+                                    <Text style={{ width: '92%', fontSize: px2dp(14), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: 21 }}>{I18n.t('BiologicalActivity.suggest')}
+                                    <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease" }); this.setState({ display: true }) }}
+                                    style={{ fontStyle: 'italic', color: '#404bc2', fontSize: px2dp(14) }}>https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease</Text>)
+                                    </Text>
                                 </View>
                             </View>
 
@@ -101,7 +106,9 @@ export default class BiologicalActivity extends Component<Props> {
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ width: '8%', fontSize: px2dp(18), color: '#6A6A79' }}>★</Text>
-                                    <Text style={{ width: '92%', fontSize: px2dp(14), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: 21 }}>{I18n.t('BiologicalActivity.studies')}</Text>
+                                    <Text style={{ width: '92%', fontSize: px2dp(14), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: 21 }}>{I18n.t('BiologicalActivity.studies')}
+                                    <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/30350398" }); this.setState({ display: true }) }} style={{ fontStyle: 'italic', color: '#404bc2', fontSize: px2dp(14) }}>https://www.ncbi.nlm.nih.gov/pubmed/30350398</Text>)
+                                   </Text>
                                 </View>
                             </View>
                             {/* 沙拉图片 */}
@@ -125,7 +132,8 @@ export default class BiologicalActivity extends Component<Props> {
                                 <Text style={{ fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: px2dp(20), fontWeight: '700' }}>Source</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease" }); this.setState({ display: true }) }}
                                     style={{ fontStyle: 'italic', color: '#404bc2', fontSize: px2dp(14) }}>https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease</Text>
-                                <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/30350398" }); this.setState({ display: true }) }} style={{ fontStyle: 'italic', color: '#404bc2', fontSize: px2dp(16) }}>https://www.ncbi.nlm.nih.gov/pubmed/30350398</Text>
+                                     <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/30350398" }); this.setState({ display: true }) }} style={{ fontStyle: 'italic', color: '#404bc2', fontSize: px2dp(14) }}>https://www.ncbi.nlm.nih.gov/pubmed/30350398</Text>
+                               
                             </View>
                             {/* epiage test */}
                             <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, backgroundColor: '#ffffff' }}>
@@ -306,7 +314,7 @@ export default class BiologicalActivity extends Component<Props> {
                                 <Text style={{ fontSize: px2dp(14), marginBottom: px2dp(10), fontFamily: 'fantasy', lineHeight: 23 }}>{I18n.t('BiologicalActivity.epitherapeutics')}</Text>
                                 <Text style={{ fontSize: px2dp(18), lineHeight: px2dp(23), fontFamily: 'fantasy', color: '#000000', textAlignVertical: 'center', marginTop: px2dp(20), marginBottom: px2dp(20), fontWeight: '700' }}>{I18n.t('BiologicalActivity.steps')}</Text>
                             </View>
-                            <View style={{ width: '90%', alignSelf: 'center', backgroundColor: '#ffffff' }}>
+                            <View style={{ width: '90%', alignSelf: 'center', backgroundColor: '#ffffff',marginBottom:px2dp(100) }}>
                                 <View style={{ borderWidth: 1,  borderRadius: 10, backgroundColor: '#ebfaff' }}>
                                     <View style={{ flexDirection: 'row', marginTop: px2dp(10) }}>
                                         <Text style={{ width: '70%', textAlignVertical: 'center',fontFamily: 'fantasy',color:'#000', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('BiologicalActivity.download')}</Text>

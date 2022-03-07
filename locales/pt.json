@@ -39,7 +39,7 @@
         "consent": "Consentimento informado pelo usuário",
         "disclaimer": "aviso Legal",
         "disclaimertext": "O teste epiAging não se destina a ser informações de saúde ou dados médicos ou para ser usado para rastrear, diagnosticar, tratar, prevenir ou avaliar o risco de qualquer doença ou condição. O serviço epiAging é uma determinação da idade epigenética com base na avaliação da metilação do DNA no seu DNA. Não estamos coletando dados genéticos. O teste está disponível para indivíduos de 21 anos de idade ou mais. Este serviço não tenha sido apagado ou aprovado pela U. S. Food and Drug Administration.",
-        "allright": " @2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
+        "allright": " @2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
         "old": "Quantos anos",
         "you": " você tem?",
         "only": "A única idade importante é ",
@@ -146,10 +146,10 @@
         "register": "registo",
         "language": "Língua",
         "Invalid": {
-            "Email": "Email inválido",
+            "Email": "Email inválido (certifique-se de que está usando a conta registrada no aplicativo)",
             "PWD": "Senha inválida",
             "NetFail": "Rede não vinculável",
-            "unactive": "Email não ativo"
+            "unactive": "E-mail não ativo (por favor, ative-o clicando no link em sua caixa de correio registrada ou verifique a pasta de SPAM)"
         },
         "ForgetPwd": "Esqueceu a senha?"
     },
@@ -165,7 +165,7 @@
         "privacy": "a Declaração de Privacidade.",
         "message": "Mensagem",
         "registered": "A caixa de correio foi registrada",
-        "activation": "O link de ativação do usuário foi enviado para sua caixa de correio registrada. Por favor, ative-o clicando no link.",
+        "activation": "E-mail não ativo (por favor, ative-o clicando no link em sua caixa de correio registrada ou verifique a pasta de SPAM).",
         "again": "Erro de rede! Tente novamente",
         "account": "já tem uma conta?",
         "login": "Conecte-se"
@@ -297,8 +297,7 @@
         "open": "Estudos preliminares mostram que mudanças na dieta podem causar desaceleração do relógio epigenético em certas pessoas, porém essa ainda é uma questão em aberto. (https://www.ncbi.nlm.nih.gov/pubmed/30350398)",
         "exercise": "As mudanças no estilo de vida, incluindo exercícios e hábitos alimentares, são recomendadas pelas associações médicas nacionais há algum tempo; no entanto, precisamos de mais dados sobre as mudanças mais recomendáveis ​​e elas devem ser personalizadas.",
         "way": "Uma maneira de aprender sobre mudanças de estilo de vida recomendáveis ​​é compartilhar nossas experiências com outras pessoas e analisar o impacto das diferenças no estilo de vida em uma grande população. Agora é possível usar tecnologias de compartilhamento como o Apps e inteligência artificial que podem determinar como diferentes entradas, como hábitos de 'estilo de vida', afetam um resultado - o 'relógio epigenético'.",
-        "position": "Posicionamento personalizado e sistemático do",
-        "health": "nosso aplicativo inteligente para a sua saúde",
+         "lifestylerecom":"Recomendações de estilo de vida",
         "links": "Nosso aplicativo conecta você a informações sobre comportamentos recomendados no estilo de vida de importantes associações médicas nacionais dos EUA, bem como a possíveis suplementos nutricionais, como SAMe, vitamina A, D e C.",
         "updated": "Esses links são atualizados regularmente e sugerimos que você continue atualizando examinando os links periodicamente. Essas recomendações são baseadas no que a “ciência” sabe hoje, elas não são perfeitas. Com mais dados e mais análises, a ciência está melhorando.",
         "first": "Nosso primeiro relatório é baseado nos dados de estilo de vida que você inseriu, que mostram até que ponto seus parâmetros de estilo de vida se desviam das recomendações de consenso. Você pode decidir fazer alterações com base neste relatório.",
@@ -489,7 +488,7 @@
         "award": "Excellence Award",
         "medical": "Toronto Alumni and Friends Medical",
         "publshed": "PUBLISHED PAPERS",
-        "all": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
+        "all": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
         "forum": "2017 Sixth Asian Chromatin and Chromosome Forum",
         "india": "(Hyderabad, India)",
         "diseases": "2016 3rd Canadian Conference on Epigenetics of Development and Diseases",
@@ -559,7 +558,7 @@
         "university": "The University of Hong Kong",
         "assistaant": "Research Assistant",
         "papers": "PUBLISHED PAPERS",
-        "rights": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
+        "rights": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
     },
     "ZhiyuanActivity": {
         "title": "Zhiyuan Lv Ph.D.",
@@ -590,7 +589,7 @@
         "journal": "Journal of Immunoassay and Immunochemistry",
         "board": "Editorial Board of Journal",
         "papers": "PUBLISHED PAPERS",
-        "reserved": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
+        "reserved": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
         "society": "2015 Annual Meeting of the American Society of Immunologists",
         "newusa": "(New Orleans, USA)",
         "third": "Third Annual Conference of the 2014 Southeast American Symposium on Immunology",
@@ -635,7 +634,7 @@
         "biological": "Nossa idade epigenética é uma medida melhor de nossa saúde e bem-estar do que a idade cronológica.",
         "acceleration": "Estudos mostram que a aceleração da 'idade de metilação do DNA' é um preditor de morte prematura e doença crônica.",
         "bydietary": "Experimentos em animais mostram que é possível reverter alterações do relógio biológico bydietary.",
-        "epi": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
+        "epi": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
     },
     "QuestionnaireActivity": {
         "title": "Questionários",
@@ -645,7 +644,7 @@
         "sleep": "Auto-avaliação do sono",
         "diet": "Recomendação de dieta",
         "how": "Como preencher o questionário?",
-        "eip": "@2021 HKG epi THERAPEUTICS Ltd. Todos os direitos reservados"
+        "eip": "@2022 HKG epi THERAPEUTICS Ltd. Todos os direitos reservados"
     },
     "ConsentActivity": {
         "title": "Formulário de consentimento do usuário",
@@ -672,7 +671,7 @@
         "security": "Segurança de dados",
         "accordance": "De acordo com os Regulamentos de proteção de dados no que diz respeito à proteção de dados, você tem o direito de solicitar acesso e retificação ou exclusão de seus dados pessoais ou restrição de processamento referente a seus dados ou se opor ao processamento, bem como o direito à portabilidade de dados. Você pode exercer esse direito entrando em contato com (info@hkgepitherapeutics.com). Seu nome e identidade serão criptografados e protegidos por firewall. Após a sua assinatura, você receberá um ID cego que permitirá fornecer dados e permanecer anônimo no sistema.",
         "agree": "Aceita",
-        "ved": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
+        "ved": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
     },
     "McGillChartActivity": {
         "title": "Questionários de Dor McGill",
@@ -818,7 +817,7 @@
         "analyze": "Nosso laboratório de ponta analisará seus dados epigenéticos para calcular sua idade epigenética e você poderá visualizar relatórios personalizados através do aplicativo.",
         "step5": "STEP 5: MAKE LIFESTYLE CHANGES IMPROVE YOUR HEALTH",
         "lifestyle": "Também analisaremos seus dados de estilo de vida. Você continua fazendo mudanças no estilo de vida e nos relatórios. Você recebe relatórios personalizados sobre sua Ordem de Progresso periodicamente, novos testes de avaliação para avaliar seu progresso. Uma nova análise será fornecida com algumas sugestões. Continue melhorando e testando seu epiAge.",
-        "foot": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
+        "foot": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
         "counts": "A única idade que conta é",
         "danage": "A idade do seu DNA biológico."
     },
@@ -911,7 +910,7 @@
         "when": "Cuidado ao tomar SAMe",
         "should": "SAMe não deve ser usado em conjunto ou no local de tratamento recomendado pelo seu médico.",
         "taking": "Se você estiver tomando medicação e considerar tomar o SAMe como suplementar, consulte seu médico para garantir que o SAMe não interaja com o medicamento que você está tomando.",
-        "ltd": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
+        "ltd": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
     },
     "DataActivity": {
         "title": "Segurança de dados",
@@ -935,7 +934,7 @@
         "not": "Não teremos ou salvaremos a chave privada do usuário para descriptografar os dados do usuário de acordo com nossa Declaração de segurança de dados. Salve sua única chave privada.",
         "lost": "Depois que a chave privada é definida, nenhuma alteração é permitida. Se a chave privada for alterada, todos os dados saudáveis salvos anteriormente serão perdidos. Novos dados saudáveis serão criptografados com uma nova chave privada e só podem ser configurados uma vez.",
         "save": "Não teremos ou salvaremos a chave privada do usuário para descriptografar os dados do usuário de acordo com a Declaração de Segurança de Dados e a Lei HIPPA.",
-        "eip": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "eip": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "RasEncryptionActivity": {
         "title": "Configuração de segurança de dados",
@@ -984,7 +983,7 @@
         "personalized": "Uma avaliação personalizada, incluindo a intervenção, será gerada com base nas informações de saúde e estilo de vida que você forneceu. As atualizações dos parâmetros de saúde e estilo de vida periodicamente ativarão o relatório de análise personalizado ao longo da vida.",
         "ques": "Continuar",
         "back": "Cancelar",
-        "epi": "@2021 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
+        "epi": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados"
     },
     "Manual1Activity": {
         "title": "Como obter o relatório de teste epiAging",

@@ -31,8 +31,8 @@
         "datasequrity": "資料安全庫",
         "consent": "用戶知情同意書",
         "disclaimer": "免責聲明",
-        "disclaimertext": "EpiAging測試並非旨在作為健康信息或醫學數據，也不用於篩選，診斷，治療，預防或評估任何疾病或狀況的風險。 epiAging服務是根據DNA中DNA甲基化的評估確定表觀遺傳的年齡。 我們不收集遺傳數據。 該測試適用於21歲以上的個人。 美國食品藥品監督管理局尚未清除或批准此服務。",
-        "allright": " @2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "disclaimertext": "EpiAge測試並非旨在作為健康信息或醫學數據，也不用於篩選，診斷，治療，預防或評估任何疾病或狀況的風險。 epiAge服務是根據DNA中DNA甲基化的評估確定表觀遺傳的年齡。 我們不收集遺傳數據。 該測試適用於21歲以上的個人。 美國食品藥品監督管理局尚未清除或批准此服務。",
+        "allright": " @2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "old":"您",
         "you":"幾歲呢？",
         "only":"唯一重要的年齡",
@@ -267,13 +267,12 @@
         "open": "初步研究表明，飲食改變可能導致某些人的生物時鐘減慢。這仍處於開放討論階段。 ( https://www.ncbi.nlm.nih.gov/pubmed/30350398)",
         "exercise": "生活模式的改變包括運動和飲食習慣的改變。雖然已被國家醫學協會推薦了一段時間，但是我們需要更多關於較高效的改變的數據；這些改變應該經過個性化設計的。",
         "way": "有無數用戶與我們分享經驗，我們才能夠向測試人仕改善咨詢質素；同時持續分析生活模式改變所帶來的影響。透過共享科技(如應用程式和人工智能) ，我們可以查出不同生活習慣會如何影響生物時鐘。",
-        "position": "我們的智能應用程序",
-        "health": "個性化和系統地定位您的健康",
+         "lifestylerecom":"生活方式建議",
         "links": "我們的應用程式會把由美國國家醫學協會推薦的生活模式資訊及建議經超鏈結提供及閣下；同時會推介相關營養補充品例如 SAMe, 維他命A, D 及C。",
         "updated": "這些資料會經常更新；我們建議用家定時參考鏈結的內容。這些建議是基於“科學”今天所知道的。雖然並不完美，隨著更多的數據和更多的分析，我們的科學也在改進提升。",
         "first": "我們的報告首先會顯示閣下的生活方式參數與建議參數的分別。你能參考第一份報告的分析結果決定進行怎樣的改變。",
         "dynamic": "與我們携手合作",
-        "achive": "獲得長久健康的”年齡”",
+        "achieve": "獲得長久健康的”年齡”",
         "suggest": "我們建議你能持之以恆的更新你的生活模式數據。",
         "update": "你能自行選擇資料更新的時間和頻率；再按需要更新某部分/全部問卷內容。當然，我們認為生物年齡檢測只有持續地研究生活方式、環境和健康管理系統,為您提供更好的分析。",
         "second": "我們建議6個月或最多1年內閣下要進行另一次唾液樣本測試。",
@@ -281,17 +280,16 @@
         "model": "當累積到足夠研究數據，模型便會分析閣下提供的數據；並與你分享研究結果。",
         "analyze": "我們會進一步分析你的生物年齡及生活模式轉變的進度。",
         "routes": "基於研究模型的分析與閣下提供的數據，我們會建議可能的生活模式改變方向。",
-        "coevolve": "我們希望能夠一同的改善閣下的健康的同時，一同令epiAging學習環境更進一步。",
+        "coevolve": "我們希望能夠一同的改善閣下的健康的同時，一同令epiAge學習環境更進一步。",
+        "age-lower": "實際年齡<生物學年齡",
+        "age-higher": "實際年齡>生物學年齡",
+        "yourchro": "你的生物學年齡",
+        "yourexpchro": "你的預測實際年齡",
+        "accuracy": "技術精確度",
         "expected":"你的預期",
-        "your": "你的",
-        "chro": "/實際年齡/",
-        "bio": "/生物學年齡/",
-        "is": "你的生物學年齡于",
-        "lower":"歲低於您的實際年齡",
-        "higher":"歲高於您的實際年齡",
         "younger": "低於预期實際年齡人群的平均值",
         "old": "高於预期實際年齡人群的平均值",
-        "yourbio": "（上面有數字）你的生物年齡",
+        "yourbio": "你的生物年齡",
         "Chartdescription":"該圖顯示了從同意透露其實際年齡的客戶那裡獲得的結果。每個點代表一個客戶。藍線代表人口的平均值。紅線代表平均值的 95% 置信區間。這意味著，如果您的位置在紅線內，您有 95% 的信心認為您的結果符合人口平均值，並且您的生物學年齡與接受此測試的普通人沒有差異。如果您高於紅線，則您年齡較大；如果您低於紅線，則您比人口平均水平年輕。綠線代表 95% 的人口所在的位置。如果您的點高於綠線，則您的生物學年齡超過 95% 的人口，如果您低於綠線，則您的年齡低於 95% 的客戶。",
         "otherolder": "其他被測試的人，他們的生物年齡比實際年齡大",
         "otheryounger": "其他被測試的人，他們的生物年齡比實際年齡小",
@@ -452,7 +450,7 @@
         "medical": "2009年-多倫多校友和朋友",
         "excellence": "醫學卓越獎",
         "publshed": "論文著作",
-        "all": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "all": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "forum": "2017第六屆亞洲染色質和染色體論壇",
         "india": "（印度海德拉巴）",
         "diseases": "2016年第三屆加拿大發展與疾病表觀遺傳學會議",
@@ -524,7 +522,7 @@
         "university": "香港大學",
         "assistaant": "研究助理",
         "papers": "論文著作",
-        "rights": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "rights": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ZhiyuanActivity": {
         "title": "呂志遠博士後研究生",
@@ -555,7 +553,7 @@
         "journal": "免疫分析與免疫化學",
         "board": "學術期刊編委",
         "papers": "論文著作",
-        "reserved": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "reserved": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "society": "美國免疫學家學會2015年年會",
         "newusa": "（美國新奧爾良）",
         "third": "2014年東南亞免疫學研討會第三屆年會",
@@ -600,7 +598,7 @@
         "biological": "相比於檢測實際年齡，量度生物年齡能更有效衡量我們的健康以及身體情況。",
         "acceleration": "研究顯示，“DNA甲基化年齡”加速是預測早期死亡和慢性疾病的因素。",
         "bydietary": "動物實驗結果反映出，飲食習慣的改變是可能逆轉生物時鐘的。",
-        "epi": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "epi": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "QuestionnaireActivity": {
         "title": "問卷調查",
@@ -610,7 +608,7 @@
         "sleep":"睡眠自我評估",
         "diet":"飲食推薦",
         "how":"如何填寫問卷？",
-        "eip":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "eip":"@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ConsentActivity": {
         "title": "客戶同意書",
@@ -637,7 +635,7 @@
         "security": "數據安全",
         "accordance": "根據《數據保護條例》關於數據保護的規定，閣下有權要求訪問、糾正或刪除閣下的個人數據，或限制與閣下數據有關的處理及數據可移動性。閣下可以通過聯繫（info@hkgepitherapeutics.com）行使此權利。閣下的數據會被加密和防火牆保護。同意接受條款之後，閣下將收到一個純粹的ID號碼，通過該ID號你可以進行數據錄入同時對系統保持匿名狀態。",
         "agree": "同意",
-        "ved": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "ved": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "McGillChartActivity": {
         "title": "麥吉爾疼痛問卷",
@@ -738,8 +736,8 @@
         "sampling": "取樣及檢測方法複雜而且並未有用大量群體樣本驗證",
         "epigenetic": "表觀遺傳時鐘",
         "closely": "表觀遺傳時鐘和人體生理功能有著緊密的關係, 同時表觀遺傳時鐘的加速轉動和患上神經退行性疾病及癌症的風險有一定關係。",
-        "epiagings": "epiAging",
-        "methylation": "epiAging 利用名為DNA甲基化的方式量度個人的真正年齡 — 從科學的角度或許能透過研究年齡反映出個人的健康狀況，生活質素甚至壽命。",
+        "epiagings": "epiAge",
+        "methylation": "epiAge 利用名為DNA甲基化的方式量度個人的真正年齡 — 從科學的角度或許能透過研究年齡反映出個人的健康狀況，生活質素甚至壽命。",
         "hkepi": "HKG epi THERAPEUTICS",
         "already": "擁有30年於DNA甲基化領域的領先研究經驗。透過我們獨有的技術 – 研究儲存於唾液細胞中的DNA甲基化，我們可以計算出你的真正年齡；也許會成為閣下決心改變生活習慣的催化劑。相關研究同時引申出以下觀點: ",
         "slow": "延緩衰老過程",
@@ -764,8 +762,8 @@
         "step4": "步驟4：發現您的年齡",
         "analyze": "我們最先進的實驗室將分析您的表觀遺傳數據以計算您的生物學年齡，並且您可以通過APP查看個性化報告。",
         "step5": "第5步：改變生活方式，改善您的健康",
-        "lifestyle": "我們還將分析您的生活方式數據。 您不斷改變生活方式並進行報告。 您會定期收到有關進度訂單的個性化報告，這些報告會定期進行新的EpiAging測試以評估您的進度。 新的分析將提供一些建議。 不斷改進和測試您的epiAge。",
-        "foot": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "lifestyle": "我們還將分析您的生活方式數據。 您不斷改變生活方式並進行報告。 您會定期收到有關進度訂單的個性化報告，這些報告會定期進行新的EpiAge測試以評估您的進度。 新的分析將提供一些建議。 不斷改進和測試您的epiAge。",
+        "foot": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "counts":"唯一重要的年齡是",
         "danage":"您的生物DNA年齡"
     },
@@ -856,7 +854,7 @@
         "when": "注意事項",
         "should": "SAMe 不應與醫生處方藥物一同服用。 ",
         "taking": "如果閣下正在服用藥物並考慮使用SAMe作為補充劑，請諮詢醫生SAMe是否與所服用藥物有相沖。",
-        "ltd": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "ltd": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "DataActivity": {
         "title": "數據安全",
@@ -879,7 +877,7 @@
         "not": "根據我們的數據安全聲明，我們將不會擁有或保存用戶的私鑰來解密用戶數據，請保存您唯一的私鑰。",
         "lost":"設置私鑰後，將不允許更改。 如果更改了私鑰，則所有先前保存的健康數據都將丟失。 新的健康數據將使用新的私鑰加密，並且只能設置一次。",
         "save":"根據數據安全聲明和HIPPA法律，我們將沒有或保存用戶的私鑰來解密用戶數據。",
-        "eip":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "eip":"@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "RasEncryptionActivity": {
         "title": "數據安全設定",
@@ -927,26 +925,26 @@
         "about": "關於問卷",
         "are": "問卷是",
         "optional": "可選填寫",
-        "however": "。然而，表觀遺傳學受到生活方式以及環境的影響。 我們的理念是，EpiAging測試僅在動態的終身生活方式、環境和健康管理系統中才有意義。",
+        "however": "。然而，表觀遺傳學受到生活方式以及環境的影響。 我們的理念是，EpiAge測試僅在動態的終身生活方式、環境和健康管理系統中才有意義。",
         "personalized": "將根據您提供的健康和生活方式信息生成包括干預的個性化評估，定期更新健康和生活方式參數將激活終身個性化分析報告。",
         "title": "問卷聲明",
         "ques": "繼續",
         "back": "取消",
-        "epi":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "epi":"@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "Manual1Activity": {
-        "title": "獲得EpiAging測試報告",
-        "getmy":"如何獲得我的EpiAging測試報告",
-        "login":"確保使用用於購買EpiAging產品的帳戶登錄。",
+        "title": "獲得EpiAge測試報告",
+        "getmy":"如何獲得我的EpiAge測試報告",
+        "login":"確保使用用於購買EpiAge產品的帳戶登錄。",
         "username":"您的用戶名將在您登錄後在此顯示。",
         "gohome":"轉到“ HOME”或“ EPICENTER”，然後單擊“我的報告”。",
-        "barcode":"輸入（或掃描）試管上的條形碼，並獲取EpiAging報告。",
-        "icon":"輸入條形碼後，通過單擊圖標獲取EpiAging測試報告",
-        "result":"划到頁面底部查看您的epiAging測試結果。"
+        "barcode":"輸入（或掃描）試管上的條形碼，並獲取EpiAge報告。",
+        "icon":"輸入條形碼後，通過單擊圖標獲取EpiAge測試報告",
+        "result":"划到頁面底部查看您的epiAge測試結果。"
         
     },
     "Manual2Activity": {
-        "title": "EpiAging App 用戶手冊",
+        "title": "EpiAge App 用戶手冊",
         "download":"從Apple Store下載IOS App或從Google Play Store下載Android App。",
         "gocenter":"轉到“ EPICENTER”並單擊“註冊”以註冊帳戶。",
         "fillregis":"填寫註冊信息",
@@ -954,7 +952,7 @@
         "accountlogin":"使用您剛註冊的帳戶登錄。",
         "setkey":"生成唯一的數據安全密鑰。",
         "sentmail":"公鑰與私鑰對將保存到您手機本地文件夾",
-        "purchase":"轉到“購物”以購買EpiAging測試套件。"
+        "purchase":"轉到“購物”以購買EpiAge測試套件。"
     },
     "Manual3Activity": {
         "title": "問卷指南",
@@ -973,7 +971,7 @@
     "SavepdfpathActivity":{
         "btncp":"複製",
         "titlemsg":"消息",
-        "copy":"複製成功，請將連結位址複製到電腦瀏覽器下載"
+        "copy":"複製成功，請將連結位址粘貼到瀏覽器下載"
     },
     "ScannerAcitivity":{
         "title":"掃描"
