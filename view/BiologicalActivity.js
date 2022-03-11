@@ -266,7 +266,7 @@ export default class BiologicalActivity extends Component<Props> {
                                 </View>
                             </View>
 
-                            <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, marginBottom: 12, backgroundColor: '#ffffff' }}>
+                            <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, marginBottom: px2dp(50), backgroundColor: '#ffffff' }}>
                                 <Text style={{ fontSize: px2dp(18), fontFamily: 'fantasy', color: '#000000', textAlignVertical: 'center', lineheight: px2dp(45), fontWeight: '700' }}>{I18n.t('BiologicalActivity.epiages')}</Text>
                                 <Text style={{ fontSize: px2dp(14), fontFamily: 'fantasy', textAlignVertical: 'center', lineHeight: 26, }}>{I18n.t('BiologicalActivity.methylation')}</Text>
                                 <Text style={{ fontSize: px2dp(18), fontFamily: 'fantasy', color: '#000000', textAlignVertical: 'center', lineHeight: 56, fontWeight: '700' }}>{I18n.t('BiologicalActivity.hkepi')}</Text>
@@ -286,7 +286,7 @@ export default class BiologicalActivity extends Component<Props> {
                                         <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(12), textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.onset')}</Text>
                                     </View>
                                 </View>
-                                <View style={{ height: px2dp(123), justifyContent: 'space-between', flexDirection: 'row' }}>
+                                <View style={{ height: px2dp(123), justifyContent: 'space-between', flexDirection: 'row',marginTop:px2dp(50) }}>
                                     <View style={{ width: '42%', borderRadius: px2dp(20), backgroundColor: '#f0f0f0' }}>
                                         <Image style={{ width: '100%', height: px2dp(45), marginTop: 5, marginBottom: px2dp(5) }} source={require('../image/icons/sun.png')} resizeMode='contain' />
                                         <Text style={{ fontFamily: 'fantasy', fontSize: px2dp(12), textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.quality')}</Text>
