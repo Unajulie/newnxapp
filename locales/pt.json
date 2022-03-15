@@ -378,9 +378,9 @@
         "introduction1": "Introdução",
         "science1": "Nossa Ciência",
         "team1": "Equipe",
-        "dna1": "DNA",
+        "dna1": "Metilação do DNA",
         "methylation1": "Metilação",
-        "biological1": "Biológico",
+        "biological1": "Idade Biológica",
         "age1": "Era",
         "consent1": "Consentimento",
         "form1": "Formato",
@@ -819,7 +819,8 @@
         "lifestyle": "Também analisaremos seus dados de estilo de vida. Você continua fazendo mudanças no estilo de vida e nos relatórios. Você recebe relatórios personalizados sobre sua Ordem de Progresso periodicamente, novos testes de avaliação para avaliar seu progresso. Uma nova análise será fornecida com algumas sugestões. Continue melhorando e testando seu epiAge.",
         "foot": "@2022 HKG epi THERAPEUTICS Ltd. Todos OS direitos reservados",
         "counts": "A única idade que conta é",
-        "danage": "A idade do seu DNA biológico."
+        "danage": "A idade do seu DNA biológico.",
+        "phone":"aplicativo epiAge"
     },
     "SleepChartActivity": {
         "title": "Questionários do sono",
@@ -1048,7 +1049,7 @@
         "title": "Lançar",
         "registerkit": "KIT DE REGISTRO",
         "myreport": "MEU RELATÓRIO",
-        "buykit": "COMPRAR KIT EPIAGE",
+        "buykit": "COMPRE NOSSOS PRODUTOS",
         "signin":"FAÇA LOGIN COM E-MAIL",
         "stop":"Pare de contar sua idade!",
         "birthdays":"Por aniversários ou velas no bolo, rugas, pés de galinha ou linhas de expressão em seu rosto - esses são apenas números.",

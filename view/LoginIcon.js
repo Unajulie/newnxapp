@@ -45,7 +45,7 @@ export default class LoginIcon extends Component<Props> {
                                 {this.state.user != null ?
                                     <View style={{ width: px2dp(120),height:px2dp(70),justifyContent: "center", alignItems: "center" }}>
                                         <Image style={{ height: px2dp(30), width: px2dp(30),marginBottom:px2dp(5) }} resizeMode="contain" source={require("../image/ic_login.png")} />
-                                        <Text numberOfLines={1} style={{ color: '#fff',fontFamily:'fantasy',fontSize:px2dp(12),textAlign:'center' }}>Hi, {this.state.user.nickname=="undefined"?"epiAge user":this.state.user.nickname}</Text>
+                                        <Text numberOfLines={1} style={{ color: '#fff',fontFamily:'Roboto-Light',fontSize:px2dp(12),textAlign:'center' }}>Hi, {this.state.user.nickname=="undefined"?"epiAge user":this.state.user.nickname}</Text>
                                     </View>
                                     :
                                     <View style={{ width: px2dp(120), justifyContent: "center", alignItems: "center" }}>

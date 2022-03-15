@@ -348,9 +348,9 @@
         "introduction1":"介紹",
         "science1":"科學",
         "team1":"團隊",
-        "dna1":"DNA",
+        "dna1":"DNA甲基化",
         "methylation1":"甲基化",
-        "biological1":"生物學",
+        "biological1":"生物學年齡",
         "age1":"年齡",
         "consent1":"客戶知情",
         "form1":"同意書"
@@ -766,7 +766,9 @@
         "lifestyle": "我們還將分析您的生活方式數據。 您不斷改變生活方式並進行報告。 您會定期收到有關進度訂單的個性化報告，這些報告會定期進行新的EpiAging測試以評估您的進度。 新的分析將提供一些建議。 不斷改進和測試您的epiAge。",
         "foot": "@2022 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "counts":"唯一重要的年齡是",
-        "danage":"您的生物DNA年齡"
+        "danage":"您的生物DNA年齡",
+        "phone":"EpiAge 應用程序"
+
     },
     "SleepChartActivity": {
         "title": "睡眠自我評估問卷",
@@ -995,7 +997,7 @@
         "title":"啟動",
         "registerkit":"註冊套件",
         "myreport":"我的報告",
-        "buykit":"購買套件",
+        "buykit":"選購我們的產品",
         "signin":"郵箱登陸",
         "readmore":"了解更多關於生物學年齡"
 

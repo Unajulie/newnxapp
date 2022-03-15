@@ -383,9 +383,9 @@
         "introduction1": "Introduccion",
         "science1": "Nuestra ciencia",
         "team1": "Equipo",
-        "dna1": "DNA",
+        "dna1": "metilación del ADN",
         "methylation1": "Metilación",
-        "biological1": "Biologico",
+        "biological1": "Edad biológica",
         "age1": "Edad",
         "consent1": "De acuerdo",
         "form1": "Forma",
@@ -827,7 +827,8 @@
         "lifestyle": "También analizaremos los datos de su estilo de vida. Sigue haciendo cambios en el estilo de vida y en los informes. Obtiene informes personalizados sobre su orden de progreso periódicamente nuevas pruebas epiAging para evaluar su progreso. Se proporcionará un nuevo análisis con algunas sugerencias. Sigue mejorando y probando tu epiAge.",
         "foot": "@2022 HKG epi THERAPEUTICS Ltd. Todos los derechos reservados",
         "counts": "La única edad que cuenta es",
-        "danage": "la edad de su ADN biológico."
+        "danage": "la edad de su ADN biológico.",
+        "phone":"aplicación epiAge"
     },
     "SleepChartActivity": {
         "title": "Cuestionarios de sueño",
@@ -1049,7 +1050,7 @@
         "title": "Lanzamiento",
         "registerkit": "KIT DE REGISTRO",
         "myreport": "MI REPORTE",
-        "buykit": "COMPRAR KIT EPIAGE",
+        "buykit": "COMPRAR NUESTROS PRODUCTOS",
         "signin": "INICIAR SESIÓN CON CORREO ELECTRÓNICO",
         "stop":"¡Deja de contar tu edad!",
         "birthdays":" Por cumpleaños o velas en el pastel, arrugas, patas de gallo o las arrugas del ceño en tu cara, esos son solo números.",

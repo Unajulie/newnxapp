@@ -18,7 +18,7 @@ buildscript {
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url "http://maven.springframework.org/release" }
         maven { url "http://maven.restlet.org" }
-        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url "https://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
         ivy { url "http://repo.mycompany.com/repo" }
         
     }
@@ -43,7 +43,7 @@ allprojects {
         maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
         maven { url "http://maven.springframework.org/release" }
         maven { url "http://maven.restlet.org" }
-        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        maven { url "https://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
         ivy { url "http://repo.mycompany.com/repo" }
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
