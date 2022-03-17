@@ -333,18 +333,18 @@ export default class BiologicalActivity extends Component<Props> {
                                     <Text style={{ fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'Roboto-Light', lineHeight: px2dp(18) }}>{I18n.t('BiologicalActivity.chronologicaled')}</Text>
                                     <Text style={{ fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'Roboto-Light', lineHeight: px2dp(18) }}>{I18n.t('BiologicalActivity.possibly')}</Text>
                                     <Text style={{ fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'Roboto-Light', lineHeight: px2dp(18) }}>{I18n.t('BiologicalActivity.really')}</Text>
-                                    <Image style={{ height: 270, width: '100%'}} resizeMode='cover' source={require("../image/enpic/test14.png")}></Image>
+                                    <Image style={{ height: 250, width: '100%'}} resizeMode='cover' source={require("../image/enpic/test14.png")}></Image>
                                 </View>
                             </View>
                             <View style={{ width: '90%', alignSelf: 'center', backgroundColor: '#ffffff' }}>
                                 <Text style={{ fontSize: px2dp(22), lineHeight: px2dp(50), marginBottom: px2dp(20), fontFamily: 'Roboto-Bold', color: '#000000', textAlignVertical: 'center', fontWeight: '700' }}>{I18n.t('BiologicalActivity.test')}</Text>
                                 <Text style={{ fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'Roboto-Light', lineHeight: px2dp(18) }}>{I18n.t('BiologicalActivity.developed')}</Text>
                                 <Text style={{ fontSize: px2dp(16), marginBottom: px2dp(10), fontFamily: 'Roboto-Light', lineHeight: 23 }}>{I18n.t('BiologicalActivity.epitherapeutics')}</Text>
-                                <Image style={{ height: 280, width: '100%',alignSelf: 'center',marginBottom: px2dp(30)}} resizeMode='cover' source={require("../image/enpic/test16.png")}></Image> 
+                                <Image style={{ height: 280, width: '100%',alignSelf: 'center',marginBottom: px2dp(30)}}  source={require("../image/enpic/test16.png")}></Image> 
                             </View>
                             <View style={{ width: '100%',backgroundColor: '#f7f7f7'}}>
                             <View style={{ width: '90%', alignSelf: 'center', marginBottom:px2dp(100) }}>
-                            <Text style={{ fontSize: px2dp(22), lineHeight: px2dp(23), fontFamily: 'Roboto-Bold', color: '#000000', textAlignVertical: 'center', marginTop: px2dp(20), marginBottom: px2dp(20), fontWeight: '700' }}>{I18n.t('BiologicalActivity.steps')}</Text>
+                            <Text style={{ fontSize: px2dp(22), lineHeight: px2dp(30), fontFamily: 'Roboto-Bold', color: '#000000', textAlignVertical: 'center', marginTop: px2dp(20), marginBottom: px2dp(20), fontWeight: '700' }}>{I18n.t('BiologicalActivity.steps')}</Text>
                                 <View style={{ borderWidth: 1, borderColor:'#ffffff', borderRadius: 10, backgroundColor: '#ffffff' }}>
                                     <View style={{ flexDirection: 'row', marginTop: px2dp(10) }}>
                                         <Text style={{ width: '70%', textAlignVertical: 'center',fontFamily: 'Roboto-Light',color:'#000', textAlign: 'center', fontSize: px2dp(16) }}>{I18n.t('BiologicalActivity.download')}</Text>

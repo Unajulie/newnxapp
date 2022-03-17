@@ -812,7 +812,8 @@
         "counts": "Le seul âge qui compte est ",
         "danage": "votre âge ADN épigénétique.",
         "lifestyle": "Nous analyserons également vos données de mode de vie. Vous continuez à modifier votre mode de vie et à en faire rapport. Vous obtenez des rapports personnalisés sur votre ordre de progression périodiquement de nouveaux tests epiAging pour évaluer vos progrès. Une nouvelle analyse sera fournie avec quelques suggestions. Continuez à améliorer et à tester votre épiAge.",
-        "foot": "@2022 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "foot": "@2022 HKG epi THERAPEUTICS Ltd. Tous droits réservés",
+        "phone":"Application épiAge"
     },
     "SleepChartActivity": {
         "title": "Auto-évaluation du sommeil",

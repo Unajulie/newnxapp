@@ -352,6 +352,7 @@
                 "Scan": "Scan Kit Barcode",
                 "intransit":"In-transit",
                 "parcelreceived":"Parcel received",
+                "processing":"Processing",
                 "reginlims":"Registered in LIMS",
                 "waitdnaprep":"DNA extraction",
                 "completed": "Test completed",
