@@ -53,6 +53,7 @@ export default class ForgetActivity extends Component<Props> {
                                     if (!this.state.email) { this.setState({ disabled: true }); return }
                                     fetch(data.url + "user/sendpaswd.jhtml?email=" + this.state.email).then((data) => { data.text() }).then((data) => {
                                         Alert.alert("The reset password link has been sent to your mailbox")
+                                        this.setState({ disabled: true })
                                     })
                                 }} style={{ height: px2dp(50), borderRadius: px2dp(5) }} />
                             </TouchableOpacity>
