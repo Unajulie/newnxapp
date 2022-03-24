@@ -118,8 +118,8 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                         {/* 问卷调查 */}
-                        {/* <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}> */}
-                        <TouchableOpacity onPress={()=>Alert.alert('Notification','The questionnaires are under maintenance, will make accessible again when it has been finished!')}>
+                        <TouchableOpacity onPress={() => this.setState({ swipeablePanelActive: true })}>
+                        {/* <TouchableOpacity onPress={()=>Alert.alert('Notification','The questionnaires are under maintenance, will make accessible again when it has been finished!')}> */}
                        
                             <View style={{ borderRadius: px2dp(25), height: px2dp(250), width: '90%', marginBottom: px2dp(20), borderWidth: px2dp(1.5), backgroundColor: '#e6dbff', borderColor: '#e6dbff', borderStyle: 'solid'}}>
                             <View style={{  height: px2dp(250), width: '100%',flexDirection: 'column',flex: 1,alignItems: 'center'}}>

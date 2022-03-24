@@ -153,8 +153,8 @@ export default class ISlider extends Component<Props> {
                         }) : null}
                     </View>
                 </View>
-                    <View {...this.watcher.panHandlers} style={{ left: process * processWidth * 0.9 }}>
-                        <View style={{ width: thumbSize }}>
+                    <View {...this.watcher.panHandlers} style={{ left: process * processWidth * 0.9,}}>
+                        <View style={{ width: thumbSize ,height:60}}>
                             <Image style={{ width: 20, height: 20 }} resizeMode="contain" source={require("../image/icons/jiantou.png")} />
                             <Text style={{ fontSize: 12, textAlign: 'center', width: 30 }}>{this.state.newValue}</Text>
                         </View>
