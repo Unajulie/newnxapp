@@ -127,6 +127,9 @@ export default class DnaReportActivity extends Component<Props> {
         this.setState({animating:true})
         fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
             for (let i in data) {
+                console.info(data[i].detectTime)
+                console.info(data[i].curtime)
+                console.info(data[i].pendingTime)
                 let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 : data[i].curtime - data[i].pendingTime)
                 let time = {}
                 //POST_FROM_LAB是从实验室发出样本到客户再邮寄回样本的这段时间统称为in-transit/POST_FROM_LAB
@@ -146,7 +149,10 @@ export default class DnaReportActivity extends Component<Props> {
                 else if(data[i].status== "ready"){time.leftseconds = 0 }
                 
             }
-                let process = parseInt(((_31day - time.leftseconds) / _31day) * 100)
+
+               let processtime=parseInt(((_31day - time.leftseconds) / _31day) * 100)
+                let process = data[i].status== "processing"?(processtime>90?90:processtime):processtime
+                
                 let vbarcode = {}
                 vbarcode.val = data[i].barcode
                 console.info(data[i].barcode + " allday:" + _31day / (24 * 3600 * 1000) + " move day:" + ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))
