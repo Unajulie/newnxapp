@@ -76,7 +76,8 @@ project.ext.react = [
     enableHermes: true,
     hermesCommand: "../../node_modules/hermesvm/%OS-BIN%/hermes",
     bundleInBeta: true,
-    devDisabledInBeta: true
+    devDisabledInBeta: true,
+    bundleInDebug: true
 ]
 
 
