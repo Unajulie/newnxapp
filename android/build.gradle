@@ -2,10 +2,10 @@
 
 buildscript {
     ext {
-        buildToolsVersion = "29.0.3"
+        buildToolsVersion = "30.0.2"
         minSdkVersion = 21
-        compileSdkVersion = 29
-        targetSdkVersion = 29
+        compileSdkVersion = 30
+        targetSdkVersion = 30
         supportLibVersion = "29.0.0"
     }
     repositories {
@@ -54,11 +54,11 @@ allprojects {
 subprojects {
     afterEvaluate {
         android {
-            compileSdkVersion 29
-            buildToolsVersion "29.0.3"
+            compileSdkVersion 30
+            buildToolsVersion "30.0.2"
 
             defaultConfig {
-                targetSdkVersion 29
+                targetSdkVersion 30
             }
         }
     }
